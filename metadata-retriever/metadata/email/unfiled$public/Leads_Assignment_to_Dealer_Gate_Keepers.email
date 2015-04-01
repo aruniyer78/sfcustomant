@@ -1,0 +1,14 @@
+<messaging:emailTemplate subject="Immediate Notice - Lead({!relatedTo.Name}, {!relatedTo.Business_Unit__c}, {!DATEVALUE(relatedTo.CreatedDate)})"
+recipientType="User" relatedToType="Lead_Account__c">
+    <messaging:HTMLEmailBody >
+    Lead({!relatedTo.Name}, {!relatedTo.Business_Unit__c}, 
+    <apex:outputText value="{0,date,dd'/'MM'/'yyyy}">
+        <apex:param value="{!relatedTo.CreatedDate}" />
+    </apex:outputText>) has been assigned to you for action.
+    <br />
+    Please review and action this lead. <br />
+    Link: <apex:outputLink value="{!LEFT($CurrentPage.URL, FIND('.com', $CurrentPage.URL)+4)+ relatedTo.Id}">
+    {!LEFT($CurrentPage.URL, FIND('.com', $CurrentPage.URL)+4)+ relatedTo.Id}
+    </apex:outputLink>
+    </messaging:HTMLEmailBody>
+</messaging:emailTemplate>

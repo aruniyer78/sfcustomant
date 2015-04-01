@@ -1,0 +1,36 @@
+<apex:page controller="TaskMassChangeActivateDeactive" showHeader="true" sidebar="true"  tabStyle="Task">
+    <apex:includeScript value="/support/console/27.0/integration.js"/>
+    <script type="text/javascript">
+        function CloseTab() {
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingTabId(closeSubtab);
+            }else{
+                window.location.href = '/007?isdtp=it';
+            }
+        }
+        var closeSubtab = function closeSubtab(result) {
+            var tabId = result.id;
+            sforce.console.closeTab(tabId);
+        };
+        
+    </script>
+    <apex:sectionHeader title="Activate/Deactivate CROs"/>
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Select User" mode="Edit">       
+            <apex:pageBlockSection columns="2">         
+                <apex:pageBlockSectionitem > 
+                    <apex:outputLabel >New Owner</apex:outputLabel>          
+                    <apex:inputField value="{!task.ownerId}"/>                
+                </apex:pageBlockSectionitem>       
+           </apex:pageBlockSection>       
+           <apex:pageBlockSection > 
+               <apex:outputPanel >                   
+                   <apex:commandButton value="Activate" action="{!Activate}" oncomplete="CloseTab()"/>
+                   <apex:commandButton value="Deactivate" action="{!Deactivate}" oncomplete="CloseTab()"/>   
+               </apex:outputPanel>    
+           </apex:pageBlockSection>     
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

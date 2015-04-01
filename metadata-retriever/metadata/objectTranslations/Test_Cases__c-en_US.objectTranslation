@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Cases</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Cases</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case No.-ext --></label>
+        <name>Case_No_ext__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Status --></label>
+        <name>Case_Status__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case description --></label>
+        <name>Case_description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Categary__c</name>
+        <picklistValues>
+            <masterLabel>CLC</masterLabel>
+            <translation><!-- CLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case &amp; Knowledge</masterLabel>
+            <translation><!-- Case &amp; Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catagory1</masterLabel>
+            <translation><!-- Catagory1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catagory2</masterLabel>
+            <translation><!-- Catagory2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catagory3</masterLabel>
+            <translation><!-- Catagory3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Catagory4</masterLabel>
+            <translation><!-- Catagory4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Campaign Management</masterLabel>
+            <translation><!-- Central Campaign Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Management</masterLabel>
+            <translation><!-- Complaint Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Management (M30)</masterLabel>
+            <translation><!-- Complaint Management (M30) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Management</masterLabel>
+            <translation><!-- Contact Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Portfolio</masterLabel>
+            <translation><!-- Contact Portfolio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Data</masterLabel>
+            <translation><!-- Customer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration</masterLabel>
+            <translation><!-- Data Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Data</masterLabel>
+            <translation><!-- Dealer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interface</masterLabel>
+            <translation><!-- Interface --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Management</masterLabel>
+            <translation><!-- Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI</masterLabel>
+            <translation><!-- SSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- *Count Blocked Step --></label>
+        <name>Count_Blocked_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Count Dev Step --></label>
+        <name>Count_Dev_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Count Failed Step --></label>
+        <name>Count_Failed_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Count Passed Step --></label>
+        <name>Count_Passed_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Count Steps --></label>
+        <name>Count_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature --></label>
+        <name>Feature__c</name>
+        <picklistValues>
+            <masterLabel>20.1.4 Irregular IB Handling (异常电话处理流程)</masterLabel>
+            <translation><!-- 20.1.4 Irregular IB Handling (异常电话处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature1</masterLabel>
+            <translation><!-- Feature1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature2</masterLabel>
+            <translation><!-- Feature2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature3</masterLabel>
+            <translation><!-- Feature3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature4</masterLabel>
+            <translation><!-- Feature4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.2 General IB Handling (一般呼入处理流程)</masterLabel>
+            <translation><!-- M20.1.2 General IB Handling (一般呼入处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3  Inquiry and Escalation Handling (问询及升级处理流程)</masterLabel>
+            <translation><!-- M20.1.3  Inquiry and Escalation Handling (问询及升级处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.1  Direct Mail Requirement Handle (直邮需求处理流程)</masterLabel>
+            <translation><!-- M20.1.3.1  Direct Mail Requirement Handle (直邮需求处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.2  Financing Consulting Handling (金融咨询、租赁咨询处理流程)</masterLabel>
+            <translation><!-- M20.1.3.2  Financing Consulting Handling (金融咨询、租赁咨询处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.3 Maybach and Van handling (迈巴赫及商务车咨询流程)</masterLabel>
+            <translation><!-- M20.1.3.3 Maybach and Van handling (迈巴赫及商务车咨询流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.4 Customer Data Check (用户信息查询流程)</masterLabel>
+            <translation><!-- M20.1.3.4 Customer Data Check (用户信息查询流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.6 IB Dialect Handling (方言处理流程)</masterLabel>
+            <translation><!-- M20.1.3.6 IB Dialect Handling (方言处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.2.1 Regular OB Handling (常规外呼处理流程)</masterLabel>
+            <translation><!-- M20.2.1 Regular OB Handling (常规外呼处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.3.1 SMS Sending (短信发送流程)</masterLabel>
+            <translation><!-- M20.3.1 SMS Sending (短信发送流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.3.2 Direct Mail Handling (直邮任务处理流程)</masterLabel>
+            <translation><!-- M20.3.2 Direct Mail Handling (直邮任务处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.5.1 Quality Control Process (质量监控流程)</masterLabel>
+            <translation><!-- M20.5.1 Quality Control Process (质量监控流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.5.4 Recording Calibration Process (录音校准流程)</masterLabel>
+            <translation><!-- M20.5.4 Recording Calibration Process (录音校准流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.6.1 Sales Leads Handling (销售线索处理流程)</masterLabel>
+            <translation><!-- M20.6.1 Sales Leads Handling (销售线索处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.6.2 Sales Leads Verification Handling (销售线索核实流程)</masterLabel>
+            <translation><!-- M20.6.2 Sales Leads Verification Handling (销售线索核实流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.6.3 Sales Leads Follow Handling (销售线索跟进流程)</masterLabel>
+            <translation><!-- M20.6.3 Sales Leads Follow Handling (销售线索跟进流程) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Function --></label>
+        <name>Finction__c</name>
+        <picklistValues>
+            <masterLabel>1.6 Complaint Process</masterLabel>
+            <translation><!-- 1.6 Complaint Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3rd Party</masterLabel>
+            <translation><!-- 3rd Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAC</masterLabel>
+            <translation><!-- CAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAC Campaign Segmentation, Execution &amp; Response Capture</masterLabel>
+            <translation><!-- CAC Campaign Segmentation, Execution &amp; Response Capture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCMS</masterLabel>
+            <translation><!-- CCMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Report</masterLabel>
+            <translation><!-- Campaign Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case &amp; Knowledge</masterLabel>
+            <translation><!-- Case &amp; Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Campaign Planning</masterLabel>
+            <translation><!-- Central Campaign Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Portfolio</masterLabel>
+            <translation><!-- Contact Portfolio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create a Sales Leads in CAC system and Pass to RME</masterLabel>
+            <translation><!-- Create a Sales Leads in CAC system and Pass to RME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Document AS LEAD types: OB call process - LEAD capturing</masterLabel>
+            <translation><!-- Document AS LEAD types: OB call process - LEAD capturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enquiry and escalation process</masterLabel>
+            <translation><!-- Enquiry and escalation process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Function1</masterLabel>
+            <translation><!-- Function1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Function2</masterLabel>
+            <translation><!-- Function2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Function3</masterLabel>
+            <translation><!-- Function3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Function4</masterLabel>
+            <translation><!-- Function4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GSSN</masterLabel>
+            <translation><!-- GSSN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LMS</masterLabel>
+            <translation><!-- LMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Management</masterLabel>
+            <translation><!-- Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead escalation</masterLabel>
+            <translation><!-- Lead escalation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1 IB Handling (IB 流程)</masterLabel>
+            <translation><!-- M20.1 IB Handling (IB 流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.2 OB Handling (外呼流程)</masterLabel>
+            <translation><!-- M20.2 OB Handling (外呼流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.2.1 常规外呼处理流程</masterLabel>
+            <translation><!-- M20.2.1 常规外呼处理流程 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.3 Non-voice Handling (非语音业务流程)</masterLabel>
+            <translation><!-- M20.3 Non-voice Handling (非语音业务流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.5 Management Process</masterLabel>
+            <translation><!-- M20.5 Management Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.6 CAC Lead Flow</masterLabel>
+            <translation><!-- M20.6 CAC Lead Flow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M30.1 Dealer Complaint Management Process</masterLabel>
+            <translation><!-- M30.1 Dealer Complaint Management Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M30.2 Regional Complaint Management Process</masterLabel>
+            <translation><!-- M30.2 Regional Complaint Management Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M30.3 CRM AS Central Complaint Management Part 1</masterLabel>
+            <translation><!-- M30.3 CRM AS Central Complaint Management Part 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M40.2 Dealer Leads Communication</masterLabel>
+            <translation><!-- M40.2 Dealer Leads Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mini Website</masterLabel>
+            <translation><!-- Mini Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OB to user and log the case in CAC Call Handling System</masterLabel>
+            <translation><!-- OB to user and log the case in CAC Call Handling System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RME</masterLabel>
+            <translation><!-- RME --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regular checking - Data Duplication</masterLabel>
+            <translation><!-- Regular checking - Data Duplication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI</masterLabel>
+            <translation><!-- SSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media communication history syschronization</masterLabel>
+            <translation><!-- Social Media communication history syschronization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validate the User Info. In CAC System</masterLabel>
+            <translation><!-- Validate the User Info. In CAC System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iCRM</masterLabel>
+            <translation><!-- iCRM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market / Country --></label>
+        <name>Market_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Module / Object --></label>
+        <name>Module_Object__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Address</masterLabel>
+            <translation><!-- Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aftersales Record</masterLabel>
+            <translation><!-- Aftersales Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLC</masterLabel>
+            <translation><!-- CLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CTI &amp; Contact Management</masterLabel>
+            <translation><!-- CTI &amp; Contact Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chatter</masterLabel>
+            <translation><!-- Chatter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint</masterLabel>
+            <translation><!-- Complaint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact</masterLabel>
+            <translation><!-- Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact / Contact</masterLabel>
+            <translation><!-- Contact / Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Data</masterLabel>
+            <translation><!-- Dealer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Portal</masterLabel>
+            <translation><!-- Dealer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Address</masterLabel>
+            <translation><!-- Email Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Key</masterLabel>
+            <translation><!-- External Key --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration</masterLabel>
+            <translation><!-- Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge</masterLabel>
+            <translation><!-- Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Literature</masterLabel>
+            <translation><!-- Literature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Literature Order</masterLabel>
+            <translation><!-- Literature Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferences</masterLabel>
+            <translation><!-- Preferences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QC</masterLabel>
+            <translation><!-- QC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report/Dashboard</masterLabel>
+            <translation><!-- Report/Dashboard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI</masterLabel>
+            <translation><!-- SSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Record</masterLabel>
+            <translation><!-- Sales Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Console</masterLabel>
+            <translation><!-- Service Console --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle / Asset</masterLabel>
+            <translation><!-- Vehicle / Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle Relationship</masterLabel>
+            <translation><!-- Vehicle Relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty Record</masterLabel>
+            <translation><!-- Warranty Record --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Test Cases --></label>
+        <name>New_Test_Cases__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pre Requisite --></label>
+        <name>Pre_Requisite__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference No. --></label>
+        <name>Reference_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requirement / User Story / Use Case --></label>
+        <name>Requirement_User_Story__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Testable</masterLabel>
+            <translation><!-- Non-Testable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Completed</masterLabel>
+            <translation><!-- Not Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass</masterLabel>
+            <translation><!-- Pass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passed 1st Round</masterLabel>
+            <translation><!-- Passed 1st Round --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Process --></label>
+        <name>Test_Process__c</name>
+        <picklistValues>
+            <masterLabel>1.6 Complaint Process</masterLabel>
+            <translation><!-- 1.6 Complaint Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20.1.4 Irregular IB Handling (异常电话处理流程)</masterLabel>
+            <translation><!-- 20.1.4 Irregular IB Handling (异常电话处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aftersales</masterLabel>
+            <translation><!-- Aftersales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aftersales CV</masterLabel>
+            <translation><!-- Aftersales CV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLC</masterLabel>
+            <translation><!-- CLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CTI</masterLabel>
+            <translation><!-- CTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CV</masterLabel>
+            <translation><!-- CV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Management-INT</masterLabel>
+            <translation><!-- Campaign Management-INT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case &amp; Knowledge</masterLabel>
+            <translation><!-- Case &amp; Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case/Knowledge</masterLabel>
+            <translation><!-- Case/Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Campaign Planning</masterLabel>
+            <translation><!-- Central Campaign Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Management</masterLabel>
+            <translation><!-- Complaint Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Management - INT</masterLabel>
+            <translation><!-- Complaint Management - INT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Retail</masterLabel>
+            <translation><!-- Complaint Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Management</masterLabel>
+            <translation><!-- Contact Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Portfolio</masterLabel>
+            <translation><!-- Contact Portfolio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Portfolio - INT</masterLabel>
+            <translation><!-- Contact Portfolio - INT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Data</masterLabel>
+            <translation><!-- Customer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration-INT</masterLabel>
+            <translation><!-- Data Migration-INT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Data</masterLabel>
+            <translation><!-- Dealer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Portal</masterLabel>
+            <translation><!-- Dealer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMC</masterLabel>
+            <translation><!-- EMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EP</masterLabel>
+            <translation><!-- EP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EoC</masterLabel>
+            <translation><!-- EoC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FS Leads</masterLabel>
+            <translation><!-- FS Leads --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet</masterLabel>
+            <translation><!-- Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IB/OB QC - INT</masterLabel>
+            <translation><!-- IB/OB QC - INT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IBOBQC</masterLabel>
+            <translation><!-- IBOBQC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interface</masterLabel>
+            <translation><!-- Interface --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid</masterLabel>
+            <translation><!-- Invalid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LDCL</masterLabel>
+            <translation><!-- LDCL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Management</masterLabel>
+            <translation><!-- Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Recording</masterLabel>
+            <translation><!-- Lead Recording --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead escalation</masterLabel>
+            <translation><!-- Lead escalation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.2 General IB Handling (一般呼入处理流程)</masterLabel>
+            <translation><!-- M20.1.2 General IB Handling (一般呼入处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3  Inquiry and Escalation Handling (问询及升级处理流程)</masterLabel>
+            <translation><!-- M20.1.3  Inquiry and Escalation Handling (问询及升级处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.1  Direct Mail Requirement Handle (直邮需求处理流程)</masterLabel>
+            <translation><!-- M20.1.3.1  Direct Mail Requirement Handle (直邮需求处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.2  Financing Consulting Handling (金融咨询、租赁咨询处理流程)</masterLabel>
+            <translation><!-- M20.1.3.2  Financing Consulting Handling (金融咨询、租赁咨询处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.3 Maybach and Van handling (迈巴赫及商务车咨询流程)</masterLabel>
+            <translation><!-- M20.1.3.3 Maybach and Van handling (迈巴赫及商务车咨询流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.4 Customer Data Check (用户信息查询流程)</masterLabel>
+            <translation><!-- M20.1.3.4 Customer Data Check (用户信息查询流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.1.3.6 IB Dialect Handling (方言处理流程)</masterLabel>
+            <translation><!-- M20.1.3.6 IB Dialect Handling (方言处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.2.1 Regular OB Handling (常规外呼处理流程)</masterLabel>
+            <translation><!-- M20.2.1 Regular OB Handling (常规外呼处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.3.1 SMS Sending (短信发送流程)</masterLabel>
+            <translation><!-- M20.3.1 SMS Sending (短信发送流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M20.3.2 Direct Mail Handling (直邮任务处理流程)</masterLabel>
+            <translation><!-- M20.3.2 Direct Mail Handling (直邮任务处理流程) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M30.1 Dealer Complaint Management Process</masterLabel>
+            <translation><!-- M30.1 Dealer Complaint Management Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M30.2 Regional Complaint Management Process</masterLabel>
+            <translation><!-- M30.2 Regional Complaint Management Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M30.3 CRM AS Central Complaint Management Part 1</masterLabel>
+            <translation><!-- M30.3 CRM AS Central Complaint Management Part 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OB Process</masterLabel>
+            <translation><!-- OB Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase III</masterLabel>
+            <translation><!-- Phase III --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI QC</masterLabel>
+            <translation><!-- SSI QC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI flow</masterLabel>
+            <translation><!-- SSI flow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI/QC</masterLabel>
+            <translation><!-- SSI/QC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media-INT</masterLabel>
+            <translation><!-- Social Media-INT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Round --></label>
+        <name>Test_Round__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Executor --></label>
+        <name>executor__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Test Cases1 Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Test Status --></label>
+            <section>Test Status</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

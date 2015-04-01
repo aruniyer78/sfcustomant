@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time Sheet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time sheets</value>
+    </caseValues>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Campany1__c</name>
+    </fields>
+    <fields>
+        <help><!-- User Daily Rate --></help>
+        <label><!-- Daily Rate --></label>
+        <name>Daily_Rate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Workload(Day)*  Daily Rate --></help>
+        <label><!-- Effort --></label>
+        <name>Effort__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Trigger Date --></label>
+        <name>Last_Trigger_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market / Country --></label>
+        <name>Market_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Allowance --></label>
+        <name>RLS_Allowance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Review</masterLabel>
+            <translation><!-- Under Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Offsite Hours --></label>
+        <name>Total_Offsite_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Onsite Hours --></label>
+        <name>Total_Onsite_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Day1 --></label>
+        <name>Week_Day1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Day2 --></label>
+        <name>Week_Day2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Day3 --></label>
+        <name>Week_Day3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Day4 --></label>
+        <name>Week_Day4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Day5 --></label>
+        <name>Week_Day5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weekends --></label>
+        <name>Weekends__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Workload(Hrs.) --></label>
+        <name>Workload_Amount__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Workload/8 --></help>
+        <label><!-- Workload(Days.) --></label>
+        <name>Workload_Days__c</name>
+    </fields>
+    <layouts>
+        <layout>Time sheet Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- No More Than 8 Hours Per Day --></errorMessage>
+        <name>no_more_8hours</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- no more 40 hours per week --></errorMessage>
+        <name>working_hours</name>
+    </validationRules>
+</CustomObjectTranslation>

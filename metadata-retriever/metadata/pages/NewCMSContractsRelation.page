@@ -1,0 +1,16 @@
+<apex:page standardController="CMS_Contracts_Relation__c" extensions="NewCMSContractsRelationController">
+    <apex:pageMessages />
+    <apex:form >
+        <apex:pageBlock title="New CMS Contracts Relation">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!saveCMS}" value="Save"/>
+                <apex:commandButton action="{!cancelCMS}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="CMS Contracts Relation Edit" columns="2" collapsible="false">
+                <apex:inputField value="{!CMS_Contracts_Relation__c.Name}"/>
+                <apex:outputField value="{!CMS_Contracts_Relation__c.OwnerId}"/>
+                <apex:inputField value="{!CMS_Contracts_Relation__c.CRM1_Case_No__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

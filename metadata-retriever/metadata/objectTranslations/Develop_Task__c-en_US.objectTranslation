@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Develop Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Develop Tasks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Age (in days) --></label>
+        <name>Age_in_days__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assign to Premier Support --></label>
+        <name>Assign_to_Premier_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Develop Tasks (Assigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Interest Score --></label>
+        <name>Business_Interest_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Value Score --></label>
+        <name>Business_Value_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Value --></label>
+        <name>Business_Value__c</name>
+        <picklistValues>
+            <masterLabel>Evolution requested has a negative impact</masterLabel>
+            <translation><!-- Evolution requested has a negative impact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No impact</masterLabel>
+            <translation><!-- No impact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Positive impact on business value</masterLabel>
+            <translation><!-- Positive impact on business value --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed --></label>
+        <name>Closed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Communication Comments --></label>
+        <name>Communication_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Communication needed --></label>
+        <name>Communication_needed__c</name>
+        <picklistValues>
+            <masterLabel>End User Documentation Update</masterLabel>
+            <translation><!-- End User Documentation Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Page Communication</masterLabel>
+            <translation><!-- Home Page Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training Webinar</masterLabel>
+            <translation><!-- Training Webinar --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Components to deploy for this DT  &amp; manual deployment steps if needed --></help>
+        <label><!-- Deployment Components --></label>
+        <name>Components__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Accuracy Score --></label>
+        <name>Data_Accuracy_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Accuracy --></label>
+        <name>Data_Accuracy__c</name>
+        <picklistValues>
+            <masterLabel>Evolution requested has a negative impact on data quality</masterLabel>
+            <translation><!-- Evolution requested has a negative impact on data quality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not relevant</masterLabel>
+            <translation><!-- Not relevant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reduces risk of error on a importance information (example : direct link with cost or revenue)</masterLabel>
+            <translation><!-- Reduces risk of error on a importance information (example : direct link with cost or revenue) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Days to Completion --></label>
+        <name>Days_to_Completion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Derived Urgency --></label>
+        <name>Derived_Urgency__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation><!-- Critical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low (Nice to have)</masterLabel>
+            <translation><!-- Low (Nice to have) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Design Comments --></label>
+        <name>Design_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Design Impact --></label>
+        <name>Design_Impact__c</name>
+        <picklistValues>
+            <masterLabel>Communication to Design Team</masterLabel>
+            <translation><!-- Communication to Design Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gap Analysis with Release</masterLabel>
+            <translation><!-- Gap Analysis with Release --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workshop</masterLabel>
+            <translation><!-- Workshop --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dev Complete Date --></label>
+        <name>Dev_Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Develop Task --></label>
+        <name>Develop_Task__c</name>
+        <relationshipLabel><!-- Develop Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Review of the developed components based on the best practices and coding standards
+-Developers to set to &quot;Ready for Review&quot; when code complete
+-Test classes included in the review --></help>
+        <label><!-- Development Review --></label>
+        <name>Development_Review__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Issues Pending</masterLabel>
+            <translation><!-- Issues Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready for Review</masterLabel>
+            <translation><!-- Ready for Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Issues Pending</masterLabel>
+            <translation><!-- Test Issues Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Enhancement Objective --></label>
+        <name>Enhancement_Objective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Functional Impact Analysis --></label>
+        <name>Functional_Impact_Analysis__c</name>
+    </fields>
+    <fields>
+        <help><!-- (Business Interest Score) x (Scope of Change Impact Score) --></help>
+        <label><!-- Global Score --></label>
+        <name>Global_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Details --></label>
+        <name>Impact_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iteration --></label>
+        <name>Iteration__c</name>
+        <relationshipLabel><!-- Develop Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LOE (Hours) --></label>
+        <name>LOE_Hours__c</name>
+        <picklistValues>
+            <masterLabel>1 to 8 hours</masterLabel>
+            <translation><!-- 1 to 8 hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40+ to 160 hours</masterLabel>
+            <translation><!-- 40+ to 160 hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8+ to 40 hours</masterLabel>
+            <translation><!-- 8+ to 40 hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt; 1 hour</masterLabel>
+            <translation><!-- &lt; 1 hour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 160 hours</masterLabel>
+            <translation><!-- &gt; 160 hours --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market / Country --></label>
+        <name>Market_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Module/Object --></label>
+        <name>Module_Object__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Activity / Task</masterLabel>
+            <translation><!-- Activity / Task --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Address</masterLabel>
+            <translation><!-- Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aftersales Record</masterLabel>
+            <translation><!-- Aftersales Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Article</masterLabel>
+            <translation><!-- Article --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Lead</masterLabel>
+            <translation><!-- Campaign Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Member</masterLabel>
+            <translation><!-- Campaign Member --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Attribute</masterLabel>
+            <translation><!-- Car Attribute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Enquiry</masterLabel>
+            <translation><!-- Car Enquiry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Model</masterLabel>
+            <translation><!-- Car Model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Model Attribute</masterLabel>
+            <translation><!-- Car Model Attribute --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint (Inquiry) / Case</masterLabel>
+            <translation><!-- Complaint (Inquiry) / Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM Material</masterLabel>
+            <translation><!-- DM Material --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM Request</masterLabel>
+            <translation><!-- DM Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM Stock Flow</masterLabel>
+            <translation><!-- DM Stock Flow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Portal</masterLabel>
+            <translation><!-- Dealer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Address</masterLabel>
+            <translation><!-- Email Address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Key</masterLabel>
+            <translation><!-- External Key --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Literature</masterLabel>
+            <translation><!-- Literature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Literature Order</masterLabel>
+            <translation><!-- Literature Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity</masterLabel>
+            <translation><!-- Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Particpating Dealer</masterLabel>
+            <translation><!-- Particpating Dealer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preferences</masterLabel>
+            <translation><!-- Preferences --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QC</masterLabel>
+            <translation><!-- QC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role / Contact</masterLabel>
+            <translation><!-- Role / Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS/EDM Template</masterLabel>
+            <translation><!-- SMS/EDM Template --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Record</masterLabel>
+            <translation><!-- Sales Record --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle / Asset</masterLabel>
+            <translation><!-- Vehicle / Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle Relationship</masterLabel>
+            <translation><!-- Vehicle Relationship --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty Record</masterLabel>
+            <translation><!-- Warranty Record --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Development Task --></label>
+        <name>New_Development_Task__c</name>
+        <relationshipLabel><!-- Develop Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- New Process Score --></label>
+        <name>New_Process_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Process --></label>
+        <name>New_Process__c</name>
+        <picklistValues>
+            <masterLabel>High impact</masterLabel>
+            <translation><!-- High impact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low impact</masterLabel>
+            <translation><!-- Low impact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not relevant</masterLabel>
+            <translation><!-- Not relevant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Peripheral Application Impact --></label>
+        <name>Peripheral_Application_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority/Severity --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation><!-- Critical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Productivity Score --></label>
+        <name>Productivity_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Productivity --></label>
+        <name>Productivity__c</name>
+        <picklistValues>
+            <masterLabel>Evolution requested has a negative impact on productivity</masterLabel>
+            <translation><!-- Evolution requested has a negative impact on productivity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional response time or process duration reduced</masterLabel>
+            <translation><!-- Functional response time or process duration reduced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not relevant</masterLabel>
+            <translation><!-- Not relevant --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Who is the original requester? --></help>
+        <label><!-- Raised by --></label>
+        <name>Raised_by__c</name>
+        <relationshipLabel><!-- Develop Tasks (Raised by) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Idea Number of Comments --></label>
+        <name>Related_Idea_Number_of_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Idea --></label>
+        <name>Related_Idea__c</name>
+        <relationshipLabel><!-- Develop Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requirement --></label>
+        <name>Requirement__c</name>
+        <relationshipLabel><!-- Develop Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resolution --></label>
+        <name>Resolution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Root Cause --></label>
+        <name>Root_Cause__c</name>
+    </fields>
+    <fields>
+        <label><!-- Solution Type --></label>
+        <name>Solution_Type__c</name>
+        <picklistValues>
+            <masterLabel>Button&amp;Link</masterLabel>
+            <translation><!-- Button&amp;Link --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Classes</masterLabel>
+            <translation><!-- Classes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EP-Extension Platform</masterLabel>
+            <translation><!-- EP-Extension Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email Template</masterLabel>
+            <translation><!-- Email Template --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLS</masterLabel>
+            <translation><!-- FLS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fields</masterLabel>
+            <translation><!-- Fields --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>List View</masterLabel>
+            <translation><!-- List View --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Page Layout</masterLabel>
+            <translation><!-- Page Layout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profiles</masterLabel>
+            <translation><!-- Profiles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS/EDM Template</masterLabel>
+            <translation><!-- SMS/EDM Template --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sharing Settings</masterLabel>
+            <translation><!-- Sharing Settings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trigger</masterLabel>
+            <translation><!-- Trigger --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Validation Rule</masterLabel>
+            <translation><!-- Validation Rule --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visual Page</masterLabel>
+            <translation><!-- Visual Page --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workflow</masterLabel>
+            <translation><!-- Workflow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed (Duplicate)</masterLabel>
+            <translation><!-- Closed (Duplicate) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed (Not An Issue)</masterLabel>
+            <translation><!-- Closed (Not An Issue) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed (Verified)</masterLabel>
+            <translation><!-- Closed (Verified) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed (Working As Designed)</masterLabel>
+            <translation><!-- Closed (Working As Designed) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete (Ready to Test)</masterLabel>
+            <translation><!-- Complete (Ready to Test) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold (for next release)</masterLabel>
+            <translation><!-- On Hold (for next release) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-Open (Test Failed)</masterLabel>
+            <translation><!-- Re-Open (Test Failed) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Incomplete</masterLabel>
+            <translation><!-- Solution Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Reviewed</masterLabel>
+            <translation><!-- Solution Reviewed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test in Progress</masterLabel>
+            <translation><!-- Test in Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Steps to Reproduce --></label>
+        <name>Steps_to_Reproduce__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Technical Impact Analysis --></label>
+        <name>Technical_Impact_Analysis__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Result --></label>
+        <name>Test_Result__c</name>
+        <relationshipLabel><!-- Develop Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Bug Fix</masterLabel>
+            <translation><!-- Bug Fix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Configuration</masterLabel>
+            <translation><!-- Configuration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Load</masterLabel>
+            <translation><!-- Data Load --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development</masterLabel>
+            <translation><!-- Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enhancement</masterLabel>
+            <translation><!-- Enhancement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Question</masterLabel>
+            <translation><!-- Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UAT Dev Task Comments --></label>
+        <name>UAT_Dev_Task_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Apex test classes and unit test case scenarios --></help>
+        <label><!-- Unit Tests --></label>
+        <name>Unit_Tests__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Friendliness Score --></label>
+        <name>User_Friendliness_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Friendliness --></label>
+        <name>User_Friendliness__c</name>
+        <picklistValues>
+            <masterLabel>Evolution requested has a negative impact on user friendliness</masterLabel>
+            <translation><!-- Evolution requested has a negative impact on user friendliness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not relevant</masterLabel>
+            <translation><!-- Not relevant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Positive impact on user friendliness</masterLabel>
+            <translation><!-- Positive impact on user friendliness --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- User Interface Impact Analysis --></label>
+        <name>User_Interface_Impact_Analysis__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story: Lead --></label>
+        <name>User_Story_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story: Solution Reviewed --></label>
+        <name>User_Story_Solution_Reviewed__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story: Stream --></label>
+        <name>User_Story_Stream__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Story: Subject --></label>
+        <name>User_Story_Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- User or Group Impacted Score --></label>
+        <name>User_or_Group_Impacted_Score__c</name>
+    </fields>
+    <fields>
+        <help><!-- Which user or group is affected by the request --></help>
+        <label><!-- User or Group Impacted --></label>
+        <name>User_or_Group_Impacted__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Unit</masterLabel>
+            <translation><!-- Business Unit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Country</masterLabel>
+            <translation><!-- Country --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Individual</masterLabel>
+            <translation><!-- Individual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Region</masterLabel>
+            <translation><!-- Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Workaround? --></label>
+        <name>Workaround__c</name>
+        <picklistValues>
+            <masterLabel>Difficult workaround (effort to make it happen)</masterLabel>
+            <translation><!-- Difficult workaround (effort to make it happen) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing satisfactory alternative method</masterLabel>
+            <translation><!-- Existing satisfactory alternative method --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No alternative or unacceptable alternative method</masterLabel>
+            <translation><!-- No alternative or unacceptable alternative method --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not relevant</masterLabel>
+            <translation><!-- Not relevant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reasonable workaround (effort to make it happen)</masterLabel>
+            <translation><!-- Reasonable workaround (effort to make it happen) --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Action Item Release Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Relative Information --></label>
+            <section>Relative Information</section>
+        </sections>
+        <sections>
+            <label><!-- Solution Details --></label>
+            <section>Solution Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Impact --></label>
+            <section>System Impact</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Bug Release Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Relative Information --></label>
+            <section>Relative Information</section>
+        </sections>
+        <sections>
+            <label><!-- Solution Details --></label>
+            <section>Solution Details</section>
+        </sections>
+        <sections>
+            <label><!-- Triage Details --></label>
+            <section>Triage Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enhancement Release Task Layout</layout>
+        <sections>
+            <label><!-- Enhancement Details --></label>
+            <section>Enhancement Details</section>
+        </sections>
+        <sections>
+            <label><!-- Impact Analysis --></label>
+            <section>Impact Analysis</section>
+        </sections>
+        <sections>
+            <label><!-- Relative Information --></label>
+            <section>Relative Information</section>
+        </sections>
+        <sections>
+            <label><!-- Scoring --></label>
+            <section>Scoring</section>
+        </sections>
+        <sections>
+            <label><!-- Solution Details --></label>
+            <section>Solution Details</section>
+        </sections>
+        <sections>
+            <label><!-- Triage Details --></label>
+            <section>Triage Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Release Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Action Item --></label>
+        <name>Action_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Bug --></label>
+        <name>Bug</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Enhancement --></label>
+        <name>Enhancement_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Step</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Step</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Test Result --></label>
+        <name>Actual_Test_Result__c</name>
+    </fields>
+    <fields>
+        <help><!-- Data element for the test or guidance on how to select the data --></help>
+        <label><!-- Data --></label>
+        <name>Data__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determine the expected result and enter it here. --></help>
+        <label><!-- Expected Result --></label>
+        <name>Expected_Result__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the application navigation steps. --></help>
+        <label><!-- Navigation Path --></label>
+        <name>Navigation_Path__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passed Results --></label>
+        <name>Passed_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Run Records --></label>
+        <name>Run_Records__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passed</masterLabel>
+            <translation><!-- Passed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Add step details necessary to understand and execute the step. --></help>
+        <label><!-- Step Description --></label>
+        <name>Step_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Step Result --></label>
+        <name>Step_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Case --></label>
+        <name>Test_Case__c</name>
+        <relationshipLabel><!-- Test Step --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Test Step Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- When test step stats is failed, Actual Test Result is required. --></errorMessage>
+        <name>ActTestResult_is_required_when_failed</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Stores all addresses linked to a customer (individual company)</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Address_Line_1__c</fullName>
+        <description>Address Line 1</description>
+        <externalId>false</externalId>
+        <label>Address Line 1</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Line_2__c</fullName>
+        <description>Address Line 2</description>
+        <externalId>false</externalId>
+        <label>Address Line 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Type__c</fullName>
+        <description>address type</description>
+        <externalId>false</externalId>
+        <label>Address Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Mailing</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Prev Mailing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>​Site address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Postal address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 1 -Main Location Sales, Service &amp; Parts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 2 -Main Location Sales Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 3 -Main Location Service &amp; Parts</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 4 -Additional Sales location not within Site 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 5 -Additional Sales location not within Site 1 or Site 4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 6 -Additional Sales, Service &amp; Parts location not within Site 1 or Site 3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 7 -Service &amp; Parts ONLY Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 8 -Only Parts Location</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Site 9 -Auto Body</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Company_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Company Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer__c</fullName>
+        <description>The customer (Individual or company) that has one or several addresses</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Person Account, Company, Dealer</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Addresses</relationshipLabel>
+        <relationshipName>Addresses</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>LDCL_Address_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>LDCL Address ID</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Post_Code__c</fullName>
+        <description>Post Code</description>
+        <externalId>false</externalId>
+        <label>Post Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Preferred__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>the address marked as preferred will be displayed in the address section of the customer (individual/company)Trigger for the calculation of the preferred address
+-- The mailing status of an address that is marked as preferred address changes to  &quot;DEADMAIL&quot;, &quot;INCOMPLETE&quot; ==&gt;   triggers the &quot;preferred address calculation&quot;, but only in case there are more than one addresses available.
+-- A user creates a new address and save it.
+-- A user changes something on an existing address and save it.</description>
+        <externalId>false</externalId>
+        <label>Preferred</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source_System__c</fullName>
+        <externalId>false</externalId>
+        <label>Source System</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <description>States of Australia</description>
+        <externalId>false</externalId>
+        <label>State</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Australian Capital Territory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New South Wales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tasmania</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dead Mail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opt out</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Suburb__c</fullName>
+        <description>Suburb</description>
+        <externalId>false</externalId>
+        <label>Suburb</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Address</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Customer__c</columns>
+        <columns>Address_Line_1__c</columns>
+        <columns>State__c</columns>
+        <columns>Country__c</columns>
+        <columns>Post_Code__c</columns>
+        <columns>Preferred__c</columns>
+        <columns>Status__c</columns>
+        <columns>Suburb__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>A{000000}</displayFormat>
+        <label>Address Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Addresses</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Company</fullName>
+        <active>true</active>
+        <description>For Company Account</description>
+        <label>Company</label>
+        <picklistValues>
+            <picklist>Address_Type__c</picklist>
+            <values>
+                <fullName>Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mailing</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Prev Mailing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Country__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>State__c</picklist>
+            <values>
+                <fullName>Australian Capital Territory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasmania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opt out</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Dealer</fullName>
+        <active>true</active>
+        <label>Dealer</label>
+        <picklistValues>
+            <picklist>Address_Type__c</picklist>
+            <values>
+                <fullName>Site 1 -Main Location Sales%2C Service %26 Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 2 -Main Location Sales Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 3 -Main Location Service %26 Parts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 4 -Additional Sales location not within Site 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 5 -Additional Sales location not within Site 1 or Site 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 6 -Additional Sales%2C Service %26 Parts location not within Site 1 or Site 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 7 -Service %26 Parts ONLY Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 8 -Only Parts Location</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Site 9 -Auto Body</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Country__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>State__c</picklist>
+            <values>
+                <fullName>Australian Capital Territory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasmania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opt out</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Individual</fullName>
+        <active>true</active>
+        <description>For Person Account</description>
+        <label>Individual</label>
+        <picklistValues>
+            <picklist>Address_Type__c</picklist>
+            <values>
+                <fullName>Business</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mailing</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Prev Mailing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Country__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>State__c</picklist>
+            <values>
+                <fullName>Australian Capital Territory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New South Wales</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern Territory</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Queensland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tasmania</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Victoria</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Western Australia</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dead Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opt out</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Address_Line_1__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Address_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Country__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Post_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>State__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Suburb__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Preferred__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>CheckedState</fullName>
+        <active>true</active>
+        <description>State (only if country is equal to Australia)</description>
+        <errorConditionFormula>AND(ISPICKVAL(Country__c, &apos;Australia&apos;),
+ISPICKVAL(State__c, &apos;&apos;),
+$Profile.Name != &apos;IntegrationAPI&apos; 
+)</errorConditionFormula>
+        <errorDisplayField>State__c</errorDisplayField>
+        <errorMessage>State is a mandatory fields when your Country is Australia.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Company_Address</fullName>
+        <availability>online</availability>
+        <description>New_Company_Address</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Address</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a00/e?CF00N90000006qtIw={!Account.Name}&amp;CF00N90000006qtIw_lkid={!Account.Id}&amp;retURL=%2F{!Account.Id}&amp;RecordType=012900000008sYb&amp;ent=01I9000000059Be</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_DealerAddress</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New  Address</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a00/e?CF00N90000006qtIw={!Account.Name}&amp;CF00N90000006qtIw_lkid={!Account.Id}&amp;retURL=%2F{!Account.Id}&amp;RecordType=012N0000000Cxcm&amp;ent=01I9000000059Be</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Individual_Address</fullName>
+        <availability>online</availability>
+        <description>New_Individual_Address</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Address</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/a00/e?CF00N90000006qtIw={!Account.Name}&amp;CF00N90000006qtIw_lkid={!Account.Id}&amp;retURL=%2F{!Account.Id}&amp;RecordType=012900000008sYc&amp;ent=01I9000000059Be</url>
+    </webLinks>
+</CustomObject>

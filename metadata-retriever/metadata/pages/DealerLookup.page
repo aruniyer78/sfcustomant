@@ -1,0 +1,73 @@
+<apex:page controller="LeadMassChangeDealerController"  id="page"  tabStyle="Lead_Account__c" sidebar="false" showHeader="false">
+    <apex:includeScript value="/support/console/27.0/integration.js"/>
+    <apex:includeScript value="/soap/ajax/27.0/apex.js"/>
+    <script type="text/javascript">
+        var winMain = window.opener;
+        if (null == winMain) {
+           winMain = window.parent.opener;
+        } 
+        function closeTab() {
+            var idText = document.getElementById('page:form:resultBlock:selectId_text').value;
+            var nameText = document.getElementById('page:form:resultBlock:selectName_text').value;
+            var inputElem = winMain.document.getElementsByTagName("input");
+            for(var i=0; i<inputElem.length; i++){
+                if(inputElem[i].id.indexOf("ownerId")!=-1){
+                
+                    inputElem[i].value = idText;
+                }
+                if(inputElem[i].id.indexOf("ownerName")!=-1){
+                
+                    inputElem[i].value = nameText;
+                }
+            }
+            winMain.closeLookupPopup();
+        }
+    </script>
+
+    <apex:form id="form">
+        <apex:pageBlock mode="edit" id="resultBlock" >         
+            
+            <apex:outputpanel Id="filter">
+                <apex:pageBlockSection columns="1" title="Select Assigned Dealer" showHeader="false">
+                    <apex:outputPanel >
+                        <b><apex:outputLabel value="Dealer Name OR SF dealer ID:" /></b>&nbsp;&nbsp;
+                        <apex:inputText value="{!name}" title="Input Dealer Name OR SF dealer ID" />
+                        &nbsp;&nbsp;
+                        <apex:commandButton value="Search Dealers" action="{!query}" status="status"  rerender="query, message"/>
+                        &nbsp;&nbsp;
+                        <apex:actionStatus id="status">
+                            <apex:facet name="start">
+                                <span style="width: 500px;">
+                                    <img src="/img/loading24.gif" style="vertical-align:middle;"/>
+                                    <span style="margin-left: 10px; font-size: 12px; font-weight: bold; color: #000000;">{!$Label.CP_Please_Wait}...</span>
+                                </span>
+                            </apex:facet>      
+                        </apex:actionStatus>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputpanel>
+            
+            <BR />
+            
+            <apex:outputPanel Id="query">
+                <apex:pageBlockTable value="{!dealers}" var="dea" rendered="{!hasQueryResult}">                    
+                    <apex:column headerValue="Account Name">
+                        <apex:commandLink action="{!choose}" value="{!dea.Name}" rerender="selectId_text ,selectName_text" oncomplete="closeTab();">
+                            <apex:param assignTo="{!choosenDealerId}" value="{!dea.Id}" name="choosenDealerId"/>
+                            <apex:param assignTo="{!choosenDealerName}" value="{!dea.Name}" name="choosenDealerName"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column headerValue="Account Owner Alias">
+                    <apex:outputText value="{!dea.Owner.Name}"/>
+                    </apex:column>
+                    <apex:column headerValue="Type">
+                    <apex:outputText value="{!dea.Type}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+            <apex:inputHidden value="{!selectIdText}" id="selectId_text"/>
+            <apex:inputHidden value="{!selectNameText}" id="selectName_text"/>
+            <apex:pageMessages Id="message"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

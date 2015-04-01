@@ -1,0 +1,17 @@
+<apex:page standardController="Task" tabStyle="Tasks__tab" extensions="TaskDeletingController" action="{!removeTask}">
+    <script>
+        function goback(){
+            history.back();
+        }
+    </script>
+    <apex:outputPanel layout="block" style="margin:20px;" rendered="{!Not(isAllowedDelete)}">
+        <apex:pageMessages ></apex:pageMessages>
+        <div style="font-size:16px; font-weight:bold;">Delete Error</div>
+        <div style="font-size:14px; margin-top:10px;">You are not allowed to delete tasks.</div>
+        <div style="margin-top:10px;">
+            <a href="javascript:void(0)" style="color:#015ba7; text-decoration: none;" onclick="goback();">
+                « Back to List: Tasks
+            </a>
+        </div>
+    </apex:outputPanel>
+</apex:page>

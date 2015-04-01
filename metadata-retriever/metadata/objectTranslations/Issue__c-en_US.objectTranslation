@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Issue</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Issues</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assign To --></label>
+        <name>Assign_To__c</name>
+        <relationshipLabel><!-- Issues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Change Request --></label>
+        <name>Change_Request__c</name>
+        <relationshipLabel><!-- Issues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Close Date --></label>
+        <name>Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Counterpart --></label>
+        <name>Counterpart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deliverables --></label>
+        <name>Deliverables__c</name>
+        <picklistValues>
+            <masterLabel>BD_1 Requirement workbook - Contact Portfolio</masterLabel>
+            <translation><!-- BD_1 Requirement workbook - Contact Portfolio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_10 Requirement workbook - Social Media</masterLabel>
+            <translation><!-- BD_10 Requirement workbook - Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_11 Requirement workbook - Customer Lifecycle</masterLabel>
+            <translation><!-- BD_11 Requirement workbook - Customer Lifecycle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_12 Data Model</masterLabel>
+            <translation><!-- BD_12 Data Model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_13 SSI</masterLabel>
+            <translation><!-- BD_13 SSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_14 CSI</masterLabel>
+            <translation><!-- BD_14 CSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_2 Requirement workbook - Campaign Mgmt</masterLabel>
+            <translation><!-- BD_2 Requirement workbook - Campaign Mgmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_3 Requirement workbook - Case &amp; Knowledge Mgmt</masterLabel>
+            <translation><!-- BD_3 Requirement workbook - Case &amp; Knowledge Mgmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_4 User Role / Data Security</masterLabel>
+            <translation><!-- BD_4 User Role / Data Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_5 Requirement workbook - Dealer Portal</masterLabel>
+            <translation><!-- BD_5 Requirement workbook - Dealer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_6 Requirement workbook - Lead Management</masterLabel>
+            <translation><!-- BD_6 Requirement workbook - Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_7 Requirement workbook - Complaint Management Wholesale</masterLabel>
+            <translation><!-- BD_7 Requirement workbook - Complaint Management Wholesale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_8 Requirement workbook - Complaint Management Retail</masterLabel>
+            <translation><!-- BD_8 Requirement workbook - Complaint Management Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BD_9 Requirement workbook - CTI &amp; Contact Management</masterLabel>
+            <translation><!-- BD_9 Requirement workbook - CTI &amp; Contact Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_1 IT Architecture Document Update</masterLabel>
+            <translation><!-- BI_1 IT Architecture Document Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_10 TD/GenIFC Social Hub</masterLabel>
+            <translation><!-- BI_10 TD/GenIFC Social Hub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_11 TD/GenIFC CTI</masterLabel>
+            <translation><!-- BI_11 TD/GenIFC CTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_2 IT Architecture Document Update</masterLabel>
+            <translation><!-- BI_2 IT Architecture Document Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_3 IT Architecture Document Update</masterLabel>
+            <translation><!-- BI_3 IT Architecture Document Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_4 IT Architecture Document Update</masterLabel>
+            <translation><!-- BI_4 IT Architecture Document Update --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_5 TD/GenIFC GSSN</masterLabel>
+            <translation><!-- BI_5 TD/GenIFC GSSN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_6 TD/GenIFC iCRM</masterLabel>
+            <translation><!-- BI_6 TD/GenIFC iCRM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_7 TD/GenIFC CC</masterLabel>
+            <translation><!-- BI_7 TD/GenIFC CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_8 TD/GenIFC LMS</masterLabel>
+            <translation><!-- BI_8 TD/GenIFC LMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BI_9 TD/GenIFC Mini Website</masterLabel>
+            <translation><!-- BI_9 TD/GenIFC Mini Website --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BSD_1 SFDC Conf. Workbook Contact, Case, Knowledge, Campaign</masterLabel>
+            <translation><!-- BSD_1 SFDC Conf. Workbook Contact, Case, Knowledge, Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BSD_2 SFDC Conf. Workbook Lead, Dealer, M&amp;S</masterLabel>
+            <translation><!-- BSD_2 SFDC Conf. Workbook Lead, Dealer, M&amp;S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BSD_3 SFDC Conf. Workbook Complaint, Contact, Social, CLC</masterLabel>
+            <translation><!-- BSD_3 SFDC Conf. Workbook Complaint, Contact, Social, CLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI_1 Migration Architecture</masterLabel>
+            <translation><!-- MI_1 Migration Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI_2 Migration Design</masterLabel>
+            <translation><!-- MI_2 Migration Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI_3 Migration Mapping - Field Mapping and LOV Mapping</masterLabel>
+            <translation><!-- MI_3 Migration Mapping - Field Mapping and LOV Mapping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MI_4 Agreed Migration Criteria</masterLabel>
+            <translation><!-- MI_4 Agreed Migration Criteria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO_1 Cut Over Planning</masterLabel>
+            <translation><!-- RO_1 Cut Over Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO_2 Administration Handbook</masterLabel>
+            <translation><!-- RO_2 Administration Handbook --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO_3 User Manual</masterLabel>
+            <translation><!-- RO_3 User Manual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RO_4 User Training Handout</masterLabel>
+            <translation><!-- RO_4 User Training Handout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RP_1 Reporting Requirments</masterLabel>
+            <translation><!-- RP_1 Reporting Requirments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RP_2 Reporting Design</masterLabel>
+            <translation><!-- RP_2 Reporting Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_1 Testing Strategy</masterLabel>
+            <translation><!-- TE_1 Testing Strategy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_2 UAT Testing Plan</masterLabel>
+            <translation><!-- TE_2 UAT Testing Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_3 SYS Test Cases Contact, Case, Knowledge, Campaign</masterLabel>
+            <translation><!-- TE_3 SYS Test Cases Contact, Case, Knowledge, Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_4 SYS Test Cases Lead, Dealer Portal, M&amp;S</masterLabel>
+            <translation><!-- TE_4 SYS Test Cases Lead, Dealer Portal, M&amp;S --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_5 SYS Test Cases Complaint, Contact, Social Media, CLC</masterLabel>
+            <translation><!-- TE_5 SYS Test Cases Complaint, Contact, Social Media, CLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_6 INT Test Cases All</masterLabel>
+            <translation><!-- TE_6 INT Test Cases All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_7 Test Cases for UAT</masterLabel>
+            <translation><!-- TE_7 Test Cases for UAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TE_8 Performance Test Result for EP</masterLabel>
+            <translation><!-- TE_8 Performance Test Result for EP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Hidden Formula calculates reminder date --></label>
+        <name>Hidden_Formula_calculates_reminder_date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Description --></label>
+        <name>Issue_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue Type --></label>
+        <name>Issue_Type__c</name>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raise to PMO</masterLabel>
+            <translation><!-- Raise to PMO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market / Country --></label>
+        <name>Market_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Module --></label>
+        <name>Module__c</name>
+        <picklistValues>
+            <masterLabel>Account/Contact</masterLabel>
+            <translation><!-- Account/Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign</masterLabel>
+            <translation><!-- Campaign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint</masterLabel>
+            <translation><!-- Complaint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DM</masterLabel>
+            <translation><!-- DM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Model</masterLabel>
+            <translation><!-- Data Model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Portal</masterLabel>
+            <translation><!-- Dealer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration</masterLabel>
+            <translation><!-- Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge</masterLabel>
+            <translation><!-- Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product/Vehicle</masterLabel>
+            <translation><!-- Product/Vehicle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QC</masterLabel>
+            <translation><!-- QC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report/Dashboard</masterLabel>
+            <translation><!-- Report/Dashboard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI</masterLabel>
+            <translation><!-- SSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales/Aftersales/Warranty</masterLabel>
+            <translation><!-- Sales/Aftersales/Warranty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Log ID --></label>
+        <name>Project_Log_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raised By --></label>
+        <name>Raised_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raised Date --></label>
+        <name>Raised_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference No. of Process/UC/BQ --></label>
+        <name>Reference_No_of__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Requirement/User Story --></label>
+        <name>Related_Requirement_User_Story__c</name>
+        <relationshipLabel><!-- Issues --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- *Reminder Date --></label>
+        <name>Reminder_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution/Solution --></label>
+        <name>Resolution_Solution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Screenshot --></label>
+        <name>Screenshot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delayed</masterLabel>
+            <translation><!-- Delayed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Propose to Close</masterLabel>
+            <translation><!-- Propose to Close --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Internal Issue Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail Info --></label>
+            <section>Detail Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>PMO Issue Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail Info --></label>
+            <section>Detail Info</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Use Case Issue Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail Info --></label>
+            <section>Detail Info</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Non-PMO Issue --></label>
+        <name>Non_PMO_Issue</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- PMO Issue --></label>
+        <name>PMO_Issue</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Use Case Issue --></label>
+        <name>Use_Case_Issue</name>
+    </recordTypes>
+    <startsWith>Vowel</startsWith>
+    <validationRules>
+        <errorMessage><!-- Only Owner can close the issue. Please contact the Issue Owner to close it. --></errorMessage>
+        <name>Only_Owner_can_close_Issue</name>
+    </validationRules>
+</CustomObjectTranslation>

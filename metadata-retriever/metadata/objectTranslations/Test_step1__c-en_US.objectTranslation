@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test step1</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test steps</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Results --></label>
+        <name>Actual_Results__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass</masterLabel>
+            <translation><!-- Pass --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Developer --></label>
+        <name>Developer__c</name>
+        <relationshipLabel><!-- Test steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- EP Related --></label>
+        <name>EP_Related__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Results --></label>
+        <name>Expected_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Cases1 --></label>
+        <name>Test_Cases1__c</name>
+        <relationshipLabel><!-- Test steps --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User role --></label>
+        <name>User_role__c</name>
+    </fields>
+    <layouts>
+        <layout>Test step Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Test Result --></label>
+            <section>Test Result</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

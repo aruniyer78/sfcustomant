@@ -1,0 +1,1020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PMO: change request management.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Assign_to__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assign to</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Change_Request_Mgmt1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assumption_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Assumption Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BU_Notification_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>BU Notification Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Business_Requirement_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Requirement Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>CR_Collaboration_Meeting__c</fullName>
+        <externalId>false</externalId>
+        <label>CR Collaboration Meeting</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Change_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Change Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Context__c</fullName>
+        <externalId>false</externalId>
+        <label>Context</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discussion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UAT W/O Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Integration Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integration Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Decision_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Decision Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Deliverable__c</fullName>
+        <externalId>false</externalId>
+        <label>Deliverable</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deployment_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>Deployment Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EP_App_Dev_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>EP App/Dev Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Estimated_Costs_USD__c</fullName>
+        <description>displays the effort in US dollars</description>
+        <externalId>false</externalId>
+        <inlineHelpText>displays the effort in US dollars</inlineHelpText>
+        <label>Estimated Costs (USD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimated_Costs__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Costs (RMB)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Estimated_Effort_MD__c</fullName>
+        <externalId>false</externalId>
+        <label>Estimated Effort (MD)</label>
+        <length>10</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expected_Benefits__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Benefits</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>External_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>External Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Final_Decision__c</fullName>
+        <externalId>false</externalId>
+        <label>Final Decision</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Im__c</fullName>
+        <externalId>false</externalId>
+        <label>Implementation Time</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Phase 1, 2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phase 2, 2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phase 3, 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1st Release 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2nd Release 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3rd Release 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LDCL_Affected__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>LDCL Affected</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Market_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Market / Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Migration_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>Migration Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Module__c</fullName>
+        <externalId>false</externalId>
+        <label>Module</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Call Centre</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Roles &amp; Profiles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CV Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Other_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Phase__c</fullName>
+        <externalId>false</externalId>
+        <label>Phase</label>
+        <picklist>
+            <picklistValues>
+                <fullName>MBAuP Phase 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1st Release 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2nd  Release 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3rd Release 2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nice To Have</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Related_Defect__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Displays the related defect</description>
+        <externalId>false</externalId>
+        <label>Related Defect</label>
+        <referenceTo>Defect__c</referenceTo>
+        <relationshipLabel>CR Management</relationshipLabel>
+        <relationshipName>CR_Management</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Request_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Requester_Name_Old__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Requester Name Old</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Change_Request_Mgmt</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Requester_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Requester Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Respond_Person_Deployment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - Deployment</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Respond_Person_External__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - External</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management6</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Respond_Person_Migration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - Migration</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management3</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Respond_Person_Other__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - Other</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management7</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Respond_Person_SFDC_App_Dev_Respond__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - SFDC App/Dev Respond</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Respond_Person_Testing__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - Testing</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management4</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Respond_Person__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Respond Person - EP App/Dev</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SFDC_App_Dev_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>SFDC App/Dev Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>0 - No Document</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 - Documented</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - Solution Agreed &amp; Estimated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - Designed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - Developed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - Tested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 - Deployed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 - Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8 - Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 - Duplicate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 - Outside of SFDC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Module__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub - Module</label>
+        <picklist>
+            <controllingField>Module__c</controllingField>
+            <picklistValues>
+                <fullName>Fleet Management</fullName>
+                <controllingFieldValues>Lead Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial Services</fullName>
+                <controllingFieldValues>Lead Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MBAuP Contact</fullName>
+                <controllingFieldValues>Dealer Data</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Contacts (Staff)</fullName>
+                <controllingFieldValues>Dealer Data</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General</fullName>
+                <controllingFieldValues>Dealer Data</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Testing_Respond__c</fullName>
+        <externalId>false</externalId>
+        <label>Testing Respond</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Reponds Person - BR</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>CR_Management</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>CR Management</label>
+    <listViews>
+        <fullName>All_CRs_Outside_of_SFDC</fullName>
+        <columns>NAME</columns>
+        <columns>Im__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Requester_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>10 - Outside of SFDC</value>
+        </filters>
+        <label>All CRs - Outside of SFDC</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_CRs</fullName>
+        <columns>NAME</columns>
+        <columns>Im__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Requester_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>All Open CRs</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_CRs_Phase_1</fullName>
+        <columns>NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Priority__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Status__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>Request_Date__c</columns>
+        <columns>Requester_Name_Old__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Deliverable__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>7 - Closed</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>8 - Cancelled</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+            <value>&quot;Phase 1, 2013&quot;</value>
+        </filters>
+        <label>All Open CRs Phase 1</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_CRs_Phase_3</fullName>
+        <columns>NAME</columns>
+        <columns>Priority__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>Request_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>Assign_to__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>7 - Closed,8 - Cancelled</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+            <value>&quot;Phase 3, 2014&quot;</value>
+        </filters>
+        <label>All Open CRs Phase 3</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_CRs_W_O_Implementation_Time</fullName>
+        <columns>NAME</columns>
+        <columns>Im__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Requester_Name__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>All Open CRs W/O Implementation Time</label>
+    </listViews>
+    <listViews>
+        <fullName>CR_List_7_Closed_8_Cancelled</fullName>
+        <columns>NAME</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Estimated_Costs__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>Status__c</columns>
+        <columns>Im__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>7 - Closed</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>8 - Cancelled</value>
+        </filters>
+        <label>CR-List - 7 - Closed/8 - Cancelled</label>
+    </listViews>
+    <listViews>
+        <fullName>CRs_1st_Release_2014</fullName>
+        <columns>NAME</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Module__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Im__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Sub_Module__c</columns>
+        <columns>Requester_Name__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+            <value>1st Release 2014</value>
+        </filters>
+        <label>CRs 1st Release 2014</label>
+    </listViews>
+    <listViews>
+        <fullName>CRs_2nd_Release_2014</fullName>
+        <columns>NAME</columns>
+        <columns>Requester_Name__c</columns>
+        <columns>Im__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+            <value>2nd Release 2014</value>
+        </filters>
+        <label>CRs 2nd Release 2014</label>
+    </listViews>
+    <listViews>
+        <fullName>CRs_3rd_Release_2014</fullName>
+        <columns>NAME</columns>
+        <columns>Requester_Name__c</columns>
+        <columns>Im__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+            <value>3rd Release 2014</value>
+        </filters>
+        <label>CRs 3rd Release 2014</label>
+    </listViews>
+    <listViews>
+        <fullName>CRs_Phase_2_2013</fullName>
+        <columns>NAME</columns>
+        <columns>Requester_Name__c</columns>
+        <columns>Im__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Change_Description__c</columns>
+        <columns>Assign_to__c</columns>
+        <columns>Status__c</columns>
+        <columns>Related_Defect__c</columns>
+        <columns>LDCL_Affected__c</columns>
+        <columns>Estimated_Effort_MD__c</columns>
+        <columns>Final_Decision__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Im__c</field>
+            <operation>equals</operation>
+            <value>&quot;Phase 2, 2013&quot;</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>7 - Closed,8 - Cancelled</value>
+        </filters>
+        <label>All CRs Open Phase 2, 2013</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CR-{000000}</displayFormat>
+        <label>Change Request  ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>CR Management</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Change_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

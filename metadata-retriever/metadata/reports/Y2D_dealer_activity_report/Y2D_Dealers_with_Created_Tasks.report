@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel># of Tasks</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>Activity$CreatedBy.Account.Car_Sales_Region__c</field>
+    </columns>
+    <columns>
+        <field>Activity$CreatedBy.Account.Id</field>
+    </columns>
+    <description>How many tasks have been created by this dealer?</description>
+    <filter>
+        <criteriaItems>
+            <column>Activity$RecordType</column>
+            <operator>equals</operator>
+            <value>Task.Task</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity$CreatedBy.Account.RecordType</column>
+            <operator>equals</operator>
+            <value>Account.Dealer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Activity$CreatedBy.Account.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Y2D: Dealers with Created Tasks</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activities_with_Created_By_Users__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Activity$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

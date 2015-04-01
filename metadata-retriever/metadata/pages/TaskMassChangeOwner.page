@@ -1,0 +1,35 @@
+<apex:page controller="TaskMassChangeOwner" showHeader="true" sidebar="true"  tabStyle="Task">
+    <apex:includeScript value="/support/console/27.0/integration.js"/>
+    <script type="text/javascript">
+        function CloseTab() {
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingTabId(closeSubtab);
+            }else{
+                window.location.href = '/007?isdtp=it';
+            }
+        }
+        var closeSubtab = function closeSubtab(result) {
+            var tabId = result.id;
+            sforce.console.closeTab(tabId);
+        };
+        
+    </script>
+    <apex:sectionHeader title="Manual Assign Tasks"/>
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Assign To" mode="Edit">       
+            <apex:pageBlockSection columns="2">         
+                <apex:pageBlockSectionitem > 
+                    <apex:outputLabel >New Owner</apex:outputLabel>          
+                    <apex:inputField value="{!task.CROUser__c}" required="true"/>                
+                </apex:pageBlockSectionitem>       
+           </apex:pageBlockSection>       
+           <apex:pageBlockSection >         
+               <apex:pageBlockSectionitem >            
+                   <apex:commandButton value="Confirm" action="{!assignToOwnerClick}" oncomplete="CloseTab()"/>
+               </apex:pageBlockSectionitem>       
+           </apex:pageBlockSection>     
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

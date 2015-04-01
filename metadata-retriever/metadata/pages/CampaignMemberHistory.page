@@ -1,0 +1,16 @@
+<apex:page standardController="CampaignMember" extensions="CampaignMemberHistoryController" >
+    <apex:pageBlock mode="edit">
+        <apex:pageBlockTable value="{!theResults}" var="theResult" >
+            <apex:column headerValue="Date">
+                <apex:outputText value="{!theResult.Date_of_Change__c} "/>
+            </apex:column>
+            <apex:column headerValue="User">
+            <apex:outputLink target="_blank" value="/{!theResult.User__c}">{!theResult.User__r.Name}
+            </apex:outputLink>  
+            </apex:column>
+            <apex:column headerValue="Action">
+                <apex:outputText value="{!SUBSTITUTE(JSENCODE(theResult.Action__c), '\\n', '<br/>')}" escape="false"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

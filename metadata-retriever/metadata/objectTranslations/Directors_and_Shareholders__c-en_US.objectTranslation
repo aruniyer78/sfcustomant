@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Directors and Shareholders</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Directors and Shareholders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Phone --></label>
+        <name>Business_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company --></label>
+        <name>Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer --></label>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Directors and Shareholders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile --></label>
+        <name>Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Person Name --></label>
+        <name>Person_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Person Type --></label>
+        <name>Person_Type__c</name>
+        <picklistValues>
+            <masterLabel>Director</masterLabel>
+            <translation><!-- Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shareholder</masterLabel>
+            <translation><!-- Shareholder --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Postal Address Address Line 1 --></label>
+        <name>Postal_Address_Address_Line_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Address Address Line 2 --></label>
+        <name>Postal_Address_Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Address Country --></label>
+        <name>Postal_Address_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Zealand</masterLabel>
+            <translation><!-- New Zealand --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Postal Address Post Code --></label>
+        <name>Postal_Address_Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Address State --></label>
+        <name>Postal_Address_State__c</name>
+        <picklistValues>
+            <masterLabel>Australian Capital Territory</masterLabel>
+            <translation><!-- Australian Capital Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New South Wales</masterLabel>
+            <translation><!-- New South Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Territory</masterLabel>
+            <translation><!-- Northern Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queensland</masterLabel>
+            <translation><!-- Queensland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Australia</masterLabel>
+            <translation><!-- South Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasmania</masterLabel>
+            <translation><!-- Tasmania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Victoria</masterLabel>
+            <translation><!-- Victoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Australia</masterLabel>
+            <translation><!-- Western Australia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Postal Address Suburb --></label>
+        <name>Postal_Address_Suburb__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shareholder Percentage --></label>
+        <name>Shareholder_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address Address Line 1 --></label>
+        <name>Street_Address_Address_Line_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address Address Line 2 --></label>
+        <name>Street_Address_Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address Country --></label>
+        <name>Street_Address_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Zealand</masterLabel>
+            <translation><!-- New Zealand --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street Address Post Code --></label>
+        <name>Street_Address_Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street Address State --></label>
+        <name>Street_Address_State__c</name>
+        <picklistValues>
+            <masterLabel>Australian Capital Territory</masterLabel>
+            <translation><!-- Australian Capital Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New South Wales</masterLabel>
+            <translation><!-- New South Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Territory</masterLabel>
+            <translation><!-- Northern Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queensland</masterLabel>
+            <translation><!-- Queensland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Australia</masterLabel>
+            <translation><!-- South Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasmania</masterLabel>
+            <translation><!-- Tasmania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Victoria</masterLabel>
+            <translation><!-- Victoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Australia</masterLabel>
+            <translation><!-- Western Australia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street Address Suburb --></label>
+        <name>Street_Address_Suburb__c</name>
+    </fields>
+    <layouts>
+        <layout>Directors and Shareholders Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

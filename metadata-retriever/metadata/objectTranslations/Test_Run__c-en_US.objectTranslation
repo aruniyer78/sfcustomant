@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Run</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Runs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fail Result --></label>
+        <name>Fail_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iteration Id --></label>
+        <name>Iteration_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iteration --></label>
+        <name>Iteration__c</name>
+        <relationshipLabel><!-- Test Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- No Run --></label>
+        <name>No_Run__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pass Rate --></label>
+        <name>Pass_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pass Result --></label>
+        <name>Pass_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test By --></label>
+        <name>Test_By__c</name>
+        <relationshipLabel><!-- Test Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Plan --></label>
+        <name>Test_Plan__c</name>
+        <relationshipLabel><!-- Test Runs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Case --></label>
+        <name>Total_Case__c</name>
+    </fields>
+    <layouts>
+        <layout>Requirement</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Result Summary --></label>
+            <section>Result Summary</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>UAT</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Result Summary --></label>
+            <section>Result Summary</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Requirement --></label>
+        <name>Requirement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- UAT --></label>
+        <name>UAT</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

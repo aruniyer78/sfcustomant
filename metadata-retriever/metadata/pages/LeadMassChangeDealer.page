@@ -1,0 +1,61 @@
+<apex:page controller="LeadMassChangeDealerController" showHeader="true"  id="page" sidebar="true"  tabStyle="Lead_Account__c">
+    <apex:includeScript value="/support/console/27.0/integration.js"/>
+    <script type="text/javascript">
+        function CloseTab() {
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingTabId(closeSubtab);
+            }
+        }
+
+        var closeSubtab = function closeSubtab(result) {
+            var tabId = result.id;
+            sforce.console.closeTab(tabId);
+        };
+        var newWin;
+        function closeLookupPopup(){
+           if (newWin != null){
+              newWin.close();
+           }  
+        }
+        function gotoDealerLooking(){
+            var nameText = document.getElementById('page:form:resultBlock:resultSection:ownerName').value;
+            //var nameText = document.form[0].ownerName.value;
+            var lookingUrl = '{!$Site.Prefix}/apex/DealerLookup?name='+nameText ;
+            newWin = window.open(lookingUrl, '' ,'fullscreen=no, height=500px, width=900px, top=100, left=150, scrollbars=1');
+        }
+    </script>
+    <apex:sectionHeader title="Mass Dealership Edit"/>
+    This screen allows you to mass transfer leads from one user to another.
+    <apex:form id="form">
+        <apex:pageMessages id="message"/>
+        <apex:pageBlock title="Select New"  id="resultBlock">       
+            <apex:pageBlockSection columns="1" id="resultSection">         
+                <apex:outputPanel style="margin-left:145px">
+                    <apex:outputLabel ><b>Dealer</b>&nbsp;&nbsp;&nbsp;&nbsp;</apex:outputLabel>          
+  
+                    <apex:inputHidden value="{!assignedDealer}"  id="ownerId" />
+                    <apex:inputText value="{!assignedDealerName}" id="ownerName" />
+                    <a href="#" onclick="gotoDealerLooking();return false;">
+                        <img src="/s.gif" alt="search" class="lookupIcon" 
+                            onblur="this.className = 'lookupIcon';" 
+                            onfocus="this.className = 'lookupIconOn';" 
+                            onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" 
+                            onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" 
+                            title="search"/>
+                        </a>                  
+                </apex:outputPanel>
+                <apex:outputPanel style="margin-left:145px">
+             
+                <apex:inputCheckbox value="{!emailRequired}" />
+                <apex:outputLabel >Send Notification Email</apex:outputLabel> 
+                
+                </apex:outputPanel>
+           </apex:pageBlockSection>  
+            <apex:pageBlockButtons location="Bottom">
+                <apex:commandButton value="Save" action="{!saveClick}"   rerender="message" oncomplete="CloseTab()"/>  
+                <apex:commandButton value="Cancel"  oncomplete="CloseTab()" />      
+            </apex:pageBlockButtons>                 
+        </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

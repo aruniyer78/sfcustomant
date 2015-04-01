@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Resource Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Resource Reports</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Hours to Date --></label>
+        <name>Actual_Hours_to_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual $ to Date --></label>
+        <name>Actual_dollars_to_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Budget $ --></label>
+        <name>Approved_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Hrs --></label>
+        <name>Budget_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Diff w/ Budget $ --></label>
+        <name>Diff_w_Budget_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Diff w/ Budget --></label>
+        <name>Diff_w_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Est. Hrs to Complete --></label>
+        <name>Est_Hrs_to_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Final Hours --></label>
+        <name>Forecast_Final_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- % Complete --></label>
+        <name>Perdent_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Overview --></label>
+        <name>Project_Overview__c</name>
+        <relationshipLabel><!-- Resource Reports --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rate/hr --></label>
+        <name>Rate_hr__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resource --></label>
+        <name>Resource__c</name>
+    </fields>
+    <fields>
+        <label><!-- Role --></label>
+        <name>Role__c</name>
+        <picklistValues>
+            <masterLabel>Business Analyst</masterLabel>
+            <translation><!-- Business Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curriculum Developer</masterLabel>
+            <translation><!-- Curriculum Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Architect</masterLabel>
+            <translation><!-- Data Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration Specialist</masterLabel>
+            <translation><!-- Data Migration Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developer - Custom Code</masterLabel>
+            <translation><!-- Developer - Custom Code --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developer - Integration</masterLabel>
+            <translation><!-- Developer - Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education Architect</masterLabel>
+            <translation><!-- Education Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engagement Manager</masterLabel>
+            <translation><!-- Engagement Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Engagement Mgr - Tech</masterLabel>
+            <translation><!-- Engagement Mgr - Tech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instructor (onsite)</masterLabel>
+            <translation><!-- Instructor (onsite) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Manager</masterLabel>
+            <translation><!-- Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA Architect</masterLabel>
+            <translation><!-- QA Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quality Engineer</masterLabel>
+            <translation><!-- Quality Engineer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Senior Business Analyst</masterLabel>
+            <translation><!-- Senior Business Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Senior Technical Architect</masterLabel>
+            <translation><!-- Senior Technical Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sr Advisor</masterLabel>
+            <translation><!-- Sr Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Architect</masterLabel>
+            <translation><!-- Technical Architect --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Burn Report Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Forecast --></label>
+            <section>Forecast</section>
+        </sections>
+        <sections>
+            <label><!-- Ratios Actual --></label>
+            <section>Ratios Actual</section>
+        </sections>
+        <sections>
+            <label><!-- Ratios Plan --></label>
+            <section>Ratios Plan</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

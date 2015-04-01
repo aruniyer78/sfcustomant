@@ -1,0 +1,384 @@
+<apex:page sidebar="false"
+           showChat="false"
+           showHeader="false"
+           cache="true"
+            contentType="application/msword#{!Lead_Account__c.Name}.doc"
+           StandardController="Lead_Account__c"
+           Extensions="FleerCorverList"
+           >
+
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+
+  /* Font Definitions */
+  @font-face
+        {font-family:sans-serif;
+        panose-1:2 1 6 0 3 1 1 1 1 1;}
+  @font-face
+        {font-family:sans-serif;
+        panose-1:2 1 6 0 3 1 1 1 1 1;}
+  @font-face
+        {font-family:CorpoS;}
+  @font-face
+        {font-family:Tahoma;
+        panose-1:2 11 6 4 3 5 4 4 2 4;}
+  @font-face
+        {font-family:sans-serif;
+        panose-1:2 1 6 0 3 1 1 1 1 1;}
+/* Page Definitions */
+  @page WordSection1
+        {size:595.3pt 841.9pt;
+        margin:0pt 36pt 36pt 36pt;
+        }
+
+
+
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+        {margin:0cm;
+        margin-bottom:.0001pt;
+        font-size:10.0pt;
+        font-family:"Times New Roman","serif";}
+
+
+.titleFont{font-size:10.5pt;
+           font-family:"Arial","sans-serif"; 
+           color:white;
+           padding:0cm;
+           background:#17365D;} 
+
+/* Table 1 Definitions*/
+.table1td1 {
+           text-transform:capitalize;
+           font-weight:bold;
+           background:#A6A6A6;
+}
+
+.table1td2 {
+           text-transform:capitalize;
+           font-weight:bold;
+           font-size:9 pt;
+           font-family: "Arial";
+
+}
+.table-a {
+        border-collapse: collapse;
+        border: none;
+}
+.table-a td{height:20px;
+            border:solid windowtext 1.0pt;
+            vertical-align:bottom;
+            padding:0cm 5.4pt 0cm 5.4pt;
+            font-size:9 pt;
+            font-family:"Arial";}
+            
+       
+/* Table 2 Definitions*/
+.table-b th{font-size:10.5pt;
+           font-family:"Arial"; 
+           color:white;
+           background:#17365D;}
+.table-b {
+        border-collapse: collapse;
+        border: none;
+}
+.table-b td{height:20px;
+            vertical-align:bottom;
+            padding:0cm 0pt 0cm 0pt;
+            font:7.5 pt ;
+            font-family:"Times New Roman"}
+
+
+div.Section1 { page:WordSection1; }
+</style>
+
+
+</head>
+<body >
+
+<div class="Section1" >
+<apex:form >
+<p align="center">Mercedes Benz Financial Services Australia</p>
+<h1><span class="titleFont">Corporate/ Fleet Settlement Compliance Checklist</span></h1>
+        <table class="table-a">
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>CONTRACT NO/S:</span></td>
+            <td  colspan="11" width="495"><apex:outputtext value="{!contractNo}"/></td>
+        </tr>
+            <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>PAYMENT METHOD:</span></td>
+            <td  colspan="11"><apex:outputtext value="{!paymentMethos}"/></td>
+        </tr>
+            <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>CUSTOMER NAME:</span></td>
+            <td  colspan="11"><apex:outputtext value="{!Lead_Account__c.Customer_Name__c}"/></td>
+        </tr>
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>INTRODUCER:</span></td>
+            <td  colspan="11"><apex:outputtext value="{!Lead_Account__c.Assigned_Dealer__r.Name}"/></td>
+        </tr>
+
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>FLEET CODE:</span></td>
+            <td  width="177" colspan="3"><apex:outputtext value="{!fleetcode}"/></td>
+            <td class="table1td2" width="154" colspan="5"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>FLEET SUB-CODE:</span></td>
+            <td  width="164" colspan="3"><apex:outputtext value="{!subfleetCode}"/></td>
+        </tr>       
+
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>ASSET DESCRIPTION:</span></td>
+            <td  colspan="11"><apex:outputtext value="{!Lead_Account__c.Vehicle_Model_Interest__c}"/></td>
+        </tr>
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>FINANCE PRODUCT:</span></td>
+            <td  colspan="11">
+            <apex:inputCheckbox value="{!fpHP}" /><span>HP</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:inputCheckbox value="{!fpFL}" /><span>FL</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:inputCheckbox value="{!fpOL}" /><span>OL</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:inputCheckbox value="{!fpAL}" /><span>AL</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr ><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>PAYMENT MODE: </span></td>
+            <td colspan="11">
+            <apex:inputCheckbox value="{!pmADV}" /><span>ADV</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:inputCheckbox value="{!pmARR}" /><span>ARR</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>GUAR. BUYBACK:</span></td>
+            <td width="81" colspan="2">
+            <apex:outputText value="{0, number, currency}">
+                <apex:param value="{!IF(Lead_Account__c.Financial_Product__c == 'Operating Lease'
+                                      ||Lead_Account__c.Financial_Product__c == 'Fully Maintained Operating Lease',
+                                     Lead_Account__c.Existing_Contract__r.Balloon_RV_Amount__c,'')}"/>
+            </apex:outputText>
+            </td>
+            <td class="table1td2" width="120" colspan="3" ><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>HELD BY:</span></td>
+            <td  width="294" colspan="6" ><apex:outputtext value="{!IF(Lead_Account__c.Financial_Product__c == 'Operating Lease'
+                                      ||Lead_Account__c.Financial_Product__c == 'Fully Maintained Operating Lease',
+                                       'MBAuP' ,'')}"/></td>
+        </tr>
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>CUSTOMER RATE:</span></td>
+            <td width="68" >
+            <apex:outputText value="{!Lead_Account__c.Contract_Rate__c}%" />
+            </td>
+            <td class="table1td2"  width="133" colspan="4"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>BASE RATE:</span></td>
+            <td width="74">
+            <apex:outputText value="{!Lead_Account__c.Base_Rate__c}%" />
+            </td>
+            <td class="table1td2" width="93"  colspan="4"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>AMT FIN:</span></td>
+            <td width="126" >
+            <apex:outputText value="{0, number, currency}">
+                <apex:param value="{!Lead_Account__c.Finance_Amount__c}"/>
+            </apex:outputText>
+            </td>
+        </tr>
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>COMMISSION PAYABLE:</span></td>
+        <td colspan="11">
+            <apex:outputText value="{0, number, currency}">
+                <apex:param value="{!Lead_Account__c.Dealer_Commission__c}"/>
+            </apex:outputText>
+       </td>
+        </tr>       
+        <tr><td width="196" valign="top" 
+        style='width:147.15pt;border:solid windowtext 1.0pt; border-top:none;background:#A6A6A6;padding:0cm 5.4pt 0cm 5.4pt'>
+          <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom: 2.0pt;margin-left:0cm'><b>
+          <span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>FEES:</span>
+          </b><span style='font-size:9.5pt; font-family:"Arial","sans-serif"'>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Doc Fee:</span></p>
+        </td>
+            <td width="68">
+            <apex:outputText value="{0, number, currency}">
+                <apex:param value="{!Lead_Account__c.Doc_Fee__c}"/>
+            </apex:outputText>
+            </td>
+            <td colspan="10" width="427">
+                <apex:inputCheckbox value="{!FeetypeFinanced}" /><span>Financed</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:inputCheckbox value="{!FeetypePaid}" /><span>Paid</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <apex:inputCheckbox value="{!FeetypeWaived}" /><span>Waived</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+        <tr><td width="196" valign="top" style='width:147.15pt;border:solid windowtext 1.0pt; 
+        border-top:none;background:#A6A6A6;padding:0cm 5.4pt 0cm 5.4pt'>
+          <p class="MsoNormal" style='margin-top:3.0pt;margin-right:0cm;margin-bottom: 2.0pt;margin-left:0cm'>
+          <span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              Orig Fee:</span></p>
+            </td>
+                <td width="68">
+                <apex:outputText value="{0, number, currency}">
+                    <apex:param value="{!Lead_Account__c.Orig_Fee__c}"/>
+                </apex:outputText>
+                </td>
+                <td  width="127" colspan="3">
+                    <apex:inputCheckbox value="{!FeetypeNa}" /><span>N/A</span>
+            </td>
+            <td width="300" colspan="7">
+            </td>
+        </tr>   
+        
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>RORAC:</span>   </td>
+        <td  width="284" colspan="7">
+            <apex:outputText value="{!Lead_Account__c.RORAC__c}%"/>
+        </td>
+        <td  width="66" colspan="2"></td>
+        <td width="145" colspan="2"></td>
+        </tr>           
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>SALES CONTACT: </span>   </td>
+            <td  colspan="7"><apex:outputtext value="{!Lead_Account__c.owner.Name}"/></td>
+            <td class="table1td2"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>EXT:</span></td>
+            <td  colspan="3"><apex:outputtext value="{!ext}"/></td>
+        </tr>       
+        <tr><td class="table1td1" width="196"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>SIGNATURE: </span>   </td>
+            <td  width="284" colspan="7"></td>
+            <td width="66" colspan="2" class="table1td2"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>DATE:</span></td>
+            <td width="145" colspan="2">
+            <apex:outputText value="{0, date, dd/MM/yyyy}">
+                <apex:param value="{!Lead_Account__c.Close_Date__c}" />
+            </apex:outputText>
+            </td>
+        </tr>
+      <tr height="0">
+        <td width="196" style='border:none'></td>
+
+        <td width="68" style='border:none'></td>
+
+        <td width="13" style='border:none'></td>
+
+        <td width="96" style='border:none'></td>
+
+        <td width="18" style='border:none'></td>
+
+        <td width="6" style='border:none'></td>
+
+        <td width="74" style='border:none'></td>
+
+        <td width="8" style='border:none'></td>
+
+        <td width="47" style='border:none'></td>
+
+        <td width="19" style='border:none'></td>
+
+        <td width="19" style='border:none'></td>
+
+        <td width="126" style='border:none'></td>
+      </tr>
+               
+        </table>
+
+        <table class="table-b" >
+            <tr>
+                <th width="500" colspan="3"><span class="titleFont">Please consider each question carefully before completing.</span></th>
+                <th width="95" align="center"><span class="titleFont"><u>Sales</u></span></th>
+                <th width="95" align="center"><span class="titleFont"><u>Credit</u></span></th>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>1.    Has the Master/Corporate File Lease/ HP Agreement been correctly executed?</span></td>
+                <td align="center"><apex:inputCheckbox value="{!q1_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q1_2}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>2.    Is the correctly executed original Master/Corporate File Lease/ HP held in safe custody?</span></td><td colspan="2">
+                    <apex:outputtext value="{!q2}" /></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>3.    What is the date of the Master/Corporate File Lease/HP Agreement?</span></td>
+                <td colspan="2"><apex:outputtext value="{!q3}"  /></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>4.    Is the Lessee/Hirer correctly identified on the individual Schedule/Agreement?</span></td>
+                <td align="center"><apex:inputcheckbox value="{!q4_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q4_2}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>5.    Has the attached Schedule/Agreement been executed by authorised signatories?</span></td>
+                <td align="center"><apex:inputcheckbox value="{!q5_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q5_2}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>6.    Have AML/CTF requirements been met for all parties to this transaction (including guarantors)?</span></td>
+                <td align="center"><apex:inputcheckbox value="{!q6_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q6_2}"/></td>
+            </tr>       
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>7.    Has the Commitment/Facility Letter been signed and returned?</span></td>
+                <td align="center"><apex:inputcheckbox value="{!q7_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q7_2}"/></td>
+            </tr>           
+            <tr>
+                <td colspan="5"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>8.    Where applicable have the Guarantee &amp; Indemnity docs been executed correctly &amp; received?</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                 <apex:outputtext value="{!q8_1}" />
+                </td>
+            </tr>
+            <tr>
+                <td width="5"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>Guarantors to be loaded:</span></td>
+            </tr>
+            <tr>
+                <td width="5">__________________________________________________________________</td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>9.    Is this transaction within the clients approved credit facility?</span></td>
+                <td></td>
+                <td align="center"><apex:inputcheckbox value="{!q9}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>10.   Have all the conditions of approval been met (including term&amp; balloon within guidelines)?</span></td>
+                <td></td>
+                <td align="center"><apex:inputcheckbox value="{!q10}"/></td>
+            </tr>
+            <tr>
+                <td colspan="4"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>11.   If applicable please attach a copy of the correct quotation (for Operating lease only)? </span>&nbsp;&nbsp;&nbsp;<apex:outputtext value="{!q11_1}" />
+                </td>
+                <td align="center"><apex:inputcheckbox value="{!q11_2}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>12.   Do we have a copy of the Certificate of Currency on file?</span></td>
+                <td align="center"><apex:inputcheckbox value="{!q12_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q12_2}"/></td>
+            </tr>       
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>13.   If applicable has the original Privacy Act acknowledgment/authority been obtained?  </span></td>
+                <td></td>
+                <td align="center"><apex:inputcheckbox value="{!q13}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>14.   Is the rate charged in line with approved RORAC (if not then do we hold reduction authority)?   </span></td>
+                <td align="center"><apex:inputcheckbox value="{!q14_1}"/></td>
+                <td align="center"><apex:inputcheckbox value="{!q14_2}"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>15.   All existing contracts are in order and there are no contracts that are currently in arrears.  </span></td>
+                <td></td>
+                <td align="center"><apex:inputcheckbox value="{!q15}"/></td>
+            </tr>
+
+            </table>
+
+<p class="MsoBodyText3" style='margin-top:0cm;margin-right:-6.5pt;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;'>
+<b><span style='font-size:10.0pt;font-family:"Arial","sans-serif";background: white'>
+I certify that by signing this form I have properly considered each of the above questions, 
+and I am satisfied all documentation relating to the Master/Corporate File Lease/HP Agreement is in place and that the attached 
+settlement can be processed:</span></b></p>
+
+<table class="table-a">
+    <tr>
+        <td width="200" class="table1td1"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>Credit Compliance Signature:</span></td>
+        <td width="200"></td>
+        <td width="145"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>Date</span></td>
+        <td width="145">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/</td>
+    </tr>
+    <tr>
+        <td width="200" class="table1td1"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>Oversight Credit Signature (Register checked &amp; draw down within limit approved)</span></td>
+        <td width="200"></td>
+        <td width="145"><span style='font-size:9.5pt;font-family: "Arial","sans-serif"'>Date</span></td>
+        <td width="145">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;/</td>
+    </tr>
+</table>
+
+<p class="MsoBodyText3" style='margin-top:0cm;margin-right:-6.5pt;margin-bottom: 0cm;margin-left:0cm;margin-bottom:.0001pt;'>
+<b><span style='font-size:10.0pt;font-family:"Arial","sans-serif";background: white'>
+                ** Settlement must not occur unless all boxes above are ticked and checklist is signed &amp; 
+                countersigned by two Corporate/Fleet Credit officers**</span></b></p>
+</apex:form>
+    
+</div>
+</body>
+
+
+
+</apex:page>

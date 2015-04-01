@@ -1,0 +1,6 @@
+<!--<apex:page action="{!URLfor('/007?isdtp=vw')}">--> 
+<!--Enable enhanced list-->
+<apex:page tabStyle="Task" action="{!URLfor('/007?isdtp=it')}">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Tasks</h1>
+</apex:page>

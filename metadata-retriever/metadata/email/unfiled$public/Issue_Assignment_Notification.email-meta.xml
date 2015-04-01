@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Issue Assignment Notification</name>
+    <style>none</style>
+    <subject>[Ref: {!Issue__c.Name}] You have been assigned an issue of {!Issue__c.Module__c} Module, raised by {!Issue__c.Raised_By__c}</subject>
+    <type>text</type>
+</EmailTemplate>

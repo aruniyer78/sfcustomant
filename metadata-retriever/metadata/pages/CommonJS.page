@@ -1,0 +1,27 @@
+<apex:page cache="false" expires="0" sidebar="falase" showHeader="false" contentType="text/javascript" standardStylesheets="false" >
+<apex:includeScript value="/support/console/27.0/integration.js"/>
+<apex:includeScript value="/soap/ajax/27.0/connection.js"/>
+
+// MY JAVASCRIPT FUNCTIONS AND CODE HERE
+/**
+ * navigation to new lead page 
+ */
+function newLeadAccount(leadRecordName,accountRecordName,accountName,accountId){
+
+    var qr = sforce.connection.query("Select id From recordtype where Name='"+leadRecordName +"' limit 1");
+    if(qr.records != null) {
+        //individual Account's param Name CF00NO0000000te36 and company is CF00NO0000000teO8
+        var urlParam1 = "CF00N90000006qtQP";
+
+        if(accountRecordName=="Company"){
+            urlParam1 = "CF00N90000006qtQN";
+        }
+
+        var url = "/a08/e?" + urlParam1 + "=" + encodeURIComponent(accountName) + "&amp;" + urlParam1 +"_lkid=" + accountId + "&amp;retURL=" + accountId + "&amp;RecordType=" + qr.records.Id + "&amp;ent=Account";
+        
+        window.parent.navigateToUrl(url);
+    }else{
+        alert(leadRecordName +" can't be used.Please contact System Administrator");
+    }
+}
+</apex:page>

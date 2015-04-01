@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Step Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Step Result</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Result --></label>
+        <name>Actual_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data --></label>
+        <name>Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Result --></label>
+        <name>Expected_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Navigation Path --></label>
+        <name>Navigation_Path__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Fail</masterLabel>
+            <translation><!-- Fail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passed</masterLabel>
+            <translation><!-- Passed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Step Description --></label>
+        <name>Step_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Result --></label>
+        <name>Test_Result__c</name>
+        <relationshipLabel><!-- Test Step Result --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Step --></label>
+        <name>Test_Step__c</name>
+        <relationshipLabel><!-- Test Step Result --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Test Step Result Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Test Step Run Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

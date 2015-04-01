@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PMO: Test Management. Store all test scripts that need to be run.(Edition2)</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Case_No_ext__c</fullName>
+        <externalId>true</externalId>
+        <label>Case No.-ext</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Case_Status__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case Status</label>
+        <referenceTo>Round__c</referenceTo>
+        <relationshipLabel>Test Cases</relationshipLabel>
+        <relationshipName>Test_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case_description__c</fullName>
+        <externalId>false</externalId>
+        <label>Case description</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Categary__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Catagory1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Catagory2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Catagory3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Catagory4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central Campaign Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case &amp; Knowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Portfolio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interface</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Management (M30)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Count_Blocked_Step__c</fullName>
+        <externalId>false</externalId>
+        <label>*Count Blocked Step</label>
+        <summaryFilterItems>
+            <field>Test_step1__c.Actual_Results__c</field>
+            <operation>equals</operation>
+            <value>Blocked</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Test_step1__c.Test_Cases1__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Dev_Step__c</fullName>
+        <externalId>false</externalId>
+        <label>*Count Dev Step</label>
+        <summaryFilterItems>
+            <field>Test_step1__c.Actual_Results__c</field>
+            <operation>equals</operation>
+            <value>In Development</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Test_step1__c.Test_Cases1__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Failed_Step__c</fullName>
+        <externalId>false</externalId>
+        <label>*Count Failed Step</label>
+        <summaryFilterItems>
+            <field>Test_step1__c.Actual_Results__c</field>
+            <operation>equals</operation>
+            <value>Failed</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Test_step1__c.Test_Cases1__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Passed_Step__c</fullName>
+        <externalId>false</externalId>
+        <label>*Count Passed Step</label>
+        <summaryFilterItems>
+            <field>Test_step1__c.Actual_Results__c</field>
+            <operation>equals</operation>
+            <value>Pass</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Test_step1__c.Test_Cases1__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Count_Steps__c</fullName>
+        <externalId>false</externalId>
+        <label>*Count Steps</label>
+        <summaryForeignKey>Test_step1__c.Test_Cases1__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Feature__c</fullName>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <picklist>
+            <controllingField>Finction__c</controllingField>
+            <picklistValues>
+                <fullName>Feature1</fullName>
+                <controllingFieldValues>Function1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feature2</fullName>
+                <controllingFieldValues>Function1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feature3</fullName>
+                <controllingFieldValues>Function2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feature4</fullName>
+                <controllingFieldValues>Function2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.6.1 Sales Leads Handling (销售线索处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.6.3 Sales Leads Follow Handling (销售线索跟进流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.6.2 Sales Leads Verification Handling (销售线索核实流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20.1.4 Irregular IB Handling (异常电话处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.2 General IB Handling (一般呼入处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3  Inquiry and Escalation Handling (问询及升级处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.1  Direct Mail Requirement Handle (直邮需求处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.2  Financing Consulting Handling (金融咨询、租赁咨询处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.3 Maybach and Van handling (迈巴赫及商务车咨询流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.4 Customer Data Check (用户信息查询流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.6 IB Dialect Handling (方言处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.2.1 Regular OB Handling (常规外呼处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.3.1 SMS Sending (短信发送流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.3.2 Direct Mail Handling (直邮任务处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.5.1 Quality Control Process (质量监控流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.5.4 Recording Calibration Process (录音校准流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Finction__c</fullName>
+        <externalId>false</externalId>
+        <label>Function</label>
+        <picklist>
+            <controllingField>Categary__c</controllingField>
+            <picklistValues>
+                <fullName>Function1</fullName>
+                <controllingFieldValues>Catagory1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Function2</fullName>
+                <controllingFieldValues>Catagory1</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Function3</fullName>
+                <controllingFieldValues>Catagory2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Function4</fullName>
+                <controllingFieldValues>Catagory2</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.6 CAC Lead Flow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead escalation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M40.2 Dealer Leads Communication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Document AS LEAD types: OB call process - LEAD capturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central Campaign Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAC Campaign Segmentation, Execution &amp; Response Capture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case &amp; Knowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Portfolio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1 IB Handling (IB 流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.2 OB Handling (外呼流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.3 Non-voice Handling (非语音业务流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.5 Management Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Validate the User Info. In CAC System</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OB to user and log the case in CAC Call Handling System</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enquiry and escalation process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Create a Sales Leads in CAC system and Pass to RME</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Media communication history syschronization</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.6 Complaint Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M30.1 Dealer Complaint Management Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M30.2 Regional Complaint Management Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M30.3 CRM AS Central Complaint Management Part 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iCRM</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CAC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RME</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CCMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3rd Party</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GSSN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regular checking - Data Duplication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mini Website</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.2.1 常规外呼处理流程</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Market_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Market / Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Module_Object__c</fullName>
+        <externalId>false</externalId>
+        <label>Module / Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aftersales Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact / Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Portal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Key</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literature Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>QC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Report/Dashboard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Console</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle / Asset</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warranty Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CTI &amp; Contact Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>New_Test_Cases__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New Test Cases</label>
+        <referenceTo>Change_Request__c</referenceTo>
+        <relationshipLabel>Test Cases</relationshipLabel>
+        <relationshipName>Test_Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pre_Requisite__c</fullName>
+        <externalId>false</externalId>
+        <label>Pre Requisite</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reference_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Reference No.</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requirement_User_Story__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Requirement / User Story / Use Case</label>
+        <referenceTo>Requirement_UserStory__c</referenceTo>
+        <relationshipLabel>Test Cases</relationshipLabel>
+        <relationshipName>Test_Case</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Blocked</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Testable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Passed 1st Round</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Test_Process__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Process</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case/Knowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Portfolio</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI/QC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Phase III</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Portal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IBOBQC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CTI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead escalation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Central Campaign Planning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CLC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20.1.4 Irregular IB Handling (异常电话处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case &amp; Knowledge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.2 General IB Handling (一般呼入处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3  Inquiry and Escalation Handling (问询及升级处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.1  Direct Mail Requirement Handle (直邮需求处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.2  Financing Consulting Handling (金融咨询、租赁咨询处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.3 Maybach and Van handling (迈巴赫及商务车咨询流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.4 Customer Data Check (用户信息查询流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.1.3.6 IB Dialect Handling (方言处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.2.1 Regular OB Handling (常规外呼处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.3.1 SMS Sending (短信发送流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M20.3.2 Direct Mail Handling (直邮任务处理流程)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI flow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI QC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.6 Complaint Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M30.1 Dealer Complaint Management Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M30.2 Regional Complaint Management Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M30.3 CRM AS Central Complaint Management Part 1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Interface</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Migration-INT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Media-INT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Management-INT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Portfolio - INT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Management - INT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IB/OB QC - INT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OB Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LDCL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EoC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aftersales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Data</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aftersales CV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EMC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fleet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CV</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FS Leads</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Recording</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Test_Round__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Test Round</label>
+        <referenceTo>Test_Round__c</referenceTo>
+        <relationshipName>Test_Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>executor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Executor</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Test_Cases1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Test Cases</label>
+    <listViews>
+        <fullName>All_Integration_Test_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Test_Round__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Test_Process__c</columns>
+        <columns>Status__c</columns>
+        <columns>Reference_No__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Test_Round__c</field>
+            <operation>equals</operation>
+            <value>Integration Test</value>
+        </filters>
+        <label>All-Integration-Test-Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Test_Cases_MBAuP</fullName>
+        <columns>NAME</columns>
+        <columns>Subject__c</columns>
+        <columns>Test_Process__c</columns>
+        <columns>Status__c</columns>
+        <columns>Test_Round__c</columns>
+        <columns>Reference_No__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>All Test-Cases MBAuP</label>
+    </listViews>
+    <listViews>
+        <fullName>All_UAT_W_O_INT_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Test_Round__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Test_Process__c</columns>
+        <columns>Status__c</columns>
+        <columns>Reference_No__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <filters>
+            <field>Test_Round__c</field>
+            <operation>equals</operation>
+            <value>UAT W/O Integration</value>
+        </filters>
+        <label>All-UAT-W/O-INT-Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>Gloria_s_test_case</fullName>
+        <columns>Test_Process__c</columns>
+        <columns>NAME</columns>
+        <columns>Case_No_ext__c</columns>
+        <columns>Count_Steps__c</columns>
+        <columns>Pre_Requisite__c</columns>
+        <columns>Requirement_User_Story__c</columns>
+        <columns>Case_description__c</columns>
+        <columns>Status__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>ST-lead</value>
+        </filters>
+        <label>Gloria&apos;s test case</label>
+    </listViews>
+    <listViews>
+        <fullName>INT_test_cases</fullName>
+        <booleanFilter>(1 OR 2)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Case_description__c</columns>
+        <columns>Categary__c</columns>
+        <columns>Feature__c</columns>
+        <columns>Finction__c</columns>
+        <columns>Pre_Requisite__c</columns>
+        <columns>Reference_No__c</columns>
+        <columns>Status__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>Shi Ann</value>
+        </filters>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>equals</operation>
+            <value>Wayne Bai</value>
+        </filters>
+        <label>INT test cases</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_Test_Cases</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Case_description__c</columns>
+        <columns>Case_Status__c</columns>
+        <columns>Categary__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Requirement_User_Story__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Test Cases</label>
+    </listViews>
+    <listViews>
+        <fullName>ST_AU_Cpn</fullName>
+        <columns>NAME</columns>
+        <columns>Case_description__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Requirement_User_Story__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>ST_AU-Cpn</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>System_Test_Case_for_Release_1_1</fullName>
+        <columns>NAME</columns>
+        <columns>Requirement_User_Story__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Status__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Mine</filterScope>
+        <label>System Test Case for Release 1.1</label>
+        <sharedTo>
+            <role>Australia</role>
+        </sharedTo>
+    </listViews>
+    <nameField>
+        <label>Case No.</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Test Cases</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Subject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Case_description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Reference_No__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Pre_Requisite__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OBJECT_ID</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Subject__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Reference_No__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Subject__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Reference_No__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Subject__c</searchFilterFields>
+        <searchFilterFields>Reference_No__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchResultsAdditionalFields>Reference_No__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Subject__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Case_description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Pre_Requisite__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

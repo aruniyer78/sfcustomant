@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CR Management</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CR Management</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assign to --></label>
+        <name>Assign_to__c</name>
+        <relationshipLabel><!-- CR Management (Assign to) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assumption Details --></label>
+        <name>Assumption_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- BU Notification Date --></label>
+        <name>BU_Notification_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Requirement Respond --></label>
+        <name>Business_Requirement_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- CR Collaboration Meeting --></label>
+        <name>CR_Collaboration_Meeting__c</name>
+    </fields>
+    <fields>
+        <label><!-- Change Description --></label>
+        <name>Change_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Context --></label>
+        <name>Context__c</name>
+        <picklistValues>
+            <masterLabel>Discussion</masterLabel>
+            <translation><!-- Discussion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Testing</masterLabel>
+            <translation><!-- Integration Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Integration Testing</masterLabel>
+            <translation><!-- Technical Integration Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT</masterLabel>
+            <translation><!-- UAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT W/O Integration</masterLabel>
+            <translation><!-- UAT W/O Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Workshop</masterLabel>
+            <translation><!-- Workshop --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Decision Date --></label>
+        <name>Decision_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deliverable --></label>
+        <name>Deliverable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deployment Respond --></label>
+        <name>Deployment_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- EP App/Dev Respond --></label>
+        <name>EP_App_Dev_Respond__c</name>
+    </fields>
+    <fields>
+        <help><!-- displays the effort in US dollars --></help>
+        <label><!-- Estimated Costs (USD) --></label>
+        <name>Estimated_Costs_USD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Costs (RMB) --></label>
+        <name>Estimated_Costs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimated Effort (MD) --></label>
+        <name>Estimated_Effort_MD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Benefits --></label>
+        <name>Expected_Benefits__c</name>
+    </fields>
+    <fields>
+        <label><!-- External Respond --></label>
+        <name>External_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- Final Decision --></label>
+        <name>Final_Decision__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Implementation Time --></label>
+        <name>Im__c</name>
+        <picklistValues>
+            <masterLabel>1st Release 2014</masterLabel>
+            <translation><!-- 1st Release 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2nd Release 2014</masterLabel>
+            <translation><!-- 2nd Release 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3rd Release 2014</masterLabel>
+            <translation><!-- 3rd Release 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 1, 2013</masterLabel>
+            <translation><!-- Phase 1, 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 2, 2013</masterLabel>
+            <translation><!-- Phase 2, 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phase 3, 2014</masterLabel>
+            <translation><!-- Phase 3, 2014 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LDCL Affected --></label>
+        <name>LDCL_Affected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market / Country --></label>
+        <name>Market_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Migration Respond --></label>
+        <name>Migration_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- Module --></label>
+        <name>Module__c</name>
+        <picklistValues>
+            <masterLabel>CV Sales</masterLabel>
+            <translation><!-- CV Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Centre</masterLabel>
+            <translation><!-- Call Centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Management</masterLabel>
+            <translation><!-- Campaign Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Data</masterLabel>
+            <translation><!-- Customer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Data</masterLabel>
+            <translation><!-- Dealer Data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Management</masterLabel>
+            <translation><!-- Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roles &amp; Profiles</masterLabel>
+            <translation><!-- Roles &amp; Profiles --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Other Respond --></label>
+        <name>Other_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phase --></label>
+        <name>Phase__c</name>
+        <picklistValues>
+            <masterLabel>1st Release 2014</masterLabel>
+            <translation><!-- 1st Release 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2nd  Release 2014</masterLabel>
+            <translation><!-- 2nd  Release 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3rd Release 2014</masterLabel>
+            <translation><!-- 3rd Release 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBAuP Phase 1</masterLabel>
+            <translation><!-- MBAuP Phase 1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nice To Have</masterLabel>
+            <translation><!-- Nice To Have --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related Defect --></label>
+        <name>Related_Defect__c</name>
+        <relationshipLabel><!-- CR Management --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request Date --></label>
+        <name>Request_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requester Name Old --></label>
+        <name>Requester_Name_Old__c</name>
+        <relationshipLabel><!-- CR Management (Requester Name Old) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requester Name --></label>
+        <name>Requester_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution --></label>
+        <name>Resolution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - Deployment --></label>
+        <name>Respond_Person_Deployment__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - Deployment) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - External --></label>
+        <name>Respond_Person_External__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - External) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - Migration --></label>
+        <name>Respond_Person_Migration__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - Migration) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - Other --></label>
+        <name>Respond_Person_Other__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - Other) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - SFDC App/Dev Respond --></label>
+        <name>Respond_Person_SFDC_App_Dev_Respond__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - SFDC App/Dev Respond) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - Testing --></label>
+        <name>Respond_Person_Testing__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - Testing) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Respond Person - EP App/Dev --></label>
+        <name>Respond_Person__c</name>
+        <relationshipLabel><!-- CR Management (Respond Person - EP App/Dev) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SFDC App/Dev Respond --></label>
+        <name>SFDC_App_Dev_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>0 - No Document</masterLabel>
+            <translation><!-- 0 - No Document --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 - Documented</masterLabel>
+            <translation><!-- 1 - Documented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10 - Outside of SFDC</masterLabel>
+            <translation><!-- 10 - Outside of SFDC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Solution Agreed &amp; Estimated</masterLabel>
+            <translation><!-- 2 - Solution Agreed &amp; Estimated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Designed</masterLabel>
+            <translation><!-- 3 - Designed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - Developed</masterLabel>
+            <translation><!-- 4 - Developed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Tested</masterLabel>
+            <translation><!-- 5 - Tested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6 - Deployed</masterLabel>
+            <translation><!-- 6 - Deployed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7 - Closed</masterLabel>
+            <translation><!-- 7 - Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8 - Cancelled</masterLabel>
+            <translation><!-- 8 - Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9 - Duplicate</masterLabel>
+            <translation><!-- 9 - Duplicate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub - Module --></label>
+        <name>Sub_Module__c</name>
+        <picklistValues>
+            <masterLabel>Dealer Contacts (Staff)</masterLabel>
+            <translation><!-- Dealer Contacts (Staff) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Services</masterLabel>
+            <translation><!-- Financial Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet Management</masterLabel>
+            <translation><!-- Fleet Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General</masterLabel>
+            <translation><!-- General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBAuP Contact</masterLabel>
+            <translation><!-- MBAuP Contact --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Testing Respond --></label>
+        <name>Testing_Respond__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reponds Person - BR --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- CR Management (Reponds Person - BR) --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Change Request Layout</layout>
+        <sections>
+            <label><!-- CR Assumption --></label>
+            <section>CR Assumption</section>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Impact Assessment --></label>
+            <section>Impact Assessment</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

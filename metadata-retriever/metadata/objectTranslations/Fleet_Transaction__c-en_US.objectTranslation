@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fleet Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fleet Transactions</value>
+    </caseValues>
+    <fields>
+        <label><!-- ABN --></label>
+        <name>ABN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount (GST Inc.) --></label>
+        <name>Amount_GST_Inc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cost Date --></label>
+        <name>Cost_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Ref Number --></label>
+        <name>Customer_Ref_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Vehicle Relationship-Driver --></label>
+        <name>Customer_Vehicle_Relationship_Driver__c</name>
+        <relationshipLabel><!-- Fleet Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fleet --></label>
+        <name>Fleet__c</name>
+        <relationshipLabel><!-- Fleet Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- GST --></label>
+        <name>GST__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Net Amount --></label>
+        <name>Net_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Odometer --></label>
+        <name>Odometer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <picklistValues>
+            <masterLabel>BIO DIESEL</masterLabel>
+            <translation><!-- BIO DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIESEL</masterLabel>
+            <translation><!-- DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIESEL B</masterLabel>
+            <translation><!-- DIESEL B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFF ROAD DIESEL</masterLabel>
+            <translation><!-- OFF ROAD DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PETROL</masterLabel>
+            <translation><!-- PETROL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PETROL E</masterLabel>
+            <translation><!-- PETROL E --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PETROL P</masterLabel>
+            <translation><!-- PETROL P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Provider --></label>
+        <name>Provider__c</name>
+        <picklistValues>
+            <masterLabel>7 Eleven</masterLabel>
+            <translation><!-- 7 Eleven --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BP Plus</masterLabel>
+            <translation><!-- BP Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caltex</masterLabel>
+            <translation><!-- Caltex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Choice Premium</masterLabel>
+            <translation><!-- Choice Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomFleet</masterLabel>
+            <translation><!-- CustomFleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gull Fuel</masterLabel>
+            <translation><!-- Gull Fuel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation><!-- Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motorpass</masterLabel>
+            <translation><!-- Motorpass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OneCard</masterLabel>
+            <translation><!-- OneCard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other / Independent</masterLabel>
+            <translation><!-- Other / Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shell</masterLabel>
+            <translation><!-- Shell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Petroleum</masterLabel>
+            <translation><!-- United Petroleum --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quantity (Litre) --></label>
+        <name>Quantity_Litre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transsaction Fee --></label>
+        <name>Transsaction_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trips --></label>
+        <name>Trips__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price (GST Inc.) --></label>
+        <name>Unit_Price_GST_Inc__c</name>
+    </fields>
+    <layouts>
+        <layout>Fuel Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Toll Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Fuel Card --></label>
+        <name>Fuel_Card</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Toll Card --></label>
+        <name>Toll_Card</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

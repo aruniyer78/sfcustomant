@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Fleets</relationshipLabel>
+        <relationshipName>Fleets</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Action_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Actioned_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Actioned Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Alleged_Speed__c</fullName>
+        <externalId>false</externalId>
+        <label>Alleged Speed</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Completed</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Vehicle_Relationship__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Vehicle Relationship</label>
+        <referenceTo>Customer_Vehicle_Relationship__c</referenceTo>
+        <relationshipLabel>Fleets</relationshipLabel>
+        <relationshipName>Fleets</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Dealership__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dealership</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Fleets (Dealership)</relationshipLabel>
+        <relationshipName>Fleets1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Fine_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Fine Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>First_Follow_Up_Store_Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>First Follow Up Store Manager</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Infringement_Reference__c</fullName>
+        <externalId>false</externalId>
+        <label>Infringement Reference</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Invoice_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Invoice_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Invoice Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Management_Fee_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Management Fee Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Tyres__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Tyres</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Obigation_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Obigation Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Odometer__c</fullName>
+        <externalId>false</externalId>
+        <label>Odometer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offence_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Offence Date/Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Offence_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Offence Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Provider__c</fullName>
+        <externalId>false</externalId>
+        <label>Provider</label>
+        <picklist>
+            <picklistValues>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other / Independent</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Site_Postcode__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Postcode</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Site_Suburb__c</fullName>
+        <externalId>false</externalId>
+        <label>Site Suburb</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Speed_Zone_KMs__c</fullName>
+        <externalId>false</externalId>
+        <label>Speed Zone KMs</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Amount_GST_Inc__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Amount(GST Inc.)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Vehicle__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Vehicle</label>
+        <referenceTo>Vehicle__c</referenceTo>
+        <relationshipLabel>Fleet</relationshipLabel>
+        <relationshipName>Fleet</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Fleet</label>
+    <nameField>
+        <label>Fleet Record Number</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Fleet</pluralLabel>
+    <recordTypes>
+        <fullName>Fines</fullName>
+        <active>true</active>
+        <label>Fines</label>
+        <picklistValues>
+            <picklist>Action_Status__c</picklist>
+            <values>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offence_Type__c</picklist>
+            <values>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Status__c</picklist>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provider__c</picklist>
+            <values>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %2F Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Fleet_Management_Fee</fullName>
+        <active>true</active>
+        <label>Fleet Management Fee</label>
+        <picklistValues>
+            <picklist>Action_Status__c</picklist>
+            <values>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offence_Type__c</picklist>
+            <values>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Status__c</picklist>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provider__c</picklist>
+            <values>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %2F Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Fuel_Card</fullName>
+        <active>true</active>
+        <label>Fuel Card</label>
+        <picklistValues>
+            <picklist>Action_Status__c</picklist>
+            <values>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offence_Type__c</picklist>
+            <values>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Status__c</picklist>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provider__c</picklist>
+            <values>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %2F Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Out_of_Contract_Charge</fullName>
+        <active>true</active>
+        <label>Out of Contract Charge</label>
+        <picklistValues>
+            <picklist>Action_Status__c</picklist>
+            <values>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offence_Type__c</picklist>
+            <values>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Status__c</picklist>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provider__c</picklist>
+            <values>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %2F Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Toll_Card</fullName>
+        <active>true</active>
+        <label>Toll Card</label>
+        <picklistValues>
+            <picklist>Action_Status__c</picklist>
+            <values>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offence_Type__c</picklist>
+            <values>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Status__c</picklist>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provider__c</picklist>
+            <values>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %2F Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Tyres</fullName>
+        <active>true</active>
+        <label>Tyres</label>
+        <picklistValues>
+            <picklist>Action_Status__c</picklist>
+            <values>
+                <fullName>Actioned</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Sent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Actioned</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Offence_Type__c</picklist>
+            <values>
+                <fullName>Infringements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red Light</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speeding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toll Fines</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Payment_Status__c</picklist>
+            <values>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unpaid</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>BIO DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DIESEL B</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OFF ROAD DIESEL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PETROL P</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Provider__c</picklist>
+            <values>
+                <fullName>7 Eleven</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BP Plus</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Caltex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Choice Premium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CustomFleet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gull Fuel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorpass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>OneCard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %2F Independent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shell</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>United Petroleum</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

@@ -1,0 +1,23 @@
+<apex:page standardController="Lead_Account__c" applyBodyTag="true">   
+<apex:includeScript value="/support/console/20.0/integration.js"/>
+<apex:includeScript value="/soap/ajax/28.0/connection.js"/>
+   <script type="text/javascript"> 
+           
+       window.onload = function() {             
+            
+            if("{!$Profile.Name}" == "Fleet (Delete)" && "{!Lead_Account__c.RecordType.name}" != "Fleet Lead") { 
+                alert("This profile shall only be available to delete only Fleet Leads records. ");
+                window.location.href = "/" + "{!Lead_Account__c}";
+            } else {
+                sforce.connection.sessionId = "{!$Api.Session_ID}";
+                var result = sforce.connection.deleteIds(["{!Lead_Account__c}"]);
+                if (result[0].getBoolean("success")) {
+                    window.location.href = "/a08/o";
+                } else {
+                    alert("You have not access to delete the record.");
+                    window.location.href = "/" + "{!Lead_Account__c}";
+                }
+            }
+       }
+   </script>
+</apex:page>

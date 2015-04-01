@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Dealer_Locator__c$Name</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Dealer_Number__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Dealer_Name__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Post_Code__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Suburb__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Business_Unit__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Offered_Service__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$PMA__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Inactive__c</field>
+    </columns>
+    <columns>
+        <field>Dealer_Locator__c$Region__c</field>
+    </columns>
+    <format>Tabular</format>
+    <name>DealerLocator 1.1 IT</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Dealer_Locator__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Dealer_Locator__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,32 @@
+<messaging:emailTemplate subject="Immediate Notice – Lead (Lead Reference - {!relatedTo.Name} , 
+{!relatedTo.Business_Unit__c} , {!DATEVALUE(relatedTo.CreatedDate)}"
+recipientType="Contact" relatedToType="Lead_Account__c">
+    <messaging:HTMLEmailBody >
+    Lead (Lead Reference - {!relatedTo.Name} , {!relatedTo.Business_Unit__c} , {!DATEVALUE(relatedTo.CreatedDate)}) has been assigned to you for action.
+    <br/><br/>
+    Please review and action this lead. 
+    <br/><br/>
+    Customer Name: {!relatedTo.Customer_Name__c}<br/>
+    Title: {!relatedTo.Title__c}<br/>
+    Business Unit: {!relatedTo.Business_Unit__c}<br/>
+    Nature of Request: {!relatedTo.Nature_of_Request__c}<br/>
+    Home Phone: {!relatedTo.Home_Phone__c}<br/>
+    Work Phone: {!relatedTo.Work_Phone__c}<br/>
+    Mobile: {!relatedTo.Mobile__c}<br/>
+    Email: {!relatedTo.Email__c}<br/>
+    Preferred Test Drive Date: {!relatedTo.Preferred_Test_Drive_Date__c}<br/>
+    Preferred Test Drive Time: {!relatedTo.Preferred_Test_Drive_Time__c}<br/>
+    Purchase date intent: {!relatedTo.Purchase_Intent__c} <br/>
+    Preferred method of communication: {!relatedTo.Preferred_Contact_Method__c}<br/>
+    MB Vehicle Interest (Make/Model): {!relatedTo.MB_Vehicle_Interest__c}<br/>
+    Description: {!relatedTo.Description__c}
+
+    <br/><br/>
+    Link: <apex:outputLink value="{!LEFT($CurrentPage.URL, FIND('.com', $CurrentPage.URL)+4)+ relatedTo.Id}">
+    {!LEFT($CurrentPage.URL, FIND('.com', $CurrentPage.URL)+4)+ relatedTo.Id}
+    </apex:outputLink>
+    <br/><br/>
+    Kind Regards,<br/>
+    Enquiry Management Centre<br/>
+    </messaging:HTMLEmailBody>
+</messaging:emailTemplate>

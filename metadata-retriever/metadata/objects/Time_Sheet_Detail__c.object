@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PMO: Timesheet detail work for each day.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Allowance_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Allowance__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>*Allowance*</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Allowance__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND( CreatedBy.CompanyName == &apos;Bp&apos; , ISPICKVAL(On_Off_Site__c, &apos;On&apos;))   , CreatedBy.Allowance__c* Workload_Hrs__c/8  ,    
+       if(AND( CreatedBy.CompanyName == &apos;SFDC&apos; , ISPICKVAL(On_Off_Site__c, &apos;On&apos;)),CreatedBy.Allowance__c* Workload_Hrs__c/8 ,
+          if(AND( CreatedBy.CompanyName == &apos;SFDC&apos; , ISPICKVAL(On_Off_Site__c, &apos;Off&apos;)) ,CreatedBy.Allowance__c* Workload_Hrs__c/8 ,
+             if(AND( CreatedBy.CompanyName == &apos;NTT DATA EMEA&apos; , ISPICKVAL(On_Off_Site__c, &apos;On&apos;))  ,CreatedBy.Allowance__c* Workload_Hrs__c/8 ,0))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>user allowance*workload/8</inlineHelpText>
+        <label>Allowance</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Discription__c</fullName>
+        <externalId>false</externalId>
+        <label>Discription</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Feature__c</fullName>
+        <externalId>false</externalId>
+        <label>Feature</label>
+        <picklist>
+            <controllingField>Function__c</controllingField>
+            <picklistValues>
+                <fullName>Gap/Fit Design</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functional Design</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Desing</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Source Code</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test Scenario/Case</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <controllingFieldValues>Testing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>System Test</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <controllingFieldValues>Testing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Presentation</fullName>
+                <controllingFieldValues>Campaign Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Case Mgmt</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Complaint Mgnt. (Retail)</controllingFieldValues>
+                <controllingFieldValues>Contact Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Customer Lifecycle</controllingFieldValues>
+                <controllingFieldValues>Dealer Portal</controllingFieldValues>
+                <controllingFieldValues>Knowledge Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>MMS / SMS</controllingFieldValues>
+                <controllingFieldValues>Marketing &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>QC</controllingFieldValues>
+                <controllingFieldValues>Reporting &amp; Dashboard</controllingFieldValues>
+                <controllingFieldValues>SSI</controllingFieldValues>
+                <controllingFieldValues>Security (Role, Profile, Data)</controllingFieldValues>
+                <controllingFieldValues>Social Media</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Architecture</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Review on Migration Architecture</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proof of Concept</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Design</fullName>
+                <controllingFieldValues>Lead &amp; Sales Mgnt.</controllingFieldValues>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Review on Migration Concept</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Development</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1st Migration</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stabilization</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Cycles</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Test 1</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <controllingFieldValues>Testing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration Test 2</fullName>
+                <controllingFieldValues>Migration</controllingFieldValues>
+                <controllingFieldValues>Testing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PMO Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Stream Lead Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Model</fullName>
+                <controllingFieldValues>Data Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Dictionary</fullName>
+                <controllingFieldValues>Data Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Logic</fullName>
+                <controllingFieldValues>Data Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Overall Design</fullName>
+                <controllingFieldValues>Application Architecture Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Iteration Planning</fullName>
+                <controllingFieldValues>Application Architecture Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Testing Preparation</fullName>
+                <controllingFieldValues>Testing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Stream leads standup meeting</fullName>
+                <controllingFieldValues>Project Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Team standup meeting</fullName>
+                <controllingFieldValues>Project Management</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test Planning</fullName>
+                <controllingFieldValues>Testing</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High Level Process Clarification</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alpha/Beta review preparation</fullName>
+                <controllingFieldValues>Alpha &amp; Beta review</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alpha/Beta review dress rehearsal</fullName>
+                <controllingFieldValues>Alpha &amp; Beta review</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alpha/Beta review session</fullName>
+                <controllingFieldValues>Alpha &amp; Beta review</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Function__c</fullName>
+        <externalId>false</externalId>
+        <label>Function</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Application Architecture Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Mgnt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Mgnt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint Mgnt. (Retail)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Mgnt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Lifecycle</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Portal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Knowledge Mgnt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead &amp; Sales Mgnt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing &amp; Sales Mgnt.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Migration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reporting &amp; Dashboard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Roll Out Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security (Role, Profile, Data)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SFDC Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Social Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SSI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Travel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Alpha &amp; Beta review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MMS / SMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Case Mgmt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>QC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>On_Off_Site__c</fullName>
+        <externalId>false</externalId>
+        <label>On/Off Site</label>
+        <picklist>
+            <picklistValues>
+                <fullName>On</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Off</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Time_Sheet__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Sheet</label>
+        <referenceTo>Time_sheet__c</referenceTo>
+        <relationshipLabel>Time Sheet Detail</relationshipLabel>
+        <relationshipName>Time_Sheet_Detail</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Week_Day__c</fullName>
+        <externalId>false</externalId>
+        <formula>MOD(( Date__c - DATE(2012,12,30)),7)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Week Day</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Workload_Hrs__c</fullName>
+        <externalId>false</externalId>
+        <label>Workload(Hrs.)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>allowance_shadow__c</fullName>
+        <externalId>false</externalId>
+        <label>allowance shadow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Time Sheet Detail</label>
+    <nameField>
+        <displayFormat>D-{0000}</displayFormat>
+        <label>Time Sheet Detail Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Time Sheet Detail</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>working_hours</fullName>
+        <active>false</active>
+        <description>no more 8 hours per day</description>
+        <errorConditionFormula>Workload_Hrs__c &gt;8</errorConditionFormula>
+        <errorMessage>no more 8 hours per day</errorMessage>
+    </validationRules>
+</CustomObject>

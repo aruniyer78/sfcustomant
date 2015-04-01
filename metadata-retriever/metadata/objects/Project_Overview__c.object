@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PMO: The Overview of a whole project</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Burn_Report_Last_Update__c</fullName>
+        <description>Date burn report was last updated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date burn report was last updated</inlineHelpText>
+        <label>Burn Report - Last Update</label>
+        <summarizedField>Resource_Report__c.LastModifiedDate</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Complete__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Total_Budget_Hours__c &lt;&gt; 0, Total_Actual_Hours__c  /  Total_Budget_Hours__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Name__c</fullName>
+        <description>Name of customer</description>
+        <externalId>false</externalId>
+        <label>Customer Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Diff_w_Budget__c</fullName>
+        <description>Total budget hrs - Total forecast hours</description>
+        <externalId>false</externalId>
+        <formula>Total_Budget_Hours__c - Total_Forecast_Hours__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Negative value indicates the project is forecasted to be over budget</inlineHelpText>
+        <label>Est. Diff w/ Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Est_Hrs_to_Complete__c</fullName>
+        <description>Estimated hours left in the project</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated hours left in the project</inlineHelpText>
+        <label>Est. Hrs to Complete</label>
+        <summarizedField>Resource_Report__c.Est_Hrs_to_Complete__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Budget_Diff__c</fullName>
+        <description>Negative amt indicates OVER budget</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Negative amt indicates OVER budget</inlineHelpText>
+        <label>Forecast Budget Diff</label>
+        <summarizedField>Resource_Report__c.Diff_w_Budget_Dollars__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Forecast_Final_Dollars__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Assigned_Budget_c__c  + Management_Fee__c - Forecast_Budget_Diff__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Forecast Final $</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Go_Live__c</fullName>
+        <description>Expected Go live date</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected Go live date</inlineHelpText>
+        <label>Go Live</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Management_Fee__c</fullName>
+        <description>For projects with mgt fee included - input TOTAL from the SOW estimate</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Estimated total fixed fee; used in forecast final $</inlineHelpText>
+        <label>Management Fee</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Id__c</fullName>
+        <description>Oppty ID from the 62 Org</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Oppty ID from the 62 Org</inlineHelpText>
+        <label>Opportunity Id</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Id__c</fullName>
+        <description>Project reference identifier</description>
+        <externalId>false</externalId>
+        <label>Project Id</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Plan</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Analyze</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design - High Level</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design - Detailed Field Mapping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test - Unit Testing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test - Validation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deploy to Prod</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Actual_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Actual Hours</label>
+        <summarizedField>Resource_Report__c.Actual_Hours_to_Date__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Approved_Budget__c</fullName>
+        <description>Includes all PO&apos;s, CO&apos;s and Management Fees</description>
+        <externalId>false</externalId>
+        <formula>Total_Assigned_Budget_c__c  +  Management_Fee__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Includes all PO&apos;s, CO&apos;s and Management Fees</inlineHelpText>
+        <label>Total Approved Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Assigned_Budget_c__c</fullName>
+        <description>calculated from the Burn Report line items</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of approved budget $</inlineHelpText>
+        <label>Total Assigned Budget - hrs</label>
+        <summarizedField>Resource_Report__c.Approved_Budget__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Budget_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Budget Hours</label>
+        <summarizedField>Resource_Report__c.Budget_Hrs__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Forecast_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Forecast Hours</label>
+        <summarizedField>Resource_Report__c.Forecast_Final_Hours__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_to_Date__c</fullName>
+        <description>amount expended to date based on actual hours logged</description>
+        <externalId>false</externalId>
+        <inlineHelpText>amount expended to date based on actual hours logged</inlineHelpText>
+        <label>Total $ to Date</label>
+        <summarizedField>Resource_Report__c.Actual_dollars_to_Date__c</summarizedField>
+        <summaryForeignKey>Resource_Report__c.Project_Overview__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Trend__c</fullName>
+        <description>Rate how this project is doing overall as compared to last week</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Rate how this project is doing overall as compared to last week</inlineHelpText>
+        <label>Trend</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Stable</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Down</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Project Overview</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Project Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Projects Overview</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Customer_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Project_Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Trend__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Go_Live__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Complete__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Customer_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Project_Id__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Customer_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Project_Id__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Customer_Name__c</searchFilterFields>
+        <searchFilterFields>Project_Id__c</searchFilterFields>
+        <searchResultsAdditionalFields>Customer_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Project_Id__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

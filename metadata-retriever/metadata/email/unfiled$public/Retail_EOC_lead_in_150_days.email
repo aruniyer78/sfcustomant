@@ -1,0 +1,79 @@
+<messaging:emailTemplate subject="Retail EOC lead auto generated from contract expiring in 150 days" recipientType="Contact" relatedToType="Lead_Account__c">
+<messaging:HTMLEmailBody >
+The following End of Contract Opportunity has been referred to you for follow up under the End of Contract process.<br/><br/>
+There are 150 days until the Contract End Date for this End of Contract Opportunity.<br/><br/>
+Please return acknowledgement of the status of this referral by clicking on the relevant link below.<br/><br/>
+
+<br />Company_Account__c:{!relatedTo.Company_Account__c}
+Nature of Request: {!relatedTo.Nature_of_Request__c}  <br/>
+Opportunity Record Type: leadIdLeadName.get({!relatedTo.id})<br/><br/>
+<b>Contact Details</b><br/>
+Phone (Day): {!relatedTo.Work_Phone__c }<br/>
+Phone (AH): {!relatedTo.Home_Phone__c }<br/>
+Mobile: {!relatedTo.Mobile__c}<br/>
+Email: {!relatedTo.Email__c}<br/><br/>
+<b>Referral Tracking</b><br/>
+Contract End Date (EOC Lead): '+ContractIdEndDate.get(lead.Existing_Contract__c)+'<br/><br/>
+<b>Qualification Information</b><br/>
+Existing Contract: ContractIdName.get({!relatedTo.Existing_Contract__c})<br/>
+Vehicle Make - Current: {!relatedTo.Vehicle_Make_Current__c }<br/>
+Vehicle Model - Current: {!relatedTo.Vehicle_Model_Current__c }<br/>
+Vehicle Year - Current: {!relatedTo.Vehicle_Year_Current__c }<br/>
+Residual Amount: {!relatedTo.Residual_Amount__c}<br/>
+Original Monthly Payment: {!relatedTo.Monthly_Payment__c}<br/>
+Interest Rate: {!relatedTo.Interest_Rate__c}<br/><br/>
+Kind Regards<br/>
+Dealer Support<br/>
+
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Quote Accepted 
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Sold Vehicle
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Sold Vehicle and Finance 
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Sold Finance
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Refinanced 
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Lost 
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+<br />
+<apex:outputLink value="https://c.ap1.visual.force.com/apex/UpdateLeadStatus">
+Contact Attempt Made 
+<apex:param name="q" value="{!relatedTo.Id}"/>
+</apex:outputLink>
+
+</messaging:HTMLEmailBody>
+<messaging:attachment renderAs="pdf">
+
+There are 150 days until the Contract End Date for this End of Contract Opportunity.<br/><br/>
+Please return acknowledgement of the status of this referral by clicking on the relevant link below.<br/><br/>
+<br />RecordTypeId: {!relatedTo.RecordTypeId}
+<br />name: {!relatedTo.name}
+<br />Contact__c: {!relatedTo.Contact__c}
+Nature of Request:  {!relatedTo.Nature_of_Request__c} <br/>
+Opportunity Record Type:  <br/><br/>
+<b>Contact Details</b><br/>
+<br />Company_Account__c:{!relatedTo.Company_Account__c}
+<br /> Interest_Rate__c:{!relatedTo.Interest_Rate__c}
+</messaging:attachment>
+
+</messaging:emailTemplate>

@@ -1,0 +1,10 @@
+*** NEW CAMPAIGN APPROVED NOTIFICATION ***  
+
+The following campaign has been approved.
+Name:  {!Campaign.Name} 
+Campaign Code:  {!Campaign.Campaign_Code__c} 
+Start Date:  {!Campaign.StartDate} 
+Type:  {!Campaign.Type} 
+Description: {!Campaign.Description}  
+
+Click on the link to access the campaign:  {!Campaign.Link}

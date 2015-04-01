@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Budget Cost</value>
+        </caseValues>
+        <name>budgeted_cost_campaign</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Approver --></label>
+        <name>Approver__c</name>
+        <relationshipLabel><!-- Campaigns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Body Type --></label>
+        <name>Body_Type__c</name>
+        <picklistValues>
+            <masterLabel>3 door</masterLabel>
+            <translation><!-- 3 door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 door</masterLabel>
+            <translation><!-- 5 door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cabriolet</masterLabel>
+            <translation><!-- Cabriolet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coupe</masterLabel>
+            <translation><!-- Coupe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estate</masterLabel>
+            <translation><!-- Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hatch</masterLabel>
+            <translation><!-- Hatch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LWB</masterLabel>
+            <translation><!-- LWB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>People Mover</masterLabel>
+            <translation><!-- People Mover --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roadster</masterLabel>
+            <translation><!-- Roadster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUV</masterLabel>
+            <translation><!-- SUV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SWB</masterLabel>
+            <translation><!-- SWB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saloon</masterLabel>
+            <translation><!-- Saloon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sedan</masterLabel>
+            <translation><!-- Sedan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shooting Brake</masterLabel>
+            <translation><!-- Shooting Brake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports Coupe</masterLabel>
+            <translation><!-- Sports Coupe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports Tourer</masterLabel>
+            <translation><!-- Sports Tourer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+        <picklistValues>
+            <masterLabel>Freightliner / Daimler Trucks</masterLabel>
+            <translation><!-- Freightliner / Daimler Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fuso / Daimler Trucks</masterLabel>
+            <translation><!-- Fuso / Daimler Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Bus &amp; Coach</masterLabel>
+            <translation><!-- MB Bus &amp; Coach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Cars</masterLabel>
+            <translation><!-- MB Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Trucks / Daimler Trucks</masterLabel>
+            <translation><!-- MB Trucks / Daimler Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Vans</masterLabel>
+            <translation><!-- MB Vans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart</masterLabel>
+            <translation><!-- smart --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign Channels --></label>
+        <name>Campaign_Channels__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail</masterLabel>
+            <translation><!-- Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS</masterLabel>
+            <translation><!-- SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website</masterLabel>
+            <translation><!-- Website --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign Code --></label>
+        <name>Campaign_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Medium --></label>
+        <name>Campaign_Format__c</name>
+        <picklistValues>
+            <masterLabel>DM</masterLabel>
+            <translation><!-- DM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealership</masterLabel>
+            <translation><!-- Dealership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online</masterLabel>
+            <translation><!-- Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS</masterLabel>
+            <translation><!-- SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eDM</masterLabel>
+            <translation><!-- eDM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign Objective --></label>
+        <name>Campaign_Objective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Offer Type --></label>
+        <name>Campaign_Offer_Type__c</name>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance Offer</masterLabel>
+            <translation><!-- Finance Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incentive</masterLabel>
+            <translation><!-- Incentive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Offer</masterLabel>
+            <translation><!-- Insurance Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Offer</masterLabel>
+            <translation><!-- Service Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Drive</masterLabel>
+            <translation><!-- Test Drive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign Response Channels --></label>
+        <name>Campaign_Response_Channels__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail</masterLabel>
+            <translation><!-- Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Registration</masterLabel>
+            <translation><!-- Online Registration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMS</masterLabel>
+            <translation><!-- SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Visit Dealer</masterLabel>
+            <translation><!-- Visit Dealer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expected Leads (%) --></label>
+        <name>Expected_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Participation (%) --></label>
+        <name>Expected_Participation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Registration (%) --></label>
+        <name>Expected_Registration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Response Rate (%) --></label>
+        <name>Expected_Response_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frequency Category --></label>
+        <name>Frequency_Category__c</name>
+        <picklistValues>
+            <masterLabel>Adhoc</masterLabel>
+            <translation><!-- Adhoc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bi Annual</masterLabel>
+            <translation><!-- Bi Annual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fortnightly</masterLabel>
+            <translation><!-- Fortnightly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tri Annual</masterLabel>
+            <translation><!-- Tri Annual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Previous Campaign Execution --></label>
+        <name>Previous_Campaign_Execution__c</name>
+        <relationshipLabel><!-- Consequent Campaign Executions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data Source --></label>
+        <name>Resource_Channels__c</name>
+        <picklistValues>
+            <masterLabel>3rd Party Database</masterLabel>
+            <translation><!-- 3rd Party Database --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Database</masterLabel>
+            <translation><!-- Dealer Database --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event Database</masterLabel>
+            <translation><!-- Event Database --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Database</masterLabel>
+            <translation><!-- MB Database --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- S&amp;M Sub-group --></label>
+        <name>S_M_Sub_group__c</name>
+        <picklistValues>
+            <masterLabel>ALL</masterLabel>
+            <translation><!-- ALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance - Insurance</masterLabel>
+            <translation><!-- Finance - Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Finance</masterLabel>
+            <translation><!-- Sales - Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Insurance</masterLabel>
+            <translation><!-- Sales - Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Service</masterLabel>
+            <translation><!-- Sales - Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service - Finance</masterLabel>
+            <translation><!-- Service - Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service - Insurance</masterLabel>
+            <translation><!-- Service - Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service- Finance- Insurance</masterLabel>
+            <translation><!-- Service- Finance- Insurance --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scale/Volume --></label>
+        <name>Scale_Volume__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatched</masterLabel>
+            <translation><!-- Dispatched --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opened</masterLabel>
+            <translation><!-- Opened --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planned</masterLabel>
+            <translation><!-- Planned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submit for approval</masterLabel>
+            <translation><!-- Submit for approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>To be Deleted</masterLabel>
+            <translation><!-- To be Deleted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Acquistion</masterLabel>
+            <translation><!-- Acquistion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competition</masterLabel>
+            <translation><!-- Competition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Event</masterLabel>
+            <translation><!-- Event --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional (Finance &amp; Insurance)</masterLabel>
+            <translation><!-- Functional (Finance &amp; Insurance) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information</masterLabel>
+            <translation><!-- Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Requirement</masterLabel>
+            <translation><!-- Legal Requirement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loyalty</masterLabel>
+            <translation><!-- Loyalty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RAK (Random Act of Kindness)</masterLabel>
+            <translation><!-- RAK (Random Act of Kindness) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retention</masterLabel>
+            <translation><!-- Retention --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsorship</masterLabel>
+            <translation><!-- Sponsorship --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle Class --></label>
+        <name>Vehicle_Class__c</name>
+        <picklistValues>
+            <masterLabel>A-Class</masterLabel>
+            <translation><!-- A-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actros</masterLabel>
+            <translation><!-- Actros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Argosy</masterLabel>
+            <translation><!-- Argosy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atego</masterLabel>
+            <translation><!-- Atego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Axor</masterLabel>
+            <translation><!-- Axor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B-Class</masterLabel>
+            <translation><!-- B-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C-Class</masterLabel>
+            <translation><!-- C-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL-Class</masterLabel>
+            <translation><!-- CL-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLA-Class</masterLabel>
+            <translation><!-- CLA-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLC-Class</masterLabel>
+            <translation><!-- CLC-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLK-Class</masterLabel>
+            <translation><!-- CLK-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLS-Class</masterLabel>
+            <translation><!-- CLS-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canter</masterLabel>
+            <translation><!-- Canter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Century Class</masterLabel>
+            <translation><!-- Century Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charter Bus</masterLabel>
+            <translation><!-- Charter Bus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citan</masterLabel>
+            <translation><!-- Citan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>City Bus</masterLabel>
+            <translation><!-- City Bus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coach</masterLabel>
+            <translation><!-- Coach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Columbia</masterLabel>
+            <translation><!-- Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coronado 112</masterLabel>
+            <translation><!-- Coronado 112 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coronado 114</masterLabel>
+            <translation><!-- Coronado 114 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Coronado SD 114</masterLabel>
+            <translation><!-- Coronado SD 114 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Class</masterLabel>
+            <translation><!-- E-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Econic</masterLabel>
+            <translation><!-- Econic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fighter</masterLabel>
+            <translation><!-- Fighter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G-Class</masterLabel>
+            <translation><!-- G-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL-Class</masterLabel>
+            <translation><!-- GL-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLA-Class</masterLabel>
+            <translation><!-- GLA-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Heavy</masterLabel>
+            <translation><!-- Heavy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M-Class</masterLabel>
+            <translation><!-- M-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R-Class</masterLabel>
+            <translation><!-- R-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rosa</masterLabel>
+            <translation><!-- Rosa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S-Class</masterLabel>
+            <translation><!-- S-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SL-Class</masterLabel>
+            <translation><!-- SL-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLK-Class</masterLabel>
+            <translation><!-- SLK-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLS AMG</masterLabel>
+            <translation><!-- SLS AMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School Bus</masterLabel>
+            <translation><!-- School Bus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sprinter</masterLabel>
+            <translation><!-- Sprinter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sterling</masterLabel>
+            <translation><!-- Sterling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimog</masterLabel>
+            <translation><!-- Unimog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valente</masterLabel>
+            <translation><!-- Valente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viano</masterLabel>
+            <translation><!-- Viano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vito</masterLabel>
+            <translation><!-- Vito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zetros</masterLabel>
+            <translation><!-- Zetros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>fortwo</masterLabel>
+            <translation><!-- fortwo --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Administrotra Layout</layout>
+        <sections>
+            <label><!-- Expected Outcome --></label>
+            <section>Expected Outcome</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Campaign Layout</layout>
+        <sections>
+            <label><!-- Expected Outcome --></label>
+            <section>Expected Outcome</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Central Campaign - AU --></label>
+        <name>Central_Campaign_AU</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Creative Brief --></label>
+        <name>Creative_Brief</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Data Brief --></label>
+        <name>Data_Brief</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Internal Campaign Brief --></label>
+        <name>Internal_Campaign_Brief</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Expected Outcome fields should not be more than 100. --></errorMessage>
+        <name>Expected_Outcome_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only Campaign with &quot;Started&quot; status can be activated. --></errorMessage>
+        <name>Only_Started_Campaign_can_be_activated</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- De_Dup --></label>
+        <name>De_Dup</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewAllCampaignMembers --></label>
+        <name>ViewAllCampaignMembers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ViewCampaignInfluenceReport --></label>
+        <name>ViewCampaignInfluenceReport</name>
+    </webLinks>
+</CustomObjectTranslation>

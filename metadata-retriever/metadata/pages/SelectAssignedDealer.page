@@ -1,0 +1,76 @@
+<apex:page StandardController="Lead_Account__c" extensions="ExtSelectAssignedDealer" 
+    sidebar="false">
+    <style>        
+        a { 
+            color: #015BA7;
+            text-decoration: none;
+        } 
+        
+        body a:hover {
+            text-decoration: underline;
+            color: #015BA7;
+        }
+        
+        .pageTitleIcon {
+            background-image: url(/img/icon/cd32.png);
+            background-position: 0 0;
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+
+    <apex:sectionHeader title="Select Assigned Dealer"/>
+    <apex:form >
+        <apex:pageBlock mode="edit" >         
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Search Dealers" action="{!query}" status="status" 
+                    rerender="query, message"/>
+                    
+                <apex:actionStatus id="status">
+                    <apex:facet name="start">
+                        <span style="width: 500px;">
+                            <img src="/img/loading24.gif" style="vertical-align:middle;"/>
+                            <span style="margin-left: 10px; font-size: 12px; font-weight: bold; color: #000000;">
+                                {!$Label.CP_Please_Wait}...</span>
+                        </span>
+                    </apex:facet>      
+                </apex:actionStatus>
+            </apex:pageBlockButtons>
+            
+            <apex:outputpanel Id="filter">
+                <apex:pageBlockSection title="Filter Part" columns="2">
+                    <apex:pageblockSectionItem >
+                        <apex:outputLabel value="Dealer Name" />
+                        <apex:inputText value="{!name}" title="Input Dealer Name" />
+                    </apex:pageblockSectionItem>
+                    <apex:pageblockSectionItem >
+                    </apex:pageblockSectionItem>
+                    <apex:inputField value="{!dealer.Suburb__c}" />
+                    <apex:inputField value="{!dealer.Post_Code__c}" />
+                    <apex:inputField value="{!dealer.Business_Unit__c}" />
+                    <apex:pageblockSectionItem >
+                        <apex:outputLabel value="Offered Service" />
+                        <apex:inputField value="{!dealer.Cars_Offered_Service__c}"/>
+                    </apex:pageblockSectionItem>
+                </apex:pageBlockSection>
+            </apex:outputpanel>
+            
+            <BR />
+            
+            <apex:outputPanel Id="query">
+                <apex:pageBlockTable value="{!dealers}" var="dea" rendered="{!hasQueryResult}">                    
+                    <apex:column headerValue="Dealer Name">
+                        <apex:commandLink action="{!choose}" value="{!dea.Name}" oncomplete="closeTab();">
+                            <apex:param assignTo="{!choosenDealerId}" value="{!dea.Id}" name="choosenDealerId"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    
+                    <apex:repeat value="{!$ObjectType.Account.FieldSets.AssignedDealerColumns}" var="column">
+                        <apex:column value="{!dea[column]}" rendered="{!NOT(column == 'Name')}"/>
+                    </apex:repeat>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+            <apex:pageMessages Id="message"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

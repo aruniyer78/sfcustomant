@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Used by the Service Cloud Console to see the List View of tasks</description>
+    <label>Tasks</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom138: TV Widescreen</motif>
+    <page>Tasks</page>
+</CustomTab>

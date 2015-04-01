@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Defect</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Defects</value>
+    </caseValues>
+    <fields>
+        <help><!-- Please select Melvin Daguplo or Sabine Jonientz --></help>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Defects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Close Comment --></label>
+        <name>Close_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Defect Category --></label>
+        <name>Defect_Category__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Request</masterLabel>
+            <translation><!-- Change Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development Bug</masterLabel>
+            <translation><!-- Development Bug --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicated</masterLabel>
+            <translation><!-- Duplicated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environment Defect</masterLabel>
+            <translation><!-- Environment Defect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Development</masterLabel>
+            <translation><!-- In Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invalid Use</masterLabel>
+            <translation><!-- Invalid Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requirement Workbook Defect</masterLabel>
+            <translation><!-- Requirement Workbook Defect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Case Error</masterLabel>
+            <translation><!-- Test Case Error --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Defect Description --></label>
+        <name>Defect_description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detected in Cycle --></label>
+        <name>Detected_in_Cycle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detected in Release --></label>
+        <name>Detected_in_Release__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detected in Version --></label>
+        <name>Detected_in_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detected on Date --></label>
+        <name>Detected_on_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market / Country --></label>
+        <name>Market_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>China</masterLabel>
+            <translation><!-- China --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>1-Urgent</masterLabel>
+            <translation><!-- 1-Urgent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-High</masterLabel>
+            <translation><!-- 2-High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-Medium</masterLabel>
+            <translation><!-- 3-Medium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4-Low</masterLabel>
+            <translation><!-- 4-Low --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Related CRs # --></label>
+        <name>Related_CRs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related Test Case --></label>
+        <name>Related_Test_Case__c</name>
+        <relationshipLabel><!-- Defects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>Release__c</name>
+        <picklistValues>
+            <masterLabel>1.1</masterLabel>
+            <translation><!-- 1.1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1.2</masterLabel>
+            <translation><!-- 1.2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1.3</masterLabel>
+            <translation><!-- 1.3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Change Request</masterLabel>
+            <translation><!-- Change Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployed</masterLabel>
+            <translation><!-- Deployed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployed and Verified</masterLabel>
+            <translation><!-- Deployed and Verified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duplicate</masterLabel>
+            <translation><!-- Duplicate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed</masterLabel>
+            <translation><!-- Fixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Reproducible</masterLabel>
+            <translation><!-- Non-Reproducible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RWB Gap</masterLabel>
+            <translation><!-- RWB Gap --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reopen</masterLabel>
+            <translation><!-- Reopen --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+        <picklistValues>
+            <masterLabel>LDCL</masterLabel>
+            <translation><!-- LDCL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC</masterLabel>
+            <translation><!-- SFDC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test step1 --></label>
+        <name>Test_step1__c</name>
+        <relationshipLabel><!-- Defects --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Testing Phase --></label>
+        <name>Testing_Phase__c</name>
+        <picklistValues>
+            <masterLabel>Integration Testing</masterLabel>
+            <translation><!-- Integration Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Testing Round 1</masterLabel>
+            <translation><!-- Integration Testing Round 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Testing Round 2</masterLabel>
+            <translation><!-- Integration Testing Round 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Testing Round 3</masterLabel>
+            <translation><!-- Integration Testing Round 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Testing Round 4</masterLabel>
+            <translation><!-- Integration Testing Round 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Testing</masterLabel>
+            <translation><!-- System Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TTT</masterLabel>
+            <translation><!-- TTT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Integration Test</masterLabel>
+            <translation><!-- Technical Integration Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT Round 1</masterLabel>
+            <translation><!-- UAT Round 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT Round 2</masterLabel>
+            <translation><!-- UAT Round 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT Round 3</masterLabel>
+            <translation><!-- UAT Round 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT W/O Integration</masterLabel>
+            <translation><!-- UAT W/O Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT with Integration</masterLabel>
+            <translation><!-- UAT with Integration --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Defect Layout</layout>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Defect Description --></label>
+            <section>Defect Description</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- HolgerMBAuPIntegration Test --></label>
+        <name>HolgerMBAuPIntegration_Test</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

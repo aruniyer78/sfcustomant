@@ -1,0 +1,7 @@
+Issue Description: 
+
+{!Issue__c.Issue_Description__c} 
+
+Due Date: {!Issue__c.Due_Date__c} 
+
+View detail in SFDC at: {!Issue__c.Link}

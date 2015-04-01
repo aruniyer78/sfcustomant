@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Fleet</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Fleet</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Fleets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Action Status --></label>
+        <name>Action_Status__c</name>
+        <picklistValues>
+            <masterLabel>Actioned</masterLabel>
+            <translation><!-- Actioned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Sent</masterLabel>
+            <translation><!-- Information Sent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Actioned</masterLabel>
+            <translation><!-- Not Actioned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Actioned Date --></label>
+        <name>Actioned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alleged Speed --></label>
+        <name>Alleged_Speed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Completed --></label>
+        <name>Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Vehicle Relationship --></label>
+        <name>Customer_Vehicle_Relationship__c</name>
+        <relationshipLabel><!-- Fleets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealership --></label>
+        <name>Dealership__c</name>
+        <relationshipLabel><!-- Fleets (Dealership) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fine Amount --></label>
+        <name>Fine_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Follow Up Store Manager --></label>
+        <name>First_Follow_Up_Store_Manager__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infringement Reference --></label>
+        <name>Infringement_Reference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Number --></label>
+        <name>Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Management Fee Amount --></label>
+        <name>Management_Fee_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Tyres --></label>
+        <name>Number_of_Tyres__c</name>
+    </fields>
+    <fields>
+        <label><!-- Obigation Number --></label>
+        <name>Obigation_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Odometer --></label>
+        <name>Odometer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offence Date/Time --></label>
+        <name>Offence_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offence Type --></label>
+        <name>Offence_Type__c</name>
+        <picklistValues>
+            <masterLabel>Infringements</masterLabel>
+            <translation><!-- Infringements --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking</masterLabel>
+            <translation><!-- Parking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red Light</masterLabel>
+            <translation><!-- Red Light --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Speeding</masterLabel>
+            <translation><!-- Speeding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toll Fines</masterLabel>
+            <translation><!-- Toll Fines --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Status --></label>
+        <name>Payment_Status__c</name>
+        <picklistValues>
+            <masterLabel>Paid</masterLabel>
+            <translation><!-- Paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unpaid</masterLabel>
+            <translation><!-- Unpaid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <picklistValues>
+            <masterLabel>BIO DIESEL</masterLabel>
+            <translation><!-- BIO DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIESEL</masterLabel>
+            <translation><!-- DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIESEL B</masterLabel>
+            <translation><!-- DIESEL B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFF ROAD DIESEL</masterLabel>
+            <translation><!-- OFF ROAD DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PETROL</masterLabel>
+            <translation><!-- PETROL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PETROL E</masterLabel>
+            <translation><!-- PETROL E --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PETROL P</masterLabel>
+            <translation><!-- PETROL P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Provider --></label>
+        <name>Provider__c</name>
+        <picklistValues>
+            <masterLabel>7 Eleven</masterLabel>
+            <translation><!-- 7 Eleven --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BP Plus</masterLabel>
+            <translation><!-- BP Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caltex</masterLabel>
+            <translation><!-- Caltex --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Choice Premium</masterLabel>
+            <translation><!-- Choice Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CustomFleet</masterLabel>
+            <translation><!-- CustomFleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gull Fuel</masterLabel>
+            <translation><!-- Gull Fuel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile</masterLabel>
+            <translation><!-- Mobile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Motorpass</masterLabel>
+            <translation><!-- Motorpass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OneCard</masterLabel>
+            <translation><!-- OneCard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other / Independent</masterLabel>
+            <translation><!-- Other / Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shell</masterLabel>
+            <translation><!-- Shell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Petroleum</masterLabel>
+            <translation><!-- United Petroleum --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Site Postcode --></label>
+        <name>Site_Postcode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site Suburb --></label>
+        <name>Site_Suburb__c</name>
+    </fields>
+    <fields>
+        <label><!-- Speed Zone KMs --></label>
+        <name>Speed_Zone_KMs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Amount(GST Inc.) --></label>
+        <name>Total_Amount_GST_Inc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Fleet --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Fines Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fleet Management Fee Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Fuel Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Out Of Contract Charge Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Toll Card Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Tyres Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Fines --></label>
+        <name>Fines</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fleet Management Fee --></label>
+        <name>Fleet_Management_Fee</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Fuel Card --></label>
+        <name>Fuel_Card</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Out of Contract Charge --></label>
+        <name>Out_of_Contract_Charge</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Toll Card --></label>
+        <name>Toll_Card</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Tyres --></label>
+        <name>Tyres</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

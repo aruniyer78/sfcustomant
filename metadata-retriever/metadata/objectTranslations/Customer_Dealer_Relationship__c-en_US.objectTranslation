@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Dealer Relationship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Dealer Relationship</value>
+    </caseValues>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>Customer__c</name>
+        <relationshipLabel><!-- Dealer Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dealer No. --></label>
+        <name>Dealer_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Name --></label>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Customer Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LDCL Cust Dealer Id --></label>
+        <name>LDCL_Cust_Dealer_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Person Id --></label>
+        <name>Sales_Person_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System --></label>
+        <name>Source_System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Customer Dealer Relationship Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>RowCount</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel># of Assigned Leads</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <field>Lead_Account__c$Assigned_Dealer__c.Car_Sales_Region__c</field>
+    </columns>
+    <columns>
+        <field>Lead_Account__c$Assigned_Dealer__c.Id</field>
+    </columns>
+    <description>How many lead records are assigned to this dealer?</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead_Account__c$Assigned_Dealer__c.RecordType</column>
+            <operator>equals</operator>
+            <value>Account.Dealer</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead_Account__c$Assigned_Dealer__c.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Y2D: Dealers with Assigned Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Leads_with_Assigned_Dealers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Lead_Account__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

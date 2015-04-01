@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MBAuP Contact</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MBAuP Contacts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>Business_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Alliance</masterLabel>
+            <translation><!-- Alliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Allmakes</masterLabel>
+            <translation><!-- Allmakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bus &amp; Coach</masterLabel>
+            <translation><!-- Bus &amp; Coach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cars</masterLabel>
+            <translation><!-- Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet</masterLabel>
+            <translation><!-- Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freightliner</masterLabel>
+            <translation><!-- Freightliner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fuso</masterLabel>
+            <translation><!-- Fuso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Trucks</masterLabel>
+            <translation><!-- MB Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBFS Cars</masterLabel>
+            <translation><!-- MBFS Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBFS Trucks</masterLabel>
+            <translation><!-- MBFS Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SelecTrucks</masterLabel>
+            <translation><!-- SelecTrucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Vehicles</masterLabel>
+            <translation><!-- Special Vehicles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimog</masterLabel>
+            <translation><!-- Unimog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vans</masterLabel>
+            <translation><!-- Vans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Star</masterLabel>
+            <translation><!-- Western Star --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart</masterLabel>
+            <translation><!-- smart --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Name --></label>
+        <name>Dealer_Name__c</name>
+        <relationshipLabel><!-- MBAuP Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- EOC Recipient Type --></label>
+        <name>EOC_Recipient_Type__c</name>
+        <picklistValues>
+            <masterLabel>15 Days CC</masterLabel>
+            <translation><!-- 15 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Days Primary</masterLabel>
+            <translation><!-- 15 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150 Days CC</masterLabel>
+            <translation><!-- 150 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150 Days Primary</masterLabel>
+            <translation><!-- 150 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Days CC</masterLabel>
+            <translation><!-- 20 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Days Primary</masterLabel>
+            <translation><!-- 20 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45 Days CC</masterLabel>
+            <translation><!-- 45 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45 Days Primary</masterLabel>
+            <translation><!-- 45 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 Days CC</masterLabel>
+            <translation><!-- 60 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 Days Primary</masterLabel>
+            <translation><!-- 60 Days Primary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Email Address --></label>
+        <name>Email_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Lead Type --></label>
+        <name>Finance_Lead_Type__c</name>
+        <picklistValues>
+            <masterLabel>Early Payout</masterLabel>
+            <translation><!-- Early Payout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Key 2 Key</masterLabel>
+            <translation><!-- Key 2 Key --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Escalation Recipient Type --></label>
+        <name>Lead_Escalation_Recipient_Type__c</name>
+        <picklistValues>
+            <masterLabel>24H Untouched Notice</masterLabel>
+            <translation><!-- 24H Untouched Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>72H Untouched Notice</masterLabel>
+            <translation><!-- 72H Untouched Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC Lead Escalation Recipient</masterLabel>
+            <translation><!-- CC Lead Escalation Recipient --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Immediate Notice</masterLabel>
+            <translation><!-- Immediate Notice --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mobile --></label>
+        <name>Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offered Services (Sub-Business Unit) --></label>
+        <name>Sub_Business_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Auto Body Repairer</masterLabel>
+            <translation><!-- Auto Body Repairer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance &amp; Insurance</masterLabel>
+            <translation><!-- Finance &amp; Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parts</masterLabel>
+            <translation><!-- Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Owned</masterLabel>
+            <translation><!-- Pre-Owned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Surname --></label>
+        <name>Surname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+        <picklistValues>
+            <masterLabel>BDM Army Trucks - Sales</masterLabel>
+            <translation><!-- BDM Army Trucks - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Cars - After-Sales</masterLabel>
+            <translation><!-- BDM Cars - After-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Cars - Sales</masterLabel>
+            <translation><!-- BDM Cars - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Freightliner - Sales</masterLabel>
+            <translation><!-- BDM Freightliner - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Fuso - Sales</masterLabel>
+            <translation><!-- BDM Fuso - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM MB Bus - Sales</masterLabel>
+            <translation><!-- BDM MB Bus - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM MB Trucks/Freightliner - Sales</masterLabel>
+            <translation><!-- BDM MB Trucks/Freightliner - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Trucks - After-Sales</masterLabel>
+            <translation><!-- BDM Trucks - After-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Vans - After-Sales</masterLabel>
+            <translation><!-- BDM Vans - After-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BDM Vans - Sales</masterLabel>
+            <translation><!-- BDM Vans - Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DRM MBFS</masterLabel>
+            <translation><!-- DRM MBFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FSM Trucks - After-Sales</masterLabel>
+            <translation><!-- FSM Trucks - After-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FSM Vans - After-Sales</masterLabel>
+            <translation><!-- FSM Vans - After-Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TSM Cars - After-Sales</masterLabel>
+            <translation><!-- TSM Cars - After-Sales --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>MBAuP Contact Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Mobile should be a numric value --></errorMessage>
+        <name>Moblie_should_be_numeric</name>
+    </validationRules>
+</CustomObjectTranslation>

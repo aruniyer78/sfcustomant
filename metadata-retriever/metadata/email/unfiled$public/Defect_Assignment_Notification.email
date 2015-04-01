@@ -1,0 +1,10 @@
+ID : {!Defect__c.Name} 
+Status : {!Defect__c.Status__c} 
+Created by : {!Defect__c.CreatedBy} 
+Related Test Case : {!Defect__c.Related_Test_Case__c} 
+Related Test Step : {!Defect__c.Test_step1__c} 
+Detected on Date : {!Defect__c.Detected_on_Date__c} 
+Defect Category : {!Defect__c.Defect_Category__c} 
+Due Date : {!Defect__c.Due_Date__c} 
+Defect description : {!Defect__c.Defect_description__c} 
+Quick link : {!Defect__c.Link}

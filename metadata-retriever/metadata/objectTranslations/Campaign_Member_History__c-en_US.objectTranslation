@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Campaign Member History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Campaign Member History</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- CampaignMember --></label>
+        <name>CampaignMember__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date of Change --></label>
+        <name>Date_of_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Campaign Member History --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

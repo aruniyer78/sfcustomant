@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PMO: Test Management. Store all test Steps that based on Test Case.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Test_Result__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Test Result</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Data__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Data element for the test or guidance on how to select the data</inlineHelpText>
+        <label>Data</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Expected_Result__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Determine the expected result and enter it here.</inlineHelpText>
+        <label>Expected Result</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Navigation_Path__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the application navigation steps.</inlineHelpText>
+        <label>Navigation Path</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Passed_Results__c</fullName>
+        <externalId>false</externalId>
+        <label>Passed Results</label>
+        <summaryFilterItems>
+            <field>Test_Step_Result__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Passed</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Test_Step_Result__c.Test_Step__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Run_Records__c</fullName>
+        <externalId>false</externalId>
+        <label>Run Records</label>
+        <summaryForeignKey>Test_Step_Result__c.Test_Step__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Passed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Step_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Add step details necessary to understand and execute the step.</inlineHelpText>
+        <label>Step Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Step_Result__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Passed_Results__c = Run_Records__c, &quot;Passed&quot;,  &quot;Fail&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Step Result</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test_Case__c</fullName>
+        <externalId>false</externalId>
+        <label>Test Case</label>
+        <referenceTo>Test_Case__c</referenceTo>
+        <relationshipLabel>Test Step</relationshipLabel>
+        <relationshipName>Test_Step</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <label>Test Step</label>
+    <nameField>
+        <label>Test Step #</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Test Step</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ActTestResult_is_required_when_failed</fullName>
+        <active>true</active>
+        <description>When test step stats is failed, Actual Test Result is required.</description>
+        <errorConditionFormula>AND(   ISPICKVAL(Status__c, &quot;Failed&quot;) , or (ISNULL(Actual_Test_Result__c) , ISBLANK(Actual_Test_Result__c) ),
+$Profile.Name != &apos;IntegrationAPI&apos; 
+)</errorConditionFormula>
+        <errorMessage>When test step stats is failed, Actual Test Result is required.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Case Status</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Case_status</value>
+    </caseValues>
+    <fields>
+        <label><!-- Case Status --></label>
+        <name>Case_Status__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fail</masterLabel>
+            <translation><!-- Fail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Start</masterLabel>
+            <translation><!-- Not Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass</masterLabel>
+            <translation><!-- Pass --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Cases1 --></label>
+        <name>Test_Cases1__c</name>
+        <relationshipLabel><!-- Case_status --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Round --></label>
+        <name>Test_Round__c</name>
+        <relationshipLabel><!-- Case_status --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Round Relation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

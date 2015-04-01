@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Scenarios</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scenarios</value>
+    </caseValues>
+    <fields>
+        <label><!-- Author (SSO ID) --></label>
+        <name>Author_SSO_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Model --></label>
+        <name>Business_Model__c</name>
+        <picklistValues>
+            <masterLabel>DI</masterLabel>
+            <translation><!-- DI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Module --></label>
+        <name>Module__c</name>
+        <picklistValues>
+            <masterLabel>Business Process</masterLabel>
+            <translation><!-- Business Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data View</masterLabel>
+            <translation><!-- Data View --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration</masterLabel>
+            <translation><!-- Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Report</masterLabel>
+            <translation><!-- Report --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Permission</masterLabel>
+            <translation><!-- User Permission --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User and Permission</masterLabel>
+            <translation><!-- User and Permission --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Scenario Description --></label>
+        <name>Scenario_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Draft Ready</masterLabel>
+            <translation><!-- Draft Ready --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewed</masterLabel>
+            <translation><!-- Reviewed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Acceptance Criteria for the overall Test Scenario --></help>
+        <label><!-- Test Acceptance Criteria --></label>
+        <name>Test_Acceptance_Criteria__c</name>
+    </fields>
+    <fields>
+        <help><!-- Objective of the overall  Test scenario --></help>
+        <label><!-- Test Objective --></label>
+        <name>Test_Objective__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Run --></label>
+        <name>Test_Run__c</name>
+        <relationshipLabel><!-- Scenarios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Type --></label>
+        <name>Test_Type__c</name>
+        <picklistValues>
+            <masterLabel>UAT</masterLabel>
+            <translation><!-- UAT --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>UAT Scenario Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

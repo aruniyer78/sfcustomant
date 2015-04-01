@@ -1,0 +1,20 @@
+Dear {!Case.OwnerFirstName},
+
+RE: RESPONSE REMINDER -{!Case.Contact} (Contract #{!Contract.Contract_Id__c})
+
+Please see dispute received previously from the Financial Ombudsman Service (FOS). 
+
+As per our Internal Disputes Resolution process please respond to the customer and FOS( info@fos.org.au ) by close of business {!Case.Response_Due_Date__c}. 
+
+Please quote the FOS Case Number in the subject line of your email to FOS, or please just use the subject line of this email. 
+
+Please also provide a copy of the response to myself for our Internal Disputes Resolution register(please email this to customerservices@daimler.com). 
+
+Thank you in advance. 
+
+Kind regards, 
+
+Angelo Atton
+Internal Disputes Resolution Administrator
+
+{!Case.Thread_Id}

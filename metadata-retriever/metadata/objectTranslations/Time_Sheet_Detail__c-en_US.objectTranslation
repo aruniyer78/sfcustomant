@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time Sheet Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time Sheet Detail</value>
+    </caseValues>
+    <fields>
+        <label><!-- *Allowance* --></label>
+        <name>Allowance_2__c</name>
+    </fields>
+    <fields>
+        <help><!-- user allowance*workload/8 --></help>
+        <label><!-- Allowance --></label>
+        <name>Allowance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discription --></label>
+        <name>Discription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature --></label>
+        <name>Feature__c</name>
+        <picklistValues>
+            <masterLabel>1st Migration</masterLabel>
+            <translation><!-- 1st Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alpha/Beta review dress rehearsal</masterLabel>
+            <translation><!-- Alpha/Beta review dress rehearsal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alpha/Beta review preparation</masterLabel>
+            <translation><!-- Alpha/Beta review preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alpha/Beta review session</masterLabel>
+            <translation><!-- Alpha/Beta review session --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Logic</masterLabel>
+            <translation><!-- Business Logic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Dictionary</masterLabel>
+            <translation><!-- Data Dictionary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Model</masterLabel>
+            <translation><!-- Data Model --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Functional Design</masterLabel>
+            <translation><!-- Functional Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gap/Fit Design</masterLabel>
+            <translation><!-- Gap/Fit Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Level Process Clarification</masterLabel>
+            <translation><!-- High Level Process Clarification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Iteration Planning</masterLabel>
+            <translation><!-- Iteration Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Architecture</masterLabel>
+            <translation><!-- Migration Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Cycles</masterLabel>
+            <translation><!-- Migration Cycles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Design</masterLabel>
+            <translation><!-- Migration Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Development</masterLabel>
+            <translation><!-- Migration Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Test 1</masterLabel>
+            <translation><!-- Migration Test 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration Test 2</masterLabel>
+            <translation><!-- Migration Test 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overall Design</masterLabel>
+            <translation><!-- Overall Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMO Meeting</masterLabel>
+            <translation><!-- PMO Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presentation</masterLabel>
+            <translation><!-- Presentation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Management</masterLabel>
+            <translation><!-- Project Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Stream Lead Meeting</masterLabel>
+            <translation><!-- Project Stream Lead Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proof of Concept</masterLabel>
+            <translation><!-- Proof of Concept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review on Migration Architecture</masterLabel>
+            <translation><!-- Review on Migration Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review on Migration Concept</masterLabel>
+            <translation><!-- Review on Migration Concept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Source Code</masterLabel>
+            <translation><!-- Source Code --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stabilization</masterLabel>
+            <translation><!-- Stabilization --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stream leads standup meeting</masterLabel>
+            <translation><!-- Stream leads standup meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Test</masterLabel>
+            <translation><!-- System Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Team standup meeting</masterLabel>
+            <translation><!-- Team standup meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Desing</masterLabel>
+            <translation><!-- Technical Desing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Planning</masterLabel>
+            <translation><!-- Test Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Scenario/Case</masterLabel>
+            <translation><!-- Test Scenario/Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing Preparation</masterLabel>
+            <translation><!-- Testing Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel</masterLabel>
+            <translation><!-- Travel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Function --></label>
+        <name>Function__c</name>
+        <picklistValues>
+            <masterLabel>Alpha &amp; Beta review</masterLabel>
+            <translation><!-- Alpha &amp; Beta review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Application Architecture Management</masterLabel>
+            <translation><!-- Application Architecture Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign Mgnt.</masterLabel>
+            <translation><!-- Campaign Mgnt. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case Mgmt</masterLabel>
+            <translation><!-- Case Mgmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Mgnt.</masterLabel>
+            <translation><!-- Complaint Mgnt. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complaint Mgnt. (Retail)</masterLabel>
+            <translation><!-- Complaint Mgnt. (Retail) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Mgnt.</masterLabel>
+            <translation><!-- Contact Mgnt. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Lifecycle</masterLabel>
+            <translation><!-- Customer Lifecycle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Management</masterLabel>
+            <translation><!-- Data Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dealer Portal</masterLabel>
+            <translation><!-- Dealer Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knowledge Mgnt.</masterLabel>
+            <translation><!-- Knowledge Mgnt. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead &amp; Sales Mgnt.</masterLabel>
+            <translation><!-- Lead &amp; Sales Mgnt. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MMS / SMS</masterLabel>
+            <translation><!-- MMS / SMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing &amp; Sales Mgnt.</masterLabel>
+            <translation><!-- Marketing &amp; Sales Mgnt. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Migration</masterLabel>
+            <translation><!-- Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Management</masterLabel>
+            <translation><!-- Project Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QC</masterLabel>
+            <translation><!-- QC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting &amp; Dashboard</masterLabel>
+            <translation><!-- Reporting &amp; Dashboard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Roll Out Manager</masterLabel>
+            <translation><!-- Roll Out Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SFDC Development</masterLabel>
+            <translation><!-- SFDC Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSI</masterLabel>
+            <translation><!-- SSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security (Role, Profile, Data)</masterLabel>
+            <translation><!-- Security (Role, Profile, Data) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media</masterLabel>
+            <translation><!-- Social Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing</masterLabel>
+            <translation><!-- Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel</masterLabel>
+            <translation><!-- Travel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- On/Off Site --></label>
+        <name>On_Off_Site__c</name>
+        <picklistValues>
+            <masterLabel>Off</masterLabel>
+            <translation><!-- Off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On</masterLabel>
+            <translation><!-- On --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time Sheet --></label>
+        <name>Time_Sheet__c</name>
+        <relationshipLabel><!-- Time Sheet Detail --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Week Day --></label>
+        <name>Week_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Workload(Hrs.) --></label>
+        <name>Workload_Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- allowance shadow --></label>
+        <name>allowance_shadow__c</name>
+    </fields>
+    <layouts>
+        <layout>Time Sheet Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Discription --></label>
+            <section>Discription</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- no more 8 hours per day --></errorMessage>
+        <name>working_hours</name>
+    </validationRules>
+</CustomObjectTranslation>

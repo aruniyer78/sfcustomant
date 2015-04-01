@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Address</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Addresses</value>
+    </caseValues>
+    <fields>
+        <label><!-- Address Line 1 --></label>
+        <name>Address_Line_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Line 2 --></label>
+        <name>Address_Line_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Address Type --></label>
+        <name>Address_Type__c</name>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company</masterLabel>
+            <translation><!-- Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home</masterLabel>
+            <translation><!-- Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mailing</masterLabel>
+            <translation><!-- Mailing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Postal address</masterLabel>
+            <translation><!-- Postal address --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prev Mailing</masterLabel>
+            <translation><!-- Prev Mailing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 1 -Main Location Sales, Service &amp; Parts</masterLabel>
+            <translation><!-- Site 1 -Main Location Sales, Service &amp; Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 2 -Main Location Sales Only</masterLabel>
+            <translation><!-- Site 2 -Main Location Sales Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 3 -Main Location Service &amp; Parts</masterLabel>
+            <translation><!-- Site 3 -Main Location Service &amp; Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 4 -Additional Sales location not within Site 1</masterLabel>
+            <translation><!-- Site 4 -Additional Sales location not within Site 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 5 -Additional Sales location not within Site 1 or Site 4</masterLabel>
+            <translation><!-- Site 5 -Additional Sales location not within Site 1 or Site 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 6 -Additional Sales, Service &amp; Parts location not within Site 1 or Site 3</masterLabel>
+            <translation><!-- Site 6 -Additional Sales, Service &amp; Parts location not within Site 1 or Site 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 7 -Service &amp; Parts ONLY Location</masterLabel>
+            <translation><!-- Site 7 -Service &amp; Parts ONLY Location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 8 -Only Parts Location</masterLabel>
+            <translation><!-- Site 8 -Only Parts Location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Site 9 -Auto Body</masterLabel>
+            <translation><!-- Site 9 -Auto Body --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>​Site address</masterLabel>
+            <translation><!-- ​Site address --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Zealand</masterLabel>
+            <translation><!-- New Zealand --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Customer__c</name>
+        <relationshipLabel><!-- Addresses --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LDCL Address ID --></label>
+        <name>LDCL_Address_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Post Code --></label>
+        <name>Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferred --></label>
+        <name>Preferred__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System --></label>
+        <name>Source_System__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>Australian Capital Territory</masterLabel>
+            <translation><!-- Australian Capital Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New South Wales</masterLabel>
+            <translation><!-- New South Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Territory</masterLabel>
+            <translation><!-- Northern Territory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queensland</masterLabel>
+            <translation><!-- Queensland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Australia</masterLabel>
+            <translation><!-- South Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasmania</masterLabel>
+            <translation><!-- Tasmania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Victoria</masterLabel>
+            <translation><!-- Victoria --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Australia</masterLabel>
+            <translation><!-- Western Australia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dead Mail</masterLabel>
+            <translation><!-- Dead Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incomplete</masterLabel>
+            <translation><!-- Incomplete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opt out</masterLabel>
+            <translation><!-- Opt out --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suburb --></label>
+        <name>Suburb__c</name>
+    </fields>
+    <layouts>
+        <layout>Address Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dealer Address Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>individual Address Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Company --></label>
+        <name>Company</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Dealer --></label>
+        <name>Dealer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Individual --></label>
+        <name>Individual</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- State is a mandatory fields when your Country is Australia. --></errorMessage>
+        <name>CheckedState</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Company_Address --></label>
+        <name>New_Company_Address</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_DealerAddress --></label>
+        <name>New_DealerAddress</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Individual_Address --></label>
+        <name>New_Individual_Address</name>
+    </webLinks>
+</CustomObjectTranslation>

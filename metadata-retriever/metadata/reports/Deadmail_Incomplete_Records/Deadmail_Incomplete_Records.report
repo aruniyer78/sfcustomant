@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Address_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Address_Line_1__c</field>
+    </columns>
+    <columns>
+        <field>Account.Address_Line_2__c</field>
+    </columns>
+    <columns>
+        <field>Account.Post_Code__c</field>
+    </columns>
+    <columns>
+        <field>Account.Suburb__c</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Account.Status__c</column>
+            <operator>equals</operator>
+            <value>Incomplete,Dead mail</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Deadmail/Incomplete Records</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

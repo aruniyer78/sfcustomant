@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Collaboration Team</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Collaboration Team</value>
+    </caseValues>
+    <fields>
+        <label><!-- Access Type --></label>
+        <name>Access_Type__c</name>
+        <picklistValues>
+            <masterLabel>Read Only</masterLabel>
+            <translation><!-- Read Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Read/Write</masterLabel>
+            <translation><!-- Read/Write --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+        <relationshipLabel><!-- Collaboration Team --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Member Name --></label>
+        <name>Member_Name__c</name>
+        <relationshipLabel><!-- Collaboration Team --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Member Role --></label>
+        <name>Member_Role__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resource Required --></label>
+        <name>Resource_Required__c</name>
+    </fields>
+    <layouts>
+        <layout>Collaboration Team Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

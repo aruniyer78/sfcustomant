@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Case2</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Cases</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Results --></label>
+        <name>Actual_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Type --></label>
+        <name>Case_Type__c</name>
+        <picklistValues>
+            <masterLabel>Negative</masterLabel>
+            <translation><!-- Negative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Positive</masterLabel>
+            <translation><!-- Positive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>SIT</masterLabel>
+            <translation><!-- SIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT</masterLabel>
+            <translation><!-- UAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Test</masterLabel>
+            <translation><!-- Unit Test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- *Count Failed Step --></label>
+        <name>Count_Failed_Step__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Count Passed Step --></label>
+        <name>Count_Passed__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Count Steps --></label>
+        <name>Count_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Develop Task --></label>
+        <name>Develop_Task__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expected Result --></label>
+        <name>Expected_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iteration Id --></label>
+        <name>Iteration_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-Condition --></label>
+        <name>Pre_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecordTypeId --></label>
+        <name>RecordTypeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requirement --></label>
+        <name>Requirement__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Scenarios --></label>
+        <name>Scenarios__c</name>
+        <relationshipLabel><!-- Test Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Screenshot --></label>
+        <name>Screenshot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selected --></label>
+        <name>Selected__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Passed</masterLabel>
+            <translation><!-- Passed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WIP</masterLabel>
+            <translation><!-- WIP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Result --></label>
+        <name>Test_Result__c</name>
+        <picklistValues>
+            <masterLabel>Fail</masterLabel>
+            <translation><!-- Fail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass</masterLabel>
+            <translation><!-- Pass --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Steps --></label>
+        <name>Test_Steps__c</name>
+    </fields>
+    <layouts>
+        <layout>Requirement</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Test Result --></label>
+            <section>Test Result</section>
+        </sections>
+        <sections>
+            <label><!-- Test Script Details --></label>
+            <section>Test Script Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>UAT</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detail Info --></label>
+            <section>Detail Info</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Requirement --></label>
+        <name>Requirement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- UAT --></label>
+        <name>UAT</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

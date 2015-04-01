@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Date of Birth</value>
+        </caseValues>
+        <name>birthdate_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Surname</value>
+        </caseValues>
+        <name>last_name_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>Business_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Alliance</masterLabel>
+            <translation><!-- Alliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Allmakes</masterLabel>
+            <translation><!-- Allmakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bus &amp; Coach</masterLabel>
+            <translation><!-- Bus &amp; Coach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cars</masterLabel>
+            <translation><!-- Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet</masterLabel>
+            <translation><!-- Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freightliner</masterLabel>
+            <translation><!-- Freightliner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fuso</masterLabel>
+            <translation><!-- Fuso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Trucks</masterLabel>
+            <translation><!-- MB Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBFS Cars</masterLabel>
+            <translation><!-- MBFS Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBFS Trucks</masterLabel>
+            <translation><!-- MBFS Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SelecTrucks</masterLabel>
+            <translation><!-- SelecTrucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Vehicles</masterLabel>
+            <translation><!-- Special Vehicles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimog</masterLabel>
+            <translation><!-- Unimog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vans</masterLabel>
+            <translation><!-- Vans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Star</masterLabel>
+            <translation><!-- Western Star --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart</masterLabel>
+            <translation><!-- smart --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dealer Sales Gate Keeper --></label>
+        <name>Dealer_Sales_Gate_Keeper__c</name>
+    </fields>
+    <fields>
+        <label><!-- EOC Recipient Type --></label>
+        <name>EOC_Recipient_Type__c</name>
+        <picklistValues>
+            <masterLabel>15 Days CC</masterLabel>
+            <translation><!-- 15 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Days Primary</masterLabel>
+            <translation><!-- 15 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150 Days CC</masterLabel>
+            <translation><!-- 150 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150 Days Primary</masterLabel>
+            <translation><!-- 150 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Days CC</masterLabel>
+            <translation><!-- 20 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Days Primary</masterLabel>
+            <translation><!-- 20 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45 Days CC</masterLabel>
+            <translation><!-- 45 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45 Days Primary</masterLabel>
+            <translation><!-- 45 Days Primary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 Days CC</masterLabel>
+            <translation><!-- 60 Days CC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60 Days Primary</masterLabel>
+            <translation><!-- 60 Days Primary --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Finance Lead Type --></label>
+        <name>Finance_Lead_Type__c</name>
+        <picklistValues>
+            <masterLabel>Early Payout</masterLabel>
+            <translation><!-- Early Payout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Key 2 Key</masterLabel>
+            <translation><!-- Key 2 Key --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Job Title --></label>
+        <name>Job_Title__c</name>
+        <picklistValues>
+            <masterLabel>Bodywork - Paint Specialist</masterLabel>
+            <translation><!-- Bodywork - Paint Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bodywork - Panel Expert</masterLabel>
+            <translation><!-- Bodywork - Panel Expert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bodywork - Panel Specialist</masterLabel>
+            <translation><!-- Bodywork - Panel Specialist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - Dealer Principal</masterLabel>
+            <translation><!-- Management - Dealer Principal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - F&amp;I Business Manager</masterLabel>
+            <translation><!-- Management - F&amp;I Business Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - Fixed Operations Manager</masterLabel>
+            <translation><!-- Management - Fixed Operations Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - General Manager</masterLabel>
+            <translation><!-- Management - General Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - Marketing Manager</masterLabel>
+            <translation><!-- Management - Marketing Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - Parts Manager</masterLabel>
+            <translation><!-- Management - Parts Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - Sales Manager</masterLabel>
+            <translation><!-- Management - Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management - Service Manager</masterLabel>
+            <translation><!-- Management - Service Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management – Accounts Manager</masterLabel>
+            <translation><!-- Management – Accounts Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management – Chairman</masterLabel>
+            <translation><!-- Management – Chairman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management – Corporate Sales Manager</masterLabel>
+            <translation><!-- Management – Corporate Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management – Director</masterLabel>
+            <translation><!-- Management – Director --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management – General Sales Manager</masterLabel>
+            <translation><!-- Management – General Sales Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Staff - Customer Facing</masterLabel>
+            <translation><!-- Other Staff - Customer Facing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Staff - Non Customer Facing</masterLabel>
+            <translation><!-- Other Staff - Non Customer Facing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parts – Apprentice</masterLabel>
+            <translation><!-- Parts – Apprentice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parts – Interpreter</masterLabel>
+            <translation><!-- Parts – Interpreter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parts/Accessories Salesperson</masterLabel>
+            <translation><!-- Parts/Accessories Salesperson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receptionist</masterLabel>
+            <translation><!-- Receptionist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Cadet</masterLabel>
+            <translation><!-- Sales - Cadet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Consultant</masterLabel>
+            <translation><!-- Sales - Consultant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Consultant (AMG Specialist)</masterLabel>
+            <translation><!-- Sales - Consultant (AMG Specialist) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales - Consultant (Corporate/Fleet)</masterLabel>
+            <translation><!-- Sales - Consultant (Corporate/Fleet) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service - Advisor</masterLabel>
+            <translation><!-- Service - Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service - Workshop Controller/Foreman</masterLabel>
+            <translation><!-- Service - Workshop Controller/Foreman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stock Controller</masterLabel>
+            <translation><!-- Stock Controller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Technician</masterLabel>
+            <translation><!-- System Technician --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - Apprentice</masterLabel>
+            <translation><!-- Technician - Apprentice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - Certified Diagnostic</masterLabel>
+            <translation><!-- Technician - Certified Diagnostic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - Diagnostic</masterLabel>
+            <translation><!-- Technician - Diagnostic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - Maintenance</masterLabel>
+            <translation><!-- Technician - Maintenance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - System (Comfort and Safety)</masterLabel>
+            <translation><!-- Technician - System (Comfort and Safety) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - System (Driving Stability)</masterLabel>
+            <translation><!-- Technician - System (Driving Stability) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - System (Power Train)</masterLabel>
+            <translation><!-- Technician - System (Power Train) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technician - System (Telecommunication)</masterLabel>
+            <translation><!-- Technician - System (Telecommunication) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty Administrator</masterLabel>
+            <translation><!-- Warranty Administrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty Manager</masterLabel>
+            <translation><!-- Warranty Manager --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LDCL Customer ID --></label>
+        <name>LDCL_Customer_ID__c</name>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Advertisement</masterLabel>
+            <translation><!-- Advertisement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Referral</masterLabel>
+            <translation><!-- Employee Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Referral</masterLabel>
+            <translation><!-- External Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Relations</masterLabel>
+            <translation><!-- Public Relations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Internal</masterLabel>
+            <translation><!-- Seminar - Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seminar - Partner</masterLabel>
+            <translation><!-- Seminar - Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show</masterLabel>
+            <translation><!-- Trade Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead Escalation Recipient Type --></label>
+        <name>Lead_Escalation_Recipient_Type__c</name>
+        <picklistValues>
+            <masterLabel>24H Untouched Notice</masterLabel>
+            <translation><!-- 24H Untouched Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>72H Untouched Notice</masterLabel>
+            <translation><!-- 72H Untouched Notice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CC Lead Escalation Recipient</masterLabel>
+            <translation><!-- CC Lead Escalation Recipient --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Immediate Notice</masterLabel>
+            <translation><!-- Immediate Notice --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Portal User --></label>
+        <name>Portal_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offered Service --></label>
+        <name>Sub_BusinessUnit__c</name>
+        <picklistValues>
+            <masterLabel>Auto Body Repairer</masterLabel>
+            <translation><!-- Auto Body Repairer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parts</masterLabel>
+            <translation><!-- Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Owned</masterLabel>
+            <translation><!-- Pre-Owned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Surname --></label>
+        <name>Surname__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Employee</masterLabel>
+            <translation><!-- Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warrantor</masterLabel>
+            <translation><!-- Warrantor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- migrt source id --></label>
+        <name>migrt_source_id__c</name>
+    </fields>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- DealerStaff --></label>
+        <name>DealerStaff</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+</CustomObjectTranslation>

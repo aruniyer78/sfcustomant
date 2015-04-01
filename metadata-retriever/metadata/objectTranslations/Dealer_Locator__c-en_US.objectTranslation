@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dealer Locator</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dealer Locators</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Unit --></label>
+        <name>Business_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Alliance</masterLabel>
+            <translation><!-- Alliance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Allmakes</masterLabel>
+            <translation><!-- Allmakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freightliner</masterLabel>
+            <translation><!-- Freightliner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fuso</masterLabel>
+            <translation><!-- Fuso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Bus</masterLabel>
+            <translation><!-- MB Bus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Cars</masterLabel>
+            <translation><!-- MB Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Trucks</masterLabel>
+            <translation><!-- MB Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB Vans</masterLabel>
+            <translation><!-- MB Vans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBFS Cars</masterLabel>
+            <translation><!-- MBFS Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBFS Trucks</masterLabel>
+            <translation><!-- MBFS Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SelecTrucks</masterLabel>
+            <translation><!-- SelecTrucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Special Vehicles</masterLabel>
+            <translation><!-- Special Vehicles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trucks</masterLabel>
+            <translation><!-- Trucks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimog</masterLabel>
+            <translation><!-- Unimog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vans</masterLabel>
+            <translation><!-- Vans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Star</masterLabel>
+            <translation><!-- Western Star --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart</masterLabel>
+            <translation><!-- smart --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Delivery Area</masterLabel>
+            <translation><!-- Delivery Area --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LVR</masterLabel>
+            <translation><!-- LVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Office Boxes</masterLabel>
+            <translation><!-- Post Office Boxes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Name --></label>
+        <name>Dealer_Name__c</name>
+        <relationshipLabel><!-- Dealer Locators --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dealer Number --></label>
+        <name>Dealer_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metro/Rural --></label>
+        <name>Metro_Rural__c</name>
+        <picklistValues>
+            <masterLabel>Metro</masterLabel>
+            <translation><!-- Metro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provincial</masterLabel>
+            <translation><!-- Provincial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rural</masterLabel>
+            <translation><!-- Rural --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Offered Service --></label>
+        <name>Offered_Service__c</name>
+        <picklistValues>
+            <masterLabel>Auto Body Repairer</masterLabel>
+            <translation><!-- Auto Body Repairer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance &amp; Insurance</masterLabel>
+            <translation><!-- Finance &amp; Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parts</masterLabel>
+            <translation><!-- Parts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre-Owned</masterLabel>
+            <translation><!-- Pre-Owned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales</masterLabel>
+            <translation><!-- Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service</masterLabel>
+            <translation><!-- Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PMA --></label>
+        <name>PMA__c</name>
+        <picklistValues>
+            <masterLabel>ALBANY</masterLabel>
+            <translation><!-- ALBANY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALICE SPRINGS</masterLabel>
+            <translation><!-- ALICE SPRINGS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ANGLE PARK</masterLabel>
+            <translation><!-- ANGLE PARK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ARMIDALE</masterLabel>
+            <translation><!-- ARMIDALE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ARTARMON</masterLabel>
+            <translation><!-- ARTARMON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adelaide</masterLabel>
+            <translation><!-- Adelaide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Albury</masterLabel>
+            <translation><!-- Albury --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BALLARAT</masterLabel>
+            <translation><!-- BALLARAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAYSIDE</masterLabel>
+            <translation><!-- BAYSIDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BENDIGO</masterLabel>
+            <translation><!-- BENDIGO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BENTLEY</masterLabel>
+            <translation><!-- BENTLEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BLACKTOWN</masterLabel>
+            <translation><!-- BLACKTOWN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BRIGHTON</masterLabel>
+            <translation><!-- BRIGHTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BROKEN HILL</masterLabel>
+            <translation><!-- BROKEN HILL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUNBURY</masterLabel>
+            <translation><!-- BUNBURY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUNDABERG</masterLabel>
+            <translation><!-- BUNDABERG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Berwick</masterLabel>
+            <translation><!-- Berwick --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brisbane</masterLabel>
+            <translation><!-- Brisbane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bunsbury</masterLabel>
+            <translation><!-- Bunsbury --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAIRNS</masterLabel>
+            <translation><!-- CAIRNS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAMPBELLTOWN</masterLabel>
+            <translation><!-- CAMPBELLTOWN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANBERRA</masterLabel>
+            <translation><!-- CANBERRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CENTRAL WEST ORANGE</masterLabel>
+            <translation><!-- CENTRAL WEST ORANGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CESSNOCK</masterLabel>
+            <translation><!-- CESSNOCK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHATSWOOD</masterLabel>
+            <translation><!-- CHATSWOOD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COFFS HARBOUR</masterLabel>
+            <translation><!-- COFFS HARBOUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COOTAMUNDRA</masterLabel>
+            <translation><!-- COOTAMUNDRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Coast</masterLabel>
+            <translation><!-- Central Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central West</masterLabel>
+            <translation><!-- Central West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central West Orana</masterLabel>
+            <translation><!-- Central West Orana --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DANDENONG</masterLabel>
+            <translation><!-- DANDENONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DARWIN</masterLabel>
+            <translation><!-- DARWIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIESEL</masterLabel>
+            <translation><!-- DIESEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DUBBO</masterLabel>
+            <translation><!-- DUBBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Darvin</masterLabel>
+            <translation><!-- Darvin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doncaster</masterLabel>
+            <translation><!-- Doncaster --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ESPERANCE</masterLabel>
+            <translation><!-- ESPERANCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FERNTREE GULLY</masterLabel>
+            <translation><!-- FERNTREE GULLY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fairfield</masterLabel>
+            <translation><!-- Fairfield --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fortitude Valley</masterLabel>
+            <translation><!-- Fortitude Valley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GEELONG</masterLabel>
+            <translation><!-- GEELONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GIPPSLAND</masterLabel>
+            <translation><!-- GIPPSLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GLEN OSMOND</masterLabel>
+            <translation><!-- GLEN OSMOND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GORDON</masterLabel>
+            <translation><!-- GORDON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GOSFORD</masterLabel>
+            <translation><!-- GOSFORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GOULBURN</masterLabel>
+            <translation><!-- GOULBURN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GRIFFITH</masterLabel>
+            <translation><!-- GRIFFITH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Geraldton</masterLabel>
+            <translation><!-- Geraldton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gold Coast</masterLabel>
+            <translation><!-- Gold Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HAMILTON</masterLabel>
+            <translation><!-- HAMILTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HAZELMERE</masterLabel>
+            <translation><!-- HAZELMERE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOBART</masterLabel>
+            <translation><!-- HOBART --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Holiday Coast</masterLabel>
+            <translation><!-- Holiday Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Horsham</masterLabel>
+            <translation><!-- Horsham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ILLAWARRA</masterLabel>
+            <translation><!-- ILLAWARRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INDOOROOPILLY</masterLabel>
+            <translation><!-- INDOOROOPILLY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INVERELL</masterLabel>
+            <translation><!-- INVERELL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KALGOORLIE</masterLabel>
+            <translation><!-- KALGOORLIE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIMBERLEY</masterLabel>
+            <translation><!-- KIMBERLEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KINGAROY</masterLabel>
+            <translation><!-- KINGAROY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Katherine</masterLabel>
+            <translation><!-- Katherine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kempsey</masterLabel>
+            <translation><!-- Kempsey --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAUNCESTON</masterLabel>
+            <translation><!-- LAUNCESTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LISMORE</masterLabel>
+            <translation><!-- LISMORE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LONGREACH</masterLabel>
+            <translation><!-- LONGREACH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laverton</masterLabel>
+            <translation><!-- Laverton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liverpool</masterLabel>
+            <translation><!-- Liverpool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACKAY</masterLabel>
+            <translation><!-- MACKAY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAROOCHYDORE</masterLabel>
+            <translation><!-- MAROOCHYDORE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MELBOURNE</masterLabel>
+            <translation><!-- MELBOURNE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MILDURA</masterLabel>
+            <translation><!-- MILDURA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MIRANDA</masterLabel>
+            <translation><!-- MIRANDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MONA VALE</masterLabel>
+            <translation><!-- MONA VALE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOREE</masterLabel>
+            <translation><!-- MOREE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORNINGTON</masterLabel>
+            <translation><!-- MORNINGTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOSMAN</masterLabel>
+            <translation><!-- MOSMAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MOUNT GAMBIER</masterLabel>
+            <translation><!-- MOUNT GAMBIER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MT GAMBIER</masterLabel>
+            <translation><!-- MT GAMBIER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Melbourne East</masterLabel>
+            <translation><!-- Melbourne East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Melbourne North</masterLabel>
+            <translation><!-- Melbourne North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Melbourne West</masterLabel>
+            <translation><!-- Melbourne West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mid North Coast</masterLabel>
+            <translation><!-- Mid North Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Murwillumbah</masterLabel>
+            <translation><!-- Murwillumbah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NARELLAN</masterLabel>
+            <translation><!-- NARELLAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEWCASTLE</masterLabel>
+            <translation><!-- NEWCASTLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NOOSAVILLE</masterLabel>
+            <translation><!-- NOOSAVILLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT</masterLabel>
+            <translation><!-- NT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NUNDAH</masterLabel>
+            <translation><!-- NUNDAH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nambour</masterLabel>
+            <translation><!-- Nambour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New England</masterLabel>
+            <translation><!-- New England --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northern Rivers - MTC</masterLabel>
+            <translation><!-- Northern Rivers - MTC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORANGE</masterLabel>
+            <translation><!-- ORANGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OSBORNE PARK</masterLabel>
+            <translation><!-- OSBORNE PARK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARRAMATTA</masterLabel>
+            <translation><!-- PARRAMATTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORT HEDLAND</masterLabel>
+            <translation><!-- PORT HEDLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORT MACQUARIE</masterLabel>
+            <translation><!-- PORT MACQUARIE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRESTON</masterLabel>
+            <translation><!-- PRESTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perth</masterLabel>
+            <translation><!-- Perth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Queanbeyan</masterLabel>
+            <translation><!-- Queanbeyan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROCKHAMPTON</masterLabel>
+            <translation><!-- ROCKHAMPTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROCKLEA</masterLabel>
+            <translation><!-- ROCKLEA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rose Bay</masterLabel>
+            <translation><!-- Rose Bay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SALE</masterLabel>
+            <translation><!-- SALE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SHEPPARTON</masterLabel>
+            <translation><!-- SHEPPARTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOMERTON</masterLabel>
+            <translation><!-- SOMERTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SOUTHPORT</masterLabel>
+            <translation><!-- SOUTHPORT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUNSHINE COAST</masterLabel>
+            <translation><!-- SUNSHINE COAST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sa Rural</masterLabel>
+            <translation><!-- Sa Rural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shepperton</masterLabel>
+            <translation><!-- Shepperton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South East</masterLabel>
+            <translation><!-- South East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sutherland</masterLabel>
+            <translation><!-- Sutherland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney</masterLabel>
+            <translation><!-- Sydney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAMWORTH</masterLabel>
+            <translation><!-- TAMWORTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAREE</masterLabel>
+            <translation><!-- TAREE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOOWOOMBA</masterLabel>
+            <translation><!-- TOOWOOMBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOWNSVILLE</masterLabel>
+            <translation><!-- TOWNSVILLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TWEED HEADS</masterLabel>
+            <translation><!-- TWEED HEADS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tasmania</masterLabel>
+            <translation><!-- Tasmania --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toorak</masterLabel>
+            <translation><!-- Toorak --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNASSIGNED BAYS &amp; PENINSULA</masterLabel>
+            <translation><!-- UNASSIGNED BAYS &amp; PENINSULA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNASSIGNED DIVIDING RANGE</masterLabel>
+            <translation><!-- UNASSIGNED DIVIDING RANGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNASSIGNED SOUTH WEST</masterLabel>
+            <translation><!-- UNASSIGNED SOUTH WEST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNASSIGNED THE MALLEE</masterLabel>
+            <translation><!-- UNASSIGNED THE MALLEE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unassigned Postcodes</masterLabel>
+            <translation><!-- Unassigned Postcodes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA NORTH</masterLabel>
+            <translation><!-- WA NORTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WAGGA WAGGA</masterLabel>
+            <translation><!-- WAGGA WAGGA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WAITARA</masterLabel>
+            <translation><!-- WAITARA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WARRNAMBOOL</masterLabel>
+            <translation><!-- WARRNAMBOOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WARWICK FARM</masterLabel>
+            <translation><!-- WARWICK FARM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WAYVILLE</masterLabel>
+            <translation><!-- WAYVILLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WEST MELBOURNE</masterLabel>
+            <translation><!-- WEST MELBOURNE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WOLLONGONG</masterLabel>
+            <translation><!-- WOLLONGONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wa Rural</masterLabel>
+            <translation><!-- Wa Rural --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wagga</masterLabel>
+            <translation><!-- Wagga --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Welshpool</masterLabel>
+            <translation><!-- Welshpool --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Districts</masterLabel>
+            <translation><!-- Western Districts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Western Sydney</masterLabel>
+            <translation><!-- Western Sydney --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Westpoint</masterLabel>
+            <translation><!-- Westpoint --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZETLAND</masterLabel>
+            <translation><!-- ZETLAND --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Post Code --></label>
+        <name>Post_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Eastern Region</masterLabel>
+            <translation><!-- Eastern Region --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NTHN</masterLabel>
+            <translation><!-- NTHN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STHN</masterLabel>
+            <translation><!-- STHN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zone 1</masterLabel>
+            <translation><!-- Zone 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Zone 2</masterLabel>
+            <translation><!-- Zone 2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>State__c</name>
+        <picklistValues>
+            <masterLabel>ACT</masterLabel>
+            <translation><!-- ACT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW</masterLabel>
+            <translation><!-- NSW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT</masterLabel>
+            <translation><!-- NT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD</masterLabel>
+            <translation><!-- QLD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA</masterLabel>
+            <translation><!-- SA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAS</masterLabel>
+            <translation><!-- TAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC</masterLabel>
+            <translation><!-- VIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA</masterLabel>
+            <translation><!-- WA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suburb --></label>
+        <name>Suburb__c</name>
+    </fields>
+    <layouts>
+        <layout>Dealer Locator Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New_Dealer_Locator --></label>
+        <name>New_Dealer_Locator</name>
+    </webLinks>
+</CustomObjectTranslation>

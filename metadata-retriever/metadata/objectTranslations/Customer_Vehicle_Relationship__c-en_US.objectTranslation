@@ -1,0 +1,2778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Vehicle Relationship</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Vehicle Relationship</value>
+    </caseValues>
+    <fields>
+        <label><!-- Add Date --></label>
+        <name>Add_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Add User --></label>
+        <name>Add_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Offer Others --></label>
+        <name>Additional_Offer_Others__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Offer --></label>
+        <name>Additional_Offer__c</name>
+        <picklistValues>
+            <masterLabel>1 year extended warranty</masterLabel>
+            <translation><!-- 1 year extended warranty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 year free servicing</masterLabel>
+            <translation><!-- 1 year free servicing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 years extended warranty</masterLabel>
+            <translation><!-- 2 years extended warranty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 years free servicing</masterLabel>
+            <translation><!-- 2 years free servicing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 years free servicing</masterLabel>
+            <translation><!-- 3 years free servicing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discount off parts and labour</masterLabel>
+            <translation><!-- Discount off parts and labour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed price service offer</masterLabel>
+            <translation><!-- Fixed price service offer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CP Expiry Date --></label>
+        <name>CP_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- CP Expiry KMS --></label>
+        <name>CP_Expiry_KMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Car Model --></label>
+        <name>Car_Model__c</name>
+    </fields>
+    <fields>
+        <help><!-- Person&apos;s relationship to the vehicle --></help>
+        <label><!-- Car Relation --></label>
+        <name>Car_Relation__c</name>
+        <picklistValues>
+            <masterLabel>Driver</masterLabel>
+            <translation><!-- Driver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lessee</masterLabel>
+            <translation><!-- Lessee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owner</masterLabel>
+            <translation><!-- Owner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Class Summary --></label>
+        <name>Class_Summary__c</name>
+        <picklistValues>
+            <masterLabel>A-Class</masterLabel>
+            <translation><!-- A-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMG</masterLabel>
+            <translation><!-- AMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All New A-Class</masterLabel>
+            <translation><!-- All New A-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B-Class</masterLabel>
+            <translation><!-- B-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C-Class</masterLabel>
+            <translation><!-- C-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C-Class Coupe</masterLabel>
+            <translation><!-- C-Class Coupe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANTER</masterLabel>
+            <translation><!-- CANTER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CL-Class</masterLabel>
+            <translation><!-- CL-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLA-Class</masterLabel>
+            <translation><!-- CLA-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLC-Class</masterLabel>
+            <translation><!-- CLC-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLK-Class</masterLabel>
+            <translation><!-- CLK-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLS Shooting Brake</masterLabel>
+            <translation><!-- CLS Shooting Brake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CLS-Class</masterLabel>
+            <translation><!-- CLS-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-Class</masterLabel>
+            <translation><!-- E-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F SERIES</masterLabel>
+            <translation><!-- F SERIES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIGHTER</masterLabel>
+            <translation><!-- FIGHTER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>G-Class</masterLabel>
+            <translation><!-- G-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GL-Class</masterLabel>
+            <translation><!-- GL-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M-Class</masterLabel>
+            <translation><!-- M-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB 100</masterLabel>
+            <translation><!-- MB 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB 140</masterLabel>
+            <translation><!-- MB 140 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R-Class</masterLabel>
+            <translation><!-- R-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROSA</masterLabel>
+            <translation><!-- ROSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>S-Class</masterLabel>
+            <translation><!-- S-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SL-Class</masterLabel>
+            <translation><!-- SL-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLK-Class</masterLabel>
+            <translation><!-- SLK-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLS AMG</masterLabel>
+            <translation><!-- SLS AMG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SLS-Class</masterLabel>
+            <translation><!-- SLS-Class --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sprinter</masterLabel>
+            <translation><!-- Sprinter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valente</masterLabel>
+            <translation><!-- Valente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Viano</masterLabel>
+            <translation><!-- Viano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vito</masterLabel>
+            <translation><!-- Vito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart Forfour</masterLabel>
+            <translation><!-- smart Forfour --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart Fortwo cabrio</masterLabel>
+            <translation><!-- smart Fortwo cabrio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart Fortwo coupe</masterLabel>
+            <translation><!-- smart Fortwo coupe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>smart Roadster</masterLabel>
+            <translation><!-- smart Roadster --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Considered Make 1 --></label>
+        <name>Considered_Make_1__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation><!-- AC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACURA</masterLabel>
+            <translation><!-- ACURA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALFA ROMEO</masterLabel>
+            <translation><!-- ALFA ROMEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASIA</masterLabel>
+            <translation><!-- ASIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASTON MARTIN</masterLabel>
+            <translation><!-- ASTON MARTIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUDI</masterLabel>
+            <translation><!-- AUDI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTIN</masterLabel>
+            <translation><!-- AUSTIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTRAL DENNING</masterLabel>
+            <translation><!-- AUSTRAL DENNING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BENTLEY</masterLabel>
+            <translation><!-- BENTLEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BMW</masterLabel>
+            <translation><!-- BMW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUGATTI</masterLabel>
+            <translation><!-- BUGATTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUICK</masterLabel>
+            <translation><!-- BUICK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CADILLAC</masterLabel>
+            <translation><!-- CADILLAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CATERHAM</masterLabel>
+            <translation><!-- CATERHAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CATERPILLAR</masterLabel>
+            <translation><!-- CATERPILLAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHERY</masterLabel>
+            <translation><!-- CHERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHEVROLET</masterLabel>
+            <translation><!-- CHEVROLET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHRYSLER</masterLabel>
+            <translation><!-- CHRYSLER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITROEN</masterLabel>
+            <translation><!-- CITROEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORSA SPECIALIZED VEHICLE</masterLabel>
+            <translation><!-- CORSA SPECIALIZED VEHICLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAEWOO</masterLabel>
+            <translation><!-- DAEWOO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAF</masterLabel>
+            <translation><!-- DAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAIHATSU</masterLabel>
+            <translation><!-- DAIHATSU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAIMLER</masterLabel>
+            <translation><!-- DAIMLER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENNIS EAGLE</masterLabel>
+            <translation><!-- DENNIS EAGLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DODGE</masterLabel>
+            <translation><!-- DODGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datsun</masterLabel>
+            <translation><!-- Datsun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eunos</masterLabel>
+            <translation><!-- Eunos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FERRARI</masterLabel>
+            <translation><!-- FERRARI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIAT</masterLabel>
+            <translation><!-- FIAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FISKER</masterLabel>
+            <translation><!-- FISKER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FORD</masterLabel>
+            <translation><!-- FORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOTON</masterLabel>
+            <translation><!-- FOTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREIGHTLINER</masterLabel>
+            <translation><!-- FREIGHTLINER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GMC</masterLabel>
+            <translation><!-- GMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GREAT WALL</masterLabel>
+            <translation><!-- GREAT WALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HILLMAN</masterLabel>
+            <translation><!-- HILLMAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HINO</masterLabel>
+            <translation><!-- HINO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOLDEN</masterLabel>
+            <translation><!-- HOLDEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HONDA</masterLabel>
+            <translation><!-- HONDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSV</masterLabel>
+            <translation><!-- HSV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUMMER</masterLabel>
+            <translation><!-- HUMMER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HYUNDAI</masterLabel>
+            <translation><!-- HYUNDAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INFINITI</masterLabel>
+            <translation><!-- INFINITI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERNATIONAL</masterLabel>
+            <translation><!-- INTERNATIONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRISBUS</masterLabel>
+            <translation><!-- IRISBUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISUZU</masterLabel>
+            <translation><!-- ISUZU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISUZU UTE</masterLabel>
+            <translation><!-- ISUZU UTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVECO</masterLabel>
+            <translation><!-- IVECO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JAGUAR</masterLabel>
+            <translation><!-- JAGUAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JEEP</masterLabel>
+            <translation><!-- JEEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KENWORTH</masterLabel>
+            <translation><!-- KENWORTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIA</masterLabel>
+            <translation><!-- KIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIT CAR</masterLabel>
+            <translation><!-- KIT CAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LADA</masterLabel>
+            <translation><!-- LADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAMBORGHINI</masterLabel>
+            <translation><!-- LAMBORGHINI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAND ROVER</masterLabel>
+            <translation><!-- LAND ROVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEXUS</masterLabel>
+            <translation><!-- LEXUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEYLAND</masterLabel>
+            <translation><!-- LEYLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LINCOLN</masterLabel>
+            <translation><!-- LINCOLN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOTUS</masterLabel>
+            <translation><!-- LOTUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACK</masterLabel>
+            <translation><!-- MACK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAN</masterLabel>
+            <translation><!-- MAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MASERATI</masterLabel>
+            <translation><!-- MASERATI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAYBACH</masterLabel>
+            <translation><!-- MAYBACH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAZDA</masterLabel>
+            <translation><!-- MAZDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCLAREN</masterLabel>
+            <translation><!-- MCLAREN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCEDES-BENZ</masterLabel>
+            <translation><!-- MERCEDES-BENZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCURY</masterLabel>
+            <translation><!-- MERCURY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation><!-- MG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MINI</masterLabel>
+            <translation><!-- MINI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MITSUBISHI</masterLabel>
+            <translation><!-- MITSUBISHI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MITSUBISHI FUSO</masterLabel>
+            <translation><!-- MITSUBISHI FUSO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORGAN</masterLabel>
+            <translation><!-- MORGAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORRIS</masterLabel>
+            <translation><!-- MORRIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NIKI</masterLabel>
+            <translation><!-- NIKI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NISSAN</masterLabel>
+            <translation><!-- NISSAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OKA</masterLabel>
+            <translation><!-- OKA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OLDSMOBILE</masterLabel>
+            <translation><!-- OLDSMOBILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPEL</masterLabel>
+            <translation><!-- OPEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PEUGEOT</masterLabel>
+            <translation><!-- PEUGEOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLYMOUTH</masterLabel>
+            <translation><!-- PLYMOUTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PONTIAC</masterLabel>
+            <translation><!-- PONTIAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORSCHE</masterLabel>
+            <translation><!-- PORSCHE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROTON</masterLabel>
+            <translation><!-- PROTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RENAULT</masterLabel>
+            <translation><!-- RENAULT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROLLS-ROYCE</masterLabel>
+            <translation><!-- ROLLS-ROYCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROVER</masterLabel>
+            <translation><!-- ROVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAAB</masterLabel>
+            <translation><!-- SAAB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SATURN</masterLabel>
+            <translation><!-- SATURN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCANIA</masterLabel>
+            <translation><!-- SCANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCION</masterLabel>
+            <translation><!-- SCION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEAT</masterLabel>
+            <translation><!-- SEAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SKODA</masterLabel>
+            <translation><!-- SKODA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMART</masterLabel>
+            <translation><!-- SMART --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSANGYONG</masterLabel>
+            <translation><!-- SSANGYONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STERLING</masterLabel>
+            <translation><!-- STERLING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STUDEBAKER</masterLabel>
+            <translation><!-- STUDEBAKER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUBARU</masterLabel>
+            <translation><!-- SUBARU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUZUKI</masterLabel>
+            <translation><!-- SUZUKI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TESLA</masterLabel>
+            <translation><!-- TESLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOYOTA</masterLabel>
+            <translation><!-- TOYOTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRIUMPH</masterLabel>
+            <translation><!-- TRIUMPH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVR</masterLabel>
+            <translation><!-- TVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UD</masterLabel>
+            <translation><!-- UD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAUXHALL</masterLabel>
+            <translation><!-- VAUXHALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLKSWAGEN</masterLabel>
+            <translation><!-- VOLKSWAGEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLVO</masterLabel>
+            <translation><!-- VOLVO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WESTERN STAR</masterLabel>
+            <translation><!-- WESTERN STAR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Considered Make 2 --></label>
+        <name>Considered_Make_2__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation><!-- AC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACURA</masterLabel>
+            <translation><!-- ACURA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALFA ROMEO</masterLabel>
+            <translation><!-- ALFA ROMEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASIA</masterLabel>
+            <translation><!-- ASIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASTON MARTIN</masterLabel>
+            <translation><!-- ASTON MARTIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUDI</masterLabel>
+            <translation><!-- AUDI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTIN</masterLabel>
+            <translation><!-- AUSTIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTRAL DENNING</masterLabel>
+            <translation><!-- AUSTRAL DENNING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BENTLEY</masterLabel>
+            <translation><!-- BENTLEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BMW</masterLabel>
+            <translation><!-- BMW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUGATTI</masterLabel>
+            <translation><!-- BUGATTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUICK</masterLabel>
+            <translation><!-- BUICK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CADILLAC</masterLabel>
+            <translation><!-- CADILLAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CATERHAM</masterLabel>
+            <translation><!-- CATERHAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CATERPILLAR</masterLabel>
+            <translation><!-- CATERPILLAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHERY</masterLabel>
+            <translation><!-- CHERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHEVROLET</masterLabel>
+            <translation><!-- CHEVROLET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHRYSLER</masterLabel>
+            <translation><!-- CHRYSLER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITROEN</masterLabel>
+            <translation><!-- CITROEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORSA SPECIALIZED VEHICLE</masterLabel>
+            <translation><!-- CORSA SPECIALIZED VEHICLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAEWOO</masterLabel>
+            <translation><!-- DAEWOO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAF</masterLabel>
+            <translation><!-- DAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAIHATSU</masterLabel>
+            <translation><!-- DAIHATSU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAIMLER</masterLabel>
+            <translation><!-- DAIMLER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENNIS EAGLE</masterLabel>
+            <translation><!-- DENNIS EAGLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DODGE</masterLabel>
+            <translation><!-- DODGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datsun</masterLabel>
+            <translation><!-- Datsun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eunos</masterLabel>
+            <translation><!-- Eunos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FERRARI</masterLabel>
+            <translation><!-- FERRARI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIAT</masterLabel>
+            <translation><!-- FIAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FISKER</masterLabel>
+            <translation><!-- FISKER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FORD</masterLabel>
+            <translation><!-- FORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOTON</masterLabel>
+            <translation><!-- FOTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREIGHTLINER</masterLabel>
+            <translation><!-- FREIGHTLINER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GMC</masterLabel>
+            <translation><!-- GMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GREAT WALL</masterLabel>
+            <translation><!-- GREAT WALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HILLMAN</masterLabel>
+            <translation><!-- HILLMAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HINO</masterLabel>
+            <translation><!-- HINO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOLDEN</masterLabel>
+            <translation><!-- HOLDEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HONDA</masterLabel>
+            <translation><!-- HONDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSV</masterLabel>
+            <translation><!-- HSV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUMMER</masterLabel>
+            <translation><!-- HUMMER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HYUNDAI</masterLabel>
+            <translation><!-- HYUNDAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INFINITI</masterLabel>
+            <translation><!-- INFINITI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERNATIONAL</masterLabel>
+            <translation><!-- INTERNATIONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRISBUS</masterLabel>
+            <translation><!-- IRISBUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISUZU</masterLabel>
+            <translation><!-- ISUZU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISUZU UTE</masterLabel>
+            <translation><!-- ISUZU UTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVECO</masterLabel>
+            <translation><!-- IVECO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JAGUAR</masterLabel>
+            <translation><!-- JAGUAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JEEP</masterLabel>
+            <translation><!-- JEEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KENWORTH</masterLabel>
+            <translation><!-- KENWORTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIA</masterLabel>
+            <translation><!-- KIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIT CAR</masterLabel>
+            <translation><!-- KIT CAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LADA</masterLabel>
+            <translation><!-- LADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAMBORGHINI</masterLabel>
+            <translation><!-- LAMBORGHINI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAND ROVER</masterLabel>
+            <translation><!-- LAND ROVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEXUS</masterLabel>
+            <translation><!-- LEXUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEYLAND</masterLabel>
+            <translation><!-- LEYLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LINCOLN</masterLabel>
+            <translation><!-- LINCOLN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOTUS</masterLabel>
+            <translation><!-- LOTUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACK</masterLabel>
+            <translation><!-- MACK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAN</masterLabel>
+            <translation><!-- MAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MASERATI</masterLabel>
+            <translation><!-- MASERATI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAYBACH</masterLabel>
+            <translation><!-- MAYBACH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAZDA</masterLabel>
+            <translation><!-- MAZDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCLAREN</masterLabel>
+            <translation><!-- MCLAREN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCEDES-BENZ</masterLabel>
+            <translation><!-- MERCEDES-BENZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCURY</masterLabel>
+            <translation><!-- MERCURY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation><!-- MG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MINI</masterLabel>
+            <translation><!-- MINI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MITSUBISHI</masterLabel>
+            <translation><!-- MITSUBISHI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MITSUBISHI FUSO</masterLabel>
+            <translation><!-- MITSUBISHI FUSO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORGAN</masterLabel>
+            <translation><!-- MORGAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORRIS</masterLabel>
+            <translation><!-- MORRIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NIKI</masterLabel>
+            <translation><!-- NIKI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NISSAN</masterLabel>
+            <translation><!-- NISSAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OKA</masterLabel>
+            <translation><!-- OKA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OLDSMOBILE</masterLabel>
+            <translation><!-- OLDSMOBILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPEL</masterLabel>
+            <translation><!-- OPEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PEUGEOT</masterLabel>
+            <translation><!-- PEUGEOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLYMOUTH</masterLabel>
+            <translation><!-- PLYMOUTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PONTIAC</masterLabel>
+            <translation><!-- PONTIAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORSCHE</masterLabel>
+            <translation><!-- PORSCHE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROTON</masterLabel>
+            <translation><!-- PROTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RENAULT</masterLabel>
+            <translation><!-- RENAULT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROLLS-ROYCE</masterLabel>
+            <translation><!-- ROLLS-ROYCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROVER</masterLabel>
+            <translation><!-- ROVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAAB</masterLabel>
+            <translation><!-- SAAB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SATURN</masterLabel>
+            <translation><!-- SATURN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCANIA</masterLabel>
+            <translation><!-- SCANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCION</masterLabel>
+            <translation><!-- SCION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEAT</masterLabel>
+            <translation><!-- SEAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SKODA</masterLabel>
+            <translation><!-- SKODA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMART</masterLabel>
+            <translation><!-- SMART --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSANGYONG</masterLabel>
+            <translation><!-- SSANGYONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STERLING</masterLabel>
+            <translation><!-- STERLING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STUDEBAKER</masterLabel>
+            <translation><!-- STUDEBAKER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUBARU</masterLabel>
+            <translation><!-- SUBARU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUZUKI</masterLabel>
+            <translation><!-- SUZUKI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TESLA</masterLabel>
+            <translation><!-- TESLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOYOTA</masterLabel>
+            <translation><!-- TOYOTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRIUMPH</masterLabel>
+            <translation><!-- TRIUMPH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVR</masterLabel>
+            <translation><!-- TVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UD</masterLabel>
+            <translation><!-- UD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAUXHALL</masterLabel>
+            <translation><!-- VAUXHALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLKSWAGEN</masterLabel>
+            <translation><!-- VOLKSWAGEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLVO</masterLabel>
+            <translation><!-- VOLVO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WESTERN STAR</masterLabel>
+            <translation><!-- WESTERN STAR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Considered Model 1 --></label>
+        <name>Considered_Model_1__c</name>
+        <relationshipLabel><!-- Customer Vehicle Relationship --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Considered Model 2 --></label>
+        <name>Considered_Model_2__c</name>
+        <relationshipLabel><!-- Customer Vehicle Relationship (Considered Model 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Corporate Sale --></label>
+        <name>Corporate_Sale__c</name>
+    </fields>
+    <fields>
+        <help><!-- ID of related person --></help>
+        <label><!-- Customer --></label>
+        <name>Customer__c</name>
+        <relationshipLabel><!-- Vehicle Relationship --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- SF Dealer ID --></label>
+        <name>DealerNo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Name --></label>
+        <name>Dealer__c</name>
+        <relationshipLabel><!-- Dealer Vehicle Relationships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Delivery Date --></label>
+        <name>Delivery_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Design --></label>
+        <name>Design__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Driver Relationship --></label>
+        <name>Driver_Relationship__c</name>
+        <picklistValues>
+            <masterLabel>Collector</masterLabel>
+            <translation><!-- Collector --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daughter</masterLabel>
+            <translation><!-- Daughter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Father</masterLabel>
+            <translation><!-- Father --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spouse/Partner</masterLabel>
+            <translation><!-- Spouse/Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Finance Method --></label>
+        <name>Finance_Method__c</name>
+        <picklistValues>
+            <masterLabel>BFS</masterLabel>
+            <translation><!-- BFS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bankmecu</masterLabel>
+            <translation><!-- Bankmecu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBA</masterLabel>
+            <translation><!-- CBA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORPORATE</masterLabel>
+            <translation><!-- CORPORATE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet</masterLabel>
+            <translation><!-- Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GE CAPITAL</masterLabel>
+            <translation><!-- GE CAPITAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACQUARIE</masterLabel>
+            <translation><!-- MACQUARIE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB</masterLabel>
+            <translation><!-- MB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCEDES BENZ FINANCE</masterLabel>
+            <translation><!-- MERCEDES BENZ FINANCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mercedes</masterLabel>
+            <translation><!-- Mercedes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mercedes-Benz</masterLabel>
+            <translation><!-- Mercedes-Benz --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NLC</masterLabel>
+            <translation><!-- NLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ORIX</masterLabel>
+            <translation><!-- ORIX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REGENT FINANCE</masterLabel>
+            <translation><!-- REGENT FINANCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WESTPAC</masterLabel>
+            <translation><!-- WESTPAC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Finance Offered --></label>
+        <name>Finance_Offered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Financier --></label>
+        <name>Financier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fleet Category --></label>
+        <name>Fleet_Category__c</name>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business - Local</masterLabel>
+            <translation><!-- Business - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charity</masterLabel>
+            <translation><!-- Charity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Cars</masterLabel>
+            <translation><!-- Company Cars --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demonstrator</masterLabel>
+            <translation><!-- Demonstrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demonstrator - Dealer</masterLabel>
+            <translation><!-- Demonstrator - Dealer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demonstrator - MBAuP</masterLabel>
+            <translation><!-- Demonstrator - MBAuP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diplomats</masterLabel>
+            <translation><!-- Diplomats --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fleet Buyer</masterLabel>
+            <translation><!-- Fleet Buyer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Govt Federal</masterLabel>
+            <translation><!-- Govt Federal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Govt Local</masterLabel>
+            <translation><!-- Govt Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Govt State</masterLabel>
+            <translation><!-- Govt State --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Large Fleet</masterLabel>
+            <translation><!-- Large Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MBC Employee</masterLabel>
+            <translation><!-- MBC Employee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium / Small Fleet</masterLabel>
+            <translation><!-- Medium / Small Fleet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mining company</masterLabel>
+            <translation><!-- Mining company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not For Profit Org</masterLabel>
+            <translation><!-- Not For Profit Org --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overseas Delivery</masterLabel>
+            <translation><!-- Overseas Delivery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owner Operator</masterLabel>
+            <translation><!-- Owner Operator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary Producer</masterLabel>
+            <translation><!-- Primary Producer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Local - F</masterLabel>
+            <translation><!-- Private Local - F --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Local - M</masterLabel>
+            <translation><!-- Private Local - M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rental</masterLabel>
+            <translation><!-- Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail Customer</masterLabel>
+            <translation><!-- Retail Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sprinter Body Builder</masterLabel>
+            <translation><!-- Sprinter Body Builder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxis</masterLabel>
+            <translation><!-- Taxis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Fleet End Customer --></label>
+        <lookupFilter>
+            <errorMessage><!-- You can only look up a Person Account. --></errorMessage>
+        </lookupFilter>
+        <name>Fleet_End_Customer__c</name>
+        <relationshipLabel><!-- Customer Vehicle Relationship (Fleet End Customer) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Fleet --></label>
+        <name>Fleet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Offered --></label>
+        <name>Insurance_Offered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurance Renewal Date --></label>
+        <name>Insurance_Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insurer --></label>
+        <name>Insurer__c</name>
+    </fields>
+    <fields>
+        <label><!-- LDCL Vehicle Relationship Id --></label>
+        <name>LDCL_Vehicle_Relationship_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Update Changed By --></label>
+        <name>Last_Update_Changed_By__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Updated --></label>
+        <name>Last_Updated__c</name>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Luxury --></label>
+        <name>Luxury__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Magazine --></label>
+        <name>Magazine__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Mail --></label>
+        <name>Mail__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Main Driver --></label>
+        <name>Main_Driver__c</name>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Newspaper --></label>
+        <name>Newspaper__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Odometer Reading --></label>
+        <name>Odometer_Reading__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Driver --></label>
+        <name>Other_Driver__c</name>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Performance --></label>
+        <name>Performance__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pre Owned Warranty Expiry --></label>
+        <name>Pre_Owned_Warranty_Expiry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Previous Make --></label>
+        <name>Previous_Make__c</name>
+        <picklistValues>
+            <masterLabel>AC</masterLabel>
+            <translation><!-- AC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACURA</masterLabel>
+            <translation><!-- ACURA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALFA ROMEO</masterLabel>
+            <translation><!-- ALFA ROMEO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASIA</masterLabel>
+            <translation><!-- ASIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ASTON MARTIN</masterLabel>
+            <translation><!-- ASTON MARTIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUDI</masterLabel>
+            <translation><!-- AUDI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTIN</masterLabel>
+            <translation><!-- AUSTIN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUSTRAL DENNING</masterLabel>
+            <translation><!-- AUSTRAL DENNING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BENTLEY</masterLabel>
+            <translation><!-- BENTLEY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BMW</masterLabel>
+            <translation><!-- BMW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUGATTI</masterLabel>
+            <translation><!-- BUGATTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUICK</masterLabel>
+            <translation><!-- BUICK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CADILLAC</masterLabel>
+            <translation><!-- CADILLAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CATERHAM</masterLabel>
+            <translation><!-- CATERHAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CATERPILLAR</masterLabel>
+            <translation><!-- CATERPILLAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHERY</masterLabel>
+            <translation><!-- CHERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHEVROLET</masterLabel>
+            <translation><!-- CHEVROLET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CHRYSLER</masterLabel>
+            <translation><!-- CHRYSLER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CITROEN</masterLabel>
+            <translation><!-- CITROEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CORSA SPECIALIZED VEHICLE</masterLabel>
+            <translation><!-- CORSA SPECIALIZED VEHICLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAEWOO</masterLabel>
+            <translation><!-- DAEWOO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAF</masterLabel>
+            <translation><!-- DAF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAIHATSU</masterLabel>
+            <translation><!-- DAIHATSU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAIMLER</masterLabel>
+            <translation><!-- DAIMLER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DENNIS EAGLE</masterLabel>
+            <translation><!-- DENNIS EAGLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DODGE</masterLabel>
+            <translation><!-- DODGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datsun</masterLabel>
+            <translation><!-- Datsun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eunos</masterLabel>
+            <translation><!-- Eunos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FERRARI</masterLabel>
+            <translation><!-- FERRARI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FIAT</masterLabel>
+            <translation><!-- FIAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FISKER</masterLabel>
+            <translation><!-- FISKER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FORD</masterLabel>
+            <translation><!-- FORD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOTON</masterLabel>
+            <translation><!-- FOTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREIGHTLINER</masterLabel>
+            <translation><!-- FREIGHTLINER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GMC</masterLabel>
+            <translation><!-- GMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GREAT WALL</masterLabel>
+            <translation><!-- GREAT WALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HILLMAN</masterLabel>
+            <translation><!-- HILLMAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HINO</masterLabel>
+            <translation><!-- HINO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HOLDEN</masterLabel>
+            <translation><!-- HOLDEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HONDA</masterLabel>
+            <translation><!-- HONDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSV</masterLabel>
+            <translation><!-- HSV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HUMMER</masterLabel>
+            <translation><!-- HUMMER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HYUNDAI</masterLabel>
+            <translation><!-- HYUNDAI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INFINITI</masterLabel>
+            <translation><!-- INFINITI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERNATIONAL</masterLabel>
+            <translation><!-- INTERNATIONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IRISBUS</masterLabel>
+            <translation><!-- IRISBUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISUZU</masterLabel>
+            <translation><!-- ISUZU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ISUZU UTE</masterLabel>
+            <translation><!-- ISUZU UTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVECO</masterLabel>
+            <translation><!-- IVECO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JAGUAR</masterLabel>
+            <translation><!-- JAGUAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JEEP</masterLabel>
+            <translation><!-- JEEP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KENWORTH</masterLabel>
+            <translation><!-- KENWORTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIA</masterLabel>
+            <translation><!-- KIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KIT CAR</masterLabel>
+            <translation><!-- KIT CAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LADA</masterLabel>
+            <translation><!-- LADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAMBORGHINI</masterLabel>
+            <translation><!-- LAMBORGHINI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAND ROVER</masterLabel>
+            <translation><!-- LAND ROVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEXUS</masterLabel>
+            <translation><!-- LEXUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LEYLAND</masterLabel>
+            <translation><!-- LEYLAND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LINCOLN</masterLabel>
+            <translation><!-- LINCOLN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOTUS</masterLabel>
+            <translation><!-- LOTUS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MACK</masterLabel>
+            <translation><!-- MACK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAN</masterLabel>
+            <translation><!-- MAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MASERATI</masterLabel>
+            <translation><!-- MASERATI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAYBACH</masterLabel>
+            <translation><!-- MAYBACH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAZDA</masterLabel>
+            <translation><!-- MAZDA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MCLAREN</masterLabel>
+            <translation><!-- MCLAREN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCEDES-BENZ</masterLabel>
+            <translation><!-- MERCEDES-BENZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MERCURY</masterLabel>
+            <translation><!-- MERCURY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MG</masterLabel>
+            <translation><!-- MG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MINI</masterLabel>
+            <translation><!-- MINI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MITSUBISHI</masterLabel>
+            <translation><!-- MITSUBISHI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MITSUBISHI FUSO</masterLabel>
+            <translation><!-- MITSUBISHI FUSO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORGAN</masterLabel>
+            <translation><!-- MORGAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MORRIS</masterLabel>
+            <translation><!-- MORRIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NIKI</masterLabel>
+            <translation><!-- NIKI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NISSAN</masterLabel>
+            <translation><!-- NISSAN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OKA</masterLabel>
+            <translation><!-- OKA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OLDSMOBILE</masterLabel>
+            <translation><!-- OLDSMOBILE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OPEL</masterLabel>
+            <translation><!-- OPEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PEUGEOT</masterLabel>
+            <translation><!-- PEUGEOT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLYMOUTH</masterLabel>
+            <translation><!-- PLYMOUTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PONTIAC</masterLabel>
+            <translation><!-- PONTIAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PORSCHE</masterLabel>
+            <translation><!-- PORSCHE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROTON</masterLabel>
+            <translation><!-- PROTON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RENAULT</masterLabel>
+            <translation><!-- RENAULT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROLLS-ROYCE</masterLabel>
+            <translation><!-- ROLLS-ROYCE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROVER</masterLabel>
+            <translation><!-- ROVER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SAAB</masterLabel>
+            <translation><!-- SAAB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SATURN</masterLabel>
+            <translation><!-- SATURN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCANIA</masterLabel>
+            <translation><!-- SCANIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SCION</masterLabel>
+            <translation><!-- SCION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SEAT</masterLabel>
+            <translation><!-- SEAT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SKODA</masterLabel>
+            <translation><!-- SKODA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMART</masterLabel>
+            <translation><!-- SMART --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SSANGYONG</masterLabel>
+            <translation><!-- SSANGYONG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STERLING</masterLabel>
+            <translation><!-- STERLING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STUDEBAKER</masterLabel>
+            <translation><!-- STUDEBAKER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUBARU</masterLabel>
+            <translation><!-- SUBARU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUZUKI</masterLabel>
+            <translation><!-- SUZUKI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TESLA</masterLabel>
+            <translation><!-- TESLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TOYOTA</masterLabel>
+            <translation><!-- TOYOTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRIUMPH</masterLabel>
+            <translation><!-- TRIUMPH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVR</masterLabel>
+            <translation><!-- TVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UD</masterLabel>
+            <translation><!-- UD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VAUXHALL</masterLabel>
+            <translation><!-- VAUXHALL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLKSWAGEN</masterLabel>
+            <translation><!-- VOLKSWAGEN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VOLVO</masterLabel>
+            <translation><!-- VOLVO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WESTERN STAR</masterLabel>
+            <translation><!-- WESTERN STAR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Previous Model --></label>
+        <name>Previous_Model__c</name>
+        <relationshipLabel><!-- Customer Vehicle Relationship (Previous Model) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Previous Year --></label>
+        <name>Previous_Year__c</name>
+        <picklistValues>
+            <masterLabel>1981</masterLabel>
+            <translation><!-- 1981 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1982</masterLabel>
+            <translation><!-- 1982 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1983</masterLabel>
+            <translation><!-- 1983 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1984</masterLabel>
+            <translation><!-- 1984 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1985</masterLabel>
+            <translation><!-- 1985 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1986</masterLabel>
+            <translation><!-- 1986 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1987</masterLabel>
+            <translation><!-- 1987 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1988</masterLabel>
+            <translation><!-- 1988 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1989</masterLabel>
+            <translation><!-- 1989 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1990</masterLabel>
+            <translation><!-- 1990 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1991</masterLabel>
+            <translation><!-- 1991 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1992</masterLabel>
+            <translation><!-- 1992 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1993</masterLabel>
+            <translation><!-- 1993 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1994</masterLabel>
+            <translation><!-- 1994 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1995</masterLabel>
+            <translation><!-- 1995 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1996</masterLabel>
+            <translation><!-- 1996 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1997</masterLabel>
+            <translation><!-- 1997 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1998</masterLabel>
+            <translation><!-- 1998 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1999</masterLabel>
+            <translation><!-- 1999 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2000</masterLabel>
+            <translation><!-- 2000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2001</masterLabel>
+            <translation><!-- 2001 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2002</masterLabel>
+            <translation><!-- 2002 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2003</masterLabel>
+            <translation><!-- 2003 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2004</masterLabel>
+            <translation><!-- 2004 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2005</masterLabel>
+            <translation><!-- 2005 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2006</masterLabel>
+            <translation><!-- 2006 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2007</masterLabel>
+            <translation><!-- 2007 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2008</masterLabel>
+            <translation><!-- 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2009</masterLabel>
+            <translation><!-- 2009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2010</masterLabel>
+            <translation><!-- 2010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2011</masterLabel>
+            <translation><!-- 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2012</masterLabel>
+            <translation><!-- 2012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013</masterLabel>
+            <translation><!-- 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014</masterLabel>
+            <translation><!-- 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2018</masterLabel>
+            <translation><!-- 2018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2019</masterLabel>
+            <translation><!-- 2019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2020</masterLabel>
+            <translation><!-- 2020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;1980</masterLabel>
+            <translation><!-- &lt;1980 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Price --></label>
+        <name>Price__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Purchase date of vehicle (information from leads, not from sales) --></help>
+        <label><!-- Purchase Date --></label>
+        <name>Purchase_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Licence plate number of vehicle --></help>
+        <label><!-- Registration No. --></label>
+        <name>Registration_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Relationship Type --></label>
+        <name>Relationship_Type__c</name>
+        <picklistValues>
+            <masterLabel>Driver</masterLabel>
+            <translation><!-- Driver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Owner</masterLabel>
+            <translation><!-- Owner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Replacement_Date --></help>
+        <label><!-- Replacement Date --></label>
+        <name>Replacement_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Safety --></label>
+        <name>Safety__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Person --></label>
+        <name>Sales_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System --></label>
+        <name>Source_System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starmarque --></label>
+        <name>Starmarque__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Currently Owned</masterLabel>
+            <translation><!-- Currently Owned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disposed - Previously Owned</masterLabel>
+            <translation><!-- Disposed - Previously Owned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- TV --></label>
+        <name>TV__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Technology --></label>
+        <name>Technology__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TradeIn Make --></label>
+        <name>TradeIn_Make__c</name>
+    </fields>
+    <fields>
+        <label><!-- TradeIn Model --></label>
+        <name>TradeIn_Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- TradeIn Year --></label>
+        <name>TradeIn_Year__c</name>
+        <picklistValues>
+            <masterLabel>1981</masterLabel>
+            <translation><!-- 1981 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1982</masterLabel>
+            <translation><!-- 1982 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1983</masterLabel>
+            <translation><!-- 1983 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1984</masterLabel>
+            <translation><!-- 1984 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1985</masterLabel>
+            <translation><!-- 1985 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1986</masterLabel>
+            <translation><!-- 1986 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1987</masterLabel>
+            <translation><!-- 1987 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1988</masterLabel>
+            <translation><!-- 1988 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1989</masterLabel>
+            <translation><!-- 1989 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1990</masterLabel>
+            <translation><!-- 1990 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1991</masterLabel>
+            <translation><!-- 1991 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1992</masterLabel>
+            <translation><!-- 1992 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1993</masterLabel>
+            <translation><!-- 1993 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1994</masterLabel>
+            <translation><!-- 1994 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1995</masterLabel>
+            <translation><!-- 1995 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1996</masterLabel>
+            <translation><!-- 1996 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1997</masterLabel>
+            <translation><!-- 1997 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1998</masterLabel>
+            <translation><!-- 1998 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1999</masterLabel>
+            <translation><!-- 1999 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2000</masterLabel>
+            <translation><!-- 2000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2001</masterLabel>
+            <translation><!-- 2001 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2002</masterLabel>
+            <translation><!-- 2002 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2003</masterLabel>
+            <translation><!-- 2003 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2004</masterLabel>
+            <translation><!-- 2004 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2005</masterLabel>
+            <translation><!-- 2005 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2006</masterLabel>
+            <translation><!-- 2006 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2007</masterLabel>
+            <translation><!-- 2007 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2008</masterLabel>
+            <translation><!-- 2008 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2009</masterLabel>
+            <translation><!-- 2009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2010</masterLabel>
+            <translation><!-- 2010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2011</masterLabel>
+            <translation><!-- 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2012</masterLabel>
+            <translation><!-- 2012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013</masterLabel>
+            <translation><!-- 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014</masterLabel>
+            <translation><!-- 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2015</masterLabel>
+            <translation><!-- 2015 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2016</masterLabel>
+            <translation><!-- 2016 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2017</masterLabel>
+            <translation><!-- 2017 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2018</masterLabel>
+            <translation><!-- 2018 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2019</masterLabel>
+            <translation><!-- 2019 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2020</masterLabel>
+            <translation><!-- 2020 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;1980</masterLabel>
+            <translation><!-- &lt;1980 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- TradeIn --></label>
+        <name>TradeIn__c</name>
+    </fields>
+    <fields>
+        <label><!-- VIN --></label>
+        <name>VIN_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- VIN --></label>
+        <name>VIN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle ID --></label>
+        <name>Vehicle_ID__c</name>
+        <relationshipLabel><!-- Customer Vehicle Relationship --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Warranty Expiry Date --></label>
+        <name>Warranty_Expiry__c</name>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Web Auto --></label>
+        <name>Web_Auto__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Web MB --></label>
+        <name>Web_MB__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- What factors were influential in your purchase decision?
+(Please rank from 1-5, with 1 being most important and 5 less important) --></help>
+        <label><!-- Word/Mouth --></label>
+        <name>Word_Mouth__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Company Vehicle Relationship Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Finance &amp; Insurance --></label>
+            <section>Finance &amp; Insurance</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Information - What factors were influential in your purchase decision --></label>
+            <section>Survey Information - What factors were influential in your purchase decision</section>
+        </sections>
+        <sections>
+            <label><!-- System information --></label>
+            <section>System information</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Relationship Information --></label>
+            <section>Vehicle Relationship Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Company Vehicle Relationship Layout with locked/read-only fields</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Finance &amp; Insurance --></label>
+            <section>Finance &amp; Insurance</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Information - What factors were influential in your purchase decision --></label>
+            <section>Survey Information - What factors were influential in your purchase decision</section>
+        </sections>
+        <sections>
+            <label><!-- System information --></label>
+            <section>System information</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Relationship Information --></label>
+            <section>Vehicle Relationship Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer &amp; Leasing Company Relationship Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Relationship Information --></label>
+            <section>Vehicle Relationship Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Individual Vehicle Relationship Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Finance &amp; Insurance --></label>
+            <section>Finance &amp; Insurance</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Information - What factors were influential in your purchase decision --></label>
+            <section>Survey Information - What factors were influential in your purchase decision</section>
+        </sections>
+        <sections>
+            <label><!-- System information --></label>
+            <section>System information</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Relationship Information --></label>
+            <section>Vehicle Relationship Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Individual Vehicle Relationship Layout with locked/read-only fields</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Finance &amp; Insurance --></label>
+            <section>Finance &amp; Insurance</section>
+        </sections>
+        <sections>
+            <label><!-- Survey Information - What factors were influential in your purchase decision --></label>
+            <section>Survey Information - What factors were influential in your purchase decision</section>
+        </sections>
+        <sections>
+            <label><!-- System information --></label>
+            <section>System information</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Relationship Information --></label>
+            <section>Vehicle Relationship Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Company --></label>
+        <name>Company</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Individual --></label>
+        <name>Individual</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lessee --></label>
+        <name>Lessee</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- New_Company_Vehicle_Relationship --></label>
+        <name>New_Company_Vehicle_Relationship</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Individual_Vehicle_Relationship --></label>
+        <name>New_Individual_Vehicle_Relationship</name>
+    </webLinks>
+</CustomObjectTranslation>

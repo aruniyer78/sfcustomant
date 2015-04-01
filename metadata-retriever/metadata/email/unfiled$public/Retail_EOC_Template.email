@@ -1,0 +1,52 @@
+<messaging:emailTemplate subject="Finance EOC   Follow Up on Finance: {!if(isblank(relatedTo.Company_Account__c),relatedTo.Contact__r.Name,relatedTo.Company_Account__r.Name)} / EOC Dealer : {!relatedTo.Assigned_Dealer__r.Name}" recipientType="Contact" relatedToType="Lead_Account__c">
+<messaging:htmlEmailBody >
+
+The following End of Contract Opportunity has been referred to you for follow up under the End of Contract process.
+<br/><br/>
+There are {!if(relatedTo.Is_Finance_Send_Email_Before_15_Days__c,'15','')}
+          {!if(relatedTo.Is_Finance_Send_Email_Before_20_Days__c,'20','')}
+          {!if(relatedTo.Is_Finance_Send_Email_Before_60_Days__c,'60','')}
+          {!if(relatedTo.Is_Finance_Send_Email_Before_150_Days__c,'150','')}
+ days until the Contract End Date for this End of Contract Opportunity.
+<br/><br/>
+Please return acknowledgement of the status of this referral by clicking on the relevant link below.
+<br/><br/>
+
+{!if(isblank(relatedTo.Company_Account__c),"Contact:    "&relatedTo.Contact__r.Name,"Company Account:     "&relatedTo.Company_Account__r.Name)}<br/>
+Lead No.: {!relatedTo.Name}<br/>
+Nature of Request:  {!relatedTo.Nature_of_Request__c}<br/>
+Assigned Dealer: {!relatedTo.Assigned_Dealer__r.Name}<br/>
+<br/>
+<b>Contact Details</b><br/>
+Work Phone: {!relatedTo.Work_Phone__c}<br/>
+Home Phone: {!if(isblank(relatedTo.Company_Account__c),relatedTo.Contact__r.PersonHomePhone,relatedTo.Company_Account__r.Phone)}<br/>
+Mobile: {!if(isblank(relatedTo.Company_Account__c),relatedTo.Contact__r.Mobile__c,relatedTo.Company_Account__r.Mobile__c)}<br/>
+Email:  {!if(isblank(relatedTo.Company_Account__c),relatedTo.Contact__r.Email__c,relatedTo.Company_Account__r.Email__c)}<br/>
+<br/>
+<b>Referral Tracking</b><br/>
+Contract End Date (EOC Lead):<apex:outputText value="{0, date, dd/MM/yyyy}">
+                                <apex:param value="{!relatedTo.Existing_Contract__r.Contract_End_Date__c}" />
+                             </apex:outputText>
+<br/>
+<br/>
+<b>Qualification Information</b><br/>
+Existing Contract: {!relatedTo.Existing_Contract__r.ContractNumber}<br/>
+Vehicle Make - Current: {!relatedTo.Vehicle_Make__c  }<br/>
+Vehicle Model - Current: {!relatedTo.Vehicle_Model__c}<br/>
+Vehicle Year - Current: {!relatedTo.Vehicle_Year__c}<br/>
+Original Monthly Payment: {!relatedTo.Monthly_Payment__c }<br/>
+Interest Rate: {!relatedTo.Interest_Rate__c }<br/>
+ {! IF((relatedTo.Financial_Product__c != 'Operating Lease'), "Residual Amount:"& text(relatedTo.Existing_Contract__r.Balloon_RV_Amount__c),'' ) }
+<br/><br/>
+<c:eoc_links leadId="{!relatedTo.id}" />
+<br/>
+
+<apex:outputLink value="{!LEFT($Api.Partner_Server_URL_140,FIND('.com',$Api.Partner_Server_URL_140)+4)+relatedTo.Id}"  >
+{!relatedTo.name}
+</apex:outputLink><br/><br/>
+Kind Regards,<br/>
+Customer Retention
+
+</messaging:htmlEmailBody>
+
+</messaging:emailTemplate>

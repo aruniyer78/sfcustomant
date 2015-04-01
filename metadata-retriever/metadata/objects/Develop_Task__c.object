@@ -1,0 +1,3152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>PMO:  Track Bugs, Enhancement Requests, and Action Items to be resolved during the Build, Validate, Deploy and/or Post-Deployment phases.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Age_in_days__c</fullName>
+        <externalId>false</externalId>
+        <formula>NOW() -  CreatedDate</formula>
+        <label>Age (in days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Assign_to_Premier_Support__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Assign to Premier Support</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_To__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned To</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Develop_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Business_Interest_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Business_Value_Score__c + Data_Accuracy_Score__c + New_Process_Score__c + Productivity_Score__c + User_Friendliness_Score__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Interest Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Value_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Business_Value__c, &quot;Evolution requested has a negative impact&quot;, -20, &quot;Positive impact on business value&quot;, 20,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Business Value Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No impact</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Evolution requested has a negative impact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Positive impact on business value</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Closed__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Status__c  , 
+&quot;Closed (Duplicate)&quot;, &quot;True&quot;,
+&quot;Closed (Working As Designed)&quot;, &quot;True&quot;,
+&quot;Closed (Question Answered)&quot;, &quot;True&quot;,
+&quot;Closed (Verified)&quot;,&quot;True&quot;,
+&quot;Closed (Not An Issue)&quot;,&quot;True&quot;,
+&quot;False&quot;)</formula>
+        <label>Closed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Communication_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Communication Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Communication_needed__c</fullName>
+        <externalId>false</externalId>
+        <label>Communication needed</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Page Communication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training Webinar</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>End User Documentation Update</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Components__c</fullName>
+        <description>Components to deploy for this DT  &amp; manual deployment steps if needed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Components to deploy for this DT  &amp; manual deployment steps if needed</inlineHelpText>
+        <label>Deployment Components</label>
+        <length>1000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Data_Accuracy_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Data_Accuracy__c, &quot;Evolution requested has a negative impact on data quality&quot;, -20, &quot;Reduces risk of error on a importance information (example : direct link with cost or revenue)&quot;, 20,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Data Accuracy Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Accuracy__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Accuracy</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Evolution requested has a negative impact on data quality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reduces risk of error on a importance information (example : direct link with cost or revenue)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Days_to_Completion__c</fullName>
+        <externalId>false</externalId>
+        <formula>Dev_Complete_Date__c - TODAY()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days to Completion</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Derived_Urgency__c</fullName>
+        <externalId>false</externalId>
+        <label>Derived Urgency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Low (Nice to have)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Design_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Design Comments</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Design_Impact__c</fullName>
+        <externalId>false</externalId>
+        <label>Design Impact</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Communication to Design Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gap Analysis with Release</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Dev_Complete_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Dev Complete Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Develop_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Develop Task</label>
+        <referenceTo>Develop_Task__c</referenceTo>
+        <relationshipLabel>Develop Tasks</relationshipLabel>
+        <relationshipName>Release_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Development_Review__c</fullName>
+        <description>Review of the developed components based on the best practices and coding standards
+-Developers to set to &quot;Ready for Review&quot; when code complete
+-Test classes included in the review</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Review of the developed components based on the best practices and coding standards
+-Developers to set to &quot;Ready for Review&quot; when code complete
+-Test classes included in the review</inlineHelpText>
+        <label>Development Review</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Ready for Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Issues Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test Issues Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Enhancement_Objective__c</fullName>
+        <externalId>false</externalId>
+        <label>Enhancement Objective</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Functional_Impact_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Functional Impact Analysis</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Global_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>Business_Interest_Score__c * User_or_Group_Impacted_Score__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>(Business Interest Score) x (Scope of Change Impact Score)</inlineHelpText>
+        <label>Global Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Impact_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Impact Details</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Iteration__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Iteration</label>
+        <referenceTo>Iteration__c</referenceTo>
+        <relationshipLabel>Develop Tasks</relationshipLabel>
+        <relationshipName>Develop_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LOE_Hours__c</fullName>
+        <externalId>false</externalId>
+        <label>LOE (Hours)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&lt; 1 hour</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1 to 8 hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8+ to 40 hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40+ to 160 hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt; 160 hours</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Market_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Market / Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Module_Object__c</fullName>
+        <description>Initailly, it list SFDC standard objects. It can be customize per each project.</description>
+        <externalId>false</externalId>
+        <label>Module/Object</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Member</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Particpating Dealer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferences</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aftersales Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warranty Record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>External Key</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle / Asset</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complaint (Inquiry) / Case</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Activity / Task</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car Model</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car Attribute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car Model Attribute</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DM Request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DM Material</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DM Stock Flow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car Enquiry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SMS/EDM Template</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Article</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literature Order</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Literature</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Address</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Role / Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>QC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dealer Portal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Campaign Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>New_Development_Task__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>New Development Task</label>
+        <referenceTo>Change_Request__c</referenceTo>
+        <relationshipLabel>Develop Tasks</relationshipLabel>
+        <relationshipName>Develop_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>New_Process_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( New_Process__c , &quot;High impact&quot;, 10, &quot;Low impact &quot;, 0,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>New Process Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>New_Process__c</fullName>
+        <externalId>false</externalId>
+        <label>New Process</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low impact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High impact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Peripheral_Application_Impact__c</fullName>
+        <externalId>false</externalId>
+        <label>Peripheral Application Impact</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority/Severity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Productivity_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Productivity__c , &quot;Evolution requested has a negative impact on productivity&quot;, -20, &quot;Functional response time or process duration reduced&quot;, 10,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Productivity Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Productivity__c</fullName>
+        <externalId>false</externalId>
+        <label>Productivity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Evolution requested has a negative impact on productivity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Functional response time or process duration reduced</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Raised_by__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Who is the original requester?</inlineHelpText>
+        <label>Raised by</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Release_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_Idea_Number_of_Comments__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Related_Idea__r.NumComments)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Related Idea Number of Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Idea__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Idea</label>
+        <referenceTo>Idea</referenceTo>
+        <relationshipName>Release_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Requirement__c</fullName>
+        <externalId>false</externalId>
+        <label>Requirement</label>
+        <referenceTo>Requirement_UserStory__c</referenceTo>
+        <relationshipLabel>Develop Tasks</relationshipLabel>
+        <relationshipName>Release_Tasks</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Root_Cause__c</fullName>
+        <description>root cause of bug</description>
+        <externalId>false</externalId>
+        <label>Root Cause</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Solution_Type__c</fullName>
+        <description>It&apos;s used by consultant/tech consultant who takes resposibility of fixing DT.</description>
+        <externalId>false</externalId>
+        <label>Solution Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Button&amp;Link</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Classes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SMS/EDM Template</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fields</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Profiles</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Trigger</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Visual Page</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Validation Rule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sharing Settings</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EP-Extension Platform</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>List View</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Email Template</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution Reviewed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution Incomplete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complete (Ready to Test)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test in Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Re-Open (Test Failed)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed (Verified)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed (Duplicate)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed (Working As Designed)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed (Not An Issue)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold (for next release)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Steps_to_Reproduce__c</fullName>
+        <externalId>false</externalId>
+        <label>Steps to Reproduce</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technical_Impact_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>Technical Impact Analysis</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Test_Result__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Test Result</label>
+        <referenceTo>Test_Result__c</referenceTo>
+        <relationshipName>Development_Tasks</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Development</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bug Fix</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UAT_Dev_Task_Comments__c</fullName>
+        <description>fill Test comments</description>
+        <externalId>false</externalId>
+        <label>UAT Dev Task Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Unit_Tests__c</fullName>
+        <description>Apex test classes and unit test case scenarios</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Apex test classes and unit test case scenarios</inlineHelpText>
+        <label>Unit Tests</label>
+        <length>32000</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>User_Friendliness_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( User_Friendliness__c , &quot;Evolution requested has a negative impact on user friendliness&quot;, -20, &quot;Positive impact on user friendliness&quot;, 20,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Friendliness Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Friendliness__c</fullName>
+        <externalId>false</externalId>
+        <label>User Friendliness</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Evolution requested has a negative impact on user friendliness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Positive impact on user friendliness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>User_Interface_Impact_Analysis__c</fullName>
+        <externalId>false</externalId>
+        <label>User Interface Impact Analysis</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>User_Story_Lead__c</fullName>
+        <externalId>false</externalId>
+        <formula>Requirement__r.assign_to_BA_user__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Story: Lead</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Story_Solution_Reviewed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Requirement__r.Solution_Reviewed_old__c, &apos;Yes&apos;, &apos;No&apos;)</formula>
+        <label>User Story: Solution Reviewed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Story_Stream__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT(Requirement__r.Name , 6)</formula>
+        <label>User Story: Stream</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_Story_Subject__c</fullName>
+        <externalId>false</externalId>
+        <formula>Requirement__r.Subject__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User Story: Subject</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_or_Group_Impacted_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(User_or_Group_Impacted__c , &quot;Business Unit&quot;, 1, &quot;Country&quot;, 5, &quot;Region&quot;,5, &quot;All&quot;, 10, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>User or Group Impacted Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User_or_Group_Impacted__c</fullName>
+        <description>Which user or group is affected by the request</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Which user or group is affected by the request</inlineHelpText>
+        <label>User or Group Impacted</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Country</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Region</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>All</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Workaround__c</fullName>
+        <externalId>false</externalId>
+        <label>Workaround?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing satisfactory alternative method</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reasonable workaround (effort to make it happen)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Difficult workaround (effort to make it happen)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No alternative or unacceptable alternative method</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Develop Task</label>
+    <listViews>
+        <fullName>All_UAT_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Priority__c</columns>
+        <columns>Derived_Urgency__c</columns>
+        <columns>Raised_by__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>10/14/2011 12:00 AM</value>
+        </filters>
+        <label>All UAT DT</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Campaign_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Type__c</columns>
+        <columns>Dev_Complete_Date__c</columns>
+        <columns>Requirement__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Resolution__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>User_Story_Stream__c</field>
+            <operation>contains</operation>
+            <value>Cpn</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Develop_Task__c.Action_Item</value>
+        </filters>
+        <label>Campaign DT</label>
+    </listViews>
+    <listViews>
+        <fullName>Case_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Complete_Date__c</columns>
+        <columns>Requirement__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Resolution__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>User_Story_Subject__c</field>
+            <operation>equals</operation>
+            <value>Case</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Develop_Task__c.Action_Item</value>
+        </filters>
+        <label>Case DT</label>
+    </listViews>
+    <listViews>
+        <fullName>Closed_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>Derived_Urgency__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>Close</value>
+        </filters>
+        <label>Closed DT</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>DT_AU</fullName>
+        <columns>NAME</columns>
+        <columns>Requirement__c</columns>
+        <columns>Type__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Priority__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Market_Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>DT_AU</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Engaged_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>Status__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Derived_Urgency__c</columns>
+        <columns>Raised_by__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>LOE_Hours__c</columns>
+        <columns>Resolution__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>notContain</operation>
+            <value>Closed,New,On Hold</value>
+        </filters>
+        <label>Engaged DT</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_Tasks2</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Type__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Days_to_Completion__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>Assigned_To__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>contains</operation>
+            <value>Iliu</value>
+        </filters>
+        <label>My Tasks</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_Uncompleted_DTs</fullName>
+        <columns>NAME</columns>
+        <columns>Requirement__c</columns>
+        <columns>Assigned_To__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Complete_Date__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>New,In Development,Complete (Ready to Test)</value>
+        </filters>
+        <label>My Uncompleted DTs</label>
+    </listViews>
+    <listViews>
+        <fullName>New_DevConfig_DTs</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>Functional_Impact_Analysis__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>RECORDTYPE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>1/1/2013 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>contains</operation>
+            <value>New,Solution Reviewed,Solution Incomplete,In Development,Re-Open (Test Faile</value>
+        </filters>
+        <filters>
+            <field>Type__c</field>
+            <operation>equals</operation>
+            <value>Configuration,Development</value>
+        </filters>
+        <label>New Development DTs</label>
+    </listViews>
+    <listViews>
+        <fullName>Not_Closed_Bug</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Requirement__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>Priority__c</columns>
+        <columns>LOE_Hours__c</columns>
+        <columns>Resolution__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Develop_Task__c.Bug</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notContain</operation>
+            <value>Closed</value>
+        </filters>
+        <label>Not Closed Bug</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>On_Hold_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Priority__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>On Hold</value>
+        </filters>
+        <label>On Hold DT</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Open_DT</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Status__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>Functional_Impact_Analysis__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>10/14/2011 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notContain</operation>
+            <value>Close</value>
+        </filters>
+        <label>Open DT</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>UAT_BUG_List</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Status__c</columns>
+        <columns>Description__c</columns>
+        <columns>Steps_to_Reproduce__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Type__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Priority__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>10/8/2011 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Develop_Task__c.Bug</value>
+        </filters>
+        <label>UAT BUG List</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Zinow_s_DTs</fullName>
+        <columns>NAME</columns>
+        <columns>Requirement__c</columns>
+        <columns>Status__c</columns>
+        <columns>Dev_Complete_Date__c</columns>
+        <columns>Subject__c</columns>
+        <columns>Description__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Assigned_To__c</field>
+            <operation>equals</operation>
+            <value>Zhang Sinow</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>notEqual</operation>
+            <value>Closed (Verified),Closed (Duplicate),Closed (Working As Designed)</value>
+        </filters>
+        <label>Zinow&apos;s DTs</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>DT-{YY}{MM}{0000}</displayFormat>
+        <label>Task Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Develop Tasks</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Action_Item</fullName>
+        <active>true</active>
+        <description>Development, Configuration, Data load or ask (Confirm) requirements with relative owners</description>
+        <label>Action Item</label>
+        <picklistValues>
+            <picklist>Business_Value__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No impact</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Positive impact on business value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Communication_needed__c</picklist>
+            <values>
+                <fullName>End User Documentation Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Page Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Data_Accuracy__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on data quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reduces risk of error on a importance information %28example %3A direct link with cost or revenue%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Derived_Urgency__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low %28Nice to have%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Design_Impact__c</picklist>
+            <values>
+                <fullName>Communication to Design Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis with Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Development_Review__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issues Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Issues Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOE_Hours__c</picklist>
+            <values>
+                <fullName>%3C 1 hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%3E 160 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 to 8 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%2B to 160 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2B to 40 hours</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Country__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Module_Object__c</picklist>
+            <values>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activity %2F Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aftersales Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Attribute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Model Attribute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint %28Inquiry%29 %2F Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Material</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Stock Flow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Particpating Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS%2FEDM Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle %2F Asset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Relationship</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_Process__c</picklist>
+            <values>
+                <fullName>High impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Productivity__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on productivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functional response time or process duration reduced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solution_Type__c</picklist>
+            <values>
+                <fullName>Button%26Link</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EP-Extension Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List View</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profiles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS%2FEDM Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sharing Settings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation Rule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual Page</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed %28Verified%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete %28Ready to Test%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold %28for next release%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Open %28Test Failed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solution Incomplete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solution Reviewed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test in Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Bug Fix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Question</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_Friendliness__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on user friendliness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Positive impact on user friendliness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_or_Group_Impacted__c</picklist>
+            <values>
+                <fullName>All</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Workaround__c</picklist>
+            <values>
+                <fullName>Difficult workaround %28effort to make it happen%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing satisfactory alternative method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No alternative or unacceptable alternative method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reasonable workaround %28effort to make it happen%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Bug</fullName>
+        <active>true</active>
+        <description>Error, exception, defect founds and data issues tracking</description>
+        <label>Bug</label>
+        <picklistValues>
+            <picklist>Business_Value__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No impact</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Positive impact on business value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Communication_needed__c</picklist>
+            <values>
+                <fullName>End User Documentation Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Page Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Data_Accuracy__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on data quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reduces risk of error on a importance information %28example %3A direct link with cost or revenue%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Derived_Urgency__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low %28Nice to have%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Design_Impact__c</picklist>
+            <values>
+                <fullName>Communication to Design Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis with Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Development_Review__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issues Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Issues Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOE_Hours__c</picklist>
+            <values>
+                <fullName>%3C 1 hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%3E 160 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 to 8 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%2B to 160 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2B to 40 hours</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Country__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Module_Object__c</picklist>
+            <values>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activity %2F Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aftersales Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Attribute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Model Attribute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint %28Inquiry%29 %2F Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Material</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Stock Flow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literature Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Particpating Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Role %2F Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS%2FEDM Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle %2F Asset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warranty Record</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_Process__c</picklist>
+            <values>
+                <fullName>High impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Productivity__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on productivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functional response time or process duration reduced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solution_Type__c</picklist>
+            <values>
+                <fullName>Button%26Link</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EP-Extension Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List View</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profiles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS%2FEDM Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation Rule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual Page</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed %28Duplicate%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed %28Not An Issue%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed %28Verified%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed %28Working As Designed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete %28Ready to Test%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold %28for next release%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Open %28Test Failed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test in Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Bug Fix</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Load</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_Friendliness__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on user friendliness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Positive impact on user friendliness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_or_Group_Impacted__c</picklist>
+            <values>
+                <fullName>All</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Workaround__c</picklist>
+            <values>
+                <fullName>Difficult workaround %28effort to make it happen%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing satisfactory alternative method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No alternative or unacceptable alternative method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reasonable workaround %28effort to make it happen%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Enhancement_Request</fullName>
+        <active>true</active>
+        <description>Change request or Enhancement to the existing request, may generate new stories requirements</description>
+        <label>Enhancement</label>
+        <picklistValues>
+            <picklist>Business_Value__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No impact</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Positive impact on business value</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Communication_needed__c</picklist>
+            <values>
+                <fullName>End User Documentation Update</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Page Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Data_Accuracy__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on data quality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reduces risk of error on a importance information %28example %3A direct link with cost or revenue%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Derived_Urgency__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low %28Nice to have%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Design_Impact__c</picklist>
+            <values>
+                <fullName>Communication to Design Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gap Analysis with Release</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workshop</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Development_Review__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Issues Pending</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Review</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test Issues Pending</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LOE_Hours__c</picklist>
+            <values>
+                <fullName>%3C 1 hour</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%3E 160 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1 to 8 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>40%2B to 160 hours</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8%2B to 40 hours</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Market_Country__c</picklist>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Module_Object__c</picklist>
+            <values>
+                <fullName>Account</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activity %2F Task</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aftersales Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Article</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Campaign Member</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Attribute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Enquiry</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Car Model Attribute</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complaint %28Inquiry%29 %2F Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Material</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DM Stock Flow</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email Address</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>External Key</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literature</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Literature Order</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Particpating Dealer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preferences</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Role %2F Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS%2FEDM Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sales Record</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle %2F Asset</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Relationship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Warranty Record</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>New_Process__c</picklist>
+            <values>
+                <fullName>High impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low impact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>Critical</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Productivity__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on productivity</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Functional response time or process duration reduced</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Solution_Type__c</picklist>
+            <values>
+                <fullName>Button%26Link</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Classes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EP-Extension Platform</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FLS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>List View</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Page Layout</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Profiles</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMS%2FEDM Template</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trigger</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Validation Rule</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Visual Page</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed %28Duplicate%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed %28Not An Issue%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed %28Verified%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed %28Working As Designed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Complete %28Ready to Test%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>On Hold %28for next release%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Re-Open %28Test Failed%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test in Progress</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Security</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_Friendliness__c</picklist>
+            <values>
+                <fullName>Evolution requested has a negative impact on user friendliness</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Positive impact on user friendliness</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>User_or_Group_Impacted__c</picklist>
+            <values>
+                <fullName>All</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Country</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Region</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Workaround__c</picklist>
+            <values>
+                <fullName>Difficult workaround %28effort to make it happen%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Existing satisfactory alternative method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No alternative or unacceptable alternative method</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not relevant</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Reasonable workaround %28effort to make it happen%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Requirement__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Subject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Priority__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Requirement__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Priority__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LAST_UPDATE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Requirement__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Priority__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UPDATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LAST_UPDATE</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>Requirement__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Priority__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LAST_UPDATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

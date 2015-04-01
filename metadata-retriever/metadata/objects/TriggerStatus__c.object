@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>Create a Custom Setting called &quot;Trigger Status&quot; with 2 fields - Trigger Name, Enabled (Yes/No)
+
+On top of every trigger, check the Enabled value of the correspondent trigger in &quot;Trigger Status&quot;, exit if Enabled = &apos;No&apos;
+(This should be wrapped in a Helper/Utility class function)
+
+This way we can easily enabled/disable all/individual trigger any time we need it.</description>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Enabled__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Create a Custom Setting called &quot;Trigger Status&quot; with 2 fields - Trigger Name, Enabled (Yes/No)
+
+On top of every trigger, check the Enabled value of the correspondent trigger in &quot;Trigger Status&quot;, exit if Enabled = &apos;No&apos;
+(This should be wrapped in a Helper/Utility class function)
+
+This way we can easily enabled/disable all/individual trigger any time we need it.</description>
+        <externalId>false</externalId>
+        <label>Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Trigger Status</label>
+</CustomObject>

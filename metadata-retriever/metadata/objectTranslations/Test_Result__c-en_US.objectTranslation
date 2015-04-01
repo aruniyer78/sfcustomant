@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Results</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Result --></label>
+        <name>Actual_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Result --></label>
+        <name>Expected_Result__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fail Steps --></label>
+        <name>Fail_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Passed Steps --></label>
+        <name>Passed_Steps__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requirement --></label>
+        <name>Requirement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Start</masterLabel>
+            <translation><!-- Not Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass</masterLabel>
+            <translation><!-- Pass --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Summary --></label>
+        <name>Summary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Test Case --></label>
+        <name>Test_Case__c</name>
+        <relationshipLabel><!-- Test Results --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Run --></label>
+        <name>Test_Run__c</name>
+        <relationshipLabel><!-- Test Results --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Requirement</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Results --></label>
+            <section>Results</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>UAT</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Result --></label>
+            <section>Result</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Requirement --></label>
+        <name>Requirement</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- UAT --></label>
+        <name>UAT</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

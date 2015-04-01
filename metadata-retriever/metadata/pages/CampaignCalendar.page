@@ -1,0 +1,378 @@
+<apex:page controller="CampaignCalendarController" sidebar="False">
+    <html>
+        <head>
+            <title>
+                Campaign - Canlendar
+            </title>
+            <script>
+                Date.prototype.format = function (fmt) { //author: meizz 
+                    var o = {
+                        "M+": this.getMonth() + 1,  
+                        "d+": this.getDate(), 
+                        "h+": this.getHours(), 
+                        "m+": this.getMinutes(), 
+                        "s+": this.getSeconds(), 
+                        "q+": Math.floor((this.getMonth() + 3) / 3), 
+                        "S": this.getMilliseconds() 
+                    };
+                    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+                    for (var k in o)
+                    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+                    return fmt;
+                }
+            </script>
+            <apex:stylesheet value="{!$Resource.Timeline_CSS}" />
+            <apex:includeScript value="{!$Resource.Timeline_JS}" />
+            <script src="/js/functions.js">
+            </script>
+            <script type="text/javascript">
+                var theTimeLine;
+                var eventSource;
+                var baseURL = window.location.protocol + '//' + window.location.hostname;
+                var user_lang;
+                var currentYear;
+                var endYear;
+
+                function isSupported(str) {
+                    var reg = new RegExp(/en|de|fr|es|it|se/);
+                    return reg.test(str);
+                }
+
+                function createBands() {
+                    eventSource = new Timeline.DefaultEventSource();
+                    Timeline.Platform.serverLocale = (isSupported(user_lang) ? user_lang: "en");
+                    Timeline.Platform.clientLocale = (isSupported(user_lang) ? user_lang: "en");
+
+                    var theme = Timeline.ClassicTheme.create();
+                    var bandInfos = [Timeline.createBandInfo({
+                        showEventText: true,
+                        eventSource: eventSource,
+                        date: Date(),
+                        width: "60%",
+                        intervalUnit: Timeline.DateTime.WEEK,
+                        intervalPixels: 70,
+                        theme: theme
+                    }), Timeline.createBandInfo({
+                        showEventText: false,
+                        eventSource: eventSource,
+                        date: Date(),
+                        width: "30%",
+                        intervalUnit: Timeline.DateTime.MONTH,
+                        intervalPixels: 100,
+                        theme: theme
+                    }), Timeline.createBandInfo({
+                        showEventText: false,
+                        trackHeight: 0.6,
+                        trackGap: 0.2,
+                        eventSource: eventSource,
+                        date: Date(),
+                        width: "10%",
+                        intervalUnit: Timeline.DateTime.YEAR,
+                        intervalPixels: 200
+                    })];
+                    bandInfos[0].highlight = false;
+                    bandInfos[1].syncWith = 0;
+                    bandInfos[1].highlight = true;
+                    bandInfos[1].eventPainter.setLayout(bandInfos[0].eventPainter.getLayout());
+                    bandInfos[2].syncWith = 1;
+                    bandInfos[2].highlight = true;
+                    bandInfos[2].eventPainter.setLayout(bandInfos[1].eventPainter.getLayout());
+                    theTimeLine = Timeline.create(document.getElementById("campaign-timeline"), bandInfos);
+                }
+
+                function initPage() {
+                    var partnerId = ("{!$CurrentPage.URL}").split("%3FpartnerId%3D").length == 1 ? "": ("{!$CurrentPage.URL}").split("%3FpartnerId%3D")[1];
+                    var _default = ("{!$CurrentPage.URL}").split("%3FpartnerId%3D").length == 1 ? true: false;
+                    var ul = "{!userLan}";
+                    user_lang = ul.substring(0, 2);
+                    var today = new Date();
+                    currentYear = today.getFullYear();
+                    createBands();
+                    CampaignCalendarController.queAllCamps('', '', function(result,event){layoutCentralCamp(result);});
+                }
+
+                function layoutCentralCamp(qr) {
+                    loadJSON(map(qr,
+                    function(rec, idx, ary) {
+                        return {
+                            start: new Date(rec.StartDate).toJSON(),
+                            end: new Date(rec.EndDate).toJSON(),
+                            isDuration: true,
+                            title: rec.Name,
+                            next: "/" + rec.Id,
+                            link: "/" + rec.Id,
+                            target: "_blank",
+                            description: (rec.Status == null ? "": "Status: " + rec.Status + "<br>"),
+                            image: "/img/icon/campaigns16.gif",
+                            icon: "/img/icon/campaigns16.gif",
+                            category: rec.Frequency_Category__c,
+                            repeatFrequency: (rec.IsActive ? "true" : "false")
+                        }
+                    }));
+                }
+
+                // some helper functions
+                // take an array of events, load them into a data object and pass to loadJSON
+                function loadJSON(events) {
+                    if (!events || events.length < 1) return;
+                    var data = {};
+                    data.events = events;
+                    eventSource.loadJSON(data, baseURL); // eventSource is part of the Timeline API
+                }
+
+                // call a function on each member of the array, return an array
+                // of the results of the callbacks
+                function map(anArray, callback) {
+                    var outArr = [];
+                    if (anArray == null) return outArr;
+                    for (var i = 0, l = anArray.length; i < l; i++) {
+                        var topush = callback(anArray[i], i, anArray);
+                        if (topush != null) {
+                            outArr.push(topush);
+                        }
+                    }
+                    return outArr;
+                }
+
+                var resizeTimerID = null;
+                function onResize() {
+                    if (resizeTimerID == null) {
+                        resizeTimerID = window.setTimeout(function() {
+                            resizeTimerID = null;
+                            theTimeLine.layout();
+                        },
+                        500);
+                    }
+                }
+
+                // Referesh Time line by Campaign Type
+                function refreshTimeline() {
+                    theTimeLine.dispose();
+                    createBands();
+                    document.getElementById("timelineHeadline").innerHTML = "All Campaigns";
+                    var duration = document.getElementById("dur").value;
+                    endYear = '';
+                    
+                    switch (duration) {
+                        case "this year on":
+                            document.getElementById("timelineHeadline").innerHTML = "All Campaigns From This Year On";
+                            currentYear = new Date().getFullYear();
+                            break;
+                        case "last year on":
+                            document.getElementById("timelineHeadline").innerHTML = "All Campaigns From Last Year On";
+                            currentYear = new Date().getFullYear() - 1;
+                            break;
+                        case "this year":
+                            document.getElementById("timelineHeadline").innerHTML = "All Campaigns During This Year";
+                            currentYear = new Date().getFullYear();
+                            endYear = new Date().getFullYear();
+                            break;
+                        case "last year":
+                            document.getElementById("timelineHeadline").innerHTML = "All Campaigns During Last Year";
+                            currentYear = new Date().getFullYear() - 1;
+                            endYear = new Date().getFullYear() - 1;
+                            break;
+                        case "all":
+                            document.getElementById("timelineHeadline").innerHTML = "All Campaigns";
+                            currentYear = '';
+                            break;
+                        default:
+                            document.getElementById("timelineHeadline").innerHTML = "All Campaigns";
+                            currentYear = '';
+                    }
+                    
+                    CampaignCalendarController.queAllCamps(currentYear, endYear, function(result,event){layoutCentralCamp(result);});
+                    if(currentYear && currentYear != '') {
+                        var scrollDate = new Date();
+                        scrollDate.setFullYear(currentYear);
+                        theTimeLine._bands[0].scrollToCenter(scrollDate);
+                    }
+                }
+
+                window.onload = function() { initPage(); };
+            </script>
+        </head>
+        
+        <body class="custom customTab3 overviewPage" onload="javascript:alert(1);initPage();" onresize="javascript:onResize();">
+            <div class="bodyDiv" style="width:100%">
+                <a name="skiplink">
+                    <img src="/s.gif" height='1' width='1' alt="Content Starts Here" class="skiplink"/>
+                </a>
+                <div id="divErrorMsg"/>
+                <div class="bPageTitle">
+                    <div class="ptBody secondaryPalette">
+                        <div class="content">
+                            <img src="/s.gif" alt="Campaign Timeline Overview" class="pageTitleIcon"
+                            title="Campaign Timeline Overview" />
+                            <h1 class="pageType">
+                                Campaign Calendar
+                                <span class="titleSeparatingColon">
+                                    :
+                                </span>
+                            </h1>
+                            <h2 class="pageDescription">
+                                Overview
+                            </h2>
+                            <div class="blank">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ptBreadcrumb">
+                        &nbsp;
+                    </div>
+                </div>
+                <div class="filterOverview">
+                    <form action="" id="filter_element" name="filter_element" method="get">
+                        <div class="bFilterView">
+                            <span class="bFilter">
+                                <h2>
+                                    View:
+                                </h2>
+                                <span class="fBody">
+                                    <select title="Duration: " id="dur" name="fcf" onchange="refreshTimeline();">
+                                        <option value="this year on" selected="selected">
+                                            All Campaigns From This Year On
+                                        </option>
+                                        <option value="last year on">
+                                            All Campaigns From Last Year On
+                                        </option>
+                                        <option value="this year">
+                                            All Campaigns During This Year
+                                        </option>
+                                        <option value="last year">
+                                            All Campaigns During Last Year
+                                        </option>
+                                        <option value="all" selected="select">
+                                            All Campaigns
+                                        </option>
+                                    </select>
+                                </span>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <div class="bRelatedList">
+                    <div class="bNext">
+                        <div class="withFilter">
+                            <div class="clearingBox">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hotListElement">
+                        <div class="bPageBlock secondaryPalette">
+                            <div class="pbHeader">
+                                <form action="" id="hotlist" name="hotlist" method="get">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="pbTitle">
+                                                    <img src="/s.gif" alt="" title="" class="minWidth" height="1" width="1"/>
+                                                    <h3>
+                                                        <div id="timelineHeadline">
+                                                            All Campaigns From This Year On
+                                                        </div>
+                                                    </h3>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #70a8dd; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:40px; height:10px;">
+                                                    <div style="width:40px">
+                                                        Adhoc
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #87df3d; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:40px; height:10px;">
+                                                    <div style="width:40px">
+                                                        Daily
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #a456e5; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:50px; height:10px;">
+                                                    <div style="width:50px">
+                                                        Weekly
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #D2691E; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:70px; height:10px;">
+                                                    <div style="width:70px">
+                                                        Fortnightly
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #104E8B; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:55px; height:10px;">
+                                                    <div style="width:55px">
+                                                        Monthly
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #EEEE00; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:60px; height:10px;">
+                                                    <div style="width:60px">
+                                                        Quarterly
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0px;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #CD00CD; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:60px; height:10px;">
+                                                    <div style="width:60px">
+                                                        Annually
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #B22222; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:60px; height:10px;">
+                                                    <div style="width:60px">
+                                                        Bi Annual
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #cc9933; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:60px; height:10px;">
+                                                    <div style="width:60px">
+                                                        Tri Annual
+                                                    </div>
+                                                </td>
+                                                <td style="width:10px; height:10px; padding:0;">
+                                                    <div style="box-shadow:1px 1px 1px 0px #6B6B6B; background-color: #D4D4D4; border:0; width:10px; height:10px"/>
+                                                </td>
+                                                <td style="width:60px; height:10px;">
+                                                    <div style="width:60px">
+                                                        Others
+                                                    </div>
+                                                </td>
+                                                <td class="pbHelp">
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                            <div class="pbBody" style="overflow:hidden">
+                                <div id="campaign-timeline" style="position:relative;width:1200px;height:600px; border: 0px;"/>
+                            </div>
+                            <div class="pbFooter secondaryPalette">
+                                <div class="bg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listElementBottomNav"/>
+                </div>
+            </div>
+        </body>
+    </html>
+</apex:page>

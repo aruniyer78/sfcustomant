@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CRM1 Contract</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contracts</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>CRM1 Contract Number</value>
+        </caseValues>
+        <name>contract_number</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Amount Financed --></label>
+        <name>Amount_Financed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Call Task 1 --></label>
+        <name>Annual_Call_Task_1_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Call Task 2 --></label>
+        <name>Annual_Call_Task_2_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Call Task 3 --></label>
+        <name>Annual_Call_Task_3_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Annual Call --></label>
+        <name>Annual_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- *Assist End Date --></label>
+        <name>Assist_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Balloon / RV Amount --></label>
+        <name>Balloon_RV_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Interest Rate --></label>
+        <name>Base_Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- CMS Contract No. --></label>
+        <name>CMS_Contract_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign Description --></label>
+        <name>Campaign_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract End Date --></label>
+        <name>Contract_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Unique Idenetifier from CMS --></help>
+        <label><!-- CMS Contract No. --></label>
+        <name>Contract_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contract Status --></label>
+        <name>Contract_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved for Sale</masterLabel>
+            <translation><!-- Approved for Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved for financing</masterLabel>
+            <translation><!-- Approved for financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asset Released</masterLabel>
+            <translation><!-- Asset Released --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closing Receipt Cancelled</masterLabel>
+            <translation><!-- Closing Receipt Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complied</masterLabel>
+            <translation><!-- Complied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conditioned</masterLabel>
+            <translation><!-- Conditioned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Continue with existing borrower</masterLabel>
+            <translation><!-- Continue with existing borrower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Default-Collection Officer</masterLabel>
+            <translation><!-- Default-Collection Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Default-External Agent</masterLabel>
+            <translation><!-- Default-External Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout</masterLabel>
+            <translation><!-- Early Payout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout-Cheque Under Clearance</masterLabel>
+            <translation><!-- Early Payout-Cheque Under Clearance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout-Sale and Finance</masterLabel>
+            <translation><!-- Early Payout-Sale and Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout-Sale of Asset</masterLabel>
+            <translation><!-- Early Payout-Sale of Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed</masterLabel>
+            <translation><!-- Executed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed-Existing Borrower</masterLabel>
+            <translation><!-- Executed-Existing Borrower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed-Financing</masterLabel>
+            <translation><!-- Executed-Financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed-Payment Received</masterLabel>
+            <translation><!-- Executed-Payment Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flat Cancel Contract</masterLabel>
+            <translation><!-- Flat Cancel Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Process</masterLabel>
+            <translation><!-- In Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Loss Arrangement</masterLabel>
+            <translation><!-- Insurance Loss Arrangement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Write off</masterLabel>
+            <translation><!-- Insurance Write off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Irregular</masterLabel>
+            <translation><!-- Irregular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Irregular Complied</masterLabel>
+            <translation><!-- Irregular Complied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Litigation</masterLabel>
+            <translation><!-- Litigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Supported</masterLabel>
+            <translation><!-- Not Supported --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overdue</masterLabel>
+            <translation><!-- Overdue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Payment Received-Default</masterLabel>
+            <translation><!-- Partial Payment Received-Default --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Payment Received-Overdue</masterLabel>
+            <translation><!-- Partial Payment Received-Overdue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Redemption</masterLabel>
+            <translation><!-- Partial Redemption --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Termination</masterLabel>
+            <translation><!-- Partial Termination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Authorize</masterLabel>
+            <translation><!-- Payment Authorize --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Pending</masterLabel>
+            <translation><!-- Payment Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Received</masterLabel>
+            <translation><!-- Payment Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payout</masterLabel>
+            <translation><!-- Payout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promise Made</masterLabel>
+            <translation><!-- Promise Made --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RV Overdue</masterLabel>
+            <translation><!-- RV Overdue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-Picked</masterLabel>
+            <translation><!-- Re-Picked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refer</masterLabel>
+            <translation><!-- Refer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refinanced</masterLabel>
+            <translation><!-- Refinanced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remarketing</masterLabel>
+            <translation><!-- Remarketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repossessed</masterLabel>
+            <translation><!-- Repossessed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repossessed-Voluntary Surrender</masterLabel>
+            <translation><!-- Repossessed-Voluntary Surrender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restructuring</masterLabel>
+            <translation><!-- Restructuring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resubmitted</masterLabel>
+            <translation><!-- Resubmitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to Printer</masterLabel>
+            <translation><!-- Sent to Printer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settled</masterLabel>
+            <translation><!-- Settled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settled Irregular</masterLabel>
+            <translation><!-- Settled Irregular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlement Pending</masterLabel>
+            <translation><!-- Settlement Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Written Off</masterLabel>
+            <translation><!-- Written Off --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Make --></label>
+        <name>Current_Make__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Model --></label>
+        <name>Current_Model__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Year --></label>
+        <name>Current_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Group --></label>
+        <name>Dealer_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dealer Name --></label>
+        <name>Dealer_Name__c</name>
+        <relationshipLabel><!-- Contracts (Dealer Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Dealer Number --></label>
+        <name>Dealer_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct Debit Authority --></label>
+        <name>Direct_Debit_Authority__c</name>
+    </fields>
+    <fields>
+        <label><!-- EOC Call Task 1 --></label>
+        <name>EOC_Call_Task_1_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- EOC Call Task 2 --></label>
+        <name>EOC_Call_Task_2_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- EOC Call Task 3 --></label>
+        <name>EOC_Call_Task_3_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- EOC Call --></label>
+        <name>EOC_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- FPI Cover --></label>
+        <name>FPI_Cover__c</name>
+    </fields>
+    <fields>
+        <label><!-- FPI Premium Amount --></label>
+        <name>FPI_Premium_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Brand --></label>
+        <name>Finance_Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Product Type --></label>
+        <name>Finance_Product_Type__c</name>
+        <picklistValues>
+            <masterLabel>Asset Loan</masterLabel>
+            <translation><!-- Asset Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Loan</masterLabel>
+            <translation><!-- Consumer Loan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance Lease</masterLabel>
+            <translation><!-- Finance Lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hire Purchase</masterLabel>
+            <translation><!-- Hire Purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operating Lease</masterLabel>
+            <translation><!-- Operating Lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Fleet - indicates whether the related compay is a fleet customer or not --></help>
+        <label><!-- Fleet --></label>
+        <name>Fleet__c</name>
+    </fields>
+    <fields>
+        <label><!-- Franchise Description --></label>
+        <name>Franchise_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- GAP Cover --></label>
+        <name>GAP_Cover__c</name>
+    </fields>
+    <fields>
+        <label><!-- GAP Premium Amount --></label>
+        <name>GAP_Premium_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- GFV --></label>
+        <name>GFV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Good Customer --></label>
+        <name>Good_Customer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interest Rate --></label>
+        <name>Interest_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- LDCL Contract Id --></label>
+        <name>LDCL_Contract_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lease Exp. Date --></label>
+        <name>Lease_Exp_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Monthly Repayment --></label>
+        <name>Monthly_Repayment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Variation --></label>
+        <name>Product_Variation__c</name>
+        <picklistValues>
+            <masterLabel>TBC</masterLabel>
+            <translation><!-- TBC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Purchase Method --></label>
+        <name>Purchase_Method__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residual --></label>
+        <name>Residual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signer --></label>
+        <name>Signer__c</name>
+        <relationshipLabel><!-- Signer Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Source System --></label>
+        <name>Source_System__c</name>
+    </fields>
+    <fields>
+        <name>Status</name>
+        <picklistValues>
+            <masterLabel>Activated</masterLabel>
+            <translation><!-- Activated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Activated0</masterLabel>
+            <translation><!-- Activated0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved for Sale</masterLabel>
+            <translation><!-- Approved for Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved for financing</masterLabel>
+            <translation><!-- Approved for financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asset Released</masterLabel>
+            <translation><!-- Asset Released --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closing Receipt Cancelled</masterLabel>
+            <translation><!-- Closing Receipt Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complied</masterLabel>
+            <translation><!-- Complied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conditioned</masterLabel>
+            <translation><!-- Conditioned --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Continue with existing borrower</masterLabel>
+            <translation><!-- Continue with existing borrower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current</masterLabel>
+            <translation><!-- Current --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Default-Collection Officer</masterLabel>
+            <translation><!-- Default-Collection Officer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Default-External Agent</masterLabel>
+            <translation><!-- Default-External Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout</masterLabel>
+            <translation><!-- Early Payout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout-Cheque Under Clearance</masterLabel>
+            <translation><!-- Early Payout-Cheque Under Clearance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout-Sale and Finance</masterLabel>
+            <translation><!-- Early Payout-Sale and Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Payout-Sale of Asset</masterLabel>
+            <translation><!-- Early Payout-Sale of Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed</masterLabel>
+            <translation><!-- Executed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed-Existing Borrower</masterLabel>
+            <translation><!-- Executed-Existing Borrower --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed-Financing</masterLabel>
+            <translation><!-- Executed-Financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Executed-Payment Received</masterLabel>
+            <translation><!-- Executed-Payment Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flat Cancel Contract</masterLabel>
+            <translation><!-- Flat Cancel Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Approval Process</masterLabel>
+            <translation><!-- In Approval Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Approval Process0</masterLabel>
+            <translation><!-- In Approval Process0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Process</masterLabel>
+            <translation><!-- In Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Loss Arrangement</masterLabel>
+            <translation><!-- Insurance Loss Arrangement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Write off</masterLabel>
+            <translation><!-- Insurance Write off --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Irregular</masterLabel>
+            <translation><!-- Irregular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Irregular Complied</masterLabel>
+            <translation><!-- Irregular Complied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Litigation</masterLabel>
+            <translation><!-- Litigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Supported</masterLabel>
+            <translation><!-- Not Supported --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overdue</masterLabel>
+            <translation><!-- Overdue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Payment Received-Default</masterLabel>
+            <translation><!-- Partial Payment Received-Default --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Payment Received-Overdue</masterLabel>
+            <translation><!-- Partial Payment Received-Overdue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Redemption</masterLabel>
+            <translation><!-- Partial Redemption --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Termination</masterLabel>
+            <translation><!-- Partial Termination --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Authorize</masterLabel>
+            <translation><!-- Payment Authorize --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Pending</masterLabel>
+            <translation><!-- Payment Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Received</masterLabel>
+            <translation><!-- Payment Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payout</masterLabel>
+            <translation><!-- Payout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Promise Made</masterLabel>
+            <translation><!-- Promise Made --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RV Overdue</masterLabel>
+            <translation><!-- RV Overdue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-Picked</masterLabel>
+            <translation><!-- Re-Picked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refer</masterLabel>
+            <translation><!-- Refer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refinanced</masterLabel>
+            <translation><!-- Refinanced --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remarketing</masterLabel>
+            <translation><!-- Remarketing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repossessed</masterLabel>
+            <translation><!-- Repossessed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repossessed-Voluntary Surrender</masterLabel>
+            <translation><!-- Repossessed-Voluntary Surrender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Restructuring</masterLabel>
+            <translation><!-- Restructuring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resubmitted</masterLabel>
+            <translation><!-- Resubmitted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sent to Printer</masterLabel>
+            <translation><!-- Sent to Printer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settled</masterLabel>
+            <translation><!-- Settled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settled Irregular</masterLabel>
+            <translation><!-- Settled Irregular --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Settlement Pending</masterLabel>
+            <translation><!-- Settlement Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support</masterLabel>
+            <translation><!-- Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Withdrawn</masterLabel>
+            <translation><!-- Withdrawn --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Written Off</masterLabel>
+            <translation><!-- Written Off --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sub-Product --></label>
+        <name>Sub_Product__c</name>
+        <picklistValues>
+            <masterLabel>TBC</masterLabel>
+            <translation><!-- TBC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- The Day After Start One Year --></label>
+        <name>The_Day_After_Start_One_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- VIN --></label>
+        <name>Vehicle__c</name>
+        <relationshipLabel><!-- Contracts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Welcome Call Task --></label>
+        <name>Welcome_Call_Task__c</name>
+    </fields>
+    <fields>
+        <label><!-- Welcome Call --></label>
+        <name>Welcome_Call__c</name>
+    </fields>
+    <fields>
+        <label><!-- *150 Days Before EOC --></label>
+        <name>X150_Days_Before_EOC__c</name>
+    </fields>
+    <fields>
+        <label><!-- livetime --></label>
+        <name>livetime__c</name>
+    </fields>
+    <layouts>
+        <layout>Contract Layout</layout>
+        <sections>
+            <label><!-- Contract Additional Information --></label>
+            <section>Contract Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Dealer Information --></label>
+            <section>Contract Dealer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contract Other Information --></label>
+            <section>Contract Other Information</section>
+        </sections>
+        <sections>
+            <label><!-- Vehicle Detail --></label>
+            <section>Vehicle Detail</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- End Date must be bigger than Start Date --></errorMessage>
+        <name>Enddate_must_be_bigger_than_Startdate</name>
+    </validationRules>
+</CustomObjectTranslation>

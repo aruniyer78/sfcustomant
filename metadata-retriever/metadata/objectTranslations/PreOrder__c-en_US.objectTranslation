@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Pre-Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pre-Orders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Closed Date --></label>
+        <name>ClosedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed Reason --></label>
+        <name>ClosedReason__c</name>
+        <picklistValues>
+            <masterLabel>Change of mind</masterLabel>
+            <translation><!-- Change of mind --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Purchased Competitor Vehicle</masterLabel>
+            <translation><!-- Purchased Competitor Vehicle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle purchased</masterLabel>
+            <translation><!-- Vehicle purchased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wait time too long</masterLabel>
+            <translation><!-- Wait time too long --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer --></label>
+        <name>Customer__c</name>
+        <relationshipLabel><!-- Pre-Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Vehicle Interested --></label>
+        <name>VehicleInterested__c</name>
+        <relationshipLabel><!-- Pre-Orders --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Pre-Order Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

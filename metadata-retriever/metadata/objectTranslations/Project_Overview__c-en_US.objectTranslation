@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Project Overview</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Projects Overview</value>
+    </caseValues>
+    <fields>
+        <help><!-- Date burn report was last updated --></help>
+        <label><!-- Burn Report - Last Update --></label>
+        <name>Burn_Report_Last_Update__c</name>
+    </fields>
+    <fields>
+        <label><!-- % Complete --></label>
+        <name>Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>Customer_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Negative value indicates the project is forecasted to be over budget --></help>
+        <label><!-- Est. Diff w/ Budget --></label>
+        <name>Diff_w_Budget__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated hours left in the project --></help>
+        <label><!-- Est. Hrs to Complete --></label>
+        <name>Est_Hrs_to_Complete__c</name>
+    </fields>
+    <fields>
+        <help><!-- Negative amt indicates OVER budget --></help>
+        <label><!-- Forecast Budget Diff --></label>
+        <name>Forecast_Budget_Diff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forecast Final $ --></label>
+        <name>Forecast_Final_Dollars__c</name>
+    </fields>
+    <fields>
+        <help><!-- Expected Go live date --></help>
+        <label><!-- Go Live --></label>
+        <name>Go_Live__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estimated total fixed fee; used in forecast final $ --></help>
+        <label><!-- Management Fee --></label>
+        <name>Management_Fee__c</name>
+    </fields>
+    <fields>
+        <help><!-- Oppty ID from the 62 Org --></help>
+        <label><!-- Opportunity Id --></label>
+        <name>Opportunity_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Id --></label>
+        <name>Project_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Stage --></label>
+        <name>Project_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Analyze</masterLabel>
+            <translation><!-- Analyze --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Build</masterLabel>
+            <translation><!-- Build --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deploy to Prod</masterLabel>
+            <translation><!-- Deploy to Prod --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design - Detailed Field Mapping</masterLabel>
+            <translation><!-- Design - Detailed Field Mapping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design - High Level</masterLabel>
+            <translation><!-- Design - High Level --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan</masterLabel>
+            <translation><!-- Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test - Unit Testing</masterLabel>
+            <translation><!-- Test - Unit Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test - Validation</masterLabel>
+            <translation><!-- Test - Validation --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Project Start Date --></label>
+        <name>Project_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Actual Hours --></label>
+        <name>Total_Actual_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- Includes all PO&apos;s, CO&apos;s and Management Fees --></help>
+        <label><!-- Total Approved Budget --></label>
+        <name>Total_Approved_Budget__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total of approved budget $ --></help>
+        <label><!-- Total Assigned Budget - hrs --></label>
+        <name>Total_Assigned_Budget_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Budget Hours --></label>
+        <name>Total_Budget_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Forecast Hours --></label>
+        <name>Total_Forecast_Hours__c</name>
+    </fields>
+    <fields>
+        <help><!-- amount expended to date based on actual hours logged --></help>
+        <label><!-- Total $ to Date --></label>
+        <name>Total_to_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Rate how this project is doing overall as compared to last week --></help>
+        <label><!-- Trend --></label>
+        <name>Trend__c</name>
+        <picklistValues>
+            <masterLabel>Down</masterLabel>
+            <translation><!-- Down --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stable</masterLabel>
+            <translation><!-- Stable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Up</masterLabel>
+            <translation><!-- Up --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Project Overview Layout</layout>
+        <sections>
+            <label><!-- Budget --></label>
+            <section>Budget</section>
+        </sections>
+        <sections>
+            <label><!-- Status --></label>
+            <section>Status</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
