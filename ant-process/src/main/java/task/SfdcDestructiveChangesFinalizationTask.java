@@ -1,10 +1,7 @@
 package task;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Triple;
@@ -14,9 +11,6 @@ import org.apache.tools.ant.taskdefs.Taskdef;
 import task.handler.ChecksumHandler;
 import task.handler.DestructiveChangesHandler;
 import task.handler.LogWrapper;
-import task.handler.MetadataHandler;
-import task.handler.SfdcHandler;
-import task.handler.ZipFileHandler;
 
 /**
  * SfdcDestructiveChangesFinalizationTask

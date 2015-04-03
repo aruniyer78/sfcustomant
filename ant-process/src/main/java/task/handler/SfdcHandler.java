@@ -47,6 +47,7 @@ import com.sforce.soap.metadata.RetrieveRequest;
 import com.sforce.soap.metadata.RetrieveResult;
 import com.sforce.soap.metadata.StaticResource;
 import com.sforce.soap.metadata.StaticResourceCacheControl;
+import com.sforce.soap.metadata.StatusCode;
 import com.sforce.soap.metadata.UpsertResult;
 import com.sforce.ws.ConnectionException;
 import com.sforce.ws.ConnectorConfig;
@@ -688,7 +689,7 @@ public class SfdcHandler
     return result;
   }
 
-  public void delete(Triple<String, String, String> destructiveChange, boolean persistedOnly)
+  public void deleteMetadata(Triple<String, String, String> destructiveChange, boolean persistedOnly)
   {
     if (persistedOnly && StringUtils.isEmpty(destructiveChange.getRight())) {
       throw new BuildException(String.format("Cannot deploy destructive change %s for type %s as it is not persistet yet. Deploy to your development sandbox first.",
@@ -712,12 +713,16 @@ public class SfdcHandler
         }
         else {
           for (com.sforce.soap.metadata.Error e : dr.getErrors()) {
-            task.log(String.format("Error %s removing metadata in SFDC: %s.",
-                                   e.getStatusCode().toString(),
-                                   e.getMessage()));
+            if (StatusCode.INVALID_CROSS_REFERENCE_KEY.equals(e.getStatusCode())) {
+              task.log(String.format("%s for type %s was deleted already.", destructiveChange.getMiddle(), destructiveChange.getLeft()));
+              break;
+            } else {
+              task.log(String.format("Error %s removing metadata in SFDC: %s.",
+                                     e.getStatusCode().toString(),
+                                     e.getMessage()));
+              throw new BuildException("Error removing metadata in SFDC.");
+            }
           }
-
-          throw new BuildException("Error removing metadata in SFDC.");
         }
       }
     }

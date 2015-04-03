@@ -1,9 +1,6 @@
 package task;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.tuple.Triple;
@@ -13,9 +10,7 @@ import org.apache.tools.ant.taskdefs.Taskdef;
 import task.handler.ChecksumHandler;
 import task.handler.DestructiveChangesHandler;
 import task.handler.LogWrapper;
-import task.handler.MetadataHandler;
 import task.handler.SfdcHandler;
-import task.handler.ZipFileHandler;
 
 /**
  * SfdcDestructiveChangesDeploymentTask
@@ -124,36 +119,13 @@ public class SfdcDestructiveChangesDeploymentTask
     List<Triple<String, String, String>> filteredDestructiveChanges = checksumHandler.filterDestructiveFiles(destructiveChanges);
     for (Triple<String, String, String> filteredDestructiveChange : filteredDestructiveChanges) {
       try {
-        sfdcHandler.delete(filteredDestructiveChange, persistedOnly);
+        sfdcHandler.deleteMetadata(filteredDestructiveChange, persistedOnly);
         checksumHandler.updateDestructiveTimestamp(filteredDestructiveChange);
       } catch (BuildException e) {
         // only set a property to prevent other deploy steps from being executed
         getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getTaskName());
       }
     }
-    
-    /* TODO remove
-    // generate destructive changes files
-    if (generate) {
-      metadataHandler.createDestructivePackageXml(destructiveChanges);
-      destructiveHandler.resetDestructiveChanges();
-    }
-    
-    // deploy destructive changes files
-    Map<String, File> destructiveFiles = metadataHandler.collectDestructiveFiles();
-    Map<String, File> destructiveFilesToDeploy = checksumHandler.filterDestructiveFiles(destructiveFiles);
-    for (Map.Entry<String, File> destructiveEntry : destructiveFilesToDeploy.entrySet()) {
-      ByteArrayOutputStream zipFile = zipFileHandler.prepareDestructiveZipFile(destructiveEntry.getValue());
-      zipFileHandler.saveZipFile("destructiveChanges", zipFile);
-      try {
-        sfdcHandler.deploy(zipFile, "destructive changes");
-        checksumHandler.updateDestructiveTimestamp(destructiveEntry.getKey());
-      } catch (BuildException e) {
-        // only set a property to prevent other deploy steps from being executed
-        getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getTaskName());
-      }
-    }
-    */
   }
 
   private void initialize()

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Task" basedir="." default="jar">
 
+	<property prefix="properties" file="build.properties"/>
+
 	<presetdef name="java-c">
 		<javac includeantruntime="false" source="1.7" target="1.7"/>
 	</presetdef>
@@ -31,6 +33,10 @@
         	<fileset dir="target/classes" includes="task/**"/>
         </jar>
     </target>
+	
+	<target name="deploy" depends="jar" description="Copy the generated jar to the lib of the project">
+		<copy file="target/sfdc-tasks.jar" todir="${properties.target.directory}"/>
+	</target>
 
 	<target name="wsdl" description="Generate JARs from WSDLs">
 		<java classname="com.sforce.ws.tools.wsdlc">
@@ -47,6 +53,15 @@
 			<arg value="src\main\wsdl\enterprise-api.wsdl"/>
 			<arg value="target\enterprise-api.jar"/>
 		</java>
+	</target>
+	
+	<target name="deployWsdl" depends="wsdl" description="Copy the generated jars to the lib of the project">
+		<copy todir="${properties.target.directory}">
+			<fileset dir="target">
+				<include name="enterprise-api.jar"/>
+				<include name="metadata-api.jar"/>
+			</fileset>
+		</copy>
 	</target>
 
 </project>
