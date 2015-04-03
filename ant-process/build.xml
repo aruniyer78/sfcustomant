@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Task" basedir="." default="jar">
+
+	<presetdef name="java-c">
+		<javac includeantruntime="false" source="1.7" target="1.7"/>
+	</presetdef>
+
+    <target name="clean" description="Delete all generated files">
+        <delete dir="target/classes" failonerror="false"/>
+    	<mkdir dir="target"/>
+		<mkdir dir="target/classes"/>
+    </target>
+
+    <target name="compile" depends="clean" description="Compiles the Task">
+    	<java-c srcdir="src/main/java" destdir="target/classes" includes="task/**">
+    		<classpath>
+    			<pathelement location="lib/ant.jar"/>
+    			<pathelement location="lib/commons-lang3-3.3.2.jar"/>
+    			<pathelement location="target/enterprise-api.jar"/>
+    			<pathelement location="target/metadata-api.jar"/>
+    			<pathelement location="lib/dataloader-30.0.0-uber.jar"/>
+    			<pathelement location="lib/force-wsc-33.0.0-uber.jar"/>
+    			<pathelement location="lib/commons-codec-1.10.jar"/>
+    		</classpath>
+    	</java-c>
+    </target>
+
+    <target name="jar" depends="compile" description="JARs the Task">
+        <jar destfile="target/sfdc-tasks.jar">
+        	<fileset dir="src/main/resources" includes="task/antlib.xml"/>
+        	<fileset dir="target/classes" includes="task/**"/>
+        </jar>
+    </target>
+
+	<target name="wsdl" description="Generate JARs from WSDLs">
+		<java classname="com.sforce.ws.tools.wsdlc">
+			<classpath>
+				<pathelement location="lib\force-wsc-33.0.0-uber.jar"/>
+			</classpath>
+			<arg value="src\main\wsdl\metadata-api.wsdl"/>
+			<arg value="target\metadata-api.jar"/>
+		</java>
+		<java classname="com.sforce.ws.tools.wsdlc">
+			<classpath>
+				<pathelement location="lib\force-wsc-33.0.0-uber.jar"/>
+			</classpath>
+			<arg value="src\main\wsdl\enterprise-api.wsdl"/>
+			<arg value="target\enterprise-api.jar"/>
+		</java>
+	</target>
+
+</project>

@@ -107,7 +107,7 @@ public class SfdcMetadataCreator
 
     System.out.println("Retrieving metadata...");
 
-    String filename = isPackageXml ? "metadata.xml" : "Metadata_Navigator.csv";
+    String filename = isPackageXml ? "metadata.xml" : "metadata.csv";
     try (FileWriter fw = new FileWriter(filename); BufferedWriter bw = new BufferedWriter(fw);) {
 
       writeHeader(bw, isPackageXml);

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<antlib>
+   <taskdef name="deploy" classname="task.SfdcDeploymentTask"/>
+   <typedef name="typeset" classname="task.model.SfdcTypeSet"/>
+   <typedef name="include" classname="task.model.SfdcInclude"/>
+   <typedef name="exclude" classname="task.model.SfdcExclude"/>
+   
+   <taskdef name="retrieve" classname="task.SfdcRetrievalTask"/>
+   <typedef name="typesets" classname="task.model.SfdcTypeSets"/>
+   <typedef name="feature" classname="task.model.SfdcFeature"/>
+   
+   <taskdef name="deployDestructiveChanges" classname="task.SfdcDestructiveChangesDeploymentTask"/>
+   <taskdef name="finalizeDestructiveChanges" classname="task.SfdcDestructiveChangesFinalizationTask"/>
+   
+   <taskdef name="retrieveChecksums" classname="task.SfdcRetrieveChecksumsTask"/>
+   <taskdef name="deployChecksums" classname="task.SfdcDeployChecksumsTask"/>
+   
+   <taskdef name="loadData" classname="task.SfdcDataLoaderTask"/>
+</antlib>
