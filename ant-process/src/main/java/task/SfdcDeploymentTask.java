@@ -145,7 +145,7 @@ public class SfdcDeploymentTask
         checksumHandler.updateTimestamp(deploymentInfos);
       } catch (BuildException e) {
         // only set a property to prevent other deploy steps from being executed
-        getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getTaskName());
+        getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getOwningTarget().getName());
       }
     }
   }
@@ -157,7 +157,7 @@ public class SfdcDeploymentTask
     checksumHandler.initialize(logWrapper, checksums, true, dryRun);
     transformationHandler.initialize(logWrapper, username, transformationsRoot, deployRoot);
     
-    metadataHandler.initialize(logWrapper, deployRoot, debug);
+    metadataHandler.initialize(logWrapper, deployRoot, debug, transformationHandler);
     zipFileHandler.initialize(logWrapper, debug, transformationHandler, metadataHandler);
     sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
   }

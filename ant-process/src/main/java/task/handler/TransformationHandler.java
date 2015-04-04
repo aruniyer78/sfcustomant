@@ -50,6 +50,11 @@ import task.handler.transformations.Transformations;
 public class TransformationHandler
 {
 
+  public static interface TransformationFilter
+  {
+    boolean check(Transformation t);
+  }
+
   public enum Operation { DEPLOY, RETRIEVE }
   
   private LogWrapper logWrapper;
@@ -234,6 +239,16 @@ public class TransformationHandler
     }
   }
 
+  public boolean evaluateFilter(File file, TransformationFilter filter) {
+    List<Transformation> fileTransformations = getTransformationsForFile(file);
+    for (Transformation t : fileTransformations) {
+      if (filter.check(t)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
   public ByteArrayOutputStream transform(InputStream is, File file, Operation operation)
   {
     List<Transformation> fileTransformations = getTransformationsForFile(file);

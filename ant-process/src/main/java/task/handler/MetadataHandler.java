@@ -26,6 +26,8 @@ import org.apache.tools.ant.types.LogLevel;
 
 import task.handler.configuration.DeploymentConfiguration;
 import task.handler.configuration.DeploymentUnit;
+import task.handler.transformations.SkipFile;
+import task.handler.transformations.Transformation;
 import task.model.SfdcExclude;
 import task.model.SfdcInclude;
 import task.model.SfdcTypeSet;
@@ -43,13 +45,15 @@ public class MetadataHandler
   private LogWrapper logWrapper;
   private String metadataRoot;
   private boolean debug;
+  private TransformationHandler transformationHandler;
 
   @SuppressWarnings("hiding")
-  public void initialize(LogWrapper logWrapper, String metadataRoot, boolean debug)
+  public void initialize(LogWrapper logWrapper, String metadataRoot, boolean debug, TransformationHandler transformationHandler)
   {
     this.logWrapper = logWrapper;
     this.metadataRoot = metadataRoot;
     this.debug = debug;
+    this.transformationHandler = transformationHandler;
     
     validate();
   }
@@ -61,6 +65,9 @@ public class MetadataHandler
     }
     if (null == metadataRoot) {
       throw new BuildException("MetadataHandler (metadataRoot) not properly initialized.");
+    }
+    if (null == transformationHandler) {
+      throw new BuildException("MetadataHandler (transformationHandler) not properly initialized.");
     }
   }
 
@@ -296,7 +303,7 @@ public class MetadataHandler
    * @param typeSets
    * @param cleanupOther If set to <code>true</code>, all other metadata are cleaned up including other metadata types.
    */
-  public void removeNotcontainedMetadata(final Map<String, List<String>> metadata, final List<SfdcTypeSet> typeSets, final boolean cleanupOther)
+  public void removeNotContainedMetadata(final Map<String, List<String>> metadata, final List<SfdcTypeSet> typeSets, final boolean cleanupOther)
   {
     // delete everything which was not retrieved
     final Set<String> filesToKeep = new HashSet<>(Arrays.asList("package.xml", ".gitattributes"));
@@ -363,13 +370,36 @@ public class MetadataHandler
       List<File> files = du.getFiles(baseDir);
       for (File file : files) {
         String name = du.getEntityName(file);
-        if (!metaEntities.contains(name)) {
+        if (checkIfFileMustBeDeleted(metaEntities, file, name)) {
           logWrapper.log(String.format("Delete file: %s (entity %s).", file.getName(), name));
           
           file.delete();
         }
       }
     }
+  }
+
+  private boolean checkIfFileMustBeDeleted(Set<String> metaEntities, File file, String name)
+  {
+    boolean result = !metaEntities.contains(name);
+    if (result) {
+      // file should be deleted -> special handling for files skipped during deployment
+      if (transformationHandler.evaluateFilter(file, new TransformationHandler.TransformationFilter() {
+        
+        @Override
+        public boolean check(Transformation t)
+        {
+          if (SkipFile.class.equals(t.getClass())) {
+            SkipFile sf = (SkipFile)t;
+            return sf.isDeploy();
+          }
+          return false;
+        }
+      })) {
+        result = false;
+      }
+    }
+    return result;
   }
 
   private void deleteDirectory(File pathname)

@@ -123,7 +123,7 @@ public class SfdcDestructiveChangesDeploymentTask
         checksumHandler.updateDestructiveTimestamp(filteredDestructiveChange);
       } catch (BuildException e) {
         // only set a property to prevent other deploy steps from being executed
-        getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getTaskName());
+        getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getOwningTarget().getName());
       }
     }
   }

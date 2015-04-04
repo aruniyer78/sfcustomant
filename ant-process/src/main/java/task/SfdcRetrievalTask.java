@@ -156,36 +156,18 @@ public class SfdcRetrievalTask
     validate();
     initialize();
 
-    // TODO incremental retrieve does not work!
-    // TODO if incremental functionality is removed, please remove in handlers as well!
-
     Map<String, Map<String, Long>> metadataUpdatestamps = sfdcHandler.getUpdateStamps(typeSets);
 
-    Map<String, List<String>> metadata2Update = null;
-    // if (full) {
-    metadata2Update = sfdcHandler.buildEntityList(metadataUpdatestamps);
-    //    }
-    //    else {
-    //      Map<String, UpdateStampHandler.Action> differences =
-    //          updateStampHandler.calculateDifferences(metadataUpdatestamps);
-    //
-    //      metadata2Update = metadataHandler.collectMetadataToUpdate(differences);
-    //      metadataHandler.removeMetadataToDelete(typeSets, differences);
-    //      metadataHandler.createDestructivePackageXml(differences);
-    //    }
-
-    byte[] packageXml = metadataHandler.createPackageXml(metadata2Update);
+    Map<String, List<String>> metadata = sfdcHandler.buildEntityList(metadataUpdatestamps);
+    
+    byte[] packageXml = metadataHandler.createPackageXml(metadata);
     metadataHandler.savePackageXml(packageXml);
 
-    ByteArrayOutputStream zipFile = sfdcHandler.retrieveMetadata(metadata2Update);
+    ByteArrayOutputStream zipFile = sfdcHandler.retrieveMetadata(metadata);
     zipFileHandler.saveZipFile("retrieve", zipFile);
     zipFileHandler.extractZipFile(retrieveRoot, zipFile);
 
-    //    if (full) {
-    metadataHandler.removeNotcontainedMetadata(metadata2Update, typeSets, cleanupOther);
-    //    }
-
-    // TODO not used for now updateStampHandler.updateTimestamps(metadataUpdatestamps, full);
+    metadataHandler.removeNotContainedMetadata(metadata, typeSets, cleanupOther);
   }
 
   private void initialize()
@@ -194,7 +176,7 @@ public class SfdcRetrievalTask
 
     transformationHandler.initialize(logWrapper, username, transformationsRoot, retrieveRoot);
 
-    metadataHandler.initialize(logWrapper, retrieveRoot, debug);
+    metadataHandler.initialize(logWrapper, retrieveRoot, debug, transformationHandler);
     zipFileHandler.initialize(logWrapper, debug, transformationHandler, metadataHandler);
     
     sfdcHandler.initialize(this,
