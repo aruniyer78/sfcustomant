@@ -1,15 +1,15 @@
 package task;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Triple;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.taskdefs.Taskdef;
 
 import task.handler.ChecksumHandler;
 import task.handler.DestructiveChangesHandler;
+import task.handler.DestructiveChangesHandler.DestructiveChange;
+import task.handler.DestructiveChangesHandler.DestructiveChange.MODE;
 import task.handler.LogWrapper;
 
 /**
@@ -65,21 +65,17 @@ public class SfdcDestructiveChangesFinalizationTask
     validate();
     initialize();
     
-    List<Triple<String, String, String>> updatedDestructiveChanges = new ArrayList<>(); 
-    
-    List<Triple<String, String, String>> destructiveChanges = destructiveHandler.readDestructiveChanges();
-    for (Triple<String, String, String> destructiveChange : destructiveChanges) {
-      Triple<String, String, String> updatedDestructiveChange = destructiveChange;
-      if (StringUtils.isEmpty(destructiveChange.getRight())) {
+    List<DestructiveChange> destructiveChanges = destructiveHandler.readDestructiveChanges(MODE.BOTH);
+    for (DestructiveChange destructiveChange : destructiveChanges) {
+      if (StringUtils.isEmpty(destructiveChange.getTimestamp())) {
         String timestamp = checksumHandler.getDestructiveTimestamp(destructiveChange);
         if (StringUtils.isNotEmpty(timestamp)) {
-          updatedDestructiveChange = Triple.of(destructiveChange.getLeft(), destructiveChange.getMiddle(), timestamp);
+          destructiveChange.setTimestamp(timestamp);
         }
       }
-      updatedDestructiveChanges.add(updatedDestructiveChange);
     }
     
-    destructiveHandler.writeDestructiveChanges(updatedDestructiveChanges);
+    destructiveHandler.writeDestructiveChanges(destructiveChanges);
   }
 
   private void initialize()

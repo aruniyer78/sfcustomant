@@ -130,7 +130,9 @@ public class SfdcDeploymentTask
   @Override
   public void execute()
   {
-    validate();
+    if (!validate()) {
+      return;
+    }
     initialize();
     
     // TODO get the checksumHandler out of the metadata handler
@@ -144,6 +146,8 @@ public class SfdcDeploymentTask
         sfdcHandler.deployTypes(zipFile, deploymentInfos);
         checksumHandler.updateTimestamp(deploymentInfos);
       } catch (BuildException e) {
+        log(String.format("Error deploying change: %s.", e.getMessage()));
+        
         // only set a property to prevent other deploy steps from being executed
         getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getOwningTarget().getName());
       }
@@ -162,13 +166,15 @@ public class SfdcDeploymentTask
     sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
   }
 
-  private void validate()
+  private boolean validate()
   {
     String step = getProject().getProperty(PROPERTY_FAILED_DEPLOY_STEP);
     if (StringUtils.isNotEmpty(step)) {
       log(String.format("A previous build step (%s) failed, therefore destructive changes are not deployed.", step));
-      return;
+      return false;
     }
+    
+    return true;
   }
   
 }

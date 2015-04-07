@@ -26,9 +26,9 @@ import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Triple;
 import org.apache.tools.ant.BuildException;
 
+import task.handler.DestructiveChangesHandler.DestructiveChange;
 import task.handler.configuration.DeploymentUnit;
 
 /**
@@ -265,11 +265,11 @@ public class ChecksumHandler
     updateStamps.put(key, value);
   }
 
-  public List<Triple<String, String, String>> filterDestructiveFiles(List<Triple<String, String, String>> destructiveChanges)
+  public List<DestructiveChange> filterDestructiveFiles(List<DestructiveChange> destructiveChanges)
   {
-    List<Triple<String, String, String>> filteredDestructiveChanges = new ArrayList<>();
+    List<DestructiveChange> filteredDestructiveChanges = new ArrayList<>();
 
-    for (Triple<String, String, String> destructiveChange : destructiveChanges) {
+    for (DestructiveChange destructiveChange : destructiveChanges) {
       String key = getDestructiveKey(destructiveChange);
       if (!updateStamps.containsKey(key)) {
         filteredDestructiveChanges.add(destructiveChange);
@@ -279,12 +279,12 @@ public class ChecksumHandler
     return filteredDestructiveChanges;
   }
 
-  private String getDestructiveKey(Triple<String, String, String> destructiveChange)
+  private String getDestructiveKey(DestructiveChange destructiveChange)
   {
-    return PREFIX_UPDATESTAMP_DESTRUCTIVE_CHANGE + "/" + destructiveChange.getLeft() + "/" + destructiveChange.getMiddle();
+    return PREFIX_UPDATESTAMP_DESTRUCTIVE_CHANGE + "/" + destructiveChange.getType() + "/" + destructiveChange.getFullName();
   }
 
-  public Triple<String, String, String> updateDestructiveTimestamp(Triple<String, String, String> destructiveChange)
+  public void updateDestructiveTimestamp(DestructiveChange destructiveChange)
   {
     String key = getDestructiveKey(destructiveChange);
     
@@ -295,10 +295,10 @@ public class ChecksumHandler
 
     writeUpdateStampes();
     
-    return Triple.of(destructiveChange.getLeft(), destructiveChange.getMiddle(), value);
+    destructiveChange.setTimestamp(value);
   }
 
-  public String getDestructiveTimestamp(Triple<String, String, String> destructiveChange)
+  public String getDestructiveTimestamp(DestructiveChange destructiveChange)
   {
     String key = getDestructiveKey(destructiveChange);
     

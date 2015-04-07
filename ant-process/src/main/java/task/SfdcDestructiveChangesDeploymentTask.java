@@ -3,12 +3,13 @@ package task;
 import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Triple;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.taskdefs.Taskdef;
 
 import task.handler.ChecksumHandler;
 import task.handler.DestructiveChangesHandler;
+import task.handler.DestructiveChangesHandler.DestructiveChange;
+import task.handler.DestructiveChangesHandler.DestructiveChange.MODE;
 import task.handler.LogWrapper;
 import task.handler.SfdcHandler;
 
@@ -33,6 +34,7 @@ public class SfdcDestructiveChangesDeploymentTask
   private String destructiveFile;
   private String checksums;
   private boolean persistedOnly;
+  private MODE mode;
 
   private ChecksumHandler checksumHandler;
   private SfdcHandler sfdcHandler;
@@ -98,6 +100,15 @@ public class SfdcDestructiveChangesDeploymentTask
     this.persistedOnly = persistedOnly;
   }
 
+  public void setMode(String mode)
+  {
+    try {
+      this.mode = MODE.valueOf(StringUtils.upperCase(mode));
+    } catch (IllegalArgumentException | NullPointerException e) {
+      throw new BuildException("The mode must be either 'pre' or 'post'.");
+    }
+  }
+
   @Override
   public void init()
     throws BuildException
@@ -112,16 +123,20 @@ public class SfdcDestructiveChangesDeploymentTask
   @Override
   public void execute()
   {
-    validate();
+    if (!validate()) {
+      return;
+    }
     initialize();
     
-    List<Triple<String, String, String>> destructiveChanges = destructiveHandler.readDestructiveChanges();
-    List<Triple<String, String, String>> filteredDestructiveChanges = checksumHandler.filterDestructiveFiles(destructiveChanges);
-    for (Triple<String, String, String> filteredDestructiveChange : filteredDestructiveChanges) {
+    List<DestructiveChange> destructiveChanges = destructiveHandler.readDestructiveChanges(mode);
+    List<DestructiveChange> filteredDestructiveChanges = checksumHandler.filterDestructiveFiles(destructiveChanges);
+    for (DestructiveChange filteredDestructiveChange : filteredDestructiveChanges) {
       try {
         sfdcHandler.deleteMetadata(filteredDestructiveChange, persistedOnly);
         checksumHandler.updateDestructiveTimestamp(filteredDestructiveChange);
       } catch (BuildException e) {
+        log(String.format("Error deploying destructive change: %s.", e.getMessage()));
+
         // only set a property to prevent other deploy steps from being executed
         getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getOwningTarget().getName());
       }
@@ -137,13 +152,15 @@ public class SfdcDestructiveChangesDeploymentTask
     destructiveHandler.initialize(logWrapper, deployRoot, destructiveFile);
   }
 
-  private void validate()
+  private boolean validate()
   {
     String step = getProject().getProperty(PROPERTY_FAILED_DEPLOY_STEP);
     if (StringUtils.isNotEmpty(step)) {
       log(String.format("A previous build step (%s) failed, therefore destructive changes are not deployed.", step));
-      return;
+      return false;
     }
+    
+    return true;
   }
   
 }

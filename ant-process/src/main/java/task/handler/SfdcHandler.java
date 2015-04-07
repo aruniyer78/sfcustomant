@@ -16,13 +16,13 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.tuple.Triple;
 import org.apache.tools.ant.BuildEvent;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.BuildListener;
 import org.apache.tools.ant.Task;
 import org.apache.tools.ant.types.LogLevel;
 
+import task.handler.DestructiveChangesHandler.DestructiveChange;
 import task.model.SfdcFeature;
 import task.model.SfdcFeature.FeatureName;
 import task.model.SfdcTypeSet;
@@ -689,12 +689,12 @@ public class SfdcHandler
     return result;
   }
 
-  public void deleteMetadata(Triple<String, String, String> destructiveChange, boolean persistedOnly)
+  public void deleteMetadata(DestructiveChange destructiveChange, boolean persistedOnly)
   {
-    if (persistedOnly && StringUtils.isEmpty(destructiveChange.getRight())) {
+    if (persistedOnly && StringUtils.isEmpty(destructiveChange.getTimestamp())) {
       throw new BuildException(String.format("Cannot deploy destructive change %s for type %s as it is not persistet yet. Deploy to your development sandbox first.",
-                                             destructiveChange.getMiddle(),
-                                             destructiveChange.getLeft()));
+                                             destructiveChange.getFullName(),
+                                             destructiveChange.getType()));
     }
     
     if (dryRun) {
@@ -704,9 +704,9 @@ public class SfdcHandler
     try {
       SfdcConnectionContext context = login();
 
-      task.log(String.format("Deploy destructive change %s for type %s.", destructiveChange.getMiddle(), destructiveChange.getLeft()));
+      task.log(String.format("Deploy destructive change %s for type %s.", destructiveChange.getFullName(), destructiveChange.getType()));
       
-      DeleteResult[] results = context.getMConnection().deleteMetadata(destructiveChange.getLeft(), new String[]{destructiveChange.getMiddle()});
+      DeleteResult[] results = context.getMConnection().deleteMetadata(destructiveChange.getType(), new String[]{destructiveChange.getFullName()});
       for (DeleteResult dr : results) {
         if (dr.isSuccess()) {
           task.log("Successfully removed metadata in SFDC.");
@@ -714,7 +714,7 @@ public class SfdcHandler
         else {
           for (com.sforce.soap.metadata.Error e : dr.getErrors()) {
             if (StatusCode.INVALID_CROSS_REFERENCE_KEY.equals(e.getStatusCode())) {
-              task.log(String.format("%s for type %s was deleted already.", destructiveChange.getMiddle(), destructiveChange.getLeft()));
+              task.log(String.format("%s for type %s was deleted already.", destructiveChange.getFullName(), destructiveChange.getType()));
               break;
             } else {
               task.log(String.format("Error %s removing metadata in SFDC: %s.",
