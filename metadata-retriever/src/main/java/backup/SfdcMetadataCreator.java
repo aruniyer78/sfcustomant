@@ -65,9 +65,9 @@ public class SfdcMetadataCreator
 
     ConnectorConfig eConfig = new ConnectorConfig();
     // CN PROD, DEV OKoeth, DEV 58demo 
-        eConfig.setAuthEndpoint("https://login.salesforce.com/services/Soap/c/32.0");
+//        eConfig.setAuthEndpoint("https://login.salesforce.com/services/Soap/c/32.0");
     // AU SIT, FULL
-//    eConfig.setAuthEndpoint("https://test.salesforce.com/services/Soap/c/32.0");
+    eConfig.setAuthEndpoint("https://test.salesforce.com/services/Soap/c/32.0");
     eConfig.setServiceEndpoint(eConfig.getAuthEndpoint());
     // CN PROD
     //    eConfig.setUsername("falk.lehmann.bp@nttdata.com.production");
@@ -77,13 +77,16 @@ public class SfdcMetadataCreator
     //    eConfig.setPassword("fl3salesforce#2");
     // AU FULL
 //    eConfig.setUsername("falk.lehmann.bp@nttdata.com.mbaup.full");
-//    eConfig.setPassword("fl3salesforce#4GHv9ipc43LgkyzpwJeVj9SgHc");
+//    eConfig.setPassword("fl3salesforce4n2HkUtwDbUJkfkYgS7XB79chW");
     // DEV OKoeth
     //    eConfig.setUsername("oliver.koeth@nttdata.com.market");
     //    eConfig.setPassword("China@2016lBMaoIRWVYtCSVKUqlE1b68bC");
     // DEV 58demo
-    eConfig.setUsername("falk.lehmann@58demo.org");
-    eConfig.setPassword("fl3salesforce1h0UA9mk93KBigN4YHJJrzjsD9");
+//    eConfig.setUsername("falk.lehmann@58demo.org");
+//    eConfig.setPassword("fl3salesforce1h0UA9mk93KBigN4YHJJrzjsD9");
+    // Kernel CI
+    eConfig.setUsername("falk.lehmann.ntt@kernel.daimler-apac.com.ci");
+    eConfig.setPassword("fl3salesforce1p3WUf4OmpsHt6NzEeNppVw1lW");
 
     if (useProxy) {
       eConfig.setProxy("141.77.17.155", 8080);
