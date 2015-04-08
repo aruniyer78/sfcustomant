@@ -21,13 +21,15 @@ import task.handler.LogWrapper;
  *
  * @author  xlehmf
  */
-@XmlRootElement(name="changeattribute")
-public class ChangeAttribute extends Transformation {
-  
+@XmlRootElement(name = "changeattribute")
+public class ChangeAttribute
+  extends Transformation
+{
+
   private String xpath;
   private Token token;
   private String value;
-  
+
   public String getXpath()
   {
     return xpath;
@@ -47,7 +49,7 @@ public class ChangeAttribute extends Transformation {
   {
     this.token = token;
   }
-  
+
   public String getValue()
   {
     return value;
@@ -57,12 +59,12 @@ public class ChangeAttribute extends Transformation {
   {
     this.value = value;
   }
-  
+
   @Override
   public void validate()
   {
     super.validate();
-    
+
     if (StringUtils.isEmpty(xpath)) {
       throw new BuildException("The xpath of the transformation changeattribute must be set.");
     }
@@ -84,38 +86,43 @@ public class ChangeAttribute extends Transformation {
   public boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     XPath xPath = XPathFactory.newInstance().newXPath();
-    
+
     // value or token?
     String replacement = null;
     if (null != token) {
+      if (!tokenMappings.containsKey(token.getText())) {
+        throw new BuildException(String.format("Could not find token mapping for token %s.", token.getText()));
+      }
       replacement = tokenMappings.get(token.getText());
-    } else {
+    }
+    else {
       replacement = value;
     }
-    
+
     try {
       NodeList nodes = (NodeList)xPath.evaluate(xpath, document.getDocumentElement(), XPathConstants.NODESET);
       for (int i = 0; i < nodes.getLength(); ++i) {
         Node n = nodes.item(i);
-        
+
         if (Node.ATTRIBUTE_NODE != n.getNodeType()) {
           throw new BuildException(String.format("The node type selected by xpath %s is not an attribute node.", xpath));
         }
-        
+
         String txt = n.getTextContent();
-        
+
         String newValue = null;
         if (null != token && token.isTokenOnly()) {
           newValue = txt.replaceAll(token.getText(), replacement);
-          
+
           logWrapper.log(String.format("Replace token %s with %s.", token.getText(), replacement));
-        } else {
+        }
+        else {
           // regular token or value
           newValue = replacement;
-          
+
           logWrapper.log(String.format("Change attribute from %s to %s.", txt, newValue));
         }
-        
+
         n.setNodeValue(newValue);
       }
       return true;
@@ -129,39 +136,44 @@ public class ChangeAttribute extends Transformation {
   public boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     XPath xPath = XPathFactory.newInstance().newXPath();
-    
+
     // value or token?
     String replacement = null;
     if (null != token) {
       replacement = token.getText();
-    } else {
+    }
+    else {
       replacement = value;
     }
-    
+
     try {
       NodeList nodes = (NodeList)xPath.evaluate(xpath, document.getDocumentElement(), XPathConstants.NODESET);
       for (int i = 0; i < nodes.getLength(); ++i) {
         Node n = nodes.item(i);
-        
+
         if (Node.ATTRIBUTE_NODE != n.getNodeType()) {
           throw new BuildException(String.format("The node type selected by xpath %s is not a attribute node.", xpath));
         }
-        
+
         String txt = n.getTextContent();
-        
+
         String newValue = null;
         if (null != token && token.isTokenOnly()) {
-            String valueToReplace = tokenMappings.get(token.getText());
-            
-            newValue = txt.replaceAll(valueToReplace, replacement);
-            
-            logWrapper.log(String.format("Replace %s with token %s.", valueToReplace, replacement));
-          } else {
-            newValue = replacement;
-            
-            logWrapper.log(String.format("Change attribute from %s to %s.", txt, newValue));
+          if (!tokenMappings.containsKey(token.getText())) {
+            throw new BuildException(String.format("Could not find token mapping for token %s.", token.getText()));
           }
-        
+          String valueToReplace = tokenMappings.get(token.getText());
+
+          newValue = txt.replaceAll(valueToReplace, replacement);
+
+          logWrapper.log(String.format("Replace %s with token %s.", valueToReplace, replacement));
+        }
+        else {
+          newValue = replacement;
+
+          logWrapper.log(String.format("Change attribute from %s to %s.", txt, newValue));
+        }
+
         n.setNodeValue(newValue);
       }
       return true;

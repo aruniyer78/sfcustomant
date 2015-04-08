@@ -620,6 +620,9 @@ public class SfdcHandler
       }
     }
     catch (IOException | ConnectionException e) {
+      
+e.printStackTrace();
+      
       throw new BuildException(String.format("Error retrieving checksums from SFDC: %s.", e.getMessage()), e);
     }
 
