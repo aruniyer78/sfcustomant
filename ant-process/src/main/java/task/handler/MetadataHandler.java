@@ -40,20 +40,20 @@ import task.model.SfdcTypeSet;
 public class MetadataHandler
 {
 
+  public static final String PREFFIX_METADATA = "metadata";
+  public static final String PREFIX_DESTRUCTIVE_CHANGES = "destructiveChanges";
   private static final String PACKAGE_XML_FILE_EXTENSION = ".xml";
   
   private LogWrapper logWrapper;
   private String metadataRoot;
   private boolean debug;
-  private TransformationHandler transformationHandler;
 
   @SuppressWarnings("hiding")
-  public void initialize(LogWrapper logWrapper, String metadataRoot, boolean debug, TransformationHandler transformationHandler)
+  public void initialize(LogWrapper logWrapper, String metadataRoot, boolean debug)
   {
     this.logWrapper = logWrapper;
     this.metadataRoot = metadataRoot;
     this.debug = debug;
-    this.transformationHandler = transformationHandler;
     
     validate();
   }
@@ -65,9 +65,6 @@ public class MetadataHandler
     }
     if (null == metadataRoot) {
       throw new BuildException("MetadataHandler (metadataRoot) not properly initialized.");
-    }
-    if (null == transformationHandler) {
-      throw new BuildException("MetadataHandler (transformationHandler) not properly initialized.");
     }
   }
 
@@ -210,7 +207,7 @@ public class MetadataHandler
 
         writeEntity(baos, type, info.getEntityNames());
       }
-      writeFooter(baos);
+      writeFooter(baos, true);
       
       return baos.toByteArray();
     }
@@ -219,7 +216,7 @@ public class MetadataHandler
     }
   }
   
-  public byte[] createPackageXml(Map<String, List<String>> metadata)
+  public byte[] createPackageXml(Map<String, List<String>> metadata, boolean includeVersion)
   {
     try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
       writeHeader(baos);
@@ -234,7 +231,7 @@ public class MetadataHandler
           writeEntity(baos, type, fullNames);
         }
       }
-      writeFooter(baos);
+      writeFooter(baos, includeVersion);
       
       return baos.toByteArray();
     }
@@ -243,10 +240,10 @@ public class MetadataHandler
     }
   }
   
-  public void savePackageXml(byte[] packageXml)
+  public void savePackageXml(String prefix, byte[] packageXml)
   {
     if (debug) {
-      String fileName = "metadata-" + System.currentTimeMillis() + PACKAGE_XML_FILE_EXTENSION;
+      String fileName = prefix + "-" + System.currentTimeMillis() + PACKAGE_XML_FILE_EXTENSION;
       
       logWrapper.log(String.format("Save metadata."));
   
@@ -275,10 +272,12 @@ public class MetadataHandler
     os.write("  </types>\n".getBytes("UTF-8"));
   }
 
-  private void writeFooter(OutputStream os)
+  private void writeFooter(OutputStream os, boolean includeVersion)
     throws IOException, UnsupportedEncodingException
   {
-    os.write("  <version>32.0</version>\n".getBytes("UTF-8"));
+    if (includeVersion) {
+      os.write("  <version>32.0</version>\n".getBytes("UTF-8"));
+    }
     os.write("</Package>\n".getBytes("UTF-8"));
   }
 
@@ -303,7 +302,7 @@ public class MetadataHandler
    * @param typeSets
    * @param cleanupOther If set to <code>true</code>, all other metadata are cleaned up including other metadata types.
    */
-  public void removeNotContainedMetadata(final Map<String, List<String>> metadata, final List<SfdcTypeSet> typeSets, final boolean cleanupOther)
+  public void removeNotContainedMetadata(final Map<String, List<String>> metadata, final List<SfdcTypeSet> typeSets, final boolean cleanupOther, TransformationHandler transformationHandler)
   {
     // delete everything which was not retrieved
     final Set<String> filesToKeep = new HashSet<>(Arrays.asList("package.xml", ".gitattributes"));
@@ -370,7 +369,7 @@ public class MetadataHandler
       List<File> files = du.getFiles(baseDir);
       for (File file : files) {
         String name = du.getEntityName(file);
-        if (checkIfFileMustBeDeleted(metaEntities, file, name)) {
+        if (checkIfFileMustBeDeleted(metaEntities, file, name, transformationHandler)) {
           logWrapper.log(String.format("Delete file: %s (entity %s).", file.getName(), name));
           
           file.delete();
@@ -379,7 +378,7 @@ public class MetadataHandler
     }
   }
 
-  private boolean checkIfFileMustBeDeleted(Set<String> metaEntities, File file, String name)
+  private boolean checkIfFileMustBeDeleted(Set<String> metaEntities, File file, String name, TransformationHandler transformationHandler)
   {
     boolean result = !metaEntities.contains(name);
     if (result) {

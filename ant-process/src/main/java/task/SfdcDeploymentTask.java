@@ -137,7 +137,7 @@ public class SfdcDeploymentTask
     
     // TODO get the checksumHandler out of the metadata handler
     List<DeploymentInfo> deploymentInfos = metadataHandler.compileDeploymentInfos(typeSets, checksumHandler);
-    ByteArrayOutputStream zipFile = zipFileHandler.prepareZipFile(deploymentInfos);
+    ByteArrayOutputStream zipFile = zipFileHandler.prepareZipFile(deploymentInfos, transformationHandler);
     if (null == zipFile) {
       log(String.format("Nothing to deploy."));
     } else {
@@ -161,8 +161,8 @@ public class SfdcDeploymentTask
     checksumHandler.initialize(logWrapper, checksums, true, dryRun);
     transformationHandler.initialize(logWrapper, username, transformationsRoot, deployRoot);
     
-    metadataHandler.initialize(logWrapper, deployRoot, debug, transformationHandler);
-    zipFileHandler.initialize(logWrapper, debug, transformationHandler, metadataHandler);
+    metadataHandler.initialize(logWrapper, deployRoot, debug);
+    zipFileHandler.initialize(logWrapper, debug, metadataHandler);
     sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
   }
 

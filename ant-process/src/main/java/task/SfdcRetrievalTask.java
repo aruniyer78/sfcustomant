@@ -160,14 +160,14 @@ public class SfdcRetrievalTask
 
     Map<String, List<String>> metadata = sfdcHandler.buildEntityList(metadataUpdatestamps);
     
-    byte[] packageXml = metadataHandler.createPackageXml(metadata);
-    metadataHandler.savePackageXml(packageXml);
+    byte[] packageXml = metadataHandler.createPackageXml(metadata, true);
+    metadataHandler.savePackageXml(MetadataHandler.PREFFIX_METADATA, packageXml);
 
     ByteArrayOutputStream zipFile = sfdcHandler.retrieveMetadata(metadata);
     zipFileHandler.saveZipFile("retrieve", zipFile);
-    zipFileHandler.extractZipFile(retrieveRoot, zipFile);
+    zipFileHandler.extractZipFile(retrieveRoot, zipFile, transformationHandler);
 
-    metadataHandler.removeNotContainedMetadata(metadata, typeSets, cleanupOther);
+    metadataHandler.removeNotContainedMetadata(metadata, typeSets, cleanupOther, transformationHandler);
   }
 
   private void initialize()
@@ -176,8 +176,8 @@ public class SfdcRetrievalTask
 
     transformationHandler.initialize(logWrapper, username, transformationsRoot, retrieveRoot);
 
-    metadataHandler.initialize(logWrapper, retrieveRoot, debug, transformationHandler);
-    zipFileHandler.initialize(logWrapper, debug, transformationHandler, metadataHandler);
+    metadataHandler.initialize(logWrapper, retrieveRoot, debug);
+    zipFileHandler.initialize(logWrapper, debug, metadataHandler);
     
     sfdcHandler.initialize(this,
                            maxPoll,

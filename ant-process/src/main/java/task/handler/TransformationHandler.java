@@ -197,11 +197,6 @@ public class TransformationHandler
       Unmarshaller um = context.createUnmarshaller();
       Transformations ts = (Transformations)um.unmarshal(fileReader);
 
-      // TODO remove
-      //      Marshaller m = context.createMarshaller();
-      //      m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-      //      m.marshal(ts,  System.out);
-
       if (null != ts && null != ts.getTransformations()) {
         for (Transformation t : ts.getTransformations()) {
           normalizeFile(t);

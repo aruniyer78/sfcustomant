@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -59,6 +60,11 @@ import com.sforce.ws.ConnectorConfig;
  */
 public class SfdcHandler
 {
+
+  interface ErrorHandler<T>
+  {
+    void evaluate(T status, String logInfo);
+  }
 
   private static final String PROJECT_PROPERTY_SFDC_SESSION = "SFDC_SESSION";
 
@@ -123,8 +129,9 @@ public class SfdcHandler
   }
 
   private final static double VERSION = 32.0d;
-  private final Set<String> noChildHandling = new HashSet<>();
+  private final Set<String> noChildHandling = new HashSet<>(Arrays.asList("CustomObject", "Workflow"));
   private final Map<String, String> folderReplacements = new HashMap<>();
+  private final Set<String> bulkifyableTypes = new HashSet<>(Arrays.asList("ApexTrigger", "ApexClass"));
 
   private Task task;
   private int maxPoll;
@@ -139,10 +146,6 @@ public class SfdcHandler
 
   public SfdcHandler()
   {
-    noChildHandling.add("CustomObject");
-    // noChildHandling.add("CustomLabels");
-    noChildHandling.add("Workflow");
-
     folderReplacements.put("Document", "DocumentFolder");
     folderReplacements.put("EmailTemplate", "EmailFolder");
     folderReplacements.put("Dashboard", "DashboardFolder");
@@ -201,15 +204,39 @@ public class SfdcHandler
    */
   public void deployTypes(ByteArrayOutputStream zipFile, List<DeploymentInfo> infos)
   {
-    if (dryRun) {
-      return;
-    }
-
     List<String> types = new ArrayList<>();
     for (DeploymentInfo info : infos) {
       types.add(info.getDeploymentUnit().getTypeName());
     }
     String typeNames = StringUtils.join(types, ",");
+
+    deployTypes(zipFile, typeNames, new ErrorHandler<DeployResult>() {
+
+      @Override
+      public void evaluate(DeployResult status, String logInfo)
+      {
+        task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
+        for (DeployMessage dm : status.getDetails().getComponentFailures()) {
+          task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
+                                 dm.getFullName(),
+                                 dm.getComponentType(),
+                                 dm.getLineNumber(),
+                                 dm.getColumnNumber(),
+                                 dm.getProblem()),
+                   LogLevel.ERR.getLevel());
+        }
+
+        throw new BuildException(String.format("Deployment of %s not successful.", logInfo));        
+      }
+      
+    });
+  }
+
+  private void deployTypes(ByteArrayOutputStream zipFile, String logInfo, ErrorHandler<DeployResult> errorHandler)
+  {
+    if (dryRun) {
+      return;
+    }
 
     try {
       SfdcConnectionContext context = login();
@@ -242,25 +269,14 @@ public class SfdcHandler
 
       if (status.isDone()) {
         if (status.isSuccess()) {
-          task.log(String.format("Deployment of %s successful.", typeNames));
+          task.log(String.format("Deployment of %s successful.", logInfo));
         }
         else {
-          task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
-          for (DeployMessage dm : status.getDetails().getComponentFailures()) {
-            task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
-                                   dm.getFullName(),
-                                   dm.getComponentType(),
-                                   dm.getLineNumber(),
-                                   dm.getColumnNumber(),
-                                   dm.getProblem()),
-                     LogLevel.ERR.getLevel());
-          }
-
-          throw new BuildException(String.format("Deployment of %s not successful.", typeNames));
+          errorHandler.evaluate(status, logInfo);
         }
       }
       else {
-        throw new BuildException(String.format("Deployment of %s not successful.", typeNames));
+        throw new BuildException(String.format("Deployment of %s not successful.", logInfo));
       }
     }
     catch (ConnectionException e) {
@@ -620,9 +636,9 @@ public class SfdcHandler
       }
     }
     catch (IOException | ConnectionException e) {
-      
-e.printStackTrace();
-      
+
+      e.printStackTrace();
+
       throw new BuildException(String.format("Error retrieving checksums from SFDC: %s.", e.getMessage()), e);
     }
 
@@ -692,24 +708,53 @@ e.printStackTrace();
     return result;
   }
 
-  public void deleteMetadata(DestructiveChange destructiveChange, boolean persistedOnly)
+  public void deleteMetadata(List<DestructiveChange> destructiveChanges,
+                             boolean persistedOnly,
+                             ZipFileHandler zipFileHandler)
   {
-    if (persistedOnly && StringUtils.isEmpty(destructiveChange.getTimestamp())) {
-      throw new BuildException(String.format("Cannot deploy destructive change %s for type %s as it is not persistet yet. Deploy to your development sandbox first.",
-                                             destructiveChange.getFullName(),
-                                             destructiveChange.getType()));
+    String type = null;
+    List<String> fullNames = new ArrayList<>();
+    for (DestructiveChange destructiveChange : destructiveChanges) {
+      if (persistedOnly) {
+        if (StringUtils.isEmpty(destructiveChange.getTimestamp())) {
+          throw new BuildException(String.format("Cannot deploy destructive change %s for type %s as it is not persistet yet. Deploy to your development sandbox first.",
+                                                 destructiveChange.getFullName(),
+                                                 destructiveChange.getType()));
+        }
+      }
+      if (null == type) {
+        type = destructiveChange.getType();
+      }
+      else if (!type.equals(destructiveChange.getType())) {
+        throw new BuildException(String.format(""));
+      }
+      fullNames.add(destructiveChange.getFullName());
     }
-    
+
     if (dryRun) {
       return;
     }
-    
+
+    task.log(String.format("Deploy destructive change(s) %s for type %s.", fullNames, type));
+
+    if (bulkifyableTypes.contains(type)) {
+      deployBulkifyableDestructiveChange(zipFileHandler, type, fullNames);
+    }
+    else {
+      if (1 != fullNames.size()) {
+        throw new BuildException(String.format("Can only deploy several destructive changes at once of certain types: %s.",
+                                               StringUtils.join(bulkifyableTypes, ",")));
+      }
+      deploySingleDestructiveChange(type, fullNames.get(0));
+    }
+  }
+
+  private void deploySingleDestructiveChange(String type, String fullName)
+  {
     try {
       SfdcConnectionContext context = login();
 
-      task.log(String.format("Deploy destructive change %s for type %s.", destructiveChange.getFullName(), destructiveChange.getType()));
-      
-      DeleteResult[] results = context.getMConnection().deleteMetadata(destructiveChange.getType(), new String[]{destructiveChange.getFullName()});
+      DeleteResult[] results = context.getMConnection().deleteMetadata(type, new String[]{ fullName });
       for (DeleteResult dr : results) {
         if (dr.isSuccess()) {
           task.log("Successfully removed metadata in SFDC.");
@@ -717,9 +762,10 @@ e.printStackTrace();
         else {
           for (com.sforce.soap.metadata.Error e : dr.getErrors()) {
             if (StatusCode.INVALID_CROSS_REFERENCE_KEY.equals(e.getStatusCode())) {
-              task.log(String.format("%s for type %s was deleted already.", destructiveChange.getFullName(), destructiveChange.getType()));
+              task.log(String.format("%s for type %s was deleted already.", fullName, type));
               break;
-            } else {
+            }
+            else {
               task.log(String.format("Error %s removing metadata in SFDC: %s.",
                                      e.getStatusCode().toString(),
                                      e.getMessage()));
@@ -732,5 +778,71 @@ e.printStackTrace();
     catch (ConnectionException e) {
       throw new BuildException(String.format("Error removing metadata in SFDC: %s.", e.getMessage()), e);
     }
+  }
+
+  private void deployBulkifyableDestructiveChange(ZipFileHandler zipFileHandler, String type, List<String> fullNames)
+  {
+    final String noErrorProblemPattern = "No " + type + " named: .* found";
+    
+    ByteArrayOutputStream zipFile = zipFileHandler.prepareDestructiveZipFile(type, fullNames);
+    deployTypes(zipFile, "destrutive changes", new ErrorHandler<DeployResult>() {
+
+      @Override
+      public void evaluate(DeployResult status, String logInfo)
+      {
+        boolean errorOccured = false;
+        
+        for (DeployMessage dm : status.getDetails().getComponentFailures()) {
+          if (dm.getProblem().matches(noErrorProblemPattern)) {
+            // we tried to delete something which is gone already -> ignore
+          } else {
+            if (!errorOccured) {
+              task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
+              errorOccured = true;
+            }
+            task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
+                                   dm.getFullName(),
+                                   dm.getComponentType(),
+                                   dm.getLineNumber(),
+                                   dm.getColumnNumber(),
+                                   dm.getProblem()),
+                     LogLevel.ERR.getLevel());
+          }
+        }
+        if (errorOccured) {
+          throw new BuildException(String.format("Deployment of %s not successful.", logInfo));
+        }
+      }
+      
+    });
+  }
+
+  /**
+   * This method extracts a list of destructive changes which can be handled as a group.
+   * Currently ApexTriggers and ApexClasses are handled as a group only.
+   */
+  public List<DestructiveChange> extractNextChanges(List<DestructiveChange> destructiveChanges)
+  {
+    List<DestructiveChange> result = new ArrayList<>();
+
+    Iterator<DestructiveChange> itrDC = destructiveChanges.iterator();
+    while (itrDC.hasNext()) {
+      DestructiveChange dc = itrDC.next();
+      if (result.isEmpty()) {
+        result.add(dc);
+        itrDC.remove();
+      }
+      else {
+        DestructiveChange lastElement = result.get(result.size() - 1);
+        if (bulkifyableTypes.contains(lastElement.getType()) && StringUtils.equals(lastElement.getType(), dc.getType())) {
+          result.add(dc);
+          itrDC.remove();
+          continue;
+        }
+        break;
+      }
+    }
+
+    return result;
   }
 }

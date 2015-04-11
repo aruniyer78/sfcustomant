@@ -40,6 +40,7 @@ public class ChecksumHandler
 {
 
   private static final String PREFIX_UPDATESTAMP_DESTRUCTIVE_CHANGE = "DestructiveChange";
+  private static final String KEY_UPDATESTAMP_GIT_VERSION = "GitVersion";
 
   private Map<String, String> updateStamps;
   private LogWrapper logWrapper;
@@ -284,18 +285,19 @@ public class ChecksumHandler
     return PREFIX_UPDATESTAMP_DESTRUCTIVE_CHANGE + "/" + destructiveChange.getType() + "/" + destructiveChange.getFullName();
   }
 
-  public void updateDestructiveTimestamp(DestructiveChange destructiveChange)
+  public void updateDestructiveTimestamps(List<DestructiveChange> destructiveChanges)
   {
-    String key = getDestructiveKey(destructiveChange);
-    
-    byte[] bytes = ByteBuffer.allocate(8).putLong(System.currentTimeMillis()).array();
-    String value = Base64.encodeBase64String(bytes);
-    
-    updateStamps.put(key, value);
-
+    for (DestructiveChange destructiveChange : destructiveChanges) {
+      String key = getDestructiveKey(destructiveChange);
+      
+      byte[] bytes = ByteBuffer.allocate(8).putLong(System.currentTimeMillis()).array();
+      String value = Base64.encodeBase64String(bytes);
+      
+      updateStamps.put(key, value);
+      
+      destructiveChange.setTimestamp(value);
+    }
     writeUpdateStampes();
-    
-    destructiveChange.setTimestamp(value);
   }
 
   public String getDestructiveTimestamp(DestructiveChange destructiveChange)
@@ -303,5 +305,22 @@ public class ChecksumHandler
     String key = getDestructiveKey(destructiveChange);
     
     return updateStamps.get(key);
+  }
+
+  public void updateGitVersionTimestamp(String version) {
+    updateStamps.put(KEY_UPDATESTAMP_GIT_VERSION, version);
+  }
+  
+  public void validateGitVersion(String gitVersion)
+  {
+    String deployedGitVersion = updateStamps.get(KEY_UPDATESTAMP_GIT_VERSION);
+    
+    if (!StringUtils.equals(deployedGitVersion, gitVersion)) {
+      logWrapper.log(String.format("The Git version %s does not match the deployed version %s.", gitVersion, deployedGitVersion));
+      
+      throw new BuildException(String.format("The version of the deployed metadata and the local metadata version do not match. Please deploy the metadata first."));
+    }
+    
+    logWrapper.log(String.format("Git version matches the deployed version %s.", gitVersion));
   }
 }

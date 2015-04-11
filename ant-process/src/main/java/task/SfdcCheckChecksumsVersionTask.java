@@ -11,11 +11,11 @@ import task.handler.LogWrapper;
 import task.handler.SfdcHandler;
 
 /**
- * SfdcDeployChecksumsTask
+ * SfdcCheckChecksumsVersionTask
  *
  * @author  xlehmf
  */
-public class SfdcDeployChecksumsTask
+public class SfdcCheckChecksumsVersionTask
   extends Taskdef
 {
 
@@ -26,10 +26,10 @@ public class SfdcDeployChecksumsTask
   private boolean useProxy;
   private String proxyHost;
   private int proxyPort;
-  private String checksums;
   private String sfdcName;
-  private boolean dryRun;
+  private String checksums;
   private String gitVersion;
+  private boolean dryRun;
 
   private ChecksumHandler checksumHandler;
   private SfdcHandler sfdcHandler;
@@ -69,16 +69,11 @@ public class SfdcDeployChecksumsTask
     this.proxyPort = proxyPort;
   }
 
-  public void setChecksums(String checksums)
-  {
-    this.checksums = checksums;
-  }
-
   public void setSfdcName(String sfdcName)
   {
     this.sfdcName = sfdcName;
   }
-
+  
   public void setDryRun(boolean dryRun)
   {
     this.dryRun = dryRun;
@@ -87,6 +82,11 @@ public class SfdcDeployChecksumsTask
   public void setGitVersion(String gitVersion)
   {
     this.gitVersion = gitVersion;
+  }
+
+  public void setChecksums(String checksums)
+  {
+    this.checksums = checksums;
   }
 
   @Override
@@ -105,19 +105,17 @@ public class SfdcDeployChecksumsTask
     validate();
     initialize();
     
-    log(String.format("Deploy checksums for version %s.", gitVersion));
-    
-    checksumHandler.updateGitVersionTimestamp(gitVersion);
-    Map<String, String> checksumMap = checksumHandler.getChecksums();
-    sfdcHandler.deployChecksums(checksumMap, sfdcName);
+    Map<String, String> checksumMap = sfdcHandler.retrieveChecksums(sfdcName);
+    checksumHandler.replaceChecksums(checksumMap);
+    checksumHandler.validateGitVersion(gitVersion);
   }
 
   private void initialize()
   {
     LogWrapper logWrapper = new LogWrapper(this);
 
-    checksumHandler.initialize(logWrapper, checksums, true, dryRun);
-    sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
+    checksumHandler.initialize(logWrapper, checksums, false, dryRun);
+    sfdcHandler.initialize(this, maxPoll, false, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
   }
 
   private void validate()

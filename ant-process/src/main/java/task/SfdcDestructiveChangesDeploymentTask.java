@@ -8,6 +8,8 @@ import org.apache.tools.ant.taskdefs.Taskdef;
 
 import task.handler.ChecksumHandler;
 import task.handler.DestructiveChangesHandler;
+import task.handler.MetadataHandler;
+import task.handler.ZipFileHandler;
 import task.handler.DestructiveChangesHandler.DestructiveChange;
 import task.handler.DestructiveChangesHandler.DestructiveChange.MODE;
 import task.handler.LogWrapper;
@@ -23,6 +25,7 @@ public class SfdcDestructiveChangesDeploymentTask
 {
 
   private boolean dryRun;
+  private boolean debug;
   private String username;
   private String password;
   private String serverurl;
@@ -39,6 +42,8 @@ public class SfdcDestructiveChangesDeploymentTask
   private ChecksumHandler checksumHandler;
   private SfdcHandler sfdcHandler;
   private DestructiveChangesHandler destructiveHandler;
+  private ZipFileHandler zipFileHandler;
+  private MetadataHandler metadataHandler;
 
   public void setUsername(String username)
   {
@@ -100,6 +105,11 @@ public class SfdcDestructiveChangesDeploymentTask
     this.persistedOnly = persistedOnly;
   }
 
+  public void setDebug(boolean debug)
+  {
+    this.debug = debug;
+  }
+
   public void setMode(String mode)
   {
     try {
@@ -118,6 +128,8 @@ public class SfdcDestructiveChangesDeploymentTask
     checksumHandler = new ChecksumHandler();
     sfdcHandler = new SfdcHandler();
     destructiveHandler = new DestructiveChangesHandler();
+    metadataHandler = new MetadataHandler();
+    zipFileHandler = new ZipFileHandler();
   }
 
   @Override
@@ -130,15 +142,18 @@ public class SfdcDestructiveChangesDeploymentTask
     
     List<DestructiveChange> destructiveChanges = destructiveHandler.readDestructiveChanges(mode);
     List<DestructiveChange> filteredDestructiveChanges = checksumHandler.filterDestructiveFiles(destructiveChanges);
-    for (DestructiveChange filteredDestructiveChange : filteredDestructiveChanges) {
+    while (!filteredDestructiveChanges.isEmpty()) {
+      List<DestructiveChange> bunchOfChanges = sfdcHandler.extractNextChanges(filteredDestructiveChanges);
       try {
-        sfdcHandler.deleteMetadata(filteredDestructiveChange, persistedOnly);
-        checksumHandler.updateDestructiveTimestamp(filteredDestructiveChange);
+        sfdcHandler.deleteMetadata(bunchOfChanges, persistedOnly, zipFileHandler);
+        checksumHandler.updateDestructiveTimestamps(bunchOfChanges);
       } catch (BuildException e) {
-        log(String.format("Error deploying destructive change: %s.", e.getMessage()));
+        log(String.format("Error deploying destructive change(s): %s.", e.getMessage()));
 
         // only set a property to prevent other deploy steps from being executed
         getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getOwningTarget().getName());
+        
+        break;
       }
     }
   }
@@ -150,6 +165,8 @@ public class SfdcDestructiveChangesDeploymentTask
     checksumHandler.initialize(logWrapper, checksums, true, dryRun);
     sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
     destructiveHandler.initialize(logWrapper, deployRoot, destructiveFile);
+    metadataHandler.initialize(logWrapper, deployRoot, debug);
+    zipFileHandler.initialize(logWrapper, debug, metadataHandler);
   }
 
   private boolean validate()

@@ -29,7 +29,8 @@ public class Transformations
       @XmlElement(name = "renamefile", type = RenameFile.class),
       @XmlElement(name = "addelement", type = AddElement.class),
       @XmlElement(name = "skipfile", type = SkipFile.class),
-      @XmlElement(name = "defaultpermissions", type = DefaultPermissionsInProfile.class)})
+      @XmlElement(name = "defaultpermissions", type = DefaultPermissionsInProfile.class),
+      @XmlElement(name = "removeduplicateelement", type = RemoveDuplicateElement.class)})
   public void setTransformations(List<Transformation> transformations)
   {
     this.transformations = transformations;
