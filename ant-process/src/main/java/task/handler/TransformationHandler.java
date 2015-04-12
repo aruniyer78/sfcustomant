@@ -40,6 +40,7 @@ import org.xml.sax.SAXException;
 import task.handler.transformations.ChangeAttribute;
 import task.handler.transformations.ChangeText;
 import task.handler.transformations.Transformation;
+import task.handler.transformations.Transformation.Result;
 import task.handler.transformations.Transformations;
 
 /**
@@ -86,13 +87,8 @@ public class TransformationHandler
 
     // global
     transformations = readTransformations(null);
-    // TODO add environment-specific transformations
+    // add environment-specific transformations
     transformations.addAll(readTransformations(environment));
-
-    // TODO fix logging
-    //    logWrapper.log(String.format("Use environment %s.", result));
-    //    logWrapper.log(String.format("Found %d transformations.", result.size()));
-    //    logWrapper.log(String.format("Found %d token mappings.", result.size()));
 
     checkTransformationConfiguration();
   }
@@ -255,7 +251,7 @@ public class TransformationHandler
     }
   }
 
-  private ByteArrayOutputStream applyTransformations(String name,
+  private ByteArrayOutputStream applyTransformations(String fileName,
                                                      InputStream is,
                                                      List<Transformation> fileTransformations,
                                                      Operation operation)
@@ -267,17 +263,25 @@ public class TransformationHandler
 
       Document doc = b.parse(is);
 
-      boolean write = true;
+      boolean applied = true;
       for (Transformation transformation : fileTransformations) {
+        Result r = null;
         if (Operation.DEPLOY.equals(operation) && transformation.isDeploy()) {
-          write &= transformation.applyForDeploy(logWrapper, doc, tokenMappings);
+          r = transformation.applyForDeploy(logWrapper, doc, tokenMappings);
+          
         }
         else if (Operation.RETRIEVE.equals(operation) && transformation.isRetrieve()) {
-          write &= transformation.applyForRetrieve(logWrapper, doc, tokenMappings);
+          r = transformation.applyForRetrieve(logWrapper, doc, tokenMappings);
+        }
+        if (null != r && r.isSkipped()) {
+          return null;
+        }
+        if (null != r && r.isApplied()) {
+          applied = true;
         }
       }
 
-      if (write) {
+      if (applied) {
         Transformer transformer = TransformerFactory.newInstance().newTransformer();
         transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "no");
         transformer.setOutputProperty(OutputKeys.METHOD, "xml");
@@ -286,19 +290,19 @@ public class TransformationHandler
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
         transformer.setOutputProperty(OutputKeys.STANDALONE, "yes");
         transformer.setOutputProperty("{http://xml.apache.org/xalan}indent-amount", "4");
-
+  
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         StreamResult result = new StreamResult(baos);
         DOMSource source = new DOMSource(doc);
-
+  
         transformer.transform(source, result);
-
+  
         return baos;
       }
-      return null;
+      return copyFile(is, fileName);
     }
     catch (ParserConfigurationException | SAXException | IOException | TransformerException e) {
-      throw new BuildException(String.format("Error reading file %s: %s.", name, e.getMessage()), e);
+      throw new BuildException(String.format("Error reading file %s: %s.", fileName, e.getMessage()), e);
     }
   }
 

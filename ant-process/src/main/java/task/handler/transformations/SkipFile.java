@@ -23,20 +23,24 @@ public class SkipFile extends Transformation {
   }
 
   @Override
-  public boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     return apply(logWrapper);
   }
 
-  private boolean apply(LogWrapper logWrapper)
+  private Result apply(LogWrapper logWrapper)
   {
+    Result r = new Result();
+    
     logWrapper.log("Skip file.");
     
-    return false;
+    r.skipped();
+    
+    return r;
   }
 
   @Override
-  public boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     return apply(logWrapper);
   }

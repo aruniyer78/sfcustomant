@@ -65,13 +65,15 @@ public class RemoveDuplicateElement extends Transformation {
   }
 
   @Override
-  public boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     return apply(logWrapper, document);
   }
 
-  private boolean apply(LogWrapper logWrapper, Document document)
+  private Result apply(LogWrapper logWrapper, Document document)
   {
+    Result r = new Result();
+    
     XPath xPath = XPathFactory.newInstance().newXPath();
     
     try {
@@ -105,9 +107,11 @@ public class RemoveDuplicateElement extends Transformation {
         logWrapper.log(String.format("Remove duplicate element %s.", n.getNodeName()));
         
         n.getParentNode().removeChild(n);
+        
+        r.applied();
       }
       
-      return true;
+      return r;
     }
     catch (XPathExpressionException e) {
       throw new BuildException(String.format("Error reading transformations.xml: %s.", e.getMessage()), e);
@@ -115,7 +119,7 @@ public class RemoveDuplicateElement extends Transformation {
   }
 
   @Override
-  public boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     return apply(logWrapper, document);
   }

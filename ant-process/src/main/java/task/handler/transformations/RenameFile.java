@@ -41,13 +41,13 @@ public class RenameFile extends Transformation {
   }
 
   @Override
-  public boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     throw new BuildException(String.format("Transformation %s not supported yet.", getClass().getSimpleName()));    
   }
 
   @Override
-  public boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
     throw new BuildException("Not implemted yet.");
   }

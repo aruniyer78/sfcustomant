@@ -18,6 +18,32 @@ import task.handler.LogWrapper;
  */
 public abstract class Transformation {
 
+  public static class Result
+  {
+    private boolean skipped;
+    private boolean applied;
+
+    public boolean isSkipped()
+    {
+      return skipped;
+    }
+    
+    public boolean isApplied()
+    {
+      return applied;
+    }
+
+    public void applied()
+    {
+      applied = true;
+    }
+
+    public void skipped()
+    {
+      skipped = true;
+    }
+  }
+
   private String filename;
   private boolean deploy;
   private boolean retrieve;
@@ -67,8 +93,8 @@ public abstract class Transformation {
     }
   }
 
-  public abstract boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings);
+  public abstract Result applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings);
   
-  public abstract boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings);
+  public abstract Result applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings);
   
 }

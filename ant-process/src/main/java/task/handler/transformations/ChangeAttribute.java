@@ -83,8 +83,10 @@ public class ChangeAttribute
   }
 
   @Override
-  public boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
+    Result r = new Result();
+    
     XPath xPath = XPathFactory.newInstance().newXPath();
 
     // value or token?
@@ -124,8 +126,10 @@ public class ChangeAttribute
         }
 
         n.setNodeValue(newValue);
+
+        r.applied();
       }
-      return true;
+      return r;
     }
     catch (XPathExpressionException e) {
       throw new BuildException(String.format("Error applying transformation changeattribute: %s.", e.getMessage()), e);
@@ -133,8 +137,10 @@ public class ChangeAttribute
   }
 
   @Override
-  public boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
+    Result r = new Result();
+    
     XPath xPath = XPathFactory.newInstance().newXPath();
 
     // value or token?
@@ -175,8 +181,10 @@ public class ChangeAttribute
         }
 
         n.setNodeValue(newValue);
+        
+        r.applied();
       }
-      return true;
+      return r;
     }
     catch (XPathExpressionException e) {
       throw new BuildException(String.format("Error applying transformation changeattribute: %s.", e.getMessage()), e);

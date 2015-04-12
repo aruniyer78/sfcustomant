@@ -78,8 +78,10 @@ public class DefaultPermissionsInProfile extends Transformation {
   }
 
   @Override
-  public boolean applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForDeploy(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
+    Result r = new Result();
+    
     XPath xPath = XPathFactory.newInstance().newXPath();
 
     try {
@@ -115,6 +117,8 @@ public class DefaultPermissionsInProfile extends Transformation {
           userPermission.appendChild(name);
           
           profile.appendChild(userPermission);
+          
+          r.applied();
         }
       }
     }
@@ -122,13 +126,13 @@ public class DefaultPermissionsInProfile extends Transformation {
       throw new BuildException(String.format("Error reading transformations.xml: %s.", e.getMessage()), e);
     }
     
-    return true;
+    return r;
   }
 
   @Override
-  public boolean applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
+  public Result applyForRetrieve(LogWrapper logWrapper, Document document, Map<String, String> tokenMappings)
   {
-    return true;
+    return new Result();
   }
 
 }
