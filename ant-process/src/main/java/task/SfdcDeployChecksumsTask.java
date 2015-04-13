@@ -16,7 +16,7 @@ import task.handler.SfdcHandler;
  * @author  xlehmf
  */
 public class SfdcDeployChecksumsTask
-  extends Taskdef
+  extends Taskdef implements SfdcTaskConstants
 {
 
   private String username;
@@ -105,9 +105,11 @@ public class SfdcDeployChecksumsTask
     validate();
     initialize();
     
-    log(String.format("Deploy checksums for version %s.", gitVersion));
-    
-    checksumHandler.updateGitVersionTimestamp(gitVersion);
+    String failedStep = getProject().getProperty(PROPERTY_FAILED_DEPLOY_STEP);
+    if (StringUtils.isNotEmpty(failedStep)) {
+      // only update GIT version in checksums if deployment was successful
+      checksumHandler.updateGitVersionTimestamp(gitVersion);
+    }
     Map<String, String> checksumMap = checksumHandler.getChecksums();
     sfdcHandler.deployChecksums(checksumMap, sfdcName);
   }

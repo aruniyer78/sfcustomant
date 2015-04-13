@@ -565,7 +565,13 @@ public class SfdcHandler
                 mConnection.listMetadata(chunk.toArray(new ListMetadataQuery[chunk.size()]), VERSION);
             for (FileProperties props : metadata) {
               String type = props.getType();
+              String ns = props.getNamespacePrefix();
 
+              // TODO xlehmf: for now we exclude everything which has a namespace -> exclude everything from packages
+              if (StringUtils.isNotEmpty(ns)) {
+                continue;
+              }
+              
               if (folderReplacements.containsValue(type)) {
                 type = reverseFolderMapping(type);
 
