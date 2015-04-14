@@ -106,7 +106,7 @@ public class SfdcDeployChecksumsTask
     initialize();
     
     String failedStep = getProject().getProperty(PROPERTY_FAILED_DEPLOY_STEP);
-    if (StringUtils.isNotEmpty(failedStep)) {
+    if (StringUtils.isEmpty(failedStep)) {
       // only update GIT version in checksums if deployment was successful
       checksumHandler.updateGitVersionTimestamp(gitVersion);
     }
