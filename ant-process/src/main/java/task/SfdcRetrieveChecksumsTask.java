@@ -108,7 +108,7 @@ public class SfdcRetrieveChecksumsTask
     LogWrapper logWrapper = new LogWrapper(this);
 
     checksumHandler.initialize(logWrapper, checksums, false, dryRun);
-    sfdcHandler.initialize(this, maxPoll, false, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
+    sfdcHandler.initialize(this, maxPoll, false, false, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
   }
 
   private void validate()

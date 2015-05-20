@@ -107,7 +107,9 @@ public class TransformationHandler
       }
       else if (transformation instanceof ChangeAttribute) {
         ChangeAttribute changeAttribute = (ChangeAttribute)transformation;
-        tokens.add(changeAttribute.getToken().getText());
+        if (null != changeAttribute.getToken()) {
+          tokens.add(changeAttribute.getToken().getText());
+        }
       }
     }
 

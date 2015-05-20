@@ -6,6 +6,7 @@ package task.handler;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -20,6 +21,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.types.LogLevel;
 
@@ -108,6 +110,9 @@ public class ZipFileHandler
     }
   }
 
+  private static final int MAXIMUM_FILES_IN_REVIEW = 60;
+  private static final String DIRECTORY_CLASSES = "classes";
+  private static final String DIRECTORY_REVIEW = "review";
   private static final String ZIP_BASE_DIR = "unpackaged";
   private static final String FILE_NAME_PACKAGE_XML = ZIP_BASE_DIR + "/package.xml";
   private static final String FILE_NAME_DESTRUCTIVE_CHANGES_XML = ZIP_BASE_DIR + "/destructiveChanges.xml";
@@ -276,7 +281,7 @@ public class ZipFileHandler
     return sb.toString();
   }
 
-  public void extractZipFile(String retrieveRoot, ByteArrayOutputStream zipFile, TransformationHandler transformationHandler)
+  public void extractZipFile(String retrieveRoot, ByteArrayOutputStream zipFile, TransformationHandler transformationHandler, ChecksumHandler checksumHandler)
   {
     logWrapper.log("Extract ZIP file.");
 
@@ -294,19 +299,23 @@ public class ZipFileHandler
             fileName = fileName.substring(1 + ZIP_BASE_DIR.length());
           }
           
-          File file = new File(retrieveRoot, fileName);
+          File file = handleZoning(retrieveRoot, fileName);
           
           InputStreamWrapper isw = new InputStreamWrapper(zis);
 
           ByteArrayOutputStream fileBaos = transformationHandler.transform(isw, file, Operation.RETRIEVE);
           if (null != fileBaos) {
+            byte[] fileContent = fileBaos.toByteArray();
+            
+            checkProtectedZones(file, fileContent, checksumHandler);
+            
             File parentFile = file.getParentFile();
             if (!parentFile.exists() && !parentFile.mkdirs()) {
-              throw new BuildException(String.format("Error creating directories while extracting file: %s.", fileName));
+              throw new BuildException(String.format("Error creating directories while extracting file: %s.", file.getName()));
             }
             
             try (FileOutputStream fos = new FileOutputStream(file)) {
-              fos.write(fileBaos.toByteArray());
+              fos.write(fileContent);
             }
           }
         }
@@ -318,6 +327,104 @@ public class ZipFileHandler
     catch (IOException ioe) {
       throw new BuildException(String.format("Error handling ZIP file: %s.", ioe.getMessage()), ioe);
     }
+  }
+
+  private void checkProtectedZones(File file, byte[] fileContent, ChecksumHandler checksumHandler)
+  {
+    String subDirectory = getClassesSubDirectory(file);
+    if (null != subDirectory && !DIRECTORY_REVIEW.equals(subDirectory)) {
+      String checksumFromFile = checksumHandler.getChecksumFromFile(file);
+      String checksumFromContent = checksumHandler.getChecksumFromContent(file.getName(), fileContent);
+      if (!StringUtils.equals(checksumFromFile, checksumFromContent)) {
+        throw new BuildException(String.format("Changes on files outside of the sub directory '%s' are not allowed.", DIRECTORY_REVIEW));
+      }
+    }
+  }
+
+  private String getClassesSubDirectory(File file)
+  {
+    if (DIRECTORY_CLASSES.equals(file.getParentFile().getParent())) {
+      return file.getParent();
+    }
+    return null;
+  }
+
+  private File handleZoning(String retrieveRoot, String fileName)
+  {
+    File result = new File(retrieveRoot, fileName);
+    
+    // zoning is relevant for classes only 
+    if (fileName.startsWith(DIRECTORY_CLASSES) && !result.exists()) {
+      // check if file is somewhere available already
+      File classesDir = result.getParentFile();
+      if (classesDir.exists()) {
+        File[] classesSubDirs = getSubDirectories(classesDir);
+        if (null != classesSubDirs && 0 < classesSubDirs.length) {
+          // look in sub dirs for the file
+          int filesInReview = 0;
+          for (File subDir : classesSubDirs) {
+            if (isDir(subDir, DIRECTORY_REVIEW)) {
+              filesInReview = countFiles(subDir);
+              
+              // allow only a certain number of files in sub directory review
+              if (MAXIMUM_FILES_IN_REVIEW < filesInReview) {
+                throw new BuildException(String.format("Only up to %d files are allowed in sub directory '%s'.", filesInReview, DIRECTORY_REVIEW));
+              }
+            }
+            
+            File suspectedFile = new File(subDir, result.getName());
+            if (suspectedFile.exists()) {
+              // found file
+              return suspectedFile;
+            }
+          }
+          
+          // allow only a certain number of files in sub directory review
+          if (MAXIMUM_FILES_IN_REVIEW < filesInReview + 1) {
+            throw new BuildException(String.format("Only up to %d files are allowed in sub directory '%s'.", filesInReview, DIRECTORY_REVIEW));
+          }
+          
+          // did not find the right sub directory -> assume it is a new file and put it into the "review" folder
+          logWrapper.log(String.format("Did not find existing file. Put file %s into sub directory '%s'.", result.getName(), DIRECTORY_REVIEW));
+          
+          return new File(new File(classesDir, DIRECTORY_REVIEW), result.getName());
+        } else {
+          // no sub dirs and file does not exist in parent dir => no special handling
+        }
+      }
+      // directory does not exist yet => no special handling
+    }
+    return result;
+  }
+
+  private int countFiles(File subDir)
+  {
+    File[] files = subDir.listFiles(new FileFilter() {
+      
+      @Override
+      public boolean accept(File pathname)
+      {
+        return pathname.isFile();
+      }
+    });
+    return null != files ? files.length : 0;
+  }
+
+  private boolean isDir(File subDir, String name)
+  {
+    return name.equals(subDir.getName());
+  }
+
+  private File[] getSubDirectories(File classesDir)
+  {
+    return classesDir.listFiles(new FileFilter() {
+      
+      @Override
+      public boolean accept(File pathname)
+      {
+        return pathname.isDirectory();
+      }
+    });
   }
 
 }

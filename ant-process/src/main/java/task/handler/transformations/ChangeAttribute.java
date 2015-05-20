@@ -153,7 +153,13 @@ public class ChangeAttribute
     }
 
     try {
+      
+      logWrapper.log(String.format("xpath %s", xpath));
+      
       NodeList nodes = (NodeList)xPath.evaluate(xpath, document.getDocumentElement(), XPathConstants.NODESET);
+      
+logWrapper.log(String.format("Found %d matches", nodes.getLength()));
+      
       for (int i = 0; i < nodes.getLength(); ++i) {
         Node n = nodes.item(i);
 

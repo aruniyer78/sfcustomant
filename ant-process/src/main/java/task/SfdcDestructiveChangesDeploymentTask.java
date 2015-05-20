@@ -163,7 +163,7 @@ public class SfdcDestructiveChangesDeploymentTask
     LogWrapper logWrapper = new LogWrapper(this);
 
     checksumHandler.initialize(logWrapper, checksums, true, dryRun);
-    sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
+    sfdcHandler.initialize(this, maxPoll, dryRun, false, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
     destructiveHandler.initialize(logWrapper, deployRoot, destructiveFile);
     metadataHandler.initialize(logWrapper, deployRoot, debug);
     zipFileHandler.initialize(logWrapper, debug, metadataHandler);

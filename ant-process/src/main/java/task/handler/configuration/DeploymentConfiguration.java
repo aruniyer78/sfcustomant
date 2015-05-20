@@ -208,7 +208,7 @@ public class DeploymentConfiguration
     duList.add(new DeploymentUnitWithContent(ApexTrigger.class, "triggers", "trigger"));
     duList.add(new DeploymentUnitWithContent(ApexPage.class, "pages", "page"));
     duList.add(new DeploymentUnitWithContent(ApexComponent.class, "components", "component"));
-    duList.add(new DeploymentUnitWithContent(ApexClass.class, "classes", "cls"));
+    duList.add(new DeploymentUnitWithContentAndZoning(ApexClass.class, "classes", "cls"));
 
     duList.add(new DeploymentUnit(Profile.class, "profiles"));
 

@@ -36,6 +36,7 @@ public class SfdcDeploymentTask
   private String deployRoot;
   private boolean debug;
   private boolean dryRun;
+  private boolean runAllTests;
   private List<SfdcTypeSet> typeSets;
   private String transformationsRoot;
   private String checksums;
@@ -94,6 +95,11 @@ public class SfdcDeploymentTask
   public void setDryRun(boolean dryRun)
   {
     this.dryRun = dryRun;
+  }
+  
+  public void setRunAllTests(boolean runAllTests)
+  {
+    this.runAllTests = runAllTests;
   }
 
   public void setTransformationsRoot(String transformationsRoot)
@@ -163,7 +169,7 @@ public class SfdcDeploymentTask
     
     metadataHandler.initialize(logWrapper, deployRoot, debug);
     zipFileHandler.initialize(logWrapper, debug, metadataHandler);
-    sfdcHandler.initialize(this, maxPoll, dryRun, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
+    sfdcHandler.initialize(this, maxPoll, dryRun, runAllTests, serverurl, username, password, useProxy, proxyHost, proxyPort, null);
   }
 
   private boolean validate()

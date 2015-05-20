@@ -31,6 +31,7 @@ import task.model.SfdcTypeSet;
 import com.sforce.soap.enterprise.EnterpriseConnection;
 import com.sforce.soap.enterprise.LoginResult;
 import com.sforce.soap.metadata.AsyncResult;
+import com.sforce.soap.metadata.CodeCoverageWarning;
 import com.sforce.soap.metadata.DeleteResult;
 import com.sforce.soap.metadata.DeployMessage;
 import com.sforce.soap.metadata.DeployOptions;
@@ -46,6 +47,8 @@ import com.sforce.soap.metadata.PackageTypeMembers;
 import com.sforce.soap.metadata.ReadResult;
 import com.sforce.soap.metadata.RetrieveRequest;
 import com.sforce.soap.metadata.RetrieveResult;
+import com.sforce.soap.metadata.RunTestFailure;
+import com.sforce.soap.metadata.RunTestsResult;
 import com.sforce.soap.metadata.StaticResource;
 import com.sforce.soap.metadata.StaticResourceCacheControl;
 import com.sforce.soap.metadata.StatusCode;
@@ -143,6 +146,7 @@ public class SfdcHandler
   private String proxyHost;
   private int proxyPort;
   private Map<String, SfdcFeature> features;
+  private boolean runAllTests;
 
   public SfdcHandler()
   {
@@ -156,6 +160,7 @@ public class SfdcHandler
   public void initialize(Task task,
                          int maxPoll,
                          boolean dryRun,
+                         boolean runAllTests,
                          String serverurl,
                          String username,
                          String password,
@@ -167,6 +172,7 @@ public class SfdcHandler
     this.task = task;
     this.maxPoll = maxPoll;
     this.dryRun = dryRun;
+    this.runAllTests = runAllTests;
     this.serverurl = serverurl;
     this.username = username;
     this.password = password;
@@ -210,29 +216,50 @@ public class SfdcHandler
     }
     String typeNames = StringUtils.join(types, ",");
 
-    deployTypes(zipFile, typeNames, new ErrorHandler<DeployResult>() {
+    deployTypes(zipFile, runAllTests, typeNames, new ErrorHandler<DeployResult>() {
 
       @Override
       public void evaluate(DeployResult status, String logInfo)
       {
-        task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
-        for (DeployMessage dm : status.getDetails().getComponentFailures()) {
-          task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
-                                 dm.getFullName(),
-                                 dm.getComponentType(),
-                                 dm.getLineNumber(),
-                                 dm.getColumnNumber(),
-                                 dm.getProblem()),
-                   LogLevel.ERR.getLevel());
+        RunTestsResult runTestResult = status.getDetails().getRunTestResult();
+        if (null != runTestResult) {
+          for (CodeCoverageWarning ccw : runTestResult.getCodeCoverageWarnings()) {
+            task.log(String.format("Test coverage warning: %s: %s", ccw.getName(), ccw.getMessage()), LogLevel.WARN.getLevel());
+          }
+          
+          if (0 != status.getNumberTestErrors()) {
+            task.log("Deployment failed. Test failures:", LogLevel.ERR.getLevel());
+            for (RunTestFailure rtf : runTestResult.getFailures()) {
+              task.log(String.format("Test error: Class %s Method %s", rtf.getClass(), rtf.getMethodName()), LogLevel.ERR.getLevel());
+              task.log(rtf.getMessage(), LogLevel.ERR.getLevel());
+              task.log(String.format("Stack trace: %s", rtf.getStackTrace()), LogLevel.ERR.getLevel());
+            }
+          }
+        }
+        
+        if (0 != status.getNumberComponentErrors()) {
+          task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
+          for (DeployMessage dm : status.getDetails().getComponentFailures()) {
+            task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
+                                   dm.getFullName(),
+                                   dm.getComponentType(),
+                                   dm.getLineNumber(),
+                                   dm.getColumnNumber(),
+                                   dm.getProblem()),
+                     LogLevel.ERR.getLevel());
+          }
         }
 
-        throw new BuildException(String.format("Deployment of %s not successful.", logInfo));        
+        throw new BuildException(String.format("Deployment of %s not successful.", logInfo));
       }
-      
+
     });
   }
 
-  private void deployTypes(ByteArrayOutputStream zipFile, String logInfo, ErrorHandler<DeployResult> errorHandler)
+  private void deployTypes(ByteArrayOutputStream zipFile,
+                           boolean rat,
+                           String logInfo,
+                           ErrorHandler<DeployResult> errorHandler)
   {
     if (dryRun) {
       return;
@@ -246,6 +273,7 @@ public class SfdcHandler
       DeployOptions options = new DeployOptions();
       options.setPerformRetrieve(false);
       options.setRollbackOnError(true);
+      options.setRunAllTests(rat);
 
       AsyncResult ar = context.getMConnection().deploy(zipFile.toByteArray(), options);
 
@@ -571,7 +599,7 @@ public class SfdcHandler
               if (StringUtils.isNotEmpty(ns)) {
                 continue;
               }
-              
+
               if (folderReplacements.containsValue(type)) {
                 type = reverseFolderMapping(type);
 
@@ -642,9 +670,6 @@ public class SfdcHandler
       }
     }
     catch (IOException | ConnectionException e) {
-
-      e.printStackTrace();
-
       throw new BuildException(String.format("Error retrieving checksums from SFDC: %s.", e.getMessage()), e);
     }
 
@@ -789,19 +814,20 @@ public class SfdcHandler
   private void deployBulkifyableDestructiveChange(ZipFileHandler zipFileHandler, String type, List<String> fullNames)
   {
     final String noErrorProblemPattern = "No " + type + " named: .* found";
-    
+
     ByteArrayOutputStream zipFile = zipFileHandler.prepareDestructiveZipFile(type, fullNames);
-    deployTypes(zipFile, "destrutive changes", new ErrorHandler<DeployResult>() {
+    deployTypes(zipFile, false, "destrutive changes", new ErrorHandler<DeployResult>() {
 
       @Override
       public void evaluate(DeployResult status, String logInfo)
       {
         boolean errorOccured = false;
-        
+
         for (DeployMessage dm : status.getDetails().getComponentFailures()) {
           if (dm.getProblem().matches(noErrorProblemPattern)) {
             // we tried to delete something which is gone already -> ignore
-          } else {
+          }
+          else {
             if (!errorOccured) {
               task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
               errorOccured = true;
@@ -819,7 +845,7 @@ public class SfdcHandler
           throw new BuildException(String.format("Deployment of %s not successful.", logInfo));
         }
       }
-      
+
     });
   }
 

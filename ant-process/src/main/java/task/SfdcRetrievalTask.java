@@ -13,6 +13,7 @@ import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.taskdefs.Taskdef;
 import org.apache.tools.ant.types.LogLevel;
 
+import task.handler.ChecksumHandler;
 import task.handler.LogWrapper;
 import task.handler.MetadataHandler;
 import task.handler.SfdcHandler;
@@ -50,6 +51,7 @@ public class SfdcRetrievalTask
   private MetadataHandler metadataHandler;
   private ZipFileHandler zipFileHandler;
   private TransformationHandler transformationHandler;
+  private ChecksumHandler checksumHandler;
 
   public void setUsername(String username)
   {
@@ -141,11 +143,13 @@ public class SfdcRetrievalTask
     super.init();
 
     typeSets = new ArrayList<>();
+    features = new HashMap<>();
+    
     sfdcHandler = new SfdcHandler();
     metadataHandler = new MetadataHandler();
     zipFileHandler = new ZipFileHandler();
     transformationHandler = new TransformationHandler();
-    features = new HashMap<>();
+    checksumHandler = new ChecksumHandler();
 
     cleanupOther = true;
   }
@@ -165,7 +169,7 @@ public class SfdcRetrievalTask
 
     ByteArrayOutputStream zipFile = sfdcHandler.retrieveMetadata(metadata);
     zipFileHandler.saveZipFile("retrieve", zipFile);
-    zipFileHandler.extractZipFile(retrieveRoot, zipFile, transformationHandler);
+    zipFileHandler.extractZipFile(retrieveRoot, zipFile, transformationHandler, checksumHandler);
 
     metadataHandler.removeNotContainedMetadata(metadata, typeSets, cleanupOther, transformationHandler);
   }
@@ -174,6 +178,7 @@ public class SfdcRetrievalTask
   {
     LogWrapper logWrapper = new LogWrapper(this);
 
+    checksumHandler.initialize(logWrapper, "DUMMY", false, dryRun);
     transformationHandler.initialize(logWrapper, username, transformationsRoot, retrieveRoot);
 
     metadataHandler.initialize(logWrapper, retrieveRoot, debug);
@@ -182,6 +187,7 @@ public class SfdcRetrievalTask
     sfdcHandler.initialize(this,
                            maxPoll,
                            dryRun,
+                           false,
                            serverurl,
                            username,
                            password,
@@ -193,7 +199,6 @@ public class SfdcRetrievalTask
 
   private void validate()
   {
-    // TODO validate settings
     if (null == retrieveRoot) {
       throw new BuildException("The property retrieveRoot must be specified.");
     }

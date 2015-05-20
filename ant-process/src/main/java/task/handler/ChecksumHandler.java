@@ -48,7 +48,7 @@ public class ChecksumHandler
   private boolean loadFile;
   private boolean dryRun;
 
-  private byte[] checkChecksum(File file)
+  private byte[] calculateChecksum(File file)
   {
     try (InputStream fis = new FileInputStream(file)) {
 
@@ -72,16 +72,32 @@ public class ChecksumHandler
     }
   }
 
-  protected String getValueFromFile(File file)
+  public String getChecksumFromFile(File file)
   {
-    byte[] checksum = checkChecksum(file);
+    byte[] checksum = calculateChecksum(file);
 
     return Base64.encodeBase64String(checksum);
   }
 
+  public String getChecksumFromContent(String name, byte[] content)
+  {
+    try {
+      MessageDigest digest = MessageDigest.getInstance("MD5");
+      digest.update(content);
+      byte[] checksum = digest.digest();
+
+      return Base64.encodeBase64String(checksum);
+    }
+    catch (NoSuchAlgorithmException e) {
+      throw new BuildException(String.format("Error creating checksum for content of file %s: %s.",
+                                             name,
+                                             e.getMessage()), e);
+    }
+  }
+
   public boolean isUpdateRequired(DeploymentUnit du, File file)
   {
-    String newChecksum = getValueFromFile(file);
+    String newChecksum = getChecksumFromFile(file);
 
     String key = getKey(du, file);
 
@@ -259,7 +275,7 @@ public class ChecksumHandler
 
   private void updateTimestamp(DeploymentUnit du, File file)
   {
-    String value = getValueFromFile(file);
+    String value = getChecksumFromFile(file);
 
     String key = getKey(du, file);
 
@@ -282,19 +298,20 @@ public class ChecksumHandler
 
   private String getDestructiveKey(DestructiveChange destructiveChange)
   {
-    return PREFIX_UPDATESTAMP_DESTRUCTIVE_CHANGE + "/" + destructiveChange.getType() + "/" + destructiveChange.getFullName();
+    return PREFIX_UPDATESTAMP_DESTRUCTIVE_CHANGE + "/" + destructiveChange.getType() + "/"
+           + destructiveChange.getFullName();
   }
 
   public void updateDestructiveTimestamps(List<DestructiveChange> destructiveChanges)
   {
     for (DestructiveChange destructiveChange : destructiveChanges) {
       String key = getDestructiveKey(destructiveChange);
-      
+
       byte[] bytes = ByteBuffer.allocate(8).putLong(System.currentTimeMillis()).array();
       String value = Base64.encodeBase64String(bytes);
-      
+
       updateStamps.put(key, value);
-      
+
       destructiveChange.setTimestamp(value);
     }
     writeUpdateStampes();
@@ -303,24 +320,27 @@ public class ChecksumHandler
   public String getDestructiveTimestamp(DestructiveChange destructiveChange)
   {
     String key = getDestructiveKey(destructiveChange);
-    
+
     return updateStamps.get(key);
   }
 
-  public void updateGitVersionTimestamp(String version) {
+  public void updateGitVersionTimestamp(String version)
+  {
     updateStamps.put(KEY_UPDATESTAMP_GIT_VERSION, version);
   }
-  
+
   public void validateGitVersion(String gitVersion)
   {
     String deployedGitVersion = updateStamps.get(KEY_UPDATESTAMP_GIT_VERSION);
-    
+
     if (!StringUtils.equals(deployedGitVersion, gitVersion)) {
-      logWrapper.log(String.format("The Git version %s does not match the deployed version %s.", gitVersion, deployedGitVersion));
-      
+      logWrapper.log(String.format("The Git version %s does not match the deployed version %s.",
+                                   gitVersion,
+                                   deployedGitVersion));
+
       throw new BuildException(String.format("The version of the deployed metadata and the local metadata version do not match. Please deploy the metadata first."));
     }
-    
+
     logWrapper.log(String.format("Git version matches the deployed version %s.", gitVersion));
   }
 }

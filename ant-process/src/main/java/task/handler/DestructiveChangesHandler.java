@@ -131,6 +131,7 @@ public class DestructiveChangesHandler
       "HomePageComponent",
       "CustomPageWebLink",
       "Report",
+      "RecordType",
       "Flow",
       "Dashboard",
       "Queue",

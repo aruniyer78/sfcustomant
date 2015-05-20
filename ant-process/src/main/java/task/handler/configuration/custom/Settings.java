@@ -8,5 +8,5 @@ import com.sforce.soap.metadata.Metadata;
  * @author  xlehmf
  */
 public class Settings extends Metadata {
-  
+  // support class only
 }
