@@ -112,7 +112,7 @@ public class SfdcRetrievalTask
   {
     this.transformationsRoot = transformationsRoot;
   }
-
+  
   public void addConfigured(SfdcTypeSets typeSetNames)
   {
     typeSetNames.validateSettings();
@@ -179,7 +179,7 @@ public class SfdcRetrievalTask
     LogWrapper logWrapper = new LogWrapper(this);
 
     checksumHandler.initialize(logWrapper, "DUMMY", false, dryRun);
-    transformationHandler.initialize(logWrapper, username, transformationsRoot, retrieveRoot);
+    transformationHandler.initialize(logWrapper, username, transformationsRoot, TransformationHandler.DEFAULT_TRANSFORMATIONS_FILE_NAME, retrieveRoot);
 
     metadataHandler.initialize(logWrapper, retrieveRoot, debug);
     zipFileHandler.initialize(logWrapper, debug, metadataHandler);

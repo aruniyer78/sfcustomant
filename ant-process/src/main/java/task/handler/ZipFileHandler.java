@@ -244,7 +244,7 @@ public class ZipFileHandler
       destructiveChanges.put(type,  fullNames);
       
       byte[] destructiveChangesXml = metadataHandler.createPackageXml(destructiveChanges, false);
-      metadataHandler.savePackageXml(MetadataHandler.PREFIX_DESTRUCTIVE_CHANGES, packageXml);
+      metadataHandler.savePackageXml(MetadataHandler.PREFIX_DESTRUCTIVE_CHANGES, destructiveChangesXml);
 
       zos.putNextEntry(new ZipEntry(FILE_NAME_DESTRUCTIVE_CHANGES_XML));
       zos.write(destructiveChangesXml);

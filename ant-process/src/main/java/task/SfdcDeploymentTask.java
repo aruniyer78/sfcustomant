@@ -39,6 +39,7 @@ public class SfdcDeploymentTask
   private boolean runAllTests;
   private List<SfdcTypeSet> typeSets;
   private String transformationsRoot;
+  private String transformationsName;
   private String checksums;
 
   private ChecksumHandler checksumHandler;
@@ -47,6 +48,12 @@ public class SfdcDeploymentTask
   private MetadataHandler metadataHandler;
   private TransformationHandler transformationHandler;
 
+  
+  public SfdcDeploymentTask() {
+    // use the default name if not overridden through setting the parameter on the task
+    transformationsName = TransformationHandler.DEFAULT_TRANSFORMATIONS_FILE_NAME;
+  }
+  
   public void setUsername(String username)
   {
     this.username = username;
@@ -107,6 +114,10 @@ public class SfdcDeploymentTask
     this.transformationsRoot = transformationsRoot;
   }
 
+  public void setTransformations(String transformations) {
+    this.transformationsName = transformations;
+  }
+  
   public void setChecksums(String checksums)
   {
     this.checksums = checksums;
@@ -165,7 +176,7 @@ public class SfdcDeploymentTask
     LogWrapper logWrapper = new LogWrapper(this);
 
     checksumHandler.initialize(logWrapper, checksums, true, dryRun);
-    transformationHandler.initialize(logWrapper, username, transformationsRoot, deployRoot);
+    transformationHandler.initialize(logWrapper, username, transformationsRoot, transformationsName, deployRoot);
     
     metadataHandler.initialize(logWrapper, deployRoot, debug);
     zipFileHandler.initialize(logWrapper, debug, metadataHandler);

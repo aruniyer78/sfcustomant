@@ -134,7 +134,7 @@ public class SfdcHandler
   private final static double VERSION = 32.0d;
   private final Set<String> noChildHandling = new HashSet<>(Arrays.asList("CustomObject", "Workflow"));
   private final Map<String, String> folderReplacements = new HashMap<>();
-  private final Set<String> bulkifyableTypes = new HashSet<>(Arrays.asList("ApexTrigger", "ApexClass"));
+  private final Set<String> bulkifyableTypes = new HashSet<>(Arrays.asList("ApexTrigger", "ApexClass", "BusinessProcess"));
 
   private Task task;
   private int maxPoll;

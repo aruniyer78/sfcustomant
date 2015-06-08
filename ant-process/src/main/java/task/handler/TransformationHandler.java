@@ -57,10 +57,13 @@ public class TransformationHandler
   }
 
   public enum Operation { DEPLOY, RETRIEVE }
+
+  public static final String DEFAULT_TRANSFORMATIONS_FILE_NAME = "transformations.xml";
   
   private LogWrapper logWrapper;
   private String userName;
   private String transformationsRoot;
+  private String transformationsName;
   private String deployRoot;
   // private boolean debug;
 
@@ -68,11 +71,12 @@ public class TransformationHandler
   private Map<String, String> tokenMappings;
 
   @SuppressWarnings("hiding")
-  public void initialize(LogWrapper logWrapper, String userName, String transformationsRoot, String deployRoot)
+  public void initialize(LogWrapper logWrapper, String userName, String transformationsRoot, String transformationsName, String deployRoot)
   {
     this.logWrapper = logWrapper;
     this.userName = userName;
     this.transformationsRoot = transformationsRoot;
+    this.transformationsName = transformationsName;
     this.deployRoot = deployRoot;
     //    this.debug = debug;
 
@@ -86,9 +90,9 @@ public class TransformationHandler
     tokenMappings = readEnvironmentConfiguration(environment);
 
     // global
-    transformations = readTransformations(null);
+    transformations = readTransformations(null, transformationsName, true);
     // add environment-specific transformations
-    transformations.addAll(readTransformations(environment));
+    transformations.addAll(readTransformations(environment, transformationsName, false));
 
     checkTransformationConfiguration();
   }
@@ -113,10 +117,11 @@ public class TransformationHandler
       }
     }
 
-    if (tokenMappings.size() != tokens.size()) {
-      throw new BuildException(String.format("The number of tokens %d does not equal the number of token transformations %d.",
-                                             tokenMappings.size(),
-                                             tokens.size()));
+    Set<String> keys = tokenMappings.keySet();
+    if (!keys.containsAll(tokens)) {
+      Set<String> copyOfKeys = new HashSet<>(keys);
+      copyOfKeys.removeAll(tokens);
+      throw new BuildException(String.format("The token mappings do not contain all required tokens. Missing tokens are: %s", StringUtils.join(copyOfKeys, ", ")));
     }
   }
 
@@ -176,7 +181,7 @@ public class TransformationHandler
     }
   }
 
-  private List<Transformation> readTransformations(String environment)
+  private List<Transformation> readTransformations(String environment, String fileName, boolean mandatory)
   {
     List<Transformation> result = new ArrayList<>();
 
@@ -185,8 +190,11 @@ public class TransformationHandler
                                            ? new File(transformationsRoot, environment)
                                            : new File(transformationsRoot);
 
-    File transConfigFile = new File(basePath, "transformations.xml");
+    File transConfigFile = new File(basePath, fileName);
     if (!transConfigFile.exists()) {
+      if (mandatory) {
+        throw new BuildException(String.format("The specified transformations file %s does not exist.", fileName));
+      }
       return result;
     }
 
