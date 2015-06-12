@@ -16,6 +16,8 @@ import org.apache.tools.ant.taskdefs.Typedef;
 public class SfdcTypeSet extends Typedef {
   
   private String name;
+  private boolean force;
+  private boolean suppressChecksumUpdate;
   private List<SfdcInclude> includes;
   private List<SfdcExclude> excludes;
 
@@ -37,6 +39,26 @@ public class SfdcTypeSet extends Typedef {
     return name;
   }
   
+  public boolean isForce()
+  {
+    return force;
+  }
+
+  public void setForce(boolean force)
+  {
+    this.force = force;
+  }
+
+  public boolean isSuppressChecksumUpdate()
+  {
+    return suppressChecksumUpdate;
+  }
+
+  public void setSuppressChecksumUpdate(boolean suppressChecksumUpdate)
+  {
+    this.suppressChecksumUpdate = suppressChecksumUpdate;
+  }
+
   public List<SfdcInclude> getIncludes()
   {
     return includes;

@@ -213,7 +213,8 @@ public class TransformationHandler
       return result;
     }
     catch (JAXBException | IOException e) {
-      throw new BuildException(String.format("Error reading transformations.xml in %s: %s.",
+      throw new BuildException(String.format("Error reading %s in %s: %s.",
+                                             fileName,
                                              basePath.getName(),
                                              e.getMessage()), e);
     }

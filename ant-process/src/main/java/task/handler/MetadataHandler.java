@@ -83,7 +83,7 @@ public class MetadataHandler
 
       List<String> entityNames = compileEntityNames(du, fileList);
 
-      deploymentInfos.add(new DeploymentInfo(du, fileList, entityNames));
+      deploymentInfos.add(new DeploymentInfo(du, fileList, entityNames, typeSet));
     }
 
     return deploymentInfos;
@@ -154,7 +154,7 @@ public class MetadataHandler
     // check timestamps
     Set<String> entitiesToUpdate = new HashSet<>();
     for (File file : filteredFileList) {
-      if (checksumHandler.isUpdateRequired(du, file)) {
+      if (typeSet.isForce() || checksumHandler.isUpdateRequired(du, file)) {
         entitiesToUpdate.add(du.getEntityName(file));
       }
     }

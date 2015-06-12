@@ -266,8 +266,10 @@ public class ChecksumHandler
   public void updateTimestamp(List<DeploymentInfo> deploymentInfos)
   {
     for (DeploymentInfo info : deploymentInfos) {
-      for (File file : info.getFileList()) {
-        updateTimestamp(info.getDeploymentUnit(), file);
+      if (!info.getTypeSet().isSuppressChecksumUpdate()) {
+        for (File file : info.getFileList()) {
+          updateTimestamp(info.getDeploymentUnit(), file);
+        }
       }
     }
     writeUpdateStampes();

@@ -7,6 +7,7 @@ import java.io.File;
 import java.util.List;
 
 import task.handler.configuration.DeploymentUnit;
+import task.model.SfdcTypeSet;
 
 /**
  * DeploymentInfo
@@ -16,15 +17,17 @@ import task.handler.configuration.DeploymentUnit;
 public class DeploymentInfo
 {
 
-  private DeploymentUnit deploymentUnit;
-  private List<File> fileList;
-  private List<String> entityNames;
+  private final DeploymentUnit deploymentUnit;
+  private final List<File> fileList;
+  private final List<String> entityNames;
+  private final SfdcTypeSet typeSet;
 
-  public DeploymentInfo(DeploymentUnit du, List<File> fileList, List<String> entityNames)
+  public DeploymentInfo(DeploymentUnit du, List<File> fileList, List<String> entityNames, SfdcTypeSet typeSet)
   {
     this.deploymentUnit = du;
     this.fileList = fileList;
     this.entityNames = entityNames;
+    this.typeSet = typeSet;
   }
 
   public DeploymentUnit getDeploymentUnit()
@@ -42,6 +45,10 @@ public class DeploymentInfo
     return entityNames;
   }
 
+  public SfdcTypeSet getTypeSet()
+  {
+    return typeSet;
+  }
   
 }
 
