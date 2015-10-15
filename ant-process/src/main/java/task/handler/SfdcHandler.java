@@ -58,11 +58,52 @@ import com.sforce.ws.ConnectorConfig;
 
 /**
  * SfdcHandler
- *
- * @author  XLEHMF
+ * 
+ * @author XLEHMF
  */
 public class SfdcHandler
 {
+
+  private final class TestResultErrorHandler
+    implements ErrorHandler<DeployResult>
+  {
+    @Override
+    public void evaluate(DeployResult status, String logInfo)
+    {
+      RunTestsResult runTestResult = status.getDetails().getRunTestResult();
+      if (null != runTestResult) {
+        for (CodeCoverageWarning ccw : runTestResult.getCodeCoverageWarnings()) {
+          task.log(String.format("Test coverage warning: %s: %s", ccw.getName(), ccw.getMessage()),
+                   LogLevel.WARN.getLevel());
+        }
+
+        if (0 != status.getNumberTestErrors()) {
+          task.log("Deployment failed. Test failures:", LogLevel.ERR.getLevel());
+          for (RunTestFailure rtf : runTestResult.getFailures()) {
+            task.log(String.format("Test error: Class %s Method %s", rtf.getClass(), rtf.getMethodName()),
+                     LogLevel.ERR.getLevel());
+            task.log(rtf.getMessage(), LogLevel.ERR.getLevel());
+            task.log(String.format("Stack trace: %s", rtf.getStackTrace()), LogLevel.ERR.getLevel());
+          }
+        }
+      }
+
+      if (0 != status.getNumberComponentErrors()) {
+        task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
+        for (DeployMessage dm : status.getDetails().getComponentFailures()) {
+          task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
+                                 dm.getFullName(),
+                                 dm.getComponentType(),
+                                 dm.getLineNumber(),
+                                 dm.getColumnNumber(),
+                                 dm.getProblem()),
+                   LogLevel.ERR.getLevel());
+        }
+      }
+
+      throw new BuildException(String.format("Deployment of %s not successful.", logInfo));
+    }
+  }
 
   interface ErrorHandler<T>
   {
@@ -134,7 +175,9 @@ public class SfdcHandler
   private final static double VERSION = 32.0d;
   private final Set<String> noChildHandling = new HashSet<>(Arrays.asList("CustomObject", "Workflow"));
   private final Map<String, String> folderReplacements = new HashMap<>();
-  private final Set<String> bulkifyableTypes = new HashSet<>(Arrays.asList("ApexTrigger", "ApexClass", "BusinessProcess"));
+  private final Set<String> bulkifyableTypes = new HashSet<>(Arrays.asList("ApexTrigger",
+                                                                           "ApexClass",
+                                                                           "BusinessProcess"));
 
   private Task task;
   private int maxPoll;
@@ -156,7 +199,6 @@ public class SfdcHandler
     folderReplacements.put("Report", "ReportFolder");
   }
 
-  @SuppressWarnings("hiding")
   public void initialize(Task task,
                          int maxPoll,
                          boolean dryRun,
@@ -205,8 +247,11 @@ public class SfdcHandler
   /**
    * This method does the actual deployment of the given ZIP file.
    * 
-   * @param zipFile The ZIP file to deploy.
-   * @param infos The list of deployment infos being deployed. Will be used for logging purposes only.
+   * @param zipFile
+   *            The ZIP file to deploy.
+   * @param infos
+   *            The list of deployment infos being deployed. Will be used for
+   *            logging purposes only.
    */
   public void deployTypes(ByteArrayOutputStream zipFile, List<DeploymentInfo> infos)
   {
@@ -216,44 +261,7 @@ public class SfdcHandler
     }
     String typeNames = StringUtils.join(types, ",");
 
-    deployTypes(zipFile, runAllTests, typeNames, new ErrorHandler<DeployResult>() {
-
-      @Override
-      public void evaluate(DeployResult status, String logInfo)
-      {
-        RunTestsResult runTestResult = status.getDetails().getRunTestResult();
-        if (null != runTestResult) {
-          for (CodeCoverageWarning ccw : runTestResult.getCodeCoverageWarnings()) {
-            task.log(String.format("Test coverage warning: %s: %s", ccw.getName(), ccw.getMessage()), LogLevel.WARN.getLevel());
-          }
-          
-          if (0 != status.getNumberTestErrors()) {
-            task.log("Deployment failed. Test failures:", LogLevel.ERR.getLevel());
-            for (RunTestFailure rtf : runTestResult.getFailures()) {
-              task.log(String.format("Test error: Class %s Method %s", rtf.getClass(), rtf.getMethodName()), LogLevel.ERR.getLevel());
-              task.log(rtf.getMessage(), LogLevel.ERR.getLevel());
-              task.log(String.format("Stack trace: %s", rtf.getStackTrace()), LogLevel.ERR.getLevel());
-            }
-          }
-        }
-        
-        if (0 != status.getNumberComponentErrors()) {
-          task.log("Deployment failed. Component errors:", LogLevel.ERR.getLevel());
-          for (DeployMessage dm : status.getDetails().getComponentFailures()) {
-            task.log(String.format("Name: %s Type: %s Line: %d Column: %d Problem: %s",
-                                   dm.getFullName(),
-                                   dm.getComponentType(),
-                                   dm.getLineNumber(),
-                                   dm.getColumnNumber(),
-                                   dm.getProblem()),
-                     LogLevel.ERR.getLevel());
-          }
-        }
-
-        throw new BuildException(String.format("Deployment of %s not successful.", logInfo));
-      }
-
-    });
+    deployTypes(zipFile, runAllTests, typeNames, new TestResultErrorHandler());
   }
 
   private void deployTypes(ByteArrayOutputStream zipFile,
@@ -268,8 +276,6 @@ public class SfdcHandler
     try {
       SfdcConnectionContext context = login();
 
-      task.log(String.format("Start deployment of ZIP."));
-
       DeployOptions options = new DeployOptions();
       options.setPerformRetrieve(false);
       options.setRollbackOnError(true);
@@ -277,6 +283,8 @@ public class SfdcHandler
 
       AsyncResult ar = context.getMConnection().deploy(zipFile.toByteArray(), options);
 
+      task.log(String.format("Sent to SFDC."));
+      
       int count = 0;
       DeployResult status = null;
       do {
@@ -595,7 +603,8 @@ public class SfdcHandler
               String type = props.getType();
               String ns = props.getNamespacePrefix();
 
-              // TODO xlehmf: for now we exclude everything which has a namespace -> exclude everything from packages
+              // TODO xlehmf: for now we exclude everything which has a
+              // namespace -> exclude everything from packages
               if (StringUtils.isNotEmpty(ns)) {
                 continue;
               }
@@ -825,7 +834,8 @@ public class SfdcHandler
 
         for (DeployMessage dm : status.getDetails().getComponentFailures()) {
           if (dm.getProblem().matches(noErrorProblemPattern)) {
-            // we tried to delete something which is gone already -> ignore
+            // we tried to delete something which is gone
+            // already -> ignore
           }
           else {
             if (!errorOccured) {
@@ -850,8 +860,9 @@ public class SfdcHandler
   }
 
   /**
-   * This method extracts a list of destructive changes which can be handled as a group.
-   * Currently ApexTriggers and ApexClasses are handled as a group only.
+   * This method extracts a list of destructive changes which can be handled
+   * as a group. Currently ApexTriggers and ApexClasses are handled as a group
+   * only.
    */
   public List<DestructiveChange> extractNextChanges(List<DestructiveChange> destructiveChanges)
   {

@@ -256,6 +256,26 @@ public class ZipFileHandler
 
     return baos;
   }
+  
+  public ByteArrayOutputStream prepareEmptyZipFile()
+  {
+    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    
+    try (ZipOutputStream zos = new ZipOutputStream(baos)) {
+      // package.xml
+      byte[] packageXml = metadataHandler.createPackageXml(new ArrayList<DeploymentInfo>());
+      // no need to save an empty package.xml
+      
+      zos.putNextEntry(new ZipEntry(FILE_NAME_PACKAGE_XML));
+      zos.write(packageXml);
+      zos.closeEntry();
+    }
+    catch (IOException e) {
+      throw new BuildException(String.format("Error preparing ZIP for deployment: %s.", e.getMessage()), e);
+    }
+
+    return baos;
+  }
 
   private String createZipEntryName(DeploymentUnit du, File file)
   {

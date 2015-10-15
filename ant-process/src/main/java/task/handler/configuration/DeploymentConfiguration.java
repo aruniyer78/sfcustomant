@@ -205,9 +205,14 @@ public class DeploymentConfiguration
     duList.add(new DeploymentUnit(CustomTab.class, "tabs", "tab"));
 
     duList.add(new DeploymentUnit(RemoteSiteSetting.class, "remoteSiteSettings", "remoteSite"));
+    
     duList.add(new DeploymentUnitWithContent(ApexTrigger.class, "triggers", "trigger"));
+    
+    
     duList.add(new DeploymentUnitWithContent(ApexPage.class, "pages", "page"));
     duList.add(new DeploymentUnitWithContent(ApexComponent.class, "components", "component"));
+    
+    
     duList.add(new DeploymentUnitWithContentAndZoning(ApexClass.class, "classes", "cls"));
 
     duList.add(new DeploymentUnit(Profile.class, "profiles"));

@@ -16,5 +16,7 @@
    <taskdef name="deployChecksums" classname="task.SfdcDeployChecksumsTask"/>
    <taskdef name="checkChecksumsVersion" classname="task.SfdcCheckChecksumsVersionTask"/>
    
+   <taskdef name="runAllTests" classname="task.SfdcRunAllTestsTask"/>
+   
    <taskdef name="loadData" classname="task.SfdcDataLoaderTask"/>
 </antlib>

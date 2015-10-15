@@ -187,7 +187,7 @@ public class SfdcDeploymentTask
   {
     String step = getProject().getProperty(PROPERTY_FAILED_DEPLOY_STEP);
     if (StringUtils.isNotEmpty(step)) {
-      log(String.format("A previous build step (%s) failed, therefore destructive changes are not deployed.", step));
+      log(String.format("A previous build step (%s) failed, therefore changes are not deployed.", step));
       return false;
     }
     
