@@ -8,14 +8,11 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.taskdefs.Taskdef;
 
-import task.handler.ChecksumHandler;
 import task.handler.DeploymentInfo;
 import task.handler.LogWrapper;
 import task.handler.MetadataHandler;
 import task.handler.SfdcHandler;
-import task.handler.TransformationHandler;
 import task.handler.ZipFileHandler;
-import task.model.SfdcTypeSet;
 
 /**
  * SfdcRunAllTestsTask
@@ -115,17 +112,9 @@ public class SfdcRunAllTestsTask
     }
     initialize();
 
-    try {
-      List<DeploymentInfo> deploymentInfos = new ArrayList<>();
-      ByteArrayOutputStream zipFile = zipFileHandler.prepareEmptyZipFile();
-      sfdcHandler.deployTypes(zipFile, deploymentInfos);
-    }
-    catch (BuildException e) {
-      log(String.format("Error running all tests: %s.", e.getMessage()));
-
-      // only set a property to prevent other deploy steps from being executed
-      getProject().setProperty(PROPERTY_FAILED_DEPLOY_STEP, getOwningTarget().getName());
-    }
+    List<DeploymentInfo> deploymentInfos = new ArrayList<>();
+    ByteArrayOutputStream zipFile = zipFileHandler.prepareEmptyZipFile();
+    sfdcHandler.deployTypes(zipFile, deploymentInfos);
   }
 
   private void initialize()
