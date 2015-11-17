@@ -1,21 +1,38 @@
-from dockerfile/java:openjdk-7-jdk
+FROM java:openjdk-8u45-jdk
+
+# MAINTAINER David Gageot <david.gageot@sonarsource.com>
 maintainer Falk Lehmann, falk.lehmann.bp@nttdata.com
 
-# RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
-RUN echo "deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/" >> /etc/apt/sources.list
-RUN apt-get update && apt-get upgrade -y
+ENV SONARQUBE_HOME /opt/sonarqube
 
-RUN apt-get install -y --force-yes sonar=4.5.4
-
-RUN sed -i 's|#wrapper.java.additional.6=-server|wrapper.java.additional.6=-server|g' /opt/sonar/conf/wrapper.conf
-
-RUN sed -i 's|#sonar.jdbc.password=sonar|sonar.jdbc.password=123qwe|g' /opt/sonar/conf/sonar.properties
-RUN sed -i 's|#sonar.jdbc.user=sonar|sonar.jdbc.user=sonar|g' /opt/sonar/conf/sonar.properties
-RUN sed -i 's|sonar.jdbc.url=jdbc:h2|#sonar.jdbc.url=jdbc:h2|g' /opt/sonar/conf/sonar.properties
-RUN sed -i 's|#sonar.jdbc.url=jdbc:mysql://localhost|sonar.jdbc.url=jdbc:mysql://${env:DB_PORT_3306_TCP_ADDR}|g' /opt/sonar/conf/sonar.properties 
-
-COPY sonar-salesforce-plugin-3.1.jar /opt/sonar/extensions/plugins/
-
+# Http port
 EXPOSE 9000
 
-CMD ["/opt/sonar/bin/linux-x86-64/sonar.sh","console"]
+# Database configuration
+ENV SONARQUBE_JDBC_USERNAME sonar
+ENV SONARQUBE_JDBC_PASSWORD 123qwe
+ENV SONARQUBE_JDBC_URL jdbc:mysql://${env:DB_PORT_3306_TCP_ADDR}/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance
+
+ENV SONAR_VERSION 5.2
+
+# pub   2048R/D26468DE 2015-05-25
+#       Key fingerprint = F118 2E81 C792 9289 21DB  CAB4 CFCA 4A29 D264 68DE
+# uid                  sonarsource_deployer (Sonarsource Deployer) <infra@sonarsource.com>
+# sub   2048R/06855C1D 2015-05-25
+RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys F1182E81C792928921DBCAB4CFCA4A29D26468DE
+
+RUN set -x \
+	&& cd /opt \
+	&& curl -o sonarqube.zip -fSL https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip \
+	&& curl -o sonarqube.zip.asc -fSL https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$SONAR_VERSION.zip.asc \
+	&& gpg --verify sonarqube.zip.asc \
+	&& unzip sonarqube.zip \
+	&& mv sonarqube-$SONAR_VERSION sonarqube \
+	&& rm sonarqube.zip* \
+	&& rm -rf $SONARQUBE_HOME/bin/*
+
+VOLUME ["$SONARQUBE_HOME/data", "$SONARQUBE_HOME/extensions"]
+
+WORKDIR $SONARQUBE_HOME
+COPY run.sh $SONARQUBE_HOME/bin/
+ENTRYPOINT ["./bin/run.sh"]
