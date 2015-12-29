@@ -30,6 +30,8 @@ import task.model.SfdcTypeSet;
 
 import com.sforce.soap.enterprise.EnterpriseConnection;
 import com.sforce.soap.enterprise.LoginResult;
+import com.sforce.soap.enterprise.fault.ApiFault;
+import com.sforce.soap.enterprise.fault.LoginFault;
 import com.sforce.soap.metadata.AsyncResult;
 import com.sforce.soap.metadata.CodeCoverageWarning;
 import com.sforce.soap.metadata.DeleteResult;
@@ -381,7 +383,14 @@ public class SfdcHandler
   private LoginResult login(EnterpriseConnection eConnection, ConnectorConfig eConfig)
     throws ConnectionException
   {
-    LoginResult loginResult = eConnection.login(eConfig.getUsername(), eConfig.getPassword());
+    
+    LoginResult loginResult = null;
+    try {
+      loginResult = eConnection.login(eConfig.getUsername(), eConfig.getPassword());
+    } catch (ApiFault af) {
+      throw new BuildException(af.getExceptionMessage(), af);
+    }
+      
     eConfig.setServiceEndpoint(loginResult.getServerUrl());
 
     eConnection.setSessionHeader(loginResult.getSessionId());
