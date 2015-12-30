@@ -55,6 +55,7 @@ import com.sforce.soap.metadata.Flow;
 import com.sforce.soap.metadata.Group;
 import com.sforce.soap.metadata.HomePageComponent;
 import com.sforce.soap.metadata.HomePageLayout;
+import com.sforce.soap.metadata.InstalledPackage;
 import com.sforce.soap.metadata.Layout;
 import com.sforce.soap.metadata.Letterhead;
 import com.sforce.soap.metadata.ListView;
@@ -301,6 +302,8 @@ public class DeploymentConfiguration
 
     duList.add(new DeploymentUnit(Community.class, "communities"));
     
+    duList.add(new DeploymentUnit(InstalledPackage.class, "installedPackages"));
+    
     // Not handled metadata
     //    duList.add(new DeploymentUnit("AnalyticSnapshot", true));
     //    duList.add(new DeploymentUnit("SharingSet", true));
@@ -308,7 +311,6 @@ public class DeploymentConfiguration
     // duList.add(new DeploymentUnit(CustomSite.class, "sites", "site")); // should be a manual task -> siteAdmin and subdomain need to be adjusted for target sandbox
     //    duList.add(new DeploymentUnit("ConnectedApp", true));
     //    duList.add(new DeploymentUnit("UiPlugin", true));
-    // duList.add(new DeploymentUnit("InstalledPackage"));
     //    duList.add(new DeploymentUnit("UserSharingRules.UserMembershipSharingRule"));
     //    duList.add(new DeploymentUnit("UserSharingRules.UserCriteriaBasedSharingRule"));
     //        duList.add(new DeploymentUnit("UserSharingRules"));

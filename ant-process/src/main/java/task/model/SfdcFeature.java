@@ -18,7 +18,8 @@ public class SfdcFeature extends Typedef {
   public enum FeatureName
   {
     EXCLUDE_CHECKSUMS("exclude-checksums", true),
-    INLCUDE_PERSONACCOUNT("include-personaccount");
+    INLCUDE_PERSONACCOUNT("include-personaccount"),
+    NAMESPACES("namespaces", true);
     
     private String code;
     private boolean paramRequired;

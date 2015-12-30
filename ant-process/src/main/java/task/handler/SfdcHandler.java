@@ -31,7 +31,6 @@ import task.model.SfdcTypeSet;
 import com.sforce.soap.enterprise.EnterpriseConnection;
 import com.sforce.soap.enterprise.LoginResult;
 import com.sforce.soap.enterprise.fault.ApiFault;
-import com.sforce.soap.enterprise.fault.LoginFault;
 import com.sforce.soap.metadata.AsyncResult;
 import com.sforce.soap.metadata.CodeCoverageWarning;
 import com.sforce.soap.metadata.DeleteResult;
@@ -606,15 +605,25 @@ public class SfdcHandler
             }
             task.log(String.format("Query: %s", StringUtils.join(names, ",")));
 
+            Set<String> namespaces = new HashSet<>();
+            
+            SfdcFeature feature = features.get(FeatureName.NAMESPACES.name());
+            if (null != feature) {
+              String nameList = feature.getParam();
+              
+              for (String namespace : nameList.split(",")) {
+                namespaces.add(namespace);
+              }
+            }            
+            
             FileProperties[] metadata =
                 mConnection.listMetadata(chunk.toArray(new ListMetadataQuery[chunk.size()]), VERSION);
             for (FileProperties props : metadata) {
               String type = props.getType();
               String ns = props.getNamespacePrefix();
 
-              // TODO xlehmf: for now we exclude everything which has a
-              // namespace -> exclude everything from packages
-              if (StringUtils.isNotEmpty(ns)) {
+              // exclude all components with unexpected namespaces
+              if (!namespaces.contains(ns)) {
                 continue;
               }
 
