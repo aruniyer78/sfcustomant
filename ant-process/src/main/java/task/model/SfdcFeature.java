@@ -19,7 +19,7 @@ public class SfdcFeature extends Typedef {
   {
     EXCLUDE_CHECKSUMS("exclude-checksums", true),
     INLCUDE_PERSONACCOUNT("include-personaccount"),
-    NAMESPACES("namespaces", true);
+    PACKAGE_NAMESPACES("package-namespaces", true);
     
     private String code;
     private boolean paramRequired;

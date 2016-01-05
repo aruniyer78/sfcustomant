@@ -262,11 +262,12 @@ public class SfdcHandler
     }
     String typeNames = StringUtils.join(types, ",");
 
-    deployTypes(zipFile, runAllTests, typeNames, new TestResultErrorHandler());
+    deployTypes(zipFile, runAllTests, false, typeNames, new TestResultErrorHandler());
   }
 
   private void deployTypes(ByteArrayOutputStream zipFile,
                            boolean rat,
+                           boolean ignoreWarnings,
                            String logInfo,
                            ErrorHandler<DeployResult> errorHandler)
   {
@@ -281,11 +282,12 @@ public class SfdcHandler
       options.setPerformRetrieve(false);
       options.setRollbackOnError(true);
       options.setRunAllTests(rat);
+      options.setIgnoreWarnings(ignoreWarnings);
 
       AsyncResult ar = context.getMConnection().deploy(zipFile.toByteArray(), options);
 
       task.log(String.format("Sent to SFDC."));
-      
+
       int count = 0;
       DeployResult status = null;
       do {
@@ -382,14 +384,15 @@ public class SfdcHandler
   private LoginResult login(EnterpriseConnection eConnection, ConnectorConfig eConfig)
     throws ConnectionException
   {
-    
+
     LoginResult loginResult = null;
     try {
       loginResult = eConnection.login(eConfig.getUsername(), eConfig.getPassword());
-    } catch (ApiFault af) {
+    }
+    catch (ApiFault af) {
       throw new BuildException(af.getExceptionMessage(), af);
     }
-      
+
     eConfig.setServiceEndpoint(loginResult.getServerUrl());
 
     eConnection.setSessionHeader(loginResult.getSessionId());
@@ -605,25 +608,26 @@ public class SfdcHandler
             }
             task.log(String.format("Query: %s", StringUtils.join(names, ",")));
 
-            Set<String> namespaces = new HashSet<>();
-            
-            SfdcFeature feature = features.get(FeatureName.NAMESPACES.name());
+            Set<String> packagaNamespaces = new HashSet<>();
+
+            SfdcFeature feature = features.get(FeatureName.PACKAGE_NAMESPACES.name());
             if (null != feature) {
               String nameList = feature.getParam();
-              
+
               for (String namespace : nameList.split(",")) {
-                namespaces.add(namespace);
+                packagaNamespaces.add(namespace);
               }
-            }            
-            
+            }
+
             FileProperties[] metadata =
                 mConnection.listMetadata(chunk.toArray(new ListMetadataQuery[chunk.size()]), VERSION);
             for (FileProperties props : metadata) {
               String type = props.getType();
               String ns = props.getNamespacePrefix();
 
-              // exclude all components with unexpected namespaces
-              if (!namespaces.contains(ns)) {
+              // exclude all components with namespaces except for specified package namespaces
+              if ((!"InstalledPackage".equals(type) && StringUtils.isNotEmpty(ns))
+                  || ("InstalledPackage".equals(type) && !packagaNamespaces.contains(ns))) {
                 continue;
               }
 
@@ -843,7 +847,9 @@ public class SfdcHandler
     final String noErrorProblemPattern = "No " + type + " named: .* found";
 
     ByteArrayOutputStream zipFile = zipFileHandler.prepareDestructiveZipFile(type, fullNames);
-    deployTypes(zipFile, false, "destrutive changes", new ErrorHandler<DeployResult>() {
+
+    // we need to ignore warnings during the deployment, otherwise already deleted classes produce an error and not all members are deleted in case this happens
+    deployTypes(zipFile, false, true, "destrutive changes", new ErrorHandler<DeployResult>() {
 
       @Override
       public void evaluate(DeployResult status, String logInfo)
@@ -852,8 +858,8 @@ public class SfdcHandler
 
         for (DeployMessage dm : status.getDetails().getComponentFailures()) {
           if (dm.getProblem().matches(noErrorProblemPattern)) {
-            // we tried to delete something which is gone
-            // already -> ignore
+            // we tried to delete something which is gone already -> ignore
+            task.log(String.format("%s: %s", dm.getProblemType(), dm.getProblem()));
           }
           else {
             if (!errorOccured) {

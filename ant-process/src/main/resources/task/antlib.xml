@@ -18,5 +18,7 @@
    
    <taskdef name="runAllTests" classname="task.SfdcRunAllTestsTask"/>
    
+   <!--taskdef name="loadTranslations" classname="task.SfdcLoadTranslationsTask"/-->
+   
    <taskdef name="loadData" classname="task.SfdcDataLoaderTask"/>
 </antlib>
