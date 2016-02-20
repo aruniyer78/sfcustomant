@@ -112,15 +112,19 @@ public class SfdcCompareDataModelsTask
 
       sfdcHandler.discardContext();
 
-      compareOrgs(masterOrg.getOrg(), masterSObjects, slaveOrg.getOrg(), slaveSObjects);
+      if (!compareOrgs(masterOrg.getOrg(), masterSObjects, slaveOrg.getOrg(), slaveSObjects)) {
+        throw new BuildException("There are some discrepencies in the data models. Please check the log for further details.");
+      }
     }
   }
 
-  private void compareOrgs(String masterName,
+  private boolean compareOrgs(String masterName,
                            List<DescribeSObjectResult> masterSObjects,
                            String slaveName,
                            List<DescribeSObjectResult> slaveSObjects)
   {
+    boolean result = true;
+    
     Map<String, DescribeSObjectResult> masterMap = createObjectMap(masterSObjects);
     Map<String, DescribeSObjectResult> slaveMap = createObjectMap(slaveSObjects);
 
@@ -145,25 +149,32 @@ public class SfdcCompareDataModelsTask
                                 slaveName));
               log(String.format("%s (%s)", masterInfo, masterName));
               log(String.format("%s (%s)", slaveInfo, slaveName));
+              result = false;
             }
           }
           else {
             log(String.format("The field %s of object %s in missing in %s.", field, name, slaveName));
+            result = false;
           }
         }
 
         for (String field : slaveFieldMap.keySet()) {
           log(String.format("The field %s of object %s in missing in %s.", field, name, masterName));
+          result = false;
         }
       }
       else {
         log(String.format("The object %s is missing in %s.", name, slaveName));
+        result = false;
       }
     }
 
     for (String name : slaveMap.keySet()) {
       log(String.format("The object %s is missing in %s.", name, masterName));
+      result = false;
     }
+    
+    return result;
   }
 
   private Map<String, String> createFieldMap(DescribeSObjectResult dsor)
