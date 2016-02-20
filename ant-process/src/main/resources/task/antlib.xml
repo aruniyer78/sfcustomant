@@ -21,4 +21,8 @@
    <!--taskdef name="loadTranslations" classname="task.SfdcLoadTranslationsTask"/-->
    
    <taskdef name="loadData" classname="task.SfdcDataLoaderTask"/>
+   
+   <taskdef name="compareDataModels" classname="task.SfdcCompareDataModelsTask"/>
+   <typedef name="master" classname="task.model.SfdcOrgDescriptor"/>
+   <typedef name="slave" classname="task.model.SfdcOrgDescriptor"/>
 </antlib>

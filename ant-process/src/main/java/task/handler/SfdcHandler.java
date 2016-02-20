@@ -28,6 +28,9 @@ import task.model.SfdcFeature;
 import task.model.SfdcFeature.FeatureName;
 import task.model.SfdcTypeSet;
 
+import com.sforce.soap.enterprise.DescribeGlobalResult;
+import com.sforce.soap.enterprise.DescribeGlobalSObjectResult;
+import com.sforce.soap.enterprise.DescribeSObjectResult;
 import com.sforce.soap.enterprise.EnterpriseConnection;
 import com.sforce.soap.enterprise.LoginResult;
 import com.sforce.soap.enterprise.fault.ApiFault;
@@ -64,6 +67,8 @@ import com.sforce.ws.ConnectorConfig;
  */
 public class SfdcHandler
 {
+
+  private static final String SESSION_INVALID_IDENTIFIER = "INVALID_SESSION";
 
   private final class TestResultErrorHandler
     implements ErrorHandler<DeployResult>
@@ -343,7 +348,7 @@ public class SfdcHandler
     throws ConnectionException
   {
     String session = task.getProject().getProperty(PROJECT_PROPERTY_SFDC_SESSION);
-    if (StringUtils.isNotEmpty(session)) {
+    if (StringUtils.isNotEmpty(session) && !SESSION_INVALID_IDENTIFIER.equals(session) ) {
 
       String[] tokens = session.split("\\|");
       if (null != tokens && 3 == tokens.length) {
@@ -911,5 +916,47 @@ public class SfdcHandler
     }
 
     return result;
+  }
+  
+  public List<DescribeSObjectResult> describeSObjects(final String name) {
+    try {
+      final SfdcConnectionContext context = login();
+
+      List<String> sObjects = new ArrayList<>();
+      
+      task.log(String.format("Query for list of objects for %s...", name));
+      
+      DescribeGlobalResult globalResult = context.getEConnection().describeGlobal();
+      for (DescribeGlobalSObjectResult sObjectResult : globalResult.getSobjects()) {
+        sObjects.add(sObjectResult.getName());
+      }
+      
+      ChunkedExecutor<String, List<DescribeSObjectResult>, ConnectionException> ce = new ChunkedExecutor<String, List<DescribeSObjectResult>, ConnectionException>() {
+
+        @Override
+        public List<DescribeSObjectResult> chunky(List<String> chunk, List<DescribeSObjectResult> result)
+          throws ConnectionException
+        {
+          
+          task.log(String.format("Query for object details for %s...", name));
+          
+          DescribeSObjectResult[] results = context.getEConnection().describeSObjects(chunk.toArray(new String[chunk.size()]));
+          
+          for (DescribeSObjectResult dsor : results) {
+            result.add(dsor);
+          }
+          
+          return result;
+        }
+      };
+      return ce.execute(sObjects, 100, new ArrayList<DescribeSObjectResult>());
+    }
+    catch (ConnectionException e) {
+      throw new BuildException(String.format("Error connecting to SFDC: %s.", e.getMessage()), e);
+    }    
+  }
+  
+  public void discardContext() {
+    task.getProject().setProperty(PROJECT_PROPERTY_SFDC_SESSION, SESSION_INVALID_IDENTIFIER);
   }
 }

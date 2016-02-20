@@ -48,7 +48,6 @@ public class MetadataHandler
   private String metadataRoot;
   private boolean debug;
 
-  @SuppressWarnings("hiding")
   public void initialize(LogWrapper logWrapper, String metadataRoot, boolean debug)
   {
     this.logWrapper = logWrapper;

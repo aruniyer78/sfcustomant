@@ -168,7 +168,7 @@ public class SfdcRetrievalTask
     metadataHandler.savePackageXml(MetadataHandler.PREFFIX_METADATA, packageXml);
 
     ByteArrayOutputStream zipFile = sfdcHandler.retrieveMetadata(metadata);
-    zipFileHandler.saveZipFile("retrieve", zipFile);
+    zipFileHandler.saveZipFile("retrieve", null, zipFile);
     zipFileHandler.extractZipFile(retrieveRoot, zipFile, transformationHandler, checksumHandler);
 
     metadataHandler.removeNotContainedMetadata(metadata, typeSets, cleanupOther, transformationHandler);

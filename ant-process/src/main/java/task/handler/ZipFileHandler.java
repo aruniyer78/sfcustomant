@@ -9,9 +9,13 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -35,6 +39,8 @@ import task.handler.configuration.DeploymentUnit;
  */
 public class ZipFileHandler
 {
+
+  private static final int MAX_FILES = 100;
 
   public class InputStreamWrapper
     extends InputStream
@@ -121,7 +127,6 @@ public class ZipFileHandler
   private boolean debug;
   private MetadataHandler metadataHandler;
 
-  @SuppressWarnings("hiding")
   public void initialize(LogWrapper logWrapper, boolean debug, MetadataHandler metadataHandler)
   {
     this.logWrapper = logWrapper;
@@ -141,16 +146,20 @@ public class ZipFileHandler
     }
   }
 
-  public void saveZipFile(String prefix, ByteArrayOutputStream zipFile)
+  public void saveZipFile(String prefix, String taskName, ByteArrayOutputStream zipFile)
   {
     // debugging
     if (debug) {
-      String fileName = prefix + "-" + System.currentTimeMillis() + ".zip";
+      
+      String fileName = prefix + "-" + System.currentTimeMillis() + (null != taskName ? "-" + taskName : "") + ".zip";
 
       logWrapper.log(String.format("Save ZIP file to %s.", fileName));
 
       File tmpDir = new File("tmp");
       tmpDir.mkdirs();
+      
+      houseKeeping(tmpDir, prefix);
+      
       File tmp = new File(tmpDir, fileName);
 
       try (FileOutputStream fos = new FileOutputStream(tmp)) {
@@ -160,6 +169,38 @@ public class ZipFileHandler
         logWrapper.log(String.format("Error preparing ZIP for deployment: %s.", e.getMessage()),
                        e,
                        LogLevel.WARN.getLevel());
+      }
+    }
+  }
+
+  private void houseKeeping(File baseDir, final String prefix)
+  {
+    // filter all files matching the prefix
+    File[] files = baseDir.listFiles(new FileFilter() {
+      
+      @Override
+      public boolean accept(File pathname)
+      {
+        return pathname.isFile() && pathname.getName().startsWith(prefix);
+      }
+    });
+    
+    if (MAX_FILES > files.length) {
+      // sort by creation date
+      List<File> fileList = Arrays.asList(files);
+      Collections.sort(fileList, new Comparator<File>() {
+
+        @Override
+        public int compare(File f1, File f2)
+        {
+          return Long.compare(f1.lastModified(), f2.lastModified());
+        }
+        
+      });
+      
+      // remove all files beyond MAX_FILES
+      for (int i=0; i < fileList.size() - MAX_FILES; i++) {
+        fileList.get(i).delete();
       }
     }
   }

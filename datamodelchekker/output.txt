@@ -1,0 +1,198 @@
+Buildfile: C:\dev\sfdc\tooling\datamodelchekker\build.xml
+
+check:
+[sf:compareDataModels] Query for list of objects for Kernel-Prod...
+[sf:compareDataModels] Query for object details for Kernel-Prod...
+[sf:compareDataModels] Query for object details for Kernel-Prod...
+[sf:compareDataModels] Query for object details for Kernel-Prod...
+[sf:compareDataModels] Query for object details for Kernel-Prod...
+[sf:compareDataModels] Query for list of objects for AU-FULL...
+[sf:compareDataModels] Query for object details for AU-FULL...
+[sf:compareDataModels] Query for object details for AU-FULL...
+[sf:compareDataModels] Query for object details for AU-FULL...
+[sf:compareDataModels] Query for object details for AU-FULL...
+[sf:compareDataModels] The field City__c of object DM_Request__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 255 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 1300 Digits: 0, Auto: false Calculated: true ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field Province__c of object DM_Request__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 255 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 1300 Digits: 0, Auto: false Calculated: true ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field Address__c of object DM_Request__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 255 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 1300 Digits: 0, Auto: false Calculated: true ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field Zip_Code__c of object DM_Request__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 8 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 1300 Digits: 0, Auto: false Calculated: true ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field External_ID__c of object Dealer_Locator__c in missing in AU-FULL.
+[sf:compareDataModels] The field Sequence_No__c of object Dealer_Locator__c in missing in AU-FULL.
+[sf:compareDataModels] The field LastReferencedDate of object Dealer_Locator__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastViewedDate of object Dealer_Locator__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field MD__c of object Audit_Trail__c in missing in AU-FULL.
+[sf:compareDataModels] The object DMCatalogueTimeStamp__c is missing in AU-FULL.
+[sf:compareDataModels] The field Model_Name__c of object Car_Model__c in missing in AU-FULL.
+[sf:compareDataModels] The field Updated_By_EP_Transactions__c of object Car_Model__c in missing in AU-FULL.
+[sf:compareDataModels] The field Model_Code__c of object Car_Model__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 255 Digits: 0, Auto: false Calculated: false ExternalId: true (Kernel-Prod)
+[sf:compareDataModels] Type: textarea Length: 255 Digits: 0, Auto: false Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field LastActivityDate of object Car_Model__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Custom_Debug_Log_Data__c of object Custom_Debug_Info__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: textarea Length: 32768 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: textarea Length: 131072 Digits: 0, Auto: false Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field LastViewedDate of object PreOrder__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastReferencedDate of object PreOrder__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Annual_Call_Task_3_del__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Annual_Call_Task_1_del__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field EOC_Call_Task_3_del__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field EOC_Call_Task_1_del__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Annual_Call_Task_2_del__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastActivityDate of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field EOC_Call_Task_2_del__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field NextRunDate__c of object Campaign in missing in AU-FULL.
+[sf:compareDataModels] The field Publish_Date__c of object Campaign in missing in AU-FULL.
+[sf:compareDataModels] The field LastRunDate__c of object Campaign in missing in AU-FULL.
+[sf:compareDataModels] The field Publish_Date_del__c of object Campaign in missing in Kernel-Prod.
+[sf:compareDataModels] The field Last_Run_Date__c of object Campaign in missing in Kernel-Prod.
+[sf:compareDataModels] The field Next_Run_Date__c of object Campaign in missing in Kernel-Prod.
+[sf:compareDataModels] The field PartnerAccountId of object Opportunity in missing in AU-FULL.
+[sf:compareDataModels] The field DUPNumber__c of object Rejected_Duplicate_Log__c in missing in AU-FULL.
+[sf:compareDataModels] The field Status__c of object Rejected_Duplicate_Log__c in missing in AU-FULL.
+[sf:compareDataModels] The field Temp_ZipCode__c of object Address__c in missing in AU-FULL.
+[sf:compareDataModels] The field TitleOfHonor__c of object Address__c in missing in AU-FULL.
+[sf:compareDataModels] The field ZipCode__c of object Address__c is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 8 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 6 Digits: 0, Auto: false Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field Temp_Address__c of object Address__c in missing in AU-FULL.
+[sf:compareDataModels] The field LastReferencedDate of object Address__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastViewedDate of object Address__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Company_Name__c of object Account is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 255 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 80 Digits: 0, Auto: false Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field SF_Dealer_ID__c of object Account is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 40 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 30 Digits: 0, Auto: true Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field Primary_Address_Display__c of object Account in missing in AU-FULL.
+[sf:compareDataModels] The field Preferred_Internet_Site__c of object Account in missing in AU-FULL.
+[sf:compareDataModels] The field Opt_Out_Portal_Reason__c of object Account in missing in AU-FULL.
+[sf:compareDataModels] The field MBJ_Yanase_Code__c of object Account is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 30 Digits: 0, Auto: false Calculated: false ExternalId: false (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 10 Digits: 0, Auto: false Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field Dealer_ND_Code__c of object Account is different in Kernel-Prod and AU-FULL:
+[sf:compareDataModels] Type: string Length: 10 Digits: 0, Auto: false Calculated: false ExternalId: true (Kernel-Prod)
+[sf:compareDataModels] Type: string Length: 10 Digits: 0, Auto: false Calculated: false ExternalId: false (AU-FULL)
+[sf:compareDataModels] The field DRM__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field UCID_Sequence__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field NttDataEpa__Is_Primary__c of object NttDataEpa__External_Picklist__c in missing in AU-FULL.
+[sf:compareDataModels] The field BusinessHoursId of object Case in missing in AU-FULL.
+[sf:compareDataModels] The field Customer_Title__c of object Case in missing in Kernel-Prod.
+[sf:compareDataModels] The field PartnerAccountId of object Lead in missing in AU-FULL.
+[sf:compareDataModels] The field Vehicle_Need_Text__c of object Lead__c in missing in AU-FULL.
+[sf:compareDataModels] The field Test_Drive_Detail__c of object Lead__c in missing in AU-FULL.
+[sf:compareDataModels] The field Preferred_Contact_Date__c of object Lead__c in missing in AU-FULL.
+[sf:compareDataModels] The field Lost_Situation__c of object Lead__c in missing in AU-FULL.
+[sf:compareDataModels] The field Questionnair__c of object Lead__c in missing in AU-FULL.
+[sf:compareDataModels] The field CAC_SourceId__c of object Lead__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Contact_Search__c of object Lead__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field RecordTypeId of object Contact in missing in Kernel-Prod.
+[sf:compareDataModels] The field Market__c of object Trigger__c in missing in AU-FULL.
+[sf:compareDataModels] The object PreOrder__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object SSI__Share is missing in Kernel-Prod.
+[sf:compareDataModels] Query for list of objects for Asia-UAT...
+[sf:compareDataModels] Query for object details for Asia-UAT...
+[sf:compareDataModels] Query for object details for Asia-UAT...
+[sf:compareDataModels] Query for object details for Asia-UAT...
+[sf:compareDataModels] Query for object details for Asia-UAT...
+[sf:compareDataModels] The field ApexLogId of object ApexTestResult in missing in Asia-UAT.
+[sf:compareDataModels] The field LastReferencedDate of object Dealer_Locator__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastViewedDate of object Dealer_Locator__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastViewedDate of object SurveyQuestionResponse__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastReferencedDate of object SurveyQuestionResponse__c in missing in Kernel-Prod.
+[sf:compareDataModels] The object NetworkModeration is missing in Asia-UAT.
+[sf:compareDataModels] The field Updated_By_EP_Transactions__c of object Car_Model__c in missing in Asia-UAT.
+[sf:compareDataModels] The field Created_By_EP_Transaction__c of object Car_Model__c in missing in Asia-UAT.
+[sf:compareDataModels] The object FeedPollVote is missing in Asia-UAT.
+[sf:compareDataModels] The field LastViewedDate of object Survey_Question__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastReferencedDate of object Survey_Question__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__CallReference__c of object Event in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UUI__c of object Event in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__AgentType__c of object Event in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UCID__c of object Event in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Called__c of object Event in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Caller__c of object Event in missing in Kernel-Prod.
+[sf:compareDataModels] The object UserPackageLicense is missing in Asia-UAT.
+[sf:compareDataModels] The field Annual_Call_Task_2__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field EOC_Call_Task_1__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Annual_Call_Task_3__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field EOC_Call_Task_3__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field EOC_Call_Task_2__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field Annual_Call_Task_1__c of object Retail_Task__c in missing in Kernel-Prod.
+[sf:compareDataModels] The object NetworkActivityAudit is missing in Asia-UAT.
+[sf:compareDataModels] The field MD__c of object Rejected_Duplicate_Log__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastReferencedDate of object Address__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastViewedDate of object Address__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__CallReference__c of object OpenActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UUI__c of object OpenActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__AgentType__c of object OpenActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UCID__c of object OpenActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Called__c of object OpenActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Caller__c of object OpenActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field Opt_In_Email3__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field FS_Email_Last_Modified_Date3__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field FS_Opt_In_Email3__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field UCID_Sequence__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field FS_Email_Last_Modified_By3__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The field TransTest__c of object Account in missing in Kernel-Prod.
+[sf:compareDataModels] The object PushTopic is missing in Asia-UAT.
+[sf:compareDataModels] The field AES_SFConnector__CallReference__c of object ActivityHistory in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UUI__c of object ActivityHistory in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__AgentType__c of object ActivityHistory in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UCID__c of object ActivityHistory in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Called__c of object ActivityHistory in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Caller__c of object ActivityHistory in missing in Kernel-Prod.
+[sf:compareDataModels] The field BusinessHoursId of object Case in missing in Asia-UAT.
+[sf:compareDataModels] The field Improvement_Department__c of object Case in missing in Kernel-Prod.
+[sf:compareDataModels] The field Resolution_Time__c of object Case in missing in Kernel-Prod.
+[sf:compareDataModels] The field Related_Department__c of object Case in missing in Kernel-Prod.
+[sf:compareDataModels] The field Approval_Submit_Date__c of object Case in missing in Kernel-Prod.
+[sf:compareDataModels] The field Vehicle_Age__c of object Vehicle__c in missing in Asia-UAT.
+[sf:compareDataModels] The field VehicleAge__c of object Vehicle__c in missing in Kernel-Prod.
+[sf:compareDataModels] The object FeedPollChoice is missing in Asia-UAT.
+[sf:compareDataModels] The object Partner is missing in Asia-UAT.
+[sf:compareDataModels] The field AES_SFConnector__CallReference__c of object Task in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UUI__c of object Task in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__AgentType__c of object Task in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UCID__c of object Task in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Called__c of object Task in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Caller__c of object Task in missing in Kernel-Prod.
+[sf:compareDataModels] The object CorsWhitelistEntry is missing in Asia-UAT.
+[sf:compareDataModels] The field AES_SFConnector__CallReference__c of object LookedUpFromActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UUI__c of object LookedUpFromActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__AgentType__c of object LookedUpFromActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__UCID__c of object LookedUpFromActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Called__c of object LookedUpFromActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The field AES_SFConnector__Caller__c of object LookedUpFromActivity in missing in Kernel-Prod.
+[sf:compareDataModels] The object PackageLicense is missing in Asia-UAT.
+[sf:compareDataModels] The field LastPasswordChangeDate of object User in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastViewedDate of object Recall__c in missing in Kernel-Prod.
+[sf:compareDataModels] The field LastReferencedDate of object Recall__c in missing in Kernel-Prod.
+[sf:compareDataModels] The object ApexLog is missing in Asia-UAT.
+[sf:compareDataModels] The object Retail_Task__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object DM_Material__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object Translation_Dictionary__c is missing in Kernel-Prod.
+[sf:compareDataModels] The object UserProvisioningRequestShare is missing in Kernel-Prod.
+[sf:compareDataModels] The object WebLinkLocalization is missing in Kernel-Prod.
+[sf:compareDataModels] The object SSI__Share is missing in Kernel-Prod.
+[sf:compareDataModels] The object CaseDeadelineCalc__mdt is missing in Kernel-Prod.
+[sf:compareDataModels] The object UserLogin is missing in Kernel-Prod.
+[sf:compareDataModels] The object Address__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object EmailDomainKey is missing in Kernel-Prod.
+[sf:compareDataModels] The object Car_Model__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object Recall__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object Dealer_Locator__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object ProvinceTranslation__mdt is missing in Kernel-Prod.
+[sf:compareDataModels] The object WebLink is missing in Kernel-Prod.
+[sf:compareDataModels] The object SurveyTaker__History is missing in Kernel-Prod.
+[sf:compareDataModels] The object UserProvisioningRequest is missing in Kernel-Prod.
+[sf:compareDataModels] The object LoginHistory is missing in Kernel-Prod.
+
+BUILD SUCCESSFUL
+Total time: 18 seconds
