@@ -94,6 +94,7 @@ public class SfdcCompareDataModelsTask
 
     sfdcHandler.discardContext();
 
+    boolean status = true;
     for (SfdcOrgDescriptor slaveOrg : slaveOrgs) {
       sfdcHandler = new SfdcHandler();
       sfdcHandler.initialize(this,
@@ -113,8 +114,12 @@ public class SfdcCompareDataModelsTask
       sfdcHandler.discardContext();
 
       if (!compareOrgs(masterOrg.getOrg(), masterSObjects, slaveOrg.getOrg(), slaveSObjects)) {
-        throw new BuildException("There are some discrepencies in the data models. Please check the log for further details.");
+        status = false;
       }
+    }
+    
+    if (!status) {
+      throw new BuildException("There are some discrepencies in the data models. Please check the log for further details.");
     }
   }
 
