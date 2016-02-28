@@ -8,7 +8,7 @@
 			</sf:master>
 			<sf:slave org="AU-Prod" url="https://login.salesforce.com" user="integration.ntt@au.daimler-apac.com" password="ep1salesforce#1yl26Xq6fr1vwIeE5WZA1RzP4">
 			</sf:slave>
-			<sf:slave org="Asia-Prod" url="https://login.salesforce.com" user="integration.ntt@asia.daimler-apac.com" password="ep1salesforce#1SZA6dlrpzCPGaifsYGW0FEk8Z">
+			<sf:slave org="Asia-Prod" url="https://login.salesforce.com" user="integration.user@asia.daimler-apac.com" password="ep1salesforce#1SZA6dlrpzCPGaifsYGW0FEk8Z">
 			</sf:slave>
 		</sf:compareDataModels>
 	</target>
