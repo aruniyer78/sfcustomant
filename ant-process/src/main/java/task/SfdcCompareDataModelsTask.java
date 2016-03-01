@@ -9,6 +9,7 @@ import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.taskdefs.Taskdef;
 
 import task.handler.SfdcHandler;
+import task.model.SfdcExclude;
 import task.model.SfdcOrgDescriptor;
 
 import com.sforce.soap.enterprise.DescribeSObjectResult;
@@ -26,10 +27,16 @@ public class SfdcCompareDataModelsTask
   private boolean useProxy;
   private String proxyHost;
   private int proxyPort;
+  private boolean debug;
 
   private SfdcOrgDescriptor masterOrg;
   private List<SfdcOrgDescriptor> slaveOrgs;
-
+  
+  public void setDebug(boolean debug)
+  {
+    this.debug = debug;
+  }
+  
   public void setUseProxy(boolean useProxy)
   {
     this.useProxy = useProxy;
@@ -90,7 +97,7 @@ public class SfdcCompareDataModelsTask
                            proxyPort,
                            null);
 
-    List<DescribeSObjectResult> masterSObjects = sfdcHandler.describeSObjects(masterOrg.getOrg());
+    List<DescribeSObjectResult> masterSObjects = applyFilter(sfdcHandler.describeSObjects(masterOrg.getOrg()), masterOrg.getExcludes());
 
     sfdcHandler.discardContext();
 
@@ -109,7 +116,7 @@ public class SfdcCompareDataModelsTask
                              proxyPort,
                              null);
 
-      List<DescribeSObjectResult> slaveSObjects = sfdcHandler.describeSObjects(slaveOrg.getOrg());
+      List<DescribeSObjectResult> slaveSObjects = applyFilter(sfdcHandler.describeSObjects(slaveOrg.getOrg()), slaveOrg.getExcludes());
 
       sfdcHandler.discardContext();
 
@@ -121,6 +128,34 @@ public class SfdcCompareDataModelsTask
     if (!status) {
       throw new BuildException("There are some discrepencies in the data models. Please check the log for further details.");
     }
+  }
+
+  private List<DescribeSObjectResult> applyFilter(List<DescribeSObjectResult> describeSObjects,
+                                                 List<SfdcExclude> excludes)
+  {
+    List<DescribeSObjectResult> filteredList = new ArrayList<>();
+    
+    // can easily written in Java8
+    // describeSObjects.stream().filter(result -> excludes.anyMatch(exclude -> exclude.match(result.getName())));
+    for (DescribeSObjectResult result : describeSObjects) {
+      boolean match = false;
+      for (SfdcExclude exclude : excludes) {
+        if (result.getName().matches(exclude.getName())) {
+          
+          if (debug) {
+            log(String.format("%s was filtered out.", result.getName(), exclude.getName()));
+          }
+          
+          match = true;
+          break;
+        }
+      }
+      if (!match) {
+        filteredList.add(result);
+      }
+    }
+    
+    return filteredList;
   }
 
   private boolean compareOrgs(String masterName,

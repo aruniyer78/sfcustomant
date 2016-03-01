@@ -1,5 +1,8 @@
 package task.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.tools.ant.BuildException;
 import org.apache.tools.ant.taskdefs.Typedef;
@@ -19,6 +22,12 @@ public class SfdcOrgDescriptor extends Typedef {
   private String url;
   private String user;
   private String password;
+  private List<SfdcExclude> excludes;
+
+  public SfdcOrgDescriptor()
+  {
+    excludes = new ArrayList<>();
+  }
 
   public String getOrg()
   {
@@ -58,6 +67,16 @@ public class SfdcOrgDescriptor extends Typedef {
   public void setPassword(String password)
   {
     this.password = password;
+  }
+
+  public void addConfigured(SfdcExclude exclude)
+  {
+    excludes.add(exclude);
+  }
+  
+  public List<SfdcExclude> getExcludes()
+  {
+    return excludes;
   }
 
   public void validateSettings()

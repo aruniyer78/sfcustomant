@@ -3,12 +3,19 @@
     <property prefix="sfdc" file="build.properties" unless:set="CI"/>
 	
 	<target name="check">
-		<sf:compareDataModels useProxy="${sfdc.proxy.use}" proxyHost="${sfdc.proxy.host}" proxyPort="${sfdc.proxy.port}" >
+		<sf:compareDataModels debug="${sfdc.debug}" useProxy="${sfdc.proxy.use}" proxyHost="${sfdc.proxy.host}" proxyPort="${sfdc.proxy.port}" >
 			<sf:master org="Kernel-Prod" url="https://login.salesforce.com" user="integration.ntt@kernel.daimler-apac.com" password="fl3salesforce1Qb15JLxWCJO6kD0uKu6rJ5WS2">
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
 			</sf:master>
 			<sf:slave org="AU-Prod" url="https://login.salesforce.com" user="integration.ntt@au.daimler-apac.com" password="ep1salesforce#1yl26Xq6fr1vwIeE5WZA1RzP4">
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
 			</sf:slave>
 			<sf:slave org="Asia-Prod" url="https://login.salesforce.com" user="integration.user@asia.daimler-apac.com" password="ep1salesforce#1SZA6dlrpzCPGaifsYGW0FEk8Z">
+				<sf:exclude name="AES_SFConnector.*"/>
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
 			</sf:slave>
 		</sf:compareDataModels>
 	</target>

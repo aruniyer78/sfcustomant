@@ -3,10 +3,22 @@
     <property prefix="sfdc" file="build.properties" unless:set="CI"/>
 	
 	<target name="check">
-		<sf:compareDataModels useProxy="${sfdc.proxy.use}" proxyHost="${sfdc.proxy.host}" proxyPort="${sfdc.proxy.port}" >
-			<sf:master org="Kernel-Prod" url="https://login.salesforce.com" user="integration.ntt@kernel.daimler-apac.com" password="fl3salesforce1Qb15JLxWCJO6kD0uKu6rJ5WS2"/>
-			<sf:slave org="AU-FULL" url="https://test.salesforce.com" user="integration@au.daimler-apac.com.full" password="ep1salesforce#1I21tZIOIWmVIfM3pC6ShxsIR"/>
-			<sf:slave org="Asia-UAT" url="https://test.salesforce.com" user="integration.ntt@asia.daimler-apac.com.uat" password="ep1salesforce1FXkpHNLDG7JcKu7BwYOimckL"/>
+		<sf:compareDataModels debug="${sfdc.debug}" useProxy="${sfdc.proxy.use}" proxyHost="${sfdc.proxy.host}" proxyPort="${sfdc.proxy.port}" >
+			<sf:master org="Kernel-Prod" url="https://login.salesforce.com" user="integration.ntt@kernel.daimler-apac.com" password="fl3salesforce1Qb15JLxWCJO6kD0uKu6rJ5WS2">
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
+			</sf:master>
+			<sf:slave org="AU-FULL" url="https://test.salesforce.com" user="integration@au.daimler-apac.com.full" password="ep1salesforce#1I21tZIOIWmVIfM3pC6ShxsIR">
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
+			</sf:slave>
+			<sf:slave org="Asia-UAT" url="https://test.salesforce.com" user="integration.ntt@asia.daimler-apac.com.uat" password="ep1salesforce1FXkpHNLDG7JcKu7BwYOimckL">
+			
+			<sf:exclude name="Checksums"/>
+				<sf:exclude name="AES_SFConnector.*"/>
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
+			</sf:slave>
 		</sf:compareDataModels>
 	</target>
 	
