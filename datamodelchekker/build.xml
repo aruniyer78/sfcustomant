@@ -8,7 +8,7 @@
 				<sf:exclude name=".*History"/>
 				<sf:exclude name=".*Share"/>
 			</sf:master>
-			<sf:slave org="AU-FULL" url="https://test.salesforce.com" user="integration@au.daimler-apac.com.full" password="ep1salesforce#1I21tZIOIWmVIfM3pC6ShxsIR">
+			<sf:slave org="AU-FULL" url="https://test.salesforce.com" user="integration.ntt@au.daimler-apac.com.full" password="ep1salesforce#1JWi1c4hbGcvF0FM69COfGpjB">
 				<sf:exclude name=".*History"/>
 				<sf:exclude name=".*Share"/>
 			</sf:slave>
