@@ -1,0 +1,7 @@
+# Build the Docker Image
+Note: Make sure LF line endings are used within jenkins.sh, plugins.sh and init.groovy.
+
+docker build --build-arg http_proxy=http://proxy.de.softlab.net:8080 --build-arg https_proxy=http://proxy.de.softlab.net:8080 -t daimlerapac/jenkins:1.580.2 .
+
+# Current Run Command used
+docker run -d -p 8080:8080 -v /appl/jenkins_test:/var/jenkins_home --name jdk8jenkins --log-driver=json-file --log-opt max-size=100m --log-opt max-file=1 daimlerapac/jenkins:1.580.2
