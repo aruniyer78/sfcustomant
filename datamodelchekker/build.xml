@@ -8,13 +8,18 @@
 				<sf:exclude name=".*History"/>
 				<sf:exclude name=".*Share"/>
 			</sf:master>
-			<sf:slave org="AU-FULL" url="https://test.salesforce.com" user="integration.ntt@au.daimler-apac.com.full" password="ep1salesforce#1JWi1c4hbGcvF0FM69COfGpjB">
+			<sf:slave org="AU-FULL" url="https://test.salesforce.com" user="integration.ntt@au.daimler-apac.com.full" password="ep1salesforce#2ChoJL5L4aiXT18S5z4O0dwu02">
 				<sf:exclude name=".*History"/>
 				<sf:exclude name=".*Share"/>
 			</sf:slave>
 			<sf:slave org="Asia-UAT" url="https://test.salesforce.com" user="integration.ntt@asia.daimler-apac.com.uat" password="ep1salesforce1FXkpHNLDG7JcKu7BwYOimckL">
-			
-			<sf:exclude name="Checksums"/>
+				<sf:exclude name="Checksums"/>
+				<sf:exclude name="AES_SFConnector.*"/>
+				<sf:exclude name=".*History"/>
+				<sf:exclude name=".*Share"/>
+			</sf:slave>
+			<sf:slave org="Korea-UAT" url="https://test.salesforce.com" user="integration.user@asia.daimler-apac.com.uatkorea" password="ep1salesforce#270j2b0p5RTGQDMHv81EAstpU9">
+				<sf:exclude name="Checksums"/>
 				<sf:exclude name="AES_SFConnector.*"/>
 				<sf:exclude name=".*History"/>
 				<sf:exclude name=".*Share"/>
