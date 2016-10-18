@@ -4,7 +4,7 @@
 	
 	<target name="check">
 		<sf:compareDataModels debug="${sfdc.debug}" useProxy="${sfdc.proxy.use}" proxyHost="${sfdc.proxy.host}" proxyPort="${sfdc.proxy.port}" >
-			<sf:master org="Kernel-Prod" url="https://login.salesforce.com" user="integration.ntt@kernel.daimler-apac.com" password="fl3salesforce1Qb15JLxWCJO6kD0uKu6rJ5WS2">
+			<sf:master org="Kernel-Prod" url="https://login.salesforce.com" user="integration.ntt@kernel.daimler-apac.com" password="fl3salesforce12mW0jbnEEQzvvba8TEqHLf3K">
 				<sf:exclude name=".*History"/>
 				<sf:exclude name=".*Share"/>
 			</sf:master>
